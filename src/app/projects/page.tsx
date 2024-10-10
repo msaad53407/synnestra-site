@@ -1,6 +1,6 @@
 import { InfiniteScrollingProjects } from '@/components/InifiniteScrollingProjects';
 
-export const products = [
+const products = [
   {
     title: 'Moonbeam',
     link: 'https://gomoonbeam.com',
