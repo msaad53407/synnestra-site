@@ -53,12 +53,12 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="/project"
+                href="/projects"
                 className={
-                  pathname === '/project' ? 'text-custom-purple' : 'text-custom-black-light hover:text-custom-purple'
+                  pathname === '/projects' ? 'text-custom-purple' : 'text-custom-black-light hover:text-custom-purple'
                 }
               >
-                Project
+                Projects
               </Link>
             </li>
             <li>

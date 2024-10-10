@@ -36,7 +36,7 @@ export default function ServicesDropdown({ triggerComponent }: Props) {
                       ].map((service) => (
                         <li key={service}>
                           <NavigationMenuLink asChild>
-                            <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple">
+                            <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple hover:underline">
                               {service}
                             </Link>
                           </NavigationMenuLink>
@@ -78,7 +78,7 @@ export default function ServicesDropdown({ triggerComponent }: Props) {
                       ].map((industry) => (
                         <li key={industry}>
                           <NavigationMenuLink asChild>
-                            <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple">
+                            <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple hover:underline">
                               {industry}
                             </Link>
                           </NavigationMenuLink>
