@@ -2,20 +2,15 @@
 
 import { cn } from '@/lib/utils';
 import React, { useEffect, useState } from 'react';
-import { ProjectCard } from '../cards/ProjectCard';
 
 export const InfiniteMovingCards = ({
-  items,
   direction = 'left',
   speed = 'fast',
   pauseOnHover = true,
   className,
+  children,
 }: {
-  items: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  }[];
+  children: React.ReactNode;
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow';
   pauseOnHover?: boolean;
@@ -66,7 +61,7 @@ export const InfiniteMovingCards = ({
   const [start, setStart] = useState(false);
 
   return (
-    <div ref={containerRef} className={cn('scroller relative z-20  max-w-7xl overflow-hidden', className)}>
+    <div ref={containerRef} className={cn('scroller relative z-20 overflow-hidden', className)}>
       <ul
         ref={scrollerRef}
         className={cn(
@@ -75,17 +70,7 @@ export const InfiniteMovingCards = ({
           pauseOnHover && 'hover:[animation-play-state:paused]',
         )}
       >
-        {items.map((item) => (
-          <li
-            className="w-max max-w-full relative rounded-2xl flex-shrink-0 px-8 py-6 md:w-max"
-            style={{
-              background: 'linear-gradient(180deg, var(--slate-800), var(--slate-900)',
-            }}
-            key={item.title}
-          >
-            <ProjectCard product={item} />
-          </li>
-        ))}
+        {children}
       </ul>
     </div>
   );

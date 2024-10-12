@@ -10,12 +10,12 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <header className="w-full px-4 py-6 flex items-center justify-between bg-white">
+    <header className="flex items-center justify-between bg-white w-full max-w-screen-2xl mx-auto px-4 py-6 sm:px-6 lg:px-12">
       <Link href="/" className="text-3xl font-normal text-custom-purple">
         Synnestra
       </Link>
       <div className="flex items-center space-x-8">
-        <nav>
+        <nav className='md:block hidden'>
           <ul className="flex space-x-6 items-center">
             <li>
               <Link

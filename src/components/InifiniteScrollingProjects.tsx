@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { InfiniteMovingCards } from './ui/infinite-moving-cards';
+import { ProjectCard } from './cards/ProjectCard';
 
 export const InfiniteScrollingProjects = ({
   products,
@@ -32,10 +33,7 @@ export const InfiniteScrollingProjects = ({
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
   const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
   return (
-    <div
-      ref={ref}
-      className={`h-full pb-[500px] overflow-hidden  antialiased relative flex flex-col self-auto`}
-    >
+    <div ref={ref} className={`h-full pb-[500px] overflow-hidden  antialiased relative flex flex-col self-auto`}>
       <Header />
       <motion.div
         style={{
@@ -47,13 +45,25 @@ export const InfiniteScrollingProjects = ({
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          <InfiniteMovingCards items={firstRow} speed="slow" />
+          <InfiniteMovingCards speed="slow">
+            {firstRow.map((product) => (
+              <ProjectCard key={product.title} product={product} />
+            ))}
+          </InfiniteMovingCards>
         </motion.div>
         <motion.div className="flex flex-row  mb-20 space-x-20">
-          <InfiniteMovingCards items={secondRow} direction="right" speed="slow" />
+          <InfiniteMovingCards direction="right" speed="slow">
+            {secondRow.map((product) => (
+              <ProjectCard key={product.title} product={product} />
+            ))}
+          </InfiniteMovingCards>
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          <InfiniteMovingCards items={thirdRow} speed="slow" />
+          <InfiniteMovingCards speed="slow">
+            {thirdRow.map((product) => (
+              <ProjectCard key={product.title} product={product} />
+            ))}
+          </InfiniteMovingCards>
         </motion.div>
       </motion.div>
     </div>
