@@ -1,6 +1,7 @@
 import AnimatedBanner from '@/components/AnimatedBanner';
 import AppShowcaseCard from '@/components/cards/AppShowcaseCard';
 import NewsletterSubscription from '@/components/sections/EmailNewsletter';
+import ReviewSection from '@/components/sections/ReviewSection';
 import StatisticsBar from '@/components/StatisticsBar';
 import { Button } from '@/components/ui/button';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
@@ -117,6 +118,93 @@ export default function Home() {
           <Button className="bg-custom-purple hover:bg-custom-purple text-white">View All Solutions</Button>
         </div>
       </section>
+      <section className="px-4 py-6 sm:px-6 lg:px-12 flex flex-col md:flex-row gap-6">
+        <div className="flex flex-col gap-6 w-full md:w-1/2">
+          {/* Organizations recognized our work */}
+          <div className="bg-custom-purple text-white p-6 rounded-lg">
+            <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
+              Organizations recognized our work
+            </h2>
+            <div className="flex space-x-4 mb-4 items-center justify-between">
+              <div className="space-y-3">
+                <Image src="/company_logos/Forbes 1.svg" alt="Forbes" width={80} height={30} />
+                <p className="text-sm text-custom-purple-light">Forbes Member Council 2022</p>
+              </div>
+              <div className="space-y-3">
+                <Image src="/company_logos/Google.svg" alt="Google" width={80} height={30} />
+                <p className="text-sm text-custom-purple-light">Developers Certified Agency</p>
+              </div>
+              <div className="space-y-3">
+                <Image src="/company_logos/clutch.svg" alt="Clutch" width={80} height={30} />
+                <p className="text-sm text-custom-purple-light">Top App DevelopmentCompany in USA 2023</p>
+              </div>
+            </div>
+            <Button variant="outline" className="text-black bg-custom-purple-light hover:bg-custom-purple-light mt-4">
+              View More Awards
+            </Button>
+          </div>
+
+          {/* We use latest technologies */}
+          <div className="bg-purple-100 p-6 rounded-lg">
+            <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
+              We use latest technologies to run your project smoothly
+            </h2>
+            <div className="flex flex-wrap gap-2">
+              {['JavaScript', 'TypeScript', 'Node.js', 'React', 'Swift', 'Java', 'Objective-C', 'Kotlin'].map(
+                (tech) => (
+                  <span key={tech} className="bg-white px-3 py-1 rounded-full text-sm">
+                    {tech}
+                  </span>
+                ),
+              )}
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-6 md:mt-20 w-full md:w-1/2">
+          {/* Synnestra has been recognized */}
+          <div className="bg-gray-100 p-6 rounded-lg relative row-span-2">
+            <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
+              Synnestra has been recognized as a Leader in the 2024 Gartner
+            </h2>
+            <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
+              <Button variant="link" className="mt-4">
+                View the report
+              </Button>
+              <div className="size-full md:size-48">
+                <Image
+                  src="/illustrations/shape-dots-black.svg"
+                  alt="Decorative triangle"
+                  width={400}
+                  height={400}
+                  className="size-full object-contain"
+                />
+              </div>
+            </div>
+          </div>
+          {/* Create a great career */}
+          <div className="bg-custom-purple text-white p-6 rounded-lg relative">
+            <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
+              Create a great career and grow your future with Synnestra
+            </h2>
+            <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
+              <Button variant="outline" className="text-black bg-custom-purple-light hover:bg-custom-purple-light mt-4">
+                View Open Positions
+              </Button>
+              <div className="size-full md:size-48">
+                <Image
+                  src="/career_oppurtunities.png"
+                  alt="Team working together"
+                  width={400}
+                  height={400}
+                  quality={100}
+                  className="size-full object-contain rounded-3xl"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <ReviewSection />
       <NewsletterSubscription />
     </div>
   );

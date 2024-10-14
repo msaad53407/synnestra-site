@@ -5,6 +5,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import ServicesDropdown from './ServicesDropdown';
+import MobileNav from './MobileNav';
 
 export default function Header() {
   const pathname = usePathname();
@@ -14,8 +15,8 @@ export default function Header() {
       <Link href="/" className="text-3xl font-normal text-custom-purple">
         Synnestra
       </Link>
-      <div className="flex items-center space-x-8">
-        <nav className='md:block hidden'>
+      <div className="hidden md:flex items-center space-x-8">
+        <nav>
           <ul className="flex space-x-6 items-center">
             <li>
               <Link
@@ -73,11 +74,12 @@ export default function Header() {
             </li>
           </ul>
         </nav>
-        <Button className="bg-custom-purple hover:bg-custom-purple-light text-white">
+        <Button className="bg-custom-purple hover:bg-custom-purple text-white">
           Contact us
           <ArrowUpRight className="ml-2 h-4 w-4" />
         </Button>
       </div>
+      <MobileNav />
     </header>
   );
 }

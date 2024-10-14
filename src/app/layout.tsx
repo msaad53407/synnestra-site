@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <Header />
-        <main className="w-full max-w-screen-2xl mx-auto">{children}</main>
+        <main className="w-full max-w-screen-2xl mx-auto overflow-x-hidden">{children}</main>
         <Footer />
       </body>
     </html>

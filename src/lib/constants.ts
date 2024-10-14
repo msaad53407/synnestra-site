@@ -1,4 +1,4 @@
-import { Company, Perk, ProjectShowcase, Solution } from '@/types';
+import { Company, Perk, ProjectShowcase, Review, Solution } from '@/types';
 
 export const companies: Company[] = [
   {
@@ -110,5 +110,50 @@ export const solutions: Solution[] = [
     title: 'Cloud Services',
     description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
     icon: '/icons/hugeicons_ai-security-01.svg',
+  },
+];
+
+export const reviews: Review[] = [
+  {
+    name: 'Emily Sutherland',
+    role: 'Marketing Director at AVD',
+    review:
+      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+    avatar: '/people_images/reviewer_1.png',
+  },
+  {
+    name: 'John Nordstrom',
+    role: 'CFO',
+    review:
+      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+    avatar: '/people_images/reviewer_2.png',
+  },
+  {
+    name: 'Michael Brown',
+    role: 'CTO',
+    review:
+      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+    avatar: '/people_images/reviewer_3.png',
+  },
+  {
+    name: 'Sarah Smith',
+    role: 'CIO',
+    review:
+      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+    avatar: '/people_images/reviewer_4.png',
+  },
+  {
+    name: 'Gavy Gruzansky',
+    role: 'CEO A Govarda',
+    review:
+      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+    avatar: '/people_images/reviewer_5.png',
+  },
+  {
+    name: 'Omri Pelad',
+    role: 'CEO B',
+    review:
+      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+    avatar: '/people_images/reviewer_6.png',
   },
 ];

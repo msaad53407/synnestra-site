@@ -24,3 +24,10 @@ export type Solution = {
   description: string;
   icon: string;
 };
+
+export type Review = {
+  name: string;
+  avatar: string;
+  role: string;
+  review: string;
+};
