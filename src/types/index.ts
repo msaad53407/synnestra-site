@@ -31,3 +31,8 @@ export type Review = {
   role: string;
   review: string;
 };
+
+export type TechnologyCard = {
+  name: string;
+  imageSrc: string;
+};
