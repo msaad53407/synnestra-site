@@ -1,3 +1,4 @@
+import { TimelineEntry } from '@/components/ui/timeline';
 import { Company, Perk, ProjectShowcase, Review, Solution, TechnologyCard } from '@/types';
 
 export const companies: Company[] = [
@@ -287,5 +288,103 @@ export const technologyCards: TechnologyCard[] = [
   {
     name: 'CSS',
     imageSrc: '/technology_logos/css.svg',
+  },
+];
+
+export const timelineItems: TimelineEntry[] = [
+  {
+    title: '2016',
+    content: [
+      {
+        heading: 'Synnestra Begin its Journey',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2017',
+    content: [
+      {
+        heading: 'We are Transparent',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2018',
+    content: [
+      {
+        heading: 'Assent',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2019',
+    content: [
+      {
+        heading: 'Synnestra signed a $30 Million contract',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2020',
+    content: [
+      {
+        heading: 'We are Transparent',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2021',
+    content: [
+      {
+        heading: 'Highest Value contract signing in Synnestra’s History',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2022',
+    content: [
+      {
+        heading: 'Artificial Intelligence',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+      {
+        heading: 'Synnestra announced first North American go live for NFS Ascent',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2023',
+    content: [
+      {
+        heading: 'Most Innovative Company in the Equipment Finance Ecosystem',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
+  },
+  {
+    title: '2024',
+    content: [
+      {
+        heading: 'Otoz 2.0 Launched',
+        description:
+          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+      },
+    ],
   },
 ];

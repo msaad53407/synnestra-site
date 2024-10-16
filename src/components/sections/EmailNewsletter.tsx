@@ -17,7 +17,7 @@ export default function NewsletterSubscription() {
 
   return (
     <section className="bg-custom-purple px-4 py-6 sm:px-6 lg:px-12">
-      <div className="bg-purple-950 rounded-2xl p-8 md:p-12 md:my-8">
+      <div className="bg-purple-100/20 rounded-2xl p-8 md:p-12 md:my-8">
         <div className="md:flex md:items-center md:justify-between mt-12">
           <div className="mb-6 md:mb-0 md:mr-8">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-2">Newsletter</h2>

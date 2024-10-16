@@ -15,7 +15,7 @@ export default function Header() {
       <Link href="/" className="text-3xl font-normal text-custom-purple">
         Synnestra
       </Link>
-      <div className="hidden md:flex items-center space-x-8">
+      <div className="hidden lg:flex items-center space-x-8">
         <nav>
           <ul className="flex space-x-6 items-center">
             <li>

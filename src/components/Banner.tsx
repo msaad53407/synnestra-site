@@ -19,6 +19,7 @@ const Banner = ({ image, children, className }: Props) => {
           quality={100}
           alt="BannerImage"
           className="object-cover size-full"
+          priority
         />
       </div>
       <div className={cn('absolute flex flex-col gap-4 left-10 bottom-10 max-w-screen-xl', className)}>{children}</div>

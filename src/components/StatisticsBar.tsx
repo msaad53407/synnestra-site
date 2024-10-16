@@ -37,7 +37,7 @@ export default function StatisticsBar() {
   );
 }
 
-function StatItem({ value, unit, description }: { value: number; unit: string; description: string }) {
+export function StatItem({ value, unit, description }: { value: number; unit: string; description: string }) {
   return (
     <div className="w-full sm:w-1/2 md:w-auto px-4 mb-4 md:mb-0 flex items-center">
       <div className="hidden md:block w-px h-12 bg-gray-300 mr-4"></div>

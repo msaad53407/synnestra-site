@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { animate, motion, useMotionValue, useTransform } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 type AnimatedCounterProps = {
   from: number;
@@ -19,10 +19,26 @@ export default function AnimatedCounter({
   const count = useMotionValue(from);
   const rounded = useTransform(count, (latest) => formatValue(latest));
   const [isMounted, setIsMounted] = useState(false);
+  const ref = useRef<HTMLSpanElement | null>(null);
 
   useEffect(() => {
-    setIsMounted(true);
-  }, []);
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setIsMounted(true);
+        }
+      },
+      { rootMargin: '100px' },
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, [ref]);
 
   useEffect(() => {
     if (isMounted) {
@@ -31,5 +47,5 @@ export default function AnimatedCounter({
     }
   }, [count, to, duration, isMounted]);
 
-  return <motion.span>{rounded}</motion.span>;
+  return <motion.span ref={ref}>{rounded}</motion.span>;
 }
