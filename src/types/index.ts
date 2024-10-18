@@ -36,3 +36,10 @@ export type TechnologyCard = {
   name: string;
   imageSrc: string;
 };
+
+export type Project = {
+  slug: string;
+  title: string;
+  link: string;
+  thumbnail: string;
+};

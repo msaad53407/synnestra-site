@@ -1,5 +1,5 @@
 import { TimelineEntry } from '@/components/ui/timeline';
-import { Company, Perk, ProjectShowcase, Review, Solution, TechnologyCard } from '@/types';
+import { Company, Perk, Project, ProjectShowcase, Review, Solution, TechnologyCard } from '@/types';
 
 export const companies: Company[] = [
   {
@@ -159,81 +159,93 @@ export const reviews: Review[] = [
   },
 ];
 
-export const products = [
+export const products: Project[] = [
   {
+    slug: 'moonbeam',
     title: 'Moonbeam',
     link: 'https://gomoonbeam.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
   },
   {
+    slug: 'cursor',
     title: 'Cursor',
     link: 'https://cursor.so',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/cursor.png',
   },
   {
+    slug: 'rogue',
     title: 'Rogue',
     link: 'https://userogue.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/rogue.png',
   },
-
   {
+    slug: 'editorially',
     title: 'Editorially',
     link: 'https://editorially.org',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/editorially.png',
   },
   {
+    slug: 'editrix-ai',
     title: 'Editrix AI',
     link: 'https://editrix.ai',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/editrix.png',
   },
   {
+    slug: 'pixel-perfect',
     title: 'Pixel Perfect',
     link: 'https://app.pixelperfect.quest',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
   },
-
   {
+    slug: 'algochurn',
     title: 'Algochurn',
     link: 'https://algochurn.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/algochurn.png',
   },
   {
+    slug: 'aceternity-ui',
     title: 'Aceternity UI',
     link: 'https://ui.aceternity.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/aceternityui.png',
   },
   {
+    slug: 'tailwind-master-kit',
     title: 'Tailwind Master Kit',
     link: 'https://tailwindmasterkit.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png',
   },
   {
+    slug: 'smartbridge',
     title: 'SmartBridge',
     link: 'https://smartbridgetech.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/smartbridge.png',
   },
   {
+    slug: 'renderwork-studio',
     title: 'Renderwork Studio',
     link: 'https://renderwork.studio',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/renderwork.png',
   },
-
   {
+    slug: 'creme-digital',
     title: 'Creme Digital',
     link: 'https://cremedigital.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/cremedigital.png',
   },
   {
+    slug: 'golden-bells-academy',
     title: 'Golden Bells Academy',
     link: 'https://goldenbellsacademy.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png',
   },
   {
+    slug: 'invoker-labs',
     title: 'Invoker Labs',
     link: 'https://invoker.lol',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/invoker.png',
   },
   {
+    slug: 'e-free-invoice',
     title: 'E Free Invoice',
     link: 'https://efreeinvoice.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png',

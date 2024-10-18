@@ -1,8 +1,10 @@
+import Footer from '@/components/Footer';
+import Header from '@/components/Header';
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
-import Header from '@/components/Header';
-import Footer from '@/components/Footer';
+import Providers from './Providers';
+import React from 'react';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700', '900'] });
 
@@ -13,14 +15,21 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: Readonly<{
   children: React.ReactNode;
+  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
         <Header />
-        <main className="w-full max-w-screen-2xl mx-auto overflow-x-hidden">{children}</main>
+        <main className="w-full max-w-screen-2xl mx-auto overflow-x-hidden">
+          <Providers>
+            {modal}
+            {children}
+          </Providers>
+        </main>
         <Footer />
       </body>
     </html>

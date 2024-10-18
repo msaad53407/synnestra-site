@@ -1,33 +1,26 @@
 'use client';
+import { useActiveProject } from '@/hooks/useActiveProject';
+import { Project } from '@/types';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import { InfiniteMovingCards } from './ui/infinite-moving-cards';
+import { useRef } from 'react';
 import { ProjectCard } from './cards/ProjectCard';
+import { InfiniteMovingCards } from './ui/infinite-moving-cards';
 
-export const InfiniteScrollingProjects = ({
-  products,
-}: {
-  products: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  }[];
-}) => {
+export const InfiniteScrollingProjects = ({ products }: { products: Project[] }) => {
   const firstRow = products.slice(0, 5);
   const secondRow = products.slice(5, 10);
   const thirdRow = products.slice(10, 15);
-  const ref = React.useRef(null);
+
+  const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['start start', 'end start'],
   });
 
+  const { activeProject } = useActiveProject();
+
   const springConfig = { stiffness: 300, damping: 30, bounce: 100 };
 
-  //   const translateX = useSpring(useTransform(scrollYProgress, [0, 1], [0, 1000]), springConfig);
-  //   const translateXReverse = useSpring(useTransform(scrollYProgress, [0, 1], [0, -1000]), springConfig);
   const rotateX = useSpring(useTransform(scrollYProgress, [0, 0.2], [15, 0]), springConfig);
   const opacity = useSpring(useTransform(scrollYProgress, [0, 0.2], [0.2, 1]), springConfig);
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
@@ -45,21 +38,21 @@ export const InfiniteScrollingProjects = ({
         className=""
       >
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20 mb-20">
-          <InfiniteMovingCards speed="slow">
+          <InfiniteMovingCards speed="slow" pause={activeProject ? firstRow.includes(activeProject) : false}>
             {firstRow.map((product) => (
               <ProjectCard key={product.title} product={product} />
             ))}
           </InfiniteMovingCards>
         </motion.div>
         <motion.div className="flex flex-row  mb-20 space-x-20">
-          <InfiniteMovingCards direction="right" speed="slow">
+          <InfiniteMovingCards speed="slow" pause={activeProject ? secondRow.includes(activeProject) : false}>
             {secondRow.map((product) => (
               <ProjectCard key={product.title} product={product} />
             ))}
           </InfiniteMovingCards>
         </motion.div>
         <motion.div className="flex flex-row-reverse space-x-reverse space-x-20">
-          <InfiniteMovingCards speed="slow">
+          <InfiniteMovingCards speed="slow" pause={activeProject ? thirdRow.includes(activeProject) : false}>
             {thirdRow.map((product) => (
               <ProjectCard key={product.title} product={product} />
             ))}
@@ -81,37 +74,5 @@ export const Header = () => {
         and designers that love to build amazing products.
       </p>
     </div>
-  );
-};
-
-export const ProductCard = ({
-  product,
-}: {
-  product: {
-    title: string;
-    link: string;
-    thumbnail: string;
-  };
-}) => {
-  return (
-    <motion.div
-      whileHover={{
-        y: -20,
-      }}
-      key={product.title}
-      className="group/product h-96 w-[30rem] relative flex-shrink-0"
-    >
-      <Link href={product.link} className="block group-hover/product:shadow-2xl ">
-        <Image
-          src={product.thumbnail}
-          height="600"
-          width="600"
-          className="object-cover object-left-top absolute h-full w-full inset-0"
-          alt={product.title}
-        />
-      </Link>
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">{product.title}</h2>
-    </motion.div>
   );
 };

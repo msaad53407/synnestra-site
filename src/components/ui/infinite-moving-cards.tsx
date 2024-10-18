@@ -1,23 +1,25 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export const InfiniteMovingCards = ({
   direction = 'left',
   speed = 'fast',
   pauseOnHover = true,
+  pause = false,
   className,
   children,
 }: {
   children: React.ReactNode;
   direction?: 'left' | 'right';
   speed?: 'fast' | 'normal' | 'slow';
+  pause?: boolean;
   pauseOnHover?: boolean;
   className?: string;
 }) => {
-  const containerRef = React.useRef<HTMLDivElement>(null);
-  const scrollerRef = React.useRef<HTMLUListElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const scrollerRef = useRef<HTMLUListElement>(null);
 
   useEffect(() => {
     function addAnimation() {
@@ -68,6 +70,7 @@ export const InfiniteMovingCards = ({
           ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
           start && 'animate-scroll ',
           pauseOnHover && 'hover:[animation-play-state:paused]',
+          pause && '[animation-play-state:paused]',
         )}
       >
         {children}
