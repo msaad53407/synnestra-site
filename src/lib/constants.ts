@@ -400,3 +400,12 @@ export const timelineItems: TimelineEntry[] = [
     ],
   },
 ];
+
+export const servicesProvided = [
+  'managed-services',
+  'it-consultancy-and-advisory',
+  'cyber-security',
+  'web-development',
+  'mobile-development',
+  'cloud-services',
+];

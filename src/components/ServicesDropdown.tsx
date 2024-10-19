@@ -8,6 +8,8 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
+import { servicesProvided } from '@/lib/constants';
+import { transformServiceSlug } from '@/lib/utils';
 
 type Props = {
   triggerComponent: React.ReactNode;
@@ -26,18 +28,14 @@ export default function ServicesDropdown({ triggerComponent }: Props) {
                   <div className="md:col-span-2">
                     <h3 className="font-bold text-lg mb-3 text-custom-black-light">Services</h3>
                     <ul className="space-y-2">
-                      {[
-                        'Managed Services',
-                        'IT Consulting & Advisory',
-                        'Cyber Security',
-                        'Web Development',
-                        'Mobile Development',
-                        'Cloud Services',
-                      ].map((service) => (
+                      {servicesProvided.map((service) => (
                         <li key={service}>
                           <NavigationMenuLink asChild>
-                            <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple hover:underline">
-                              {service}
+                            <Link
+                              href={`/services/${service}`}
+                              className="text-sm text-gray-600 hover:text-custom-purple hover:underline"
+                            >
+                              {transformServiceSlug(service)}
                             </Link>
                           </NavigationMenuLink>
                         </li>

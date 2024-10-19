@@ -6,11 +6,12 @@ type Props = {
   children: React.ReactNode;
   image: string;
   className?: string;
+  minHeight?: string;
 };
 
-const Banner = ({ image, children, className }: Props) => {
+const Banner = ({ image, children, className, minHeight = 'min-h-[450px]' }: Props) => {
   return (
-    <div className="relative w-full h-auto min-h-[450px]">
+    <div className={`relative w-full h-auto ${minHeight}`}>
       <div className="absolute inset-0">
         <Image
           src={image}
