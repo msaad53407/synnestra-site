@@ -29,20 +29,20 @@ export default function ServicesDropdown({ triggerComponent }: Props) {
                     <h3 className="font-bold text-lg mb-3 text-custom-black-light">Services</h3>
                     <ul className="space-y-2">
                       {servicesProvided.map((service) => (
-                        <li key={service}>
+                        <li key={service.slug}>
                           <NavigationMenuLink asChild>
                             <Link
-                              href={`/services/${service}`}
+                              href={`/services/${service.slug}`}
                               className="text-sm text-gray-600 hover:text-custom-purple hover:underline"
                             >
-                              {transformServiceSlug(service)}
+                              {transformServiceSlug(service.slug)}
                             </Link>
                           </NavigationMenuLink>
                         </li>
                       ))}
                     </ul>
                   </div>
-                  <div className="md:col-span-3">
+                  <div className="md:col-span-5">
                     <h3 className="font-bold text-lg mb-3 text-custom-black-light">Business Challenges</h3>
                     <div className="grid grid-cols-2 gap-3">
                       {[
@@ -62,35 +62,6 @@ export default function ServicesDropdown({ triggerComponent }: Props) {
                         </NavigationMenuLink>
                       ))}
                     </div>
-                  </div>
-                  <div className="md:col-span-2">
-                    <h3 className="font-bold text-lg mb-3 text-custom-black-light">Industry Focus</h3>
-                    <ul className="space-y-2">
-                      {[
-                        'Industry Manufacturing',
-                        'Transportation Logistics',
-                        'Healthcare',
-                        'Web Development',
-                        'Transportation Logistics',
-                        'Industry Manufacturing',
-                      ].map((industry) => (
-                        <li key={industry}>
-                          <NavigationMenuLink asChild>
-                            <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple hover:underline">
-                              {industry}
-                            </Link>
-                          </NavigationMenuLink>
-                        </li>
-                      ))}
-                    </ul>
-                    <NavigationMenuLink asChild>
-                      <Link
-                        href="#"
-                        className="text-sm text-custom-purple font-medium mt-3 inline-block hover:underline"
-                      >
-                        View All
-                      </Link>
-                    </NavigationMenuLink>
                   </div>
                 </div>
               </div>
