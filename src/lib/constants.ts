@@ -444,12 +444,20 @@ export const servicesProvided = [
           title: "Embrace Tomorrow's Possibilities",
           description: 'Future-proof your business with innovative technology solutions.',
         },
+        {
+          title: "Embrace Tomorrow's Possibilities",
+          description: 'Future-proof your business with innovative technology solutions.',
+        },
+        {
+          title: "Embrace Tomorrow's Possibilities",
+          description: 'Future-proof your business with innovative technology solutions.',
+        },
       ],
     },
   },
   {
     slug: 'it-consultancy-and-advisory',
-    imageSrc: '/managed_services_section.png',
+    imageSrc: '/it_consultantancy.jpg',
     benefits: [
       {
         icon: CircleDotDashed,
@@ -488,12 +496,20 @@ export const servicesProvided = [
           title: 'Growth-Ready Solutions',
           description: 'Prepare your infrastructure for future growth with scalable IT solutions.',
         },
+        {
+          title: 'Tech Risk Assessment',
+          description: 'Understand and mitigate risks through expert assessment and planning.',
+        },
+        {
+          title: 'Growth-Ready Solutions',
+          description: 'Prepare your infrastructure for future growth with scalable IT solutions.',
+        },
       ],
     },
   },
   {
     slug: 'cyber-security',
-    imageSrc: '/managed_services_section.png',
+    imageSrc: '/cybersecurity.jpg',
     benefits: [
       {
         icon: CircleDotDashed,
@@ -532,12 +548,20 @@ export const servicesProvided = [
           title: 'Data Compliance & Privacy',
           description: 'Ensure data privacy and regulatory compliance in your business.',
         },
+        {
+          title: 'Real-Time Monitoring',
+          description: 'Detect and respond to threats with proactive monitoring and alerts.',
+        },
+        {
+          title: 'Data Compliance & Privacy',
+          description: 'Ensure data privacy and regulatory compliance in your business.',
+        },
       ],
     },
   },
   {
     slug: 'web-development',
-    imageSrc: '/managed_services_section.png',
+    imageSrc: '/web_development.jpg',
     benefits: [
       {
         icon: CircleDotDashed,
@@ -576,12 +600,20 @@ export const servicesProvided = [
           title: 'Custom Solutions for Your Brand',
           description: 'Develop websites tailored to your unique business needs.',
         },
+        {
+          title: 'SEO-Optimized Development',
+          description: 'Boost online visibility with built-in SEO practices.',
+        },
+        {
+          title: 'Custom Solutions for Your Brand',
+          description: 'Develop websites tailored to your unique business needs.',
+        },
       ],
     },
   },
   {
     slug: 'mobile-development',
-    imageSrc: '/managed_services_section.png',
+    imageSrc: '/mobile-application-development.webp',
     benefits: [
       {
         icon: CircleDotDashed,
@@ -620,12 +652,20 @@ export const servicesProvided = [
           title: 'Performance-Driven Development',
           description: 'Deliver high-quality mobile experiences that meet modern standards.',
         },
+        {
+          title: 'User-Centric Interfaces',
+          description: 'Create interfaces that prioritize user engagement and satisfaction.',
+        },
+        {
+          title: 'Performance-Driven Development',
+          description: 'Deliver high-quality mobile experiences that meet modern standards.',
+        },
       ],
     },
   },
   {
     slug: 'cloud-services',
-    imageSrc: '/managed_services_section.png',
+    imageSrc: '/cloud_services.jpeg',
     benefits: [
       {
         icon: CircleDotDashed,
@@ -655,6 +695,14 @@ export const servicesProvided = [
         {
           title: 'Hybrid & Multi-Cloud Options',
           description: 'Choose the cloud infrastructure that fits your business best.',
+        },
+        {
+          title: 'Disaster Recovery & Backup',
+          description: 'Keep your data safe with built-in recovery and backup solutions.',
+        },
+        {
+          title: 'Collaboration & Efficiency',
+          description: 'Enhance team collaboration with flexible, cloud-based solutions.',
         },
         {
           title: 'Disaster Recovery & Backup',

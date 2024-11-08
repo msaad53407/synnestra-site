@@ -1,9 +1,11 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 'use client';
+
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import React, { useRef } from 'react';
-import { Button } from './button';
+import React, { useEffect, useRef, useState } from 'react';
+import { Button } from '@/components/ui/button';
+import GradientText from '@/components/GradientText';
+import { cn } from '@/lib/utils';
 
 export const StickyScroll = ({
   content,
@@ -17,14 +19,36 @@ export const StickyScroll = ({
     description: string;
   }[];
 }) => {
-  const [activeCard, setActiveCard] = React.useState(0);
-  const ref = useRef<any>(null);
+  const [activeCard, setActiveCard] = useState(0);
+  const [isInView, setIsInView] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const contentRef = useRef<HTMLDivElement>(null);
+
   const { scrollYProgress } = useScroll({
-    // uncomment line 22 and comment line 23 if you DONT want the overflow container and want to have it change on the entire page scroll
-    // target: ref
-    container: ref,
+    target: contentRef,
     offset: ['start start', 'end start'],
   });
+
+  useEffect(() => {
+    const currentSectionRef = sectionRef.current;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setIsInView(entry.isIntersecting);
+      },
+      { threshold: 0.5 },
+    );
+
+    if (currentSectionRef) {
+      observer.observe(currentSectionRef);
+    }
+
+    return () => {
+      if (currentSectionRef) {
+        observer.unobserve(currentSectionRef);
+      }
+    };
+  }, []);
+
   const cardLength = content.length;
 
   useMotionValueEvent(scrollYProgress, 'change', (latest) => {
@@ -43,42 +67,51 @@ export const StickyScroll = ({
 
   return (
     <motion.div
+      ref={sectionRef}
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[800px] overflow-y-auto grid grid-cols-2 justify-center relative space-x-10 rounded-md p-10"
-      ref={ref}
+      className="relative min-h-screen"
     >
-      <div className="sticky left-0 top-0 flex h-screen bg-background px-12">
-        <div className="space-y-5">
-          <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Our Offerings</p>
-          <h2 className="mt-4 text-5xl font-medium tracking-tight leading-relaxed">{mainHeading}</h2>
-          <p className="mt-4 text-lg text-muted-foreground">{subtitle}</p>
-          <Button className="mt-8 gap-2 bg-custom-purple text-white rounded-full hover:bg-custom-purple" size="lg">
-            Get in Touch
-            <ArrowUpRight className="size-4" />
-          </Button>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-10 relative">
+        <div className={`left-0 top-0 h-fit md:h-screen flex bg-background px-4 md:px-12`}>
+          <div
+            className={cn(
+              `top-28 h-fit space-y-5 max-w-xl transition`,
+              isInView && 'md:fixed -translate-y-10 md:w-1/3',
+            )}
+          >
+            <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">Our Offerings</p>
+            <GradientText className="mt-4 text-4xl md:text-5xl font-medium tracking-tight leading-relaxed">
+              {mainHeading}
+            </GradientText>
+            <p className="mt-4 text-lg text-muted-foreground">{subtitle}</p>
+            <Button className="mt-8 gap-2 bg-custom-purple text-white rounded-full hover:bg-custom-purple" size="lg">
+              Get in Touch
+              <ArrowUpRight className="size-4" />
+            </Button>
+          </div>
         </div>
-      </div>
-      <div className="div relative flex items-start px-4">
-        <div className="max-w-2xl space-y-10">
-          {content.map((item, index) => (
-            <motion.div
-              key={item.title + index}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{
-                opacity: 1,
-                y: 0,
-                transition: { duration: 0.5, delay: index * 0.1 },
-              }}
-              viewport={{ margin: '-100px' }}
-              className="mr-12 rounded-xl border bg-card p-8 shadow-sm"
-            >
-              <h2 className="text-xl font-semibold">{item.title}</h2>
-              <p className="mt-4 text-muted-foreground">{item.description}</p>
-            </motion.div>
-          ))}
-          <div className="h-40" />
+        <div ref={contentRef} className={cn('relative flex items-start px-4')}>
+          <div className="max-w-2xl space-y-10">
+            {content.map((item, index) => (
+              <motion.div
+                key={item.title + index}
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: { duration: 0.5, delay: index * 0.1 },
+                }}
+                viewport={{ once: true, margin: '-100px' }}
+                className="rounded-xl border bg-card p-8 shadow-sm"
+              >
+                <h2 className="text-xl font-semibold">{item.title}</h2>
+                <p className="mt-4 text-muted-foreground">{item.description}</p>
+              </motion.div>
+            ))}
+            <div className="h-40" />
+          </div>
         </div>
       </div>
     </motion.div>

@@ -1,4 +1,5 @@
 import Banner from '@/components/Banner';
+import GradientText from '@/components/GradientText';
 import CompanyImpact from '@/components/sections/CompanyImpact';
 import NewsletterSubscription from '@/components/sections/EmailNewsletter';
 import SplitColorText from '@/components/SplitColorText';
@@ -55,10 +56,10 @@ const ServicePage = ({ params: { service } }: Props) => {
       {/* Managed IT Services Section */}
       <section className="w-full px-4 py-6 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center gap-x-20 gap-y-8">
         <div className="md:w-1/2">
-          <h2 className="text-5xl font-medium mb-4 leading-normal">
+          <GradientText>
             Our <span className="text-custom-purple">{transformServiceSlug(service)}</span> let you concentrate on what
             matters
-          </h2>
+          </GradientText>
           <p className="text-gray-600 mb-4">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
             atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.
@@ -74,7 +75,8 @@ const ServicePage = ({ params: { service } }: Props) => {
             alt="Managed IT Services"
             width={500}
             height={300}
-            className="rounded-lg object-cover w-full"
+            className="rounded-lg object-cover object-center aspect-square w-full hover:zoom-out-150 transition-all"
+            quality={100}
           />
         </div>
       </section>
@@ -85,7 +87,8 @@ const ServicePage = ({ params: { service } }: Props) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="mb-8">
             <h2 className="text-5xl font-medium mb-4 leading-normal">
-              Benefits of {transformServiceSlug(service)} provided by Synnestra
+              Benefits of <span className="text-custom-purple">{transformServiceSlug(service)}</span> provided by
+              Synnestra
             </h2>
             <p className="text-gray-600 max-w-2xl">
               At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
