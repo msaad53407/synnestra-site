@@ -1,5 +1,5 @@
 import { TimelineEntry } from '@/components/ui/timeline';
-import { Company, Perk, Project, ProjectShowcase, Review, Solution, TechnologyCard } from '@/types';
+import { Company, Industry, Perk, Project, ProjectShowcase, Review, Service, Solution, TechnologyCard } from '@/types';
 import { Brain, CircleDotDashed, Cog, Presentation } from 'lucide-react';
 
 export const companies: Company[] = [
@@ -402,7 +402,7 @@ export const timelineItems: TimelineEntry[] = [
   },
 ];
 
-export const servicesProvided = [
+export const servicesProvided: Service[] = [
   {
     slug: 'managed-services',
     imageSrc: '/managed_services_section.png',
@@ -714,5 +714,192 @@ export const servicesProvided = [
         },
       ],
     },
+  },
+];
+
+export const industries: Industry[] = [
+  {
+    slug: 'telecommunications',
+    imageSrc: '/industries/telecommunications_thumbnail.jpg',
+    bannerImage: '/industries/telecommunications_banner.jpg',
+    offers: {
+      mainHeading: 'Empowering Connectivity Solutions',
+      subtitle:
+        'In the fast-paced world of telecommunications, we provide advanced solutions to enhance connectivity, drive efficiency, and boost innovation.',
+      offerings: [
+        {
+          title: 'Optimized Network Management',
+          description:
+            'Streamline network operations with cutting-edge tools and analytics to ensure uninterrupted service.',
+        },
+        {
+          title: 'Scalable Communication Solutions',
+          description:
+            'Leverage scalable systems that grow with demand, providing seamless communication for customers.',
+        },
+        {
+          title: 'Customer-Centric Support',
+          description: 'Enhance customer satisfaction with tailored support solutions that respond to dynamic needs.',
+        },
+      ],
+    },
+    relatedArticles: [
+      {
+        slug: 'telecom-5g-future',
+        title: 'The Future of 5G in Telecommunications',
+        thumbnail: '/industries/banking_and_finance_thumbnail.jpg',
+      },
+      {
+        slug: 'telecom-customer-experience',
+        title: 'Improving Customer Experience in Telecom',
+        thumbnail: '/industries/healthcare_thumbnail.webp',
+      },
+    ],
+  },
+  {
+    slug: 'banking-finance',
+    imageSrc: '/industries/banking_and_finance_thumbnail.jpg',
+    bannerImage: '/industries/banking_and_finance_banner.jpg',
+    offers: {
+      mainHeading: 'Transforming Financial Services with Technology',
+      subtitle:
+        'Enhancing security, efficiency, and accessibility in the banking and finance industry through robust digital solutions.',
+      offerings: [
+        {
+          title: 'Advanced Data Security',
+          description: 'Protect financial data with top-notch security systems tailored for financial institutions.',
+        },
+        {
+          title: 'Automated Financial Processes',
+          description:
+            'Improve efficiency by automating routine tasks, allowing your team to focus on high-value activities.',
+        },
+        {
+          title: 'Enhanced Customer Analytics',
+          description:
+            'Gain valuable insights into customer behaviors to better tailor services and improve satisfaction.',
+        },
+      ],
+    },
+    relatedArticles: [
+      {
+        slug: 'fintech-trends-2024',
+        title: 'Emerging Trends in Fintech for 2024',
+        thumbnail: '/industries/retail_and_cpg_thumbnail.png',
+      },
+      {
+        slug: 'cybersecurity-finance',
+        title: 'Cybersecurity Best Practices in Banking',
+        thumbnail: '/industries/healthcare_thumbnail.webp',
+      },
+    ],
+  },
+  {
+    slug: 'public-sector',
+    imageSrc: '/industries/public_sector_thumbnail.png',
+    bannerImage: '/industries/public_sector_banner.jpg',
+    offers: {
+      mainHeading: 'Driving Digital Transformation in Public Sector',
+      subtitle:
+        'We help government agencies leverage technology to improve public services, increase transparency, and foster citizen engagement.',
+      offerings: [
+        {
+          title: 'Citizen-Centric Services',
+          description: 'Develop digital solutions that make public services more accessible and user-friendly.',
+        },
+        {
+          title: 'Secure and Compliant Solutions',
+          description: 'Implement secure systems that meet regulatory requirements and safeguard public data.',
+        },
+        {
+          title: 'Data-Driven Decision Making',
+          description: 'Utilize analytics to make informed decisions and enhance government operations.',
+        },
+      ],
+    },
+    relatedArticles: [
+      {
+        slug: 'digital-transformation-public-sector',
+        title: 'Digital Transformation in Government Services',
+        thumbnail: '/industries/telecommunications_thumbnail.jpg',
+      },
+      {
+        slug: 'public-sector-automation',
+        title: 'How Automation is Reshaping the Public Sector',
+        thumbnail: '/industries/banking_and_finance_thumbnail.jpg',
+      },
+    ],
+  },
+  {
+    slug: 'healthcare-pharmaceutical',
+    imageSrc: '/industries/healthcare_thumbnail.webp',
+    bannerImage: '/industries/healthcare_banner.png',
+    offers: {
+      mainHeading: 'Innovative Solutions for Healthcare and Pharmaceuticals',
+      subtitle:
+        'Supporting healthcare providers and pharmaceutical companies with digital tools to enhance patient care and streamline operations.',
+      offerings: [
+        {
+          title: 'Patient Data Management',
+          description: 'Optimize patient data storage and access, ensuring security and compliance.',
+        },
+        {
+          title: 'Telemedicine Platforms',
+          description: 'Develop solutions for remote consultations, increasing accessibility for patients.',
+        },
+        {
+          title: 'Supply Chain Optimization',
+          description: 'Streamline pharmaceutical supply chains for efficiency and reliability.',
+        },
+      ],
+    },
+    relatedArticles: [
+      {
+        slug: 'telemedicine-trends',
+        title: 'Top Trends in Telemedicine for 2024',
+        thumbnail: '/industries/retail_and_cpg_thumbnail.png',
+      },
+      {
+        slug: 'ai-in-pharma',
+        title: 'The Role of AI in Pharmaceutical Development',
+        thumbnail: '/industries/banking_and_finance_thumbnail.jpg',
+      },
+    ],
+  },
+  {
+    slug: 'retail-cpg',
+    imageSrc: '/industries/retail_and_cpg_thumbnail.png',
+    bannerImage: '/industries/retail_and_cpg_banner.jpg',
+    offers: {
+      mainHeading: 'Empowering Retail & CPG with Technology',
+      subtitle:
+        'Providing the retail and consumer packaged goods industries with tools to improve customer engagement and optimize operations.',
+      offerings: [
+        {
+          title: 'Personalized Customer Experiences',
+          description: 'Use data-driven insights to deliver personalized shopping experiences for customers.',
+        },
+        {
+          title: 'Inventory Management Solutions',
+          description: 'Optimize stock levels with real-time tracking and predictive analytics.',
+        },
+        {
+          title: 'Omnichannel Retail Strategies',
+          description: 'Seamlessly integrate online and offline channels for a cohesive shopping experience.',
+        },
+      ],
+    },
+    relatedArticles: [
+      {
+        slug: 'omnichannel-strategies',
+        title: 'Successful Omnichannel Strategies for Retail',
+        thumbnail: '/industries/telecommunications_thumbnail.jpg',
+      },
+      {
+        slug: 'retail-analytics',
+        title: 'How Analytics is Transforming Retail',
+        thumbnail: '/industries/healthcare_thumbnail.webp',
+      },
+    ],
   },
 ];

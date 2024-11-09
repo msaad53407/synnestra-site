@@ -1,7 +1,7 @@
 'use client';
 
 import { cn } from '@/lib/utils';
-import { useScroll, motion, useTransform, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { PropsWithChildren, useRef } from 'react';
 
 type Props = {
@@ -9,9 +9,9 @@ type Props = {
 } & PropsWithChildren;
 
 export default function GradientText({ className, children }: Props) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const defaultRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
-    target: containerRef,
+    target: defaultRef,
     offset: ['start end', 'end start'],
   });
 
@@ -26,7 +26,7 @@ export default function GradientText({ className, children }: Props) {
   const gradientX = useTransform(gradientProgress, [0, 1], ['0%', '200%']);
 
   return (
-    <div ref={containerRef}>
+    <div ref={defaultRef}>
       <motion.div
         className="relative"
         style={{

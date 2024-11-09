@@ -6,7 +6,7 @@ import SplitColorText from '@/components/SplitColorText';
 import { Button } from '@/components/ui/button';
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
 import { servicesProvided } from '@/lib/constants';
-import { transformServiceSlug } from '@/lib/utils';
+import { transformSlug } from '@/lib/utils';
 import { ArrowUpRight, Banknote, BarChart3, Building2, Lightbulb, Settings, Trophy, Users } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -31,7 +31,7 @@ const ServicePage = ({ params: { service } }: Props) => {
           minHeight="min-h-[350px]"
         >
           <div className="flex flex-col gap-4">
-            <h3 className="text-sm font-medium text-white leading-relaxed">{transformServiceSlug(service)}</h3>
+            <h3 className="text-sm font-medium text-white leading-relaxed">{transformSlug(service)}</h3>
             <p className="text-4xl min-[550px]:text-5xl md:text-7xl lg:text-8xl text-white font-medium mb-2">From a</p>
             <SplitColorText
               text="concept to"
@@ -57,8 +57,7 @@ const ServicePage = ({ params: { service } }: Props) => {
       <section className="w-full px-4 py-6 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center gap-x-20 gap-y-8">
         <div className="md:w-1/2">
           <GradientText>
-            Our <span className="text-custom-purple">{transformServiceSlug(service)}</span> let you concentrate on what
-            matters
+            Our <span className="text-custom-purple">{transformSlug(service)}</span> let you concentrate on what matters
           </GradientText>
           <p className="text-gray-600 mb-4">
             At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti
@@ -87,8 +86,7 @@ const ServicePage = ({ params: { service } }: Props) => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="mb-8">
             <h2 className="text-5xl font-medium mb-4 leading-normal">
-              Benefits of <span className="text-custom-purple">{transformServiceSlug(service)}</span> provided by
-              Synnestra
+              Benefits of <span className="text-custom-purple">{transformSlug(service)}</span> provided by Synnestra
             </h2>
             <p className="text-gray-600 max-w-2xl">
               At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti

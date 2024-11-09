@@ -1,3 +1,10 @@
+import { LucideProps } from 'lucide-react';
+import { ForwardRefExoticComponent, RefAttributes } from 'react';
+
+export type Prettify<T> = {
+  [K in keyof T]: T[K];
+} & {};
+
 export type Company = {
   title: string;
   thumbnail: string;
@@ -43,3 +50,34 @@ export type Project = {
   link: string;
   thumbnail: string;
 };
+
+export type Service = {
+  slug: string;
+  imageSrc: string;
+  benefits: {
+    icon: ForwardRefExoticComponent<Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>>;
+    title: string;
+    description: string;
+  }[];
+  offers: {
+    mainHeading: string;
+    subtitle: string;
+    offerings: {
+      title: string;
+      description: string;
+    }[];
+  };
+};
+
+export type ArticlePreview = {
+  slug: string;
+  title: string;
+  thumbnail: string;
+};
+
+export type Industry = Prettify<
+  Omit<Service, 'benefits'> & {
+    bannerImage: string;
+    relatedArticles: ArticlePreview[];
+  }
+>;

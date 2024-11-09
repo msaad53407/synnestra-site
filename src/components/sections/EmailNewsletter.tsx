@@ -32,7 +32,7 @@ export default function NewsletterSubscription() {
               required
               className="bg-white rounded-3xl"
             />
-            <Button type="submit" className="bg-custom-purple hover:bg-custom-purple-light text-white rounded-3xl">
+            <Button type="submit" className="bg-custom-purple hover:bg-custom-purple text-white rounded-3xl">
               Sign Up
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
