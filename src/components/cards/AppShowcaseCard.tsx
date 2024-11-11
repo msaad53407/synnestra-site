@@ -4,6 +4,7 @@ import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import AnimatedSection from '@/components/AnimatedSection';
 
 type Props = {
   index: number;
@@ -15,7 +16,8 @@ const AppShowcaseCard = ({
   project: { color, description, headingColor, id, image, name, textColor },
 }: Props) => {
   return (
-    <div
+    <AnimatedSection
+      direction={index === 2 ? 'up' : index === 0 ? 'left' : 'right'}
       key={id}
       className={cn(
         `rounded-2xl bg-custom-cream p-6 flex flex-col min-h-80`,
@@ -48,7 +50,7 @@ const AppShowcaseCard = ({
           </Link>
         </div>
       </div>
-    </div>
+    </AnimatedSection>
   );
 };
 

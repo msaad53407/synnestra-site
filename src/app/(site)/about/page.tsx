@@ -17,11 +17,13 @@ const AboutPage = () => {
               Explore the world of Synnestra Technologies.
             </h1>
             <p className="text-white font-normal">
-              Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.{' '}
+              Synnestra Technologies is a leading provider of cutting-edge technology solutions that empower the world&apos;s
+              top companies to achieve their goals and stay ahead of the competition.
             </p>
           </div>
         </Banner>
-        <section className="md:absolute left-1/2 transform w-[95%] mx-auto lg:w-max border border-gray-300 md:-translate-x-1/2 -bottom-32 lg:-bottom-20 p-10 flex flex-col gap-5 items-center bg-white rounded-xl shadow-md">
+        <section
+          className="md:absolute left-1/2 transform w-[95%] mx-auto lg:w-max border border-gray-300 md:-translate-x-1/2 -bottom-32 lg:-bottom-20 p-10 flex flex-col gap-5 items-center bg-white rounded-xl shadow-md">
           <h3 className="text-xl font-semibold">The World&apos;s leading technologies are powered by Synnestra.</h3>
           <div className="flex gap-5 items-center justify-center w-full flex-wrap">
             {technologyCards.map((techCard) => (
@@ -39,17 +41,16 @@ const AboutPage = () => {
           <span className="text-custom-purple">technology solutions</span> for over four decades
         </h3>
         <p className="text-sm text-gray-400 text-center">
-          Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-          habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames
-          arcu sed auctor. Euismod habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Recusandae explicabo tempora sit laboriosam inventore dolorem veniam, ea quo voluptatem vitae.
+          Synnestra&apos;s legacy of innovation and unwavering dedication to client success has earned us the trust and
+          loyalty of the world&apos;s leading organizations. Through our deep domain expertise, advanced technology
+          capabilities, and exceptional service delivery, we have consistently helped our clients navigate complex
+          challenges, seize new opportunities, and drive sustainable growth.
         </p>
         <p className="text-sm text-gray-400 text-center">
-          Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-          habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames
-          arcu sed auctor. Euismod habitant turpis pellentesque Lorem ipsum dolor, sit amet consectetur adipisicing
-          elit. Fuga vero voluptate, ab rem adipisci labore voluptas modi provident, voluptatum, quam praesentium
-          dolores eum unde eos quisquam error sit temporibus rerum?
+          The proposed content highlights Synnestra&apos;s unique positioning as a leading provider of cutting-edge
+          technology solutions, its extensive experience and proven track record of serving top global companies, and
+          its commitment to innovation, quality, and customer satisfaction. This information is tailored to be relevant,
+          informative, and appropriate for the context of the page.
         </p>
       </section>
 
@@ -64,9 +65,8 @@ const AboutPage = () => {
           </div>
           <h3 className="text-3xl">Proven track record</h3>
           <p className="text-gray-600 text-sm">
-            Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-            habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames
-            arcu sed auctor. Euismod habitant turpis pellentesque
+            Synnestra&apos;s track record of success is a testament to our commitment to excellence, innovation, and
+            client satisfaction.
           </p>
         </div>
 
@@ -99,7 +99,8 @@ const AboutPage = () => {
 
             <div className="bg-white  flex-1 w-full">
               <h3 className="font-semibold mb-4 text-2xl">Product & Services</h3>
-              <div className="min-h-60 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 rounded-xl border border-black">
+              <div
+                className="min-h-60 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 rounded-xl border border-black">
                 <div className="md:border-r md:border-r-black max-md:border-b max-md:border-b-black">
                   <h4 className="font-semibold mb-2">Mobility</h4>
                   <ul className="text-sm text-gray-600 space-y-1 list-disc p-1">
@@ -168,7 +169,8 @@ const AboutPage = () => {
             <div className="bg-white rounded-lg w-full md:col-span-2">
               <h3 className="font-semibold mb-4 text-2xl">Proven Market Experience and Footprint</h3>
               <div className="space-y-4 min-h-60 grid grid-cols-1 md:grid-cols-3 p-4 rounded-xl border border-black">
-                <div className="flex flex-col justify-center md:border-r md:border-r-black max-md:border-b max-md:border-b-black px-4">
+                <div
+                  className="flex flex-col justify-center md:border-r md:border-r-black max-md:border-b max-md:border-b-black px-4">
                   <h4 className="font-medium text-2xl">Americas</h4>
                   <p className="text-2xl font-bold">
                     <AnimatedCounter from={0} to={40} />+
@@ -176,7 +178,8 @@ const AboutPage = () => {
                   </p>
                   <p className="text-sm text-gray-600">Austin | Los Angeles</p>
                 </div>
-                <div className="flex flex-col justify-center md:border-r md:border-r-black max-md:border-b max-md:border-b-black px-4">
+                <div
+                  className="flex flex-col justify-center md:border-r md:border-r-black max-md:border-b max-md:border-b-black px-4">
                   <h4 className="font-medium text-2xl">Europe & UK</h4>
                   <p className="text-2xl font-bold">
                     <AnimatedCounter from={0} to={30} />+
@@ -252,11 +255,9 @@ const AboutPage = () => {
         <div className="max-w-screen-lg mx-auto space-y-8">
           <h3 className="text-3xl font-bold text-center">Domain Expertise</h3>
           <p className="text-sm text-gray-400 text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa distinctio aut numquam quisquam! Earum eos
-            eaque quibusdam, mollitia cumque dolorem! Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Accusantium blanditiis similique at commodi. Corrupti iste dolorum quibusdam accusamus quis tenetur
-            necessitatibus? Odit in, necessitatibus dolorem facilis illum ea saepe. Eveniet nemo dolorum assumenda ipsum
-            sed quidem! Eum ratione quia sequi.
+            Synnestra Technologies is a trusted partner with deep domain expertise across a wide range of industries and
+            technology landscapes. For over four decades, we have been at the forefront of innovation, delivering
+            cutting-edge solutions that empower our clients to stay ahead of the curve.
           </p>
         </div>
         <div className="space-y-4">
@@ -264,14 +265,14 @@ const AboutPage = () => {
             <div className="col-span-1 md:col-span-4 bg-custom-purple relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed text-white">Committed to Quality Excellence</h4>
               <p className="text-sm font-medium text-white w-[80%]">
-                Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-                habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est
-                fames arcu sed auctor. Euismod habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur.
-                Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque Lorem
-                ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-                habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est
-                fames arcu sed auctor. Euismod habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur.
-                Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque{' '}
+                At the heart of Synnestra&apos;s ethos lies an unwavering commitment to quality and excellence. We have
+                built
+                a reputation for delivering exceptional results by adhering to the highest standards of engineering,
+                project management, and customer service. <br />
+                Our quality assurance processes are rigorous and multi-layered, ensuring that every solution we provide
+                meets the strictest criteria for performance, reliability, and security. We invest heavily in research
+                and development to stay at the forefront of technological advancements, continuously enhancing our
+                capabilities to better serve our clients.
               </p>
               <Image
                 src="/icons/grommet-icons_services.svg"
@@ -284,9 +285,10 @@ const AboutPage = () => {
             <div className="col-span-1 md:col-span-2 bg-gray-100 relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed">Committed to Quality Excellence</h4>
               <p className="text-sm font-medium w-1/2">
-                Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-                habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est
-                fames arcu sed auctor. Euismod habitant turpis pellentesque
+                Synnestra&apos;s clients can count on consistently high levels of service and support, backed by robust
+                service-level agreements and a customer-centric approach. Our teams are dedicated to proactively
+                identifying and addressing any potential issues, delivering prompt, effective resolutions that minimize
+                downtime and disruption.
               </p>
               <Image
                 src="/icons/Syn..svg"
@@ -301,9 +303,10 @@ const AboutPage = () => {
             <div className="col-span-1 md:col-span-2 bg-gray-100 relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed">Ensured Service Levels</h4>
               <p className="text-sm font-medium w-1/2">
-                Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-                habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est
-                fames arcu sed auctor. Euismod habitant turpis pellentesque
+                Synnestra&apos;s clients can count on consistently high levels of service and support, backed by robust
+                service-level agreements and a customer-centric approach. Our teams are dedicated to proactively
+                identifying and addressing any potential issues, delivering prompt, effective resolutions that minimize
+                downtime and disruption.
               </p>
               <Image
                 src="/icons/material-symbols_rewarded-ads-sharp.svg"
@@ -316,14 +319,14 @@ const AboutPage = () => {
             <div className="col-span-1 md:col-span-4 bg-custom-purple relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed text-white">Harnessing the Power of AI</h4>
               <p className="text-sm font-medium text-white w-[80%]">
-                Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-                habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est
-                fames arcu sed auctor. Euismod habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur.
-                Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque Lorem
-                ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod
-                habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est
-                fames arcu sed auctor. Euismod habitant turpis pellentesque Lorem ipsum dolor sit amet consectetur.
-                Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque{' '}
+                Synnestra&apos;s solutions leverage the transformative power of artificial intelligence to unlock new
+                frontiers of efficiency, innovation, and competitive advantage for our clients. Our AI-driven
+                capabilities span a diverse range of applications, from intelligent automation and predictive analytics
+                to natural language processing and computer vision. <br />
+                By embedding AI and machine learning at the core of our offerings, we empower our clients to make more
+                informed decisions, optimize critical processes, and unleash new possibilities for growth. Our team of
+                AI experts works closely with clients to identify high-impact use cases and implement robust, scalable
+                AI-powered solutions that deliver tangible, long-lasting benefits.
               </p>
               <Image
                 src="/icons/eos-icons_ai.svg"

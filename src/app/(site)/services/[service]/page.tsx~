@@ -108,7 +108,7 @@ const ServicePage = ({ params: { service } }: Props) => {
         </span>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 items-center">
           <div className="mb-8">
-            <h2 className="text-4xl md:text-5xl font-medium mb-4 leading-normal">
+            <h2 className="text-5xl font-medium mb-4 leading-normal">
               Benefits of <span className="text-custom-purple">{transformSlug(service)}</span> provided by Synnestra
             </h2>
             <p className="text-gray-600 max-w-2xl">

@@ -5,7 +5,8 @@ import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion';
 import { ArrowUpRight } from 'lucide-react';
-import { useEffect, useRef, useState } from 'react';
+import { useRef, useState } from 'react';
+import useInView from '@/hooks/useInView';
 
 export const StickyScroll = ({
   content,
@@ -20,34 +21,15 @@ export const StickyScroll = ({
   }[];
 }) => {
   const [activeCard, setActiveCard] = useState(0);
-  const [isInView, setIsInView] = useState(false);
   const sectionRef = useRef<HTMLDivElement>(null);
   const contentRef = useRef<HTMLDivElement>(null);
+
+  const isInView = useInView(sectionRef);
 
   const { scrollYProgress } = useScroll({
     target: contentRef,
     offset: ['start start', 'end start'],
   });
-
-  useEffect(() => {
-    const currentSectionRef = sectionRef.current;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setIsInView(entry.isIntersecting);
-      },
-      { threshold: 0.7 },
-    );
-
-    if (currentSectionRef) {
-      observer.observe(currentSectionRef);
-    }
-
-    return () => {
-      if (currentSectionRef) {
-        observer.unobserve(currentSectionRef);
-      }
-    };
-  }, []);
 
   const cardLength = content.length;
 
@@ -73,11 +55,11 @@ export const StickyScroll = ({
       }}
       className="relative min-h-screen"
     >
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 p-10 relative">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:p-10 relative">
         <div className={'left-0 h-fit md:h-screen flex bg-background px-4 md:px-12'}>
           <div
             className={cn(
-              `top-28 h-fit space-y-5 max-w-xl transition`,
+              `top-28 lg:top-44 h-fit space-y-5 max-w-xl transition`,
               isInView && 'md:fixed -translate-y-10 md:w-1/3',
             )}
           >

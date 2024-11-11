@@ -29,25 +29,25 @@ export const perks: Perk[] = [
   {
     title: 'Cost-Effectiveness',
     description:
-      'lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus sed fames arcu sed aliquor. Euismod habitant turpis pellentesque posuere et amet sagittis velit. Diam tortor sed.',
+      'Our agile development approach and scalable solutions ensure that you get the most value for your investment. We prioritize cost-optimization without compromising on quality or functionality.',
     image: '/icons/streamline_business-idea-money.svg',
   },
   {
     title: 'Innovative Technology',
     description:
-      'lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus sed fames arcu sed aliquor. Euismod habitant turpis pellentesque posuere et amet sagittis velit. Diam tortor sed.',
+      'We leverage the latest advancements in software engineering to deliver cutting-edge solutions that adapt to your evolving needs. Our focus on innovation helps you stay ahead of the curve.',
     image: '/icons/innovative_idea.svg',
   },
   {
     title: 'Industry Expertise',
     description:
-      'lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus sed fames arcu sed aliquor. Euismod habitant turpis pellentesque posuere et amet sagittis velit. Diam tortor sed.',
+      'With decades of experience serving diverse industries, we understand the unique challenges you face. Our tailored solutions are crafted to address your specific pain points and unlock your full potential.',
     image: '/icons/fluent_design-ideas-24-regular.svg',
   },
   {
     title: 'Quality',
     description:
-      'lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus sed fames arcu sed aliquor. Euismod habitant turpis pellentesque posuere et amet sagittis velit. Diam tortor sed.',
+      'Quality is at the heart of everything we do. We adhere to rigorous standards and implement robust testing procedures to ensure the reliability and performance of our products. Your satisfaction is our top priority.',
     image: '/icons/gis_cube-3d.svg',
   },
 ];
@@ -56,7 +56,7 @@ export const projectsShowcase: ProjectShowcase[] = [
   {
     id: '01',
     name: 'Success Loop',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'At Synnestra, we empower businesses to achieve sustainable growth through our innovative software solutions. Our "Success Loop" methodology ensures that we consistently deliver tangible results and drive continuous improvement for our clients.',
     color: 'bg-custom-purple-light',
     textColor: 'text-black',
     headingColor: 'text-custom-purple',
@@ -74,7 +74,7 @@ export const projectsShowcase: ProjectShowcase[] = [
   {
     id: '03',
     name: 'Swappin Numbers Academy',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'As part of our commitment to knowledge-sharing, we have developed the Swappin\' Numbers Academy - an educational platform that equips professionals with the skills and strategies needed to navigate the dynamic world of financial data analysis and decision-making.',
     color: 'bg-custom-purple',
     textColor: 'text-white',
     headingColor: 'text-white',
@@ -85,32 +85,32 @@ export const projectsShowcase: ProjectShowcase[] = [
 export const solutions: Solution[] = [
   {
     title: 'Manage Services',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'Our comprehensive managed services suite ensures the smooth and efficient operation of your business-critical systems, allowing you to focus on core competencies and achieve your strategic objectives.',
     icon: '/icons/grommet-icons_services.svg',
   },
   {
     title: 'IT Consulting & Advisory',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'Leverage our industry-leading expertise to navigate the complex IT landscape. Our consultative approach helps you align technology with your business goals, optimize performance, and drive innovation.',
     icon: '/icons/fluent_people-team-24-regular.svg',
   },
   {
     title: 'Cyber Security',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'Protect your organization\'s sensitive data and digital assets with our robust cybersecurity solutions. We implement multi-layered security measures to safeguard your operations and maintain business continuity.',
     icon: '/icons/carbon_cloud-services.svg',
   },
   {
     title: 'Web Development',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'Our web development services empower you to create engaging, user-centric digital experiences that showcase your brand, enhance customer interactions, and drive business growth.',
     icon: '/icons/mdi_web-asset.svg',
   },
   {
     title: 'Mobile Development',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'Stay ahead of the mobile-first revolution with our custom mobile applications. We develop intuitive, feature-rich solutions that seamlessly integrate with your existing systems and processes.',
     icon: '/icons/healthicons_mobile.svg',
   },
   {
     title: 'Cloud Services',
-    description: 'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor.',
+    description: 'Unlock the power of cloud computing with our comprehensive suite of cloud-based services. From infrastructure to software-as-a-service, we help you harness the flexibility, scalability, and cost-efficiency of the cloud.',
     icon: '/icons/hugeicons_ai-security-01.svg',
   },
 ];
@@ -120,42 +120,42 @@ export const reviews: Review[] = [
     name: 'Emily Sutherland',
     role: 'Marketing Director at AVD',
     review:
-      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+      'Synnestra\'s solutions have been a game-changer for our marketing team. The intuitive web tools and mobile apps have streamlined our workflows and enabled us to deliver more effective campaigns.',
     avatar: '/people_images/reviewer_1.png',
   },
   {
     name: 'John Nordstrom',
     role: 'CFO',
     review:
-      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+      'As the CFO, I\'ve been extremely impressed with Synnestra\'s financial management tools. The real-time reporting and cross-border transaction capabilities have been invaluable in optimizing our global operations.',
     avatar: '/people_images/reviewer_2.png',
   },
   {
     name: 'Michael Brown',
     role: 'CTO',
     review:
-      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+      'Synnestra\'s IT consulting and cybersecurity services have been instrumental in modernizing our technology infrastructure. Their expert guidance has helped us enhance our digital resilience and drive innovation.',
     avatar: '/people_images/reviewer_3.png',
   },
   {
     name: 'Sarah Smith',
     role: 'CIO',
     review:
-      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+      'Synnestra\'s cloud-based solutions have transformed the way we manage our IT resources. The scalability and cost-efficiency of their platform have allowed us to focus on our core business objectives.',
     avatar: '/people_images/reviewer_4.png',
   },
   {
     name: 'Gavy Gruzansky',
     role: 'CEO A Govarda',
     review:
-      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+      'Synnestra\'s mobile development expertise has been integral to the success of our new product launch. The intuitive app they created has revolutionized the way our customers interact with our brand.',
     avatar: '/people_images/reviewer_5.png',
   },
   {
     name: 'Omri Pelad',
     role: 'CEO B',
     review:
-      'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Euismod habitant turpis pellentesque posuere id amet sagittis velit. ',
+      'Synnestra\'s managed services have been a lifesaver for our business. The seamless operation of our critical systems and the proactive support from their team have allowed us to concentrate on strategic initiatives.',
     avatar: '/people_images/reviewer_6.png',
   },
 ];
@@ -309,9 +309,9 @@ export const timelineItems: TimelineEntry[] = [
     title: '2016',
     content: [
       {
-        heading: 'Synnestra Begin its Journey',
+        heading: 'Synnestra Established',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Synnestra was founded with a mission to simplify complex IT challenges for businesses across diverse industries. Our journey began with a commitment to delivering innovative software solutions and exceptional customer service.',
       },
     ],
   },
@@ -319,9 +319,9 @@ export const timelineItems: TimelineEntry[] = [
     title: '2017',
     content: [
       {
-        heading: 'We are Transparent',
+        heading: 'Embracing Transparency',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'We made a strategic decision to prioritize transparency in all our operations, ensuring our clients have full visibility into our processes and the progress of their projects. This commitment has been a cornerstone of our growth and client satisfaction.',
       },
     ],
   },
@@ -329,9 +329,9 @@ export const timelineItems: TimelineEntry[] = [
     title: '2018',
     content: [
       {
-        heading: 'Assent',
+        heading: 'Achieving Operational Excellence',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Through rigorous process improvement and the implementation of best practices, Synnestra solidified its position as a trusted partner for businesses seeking to streamline their operations and enhance their competitiveness.',
       },
     ],
   },
@@ -339,19 +339,20 @@ export const timelineItems: TimelineEntry[] = [
     title: '2019',
     content: [
       {
-        heading: 'Synnestra signed a $30 Million contract',
+        heading: 'Landmark $30 Million Contract',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Synnestra reached a significant milestone by securing a $30 million contract, further validating our expertise and the value we deliver to our clients. This achievement was a testament to our team\'s hard work, innovative solutions, and unwavering commitment to client success.',
       },
     ],
   },
+
   {
     title: '2020',
     content: [
       {
-        heading: 'We are Transparent',
+        heading: 'Navigating Unprecedented Challenges',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'The global pandemic presented unprecedented challenges, but Synnestra\'s resilience and adaptability allowed us to continue supporting our clients without interruption. We leveraged our digital capabilities to ensure seamless service delivery and help our clients navigate the turbulent landscape.',
       },
     ],
   },
@@ -359,24 +360,25 @@ export const timelineItems: TimelineEntry[] = [
     title: '2021',
     content: [
       {
-        heading: 'Highest Value contract signing in Synnestra’s History',
+        heading: 'Securing the Highest-Value Contract',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Synnestra reached another major milestone by securing the highest-value contract in the company\'s history. This accomplishment solidified our reputation as a leading provider of transformative software solutions and underscored our ability to deliver exceptional value to our clients.',
       },
     ],
+
   },
   {
     title: '2022',
     content: [
       {
-        heading: 'Artificial Intelligence',
+        heading: 'Embracing Artificial Intelligence',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Recognizing the transformative potential of AI, Synnestra invested heavily in developing cutting-edge AI-powered solutions to enhance our clients\' competitive edge. This strategic move positioned us at the forefront of the industry and enabled us to deliver even more intelligent and efficient services.',
       },
       {
-        heading: 'Synnestra announced first North American go live for NFS Ascent',
+        heading: 'Expanding to North America',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Synnestra announced the successful go-live of our NFS Ascent product in North America, marking a significant milestone in our global expansion strategy. This achievement solidified our position as a trusted provider of enterprise-grade software solutions in the international market.',
       },
     ],
   },
@@ -384,9 +386,10 @@ export const timelineItems: TimelineEntry[] = [
     title: '2023',
     content: [
       {
-        heading: 'Most Innovative Company in the Equipment Finance Ecosystem',
+        heading:
+          'Recognized as the Most Innovative Company',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Synnestra was honored with the prestigious "Most Innovative Company in the Equipment Finance Ecosystem" award, recognizing our commitment to driving innovation and delivering transformative solutions to our clients. This accolade further strengthened our reputation as an industry leader.',
       },
     ],
   },
@@ -394,13 +397,14 @@ export const timelineItems: TimelineEntry[] = [
     title: '2024',
     content: [
       {
-        heading: 'Otoz 2.0 Launched',
+        heading: 'Launching Otoz 2.0',
         description:
-          'Lorem ipsum dolor sit amet consectetur. Commodo fermentum diam cursus est fames arcu sed auctor. Eulismod habitant turpis pellentesque.',
+          'Synnestra unveiled the highly anticipated Otoz 2.0, a groundbreaking platform that revolutionizes the way businesses manage their transportation and logistics operations. This innovative solution solidified our position as a trailblazer in the rapidly evolving mobility ecosystem.',
       },
     ],
   },
 ];
+
 
 export const servicesProvided: Service[] = [
   {
@@ -441,15 +445,15 @@ export const servicesProvided: Service[] = [
           description: 'Enhance your customer experience through optimized, managed IT services.',
         },
         {
-          title: "Embrace Tomorrow's Possibilities",
+          title: 'Embrace Tomorrow\'s Possibilities',
           description: 'Future-proof your business with innovative technology solutions.',
         },
         {
-          title: "Embrace Tomorrow's Possibilities",
+          title: 'Embrace Tomorrow\'s Possibilities',
           description: 'Future-proof your business with innovative technology solutions.',
         },
         {
-          title: "Embrace Tomorrow's Possibilities",
+          title: 'Embrace Tomorrow\'s Possibilities',
           description: 'Future-proof your business with innovative technology solutions.',
         },
       ],
