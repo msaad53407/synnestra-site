@@ -2,17 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Menu } from 'lucide-react';
+import { ChevronDown, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
-
-const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'Services', href: '/services' },
-  { name: 'Industries', href: '/industries' },
-  { name: 'Project', href: '/projects' },
-  { name: 'Solutions', href: '/solutions' },
-];
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
+import { navItems } from '@/lib/constants';
 
 export default function MobileNav() {
   const [open, setOpen] = useState(false);
@@ -33,19 +27,44 @@ export default function MobileNav() {
           <ul className="space-y-4">
             {navItems.map((item) => (
               <li key={item.name}>
-                <Link
-                  href={item.href}
-                  className="block py-2 text-lg hover:text-custom-purple transition-colors"
-                  onClick={() => setOpen(false)}
-                >
-                  {item.name}
-                </Link>
+                {item.subitems ? (
+                  <Collapsible>
+                    <CollapsibleTrigger
+                      className="flex w-full items-center justify-between py-2 text-lg hover:text-custom-purple transition-colors">
+                      {item.name}
+                      <ChevronDown className="h-4 w-4" />
+                    </CollapsibleTrigger>
+                    <CollapsibleContent>
+                      <ul className="ml-4 mt-2 space-y-2">
+                        {item.subitems.map((subitem) => (
+                          <li key={subitem.name}>
+                            <Link
+                              href={subitem.href}
+                              className="block py-1 text-base hover:text-custom-purple transition-colors"
+                              onClick={() => setOpen(false)}
+                            >
+                              {subitem.name}
+                            </Link>
+                          </li>
+                        ))}
+                      </ul>
+                    </CollapsibleContent>
+                  </Collapsible>
+                ) : (
+                  <Link
+                    href={item.href}
+                    className="block py-2 text-lg hover:text-custom-purple transition-colors"
+                    onClick={() => setOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                )}
               </li>
             ))}
           </ul>
         </nav>
         <div className="mt-8">
-          <Button className="w-full bg-custom-purple hover:bg-custom-purple text-white">Contact us</Button>
+          <Button className="w-full bg-custom-purple hover:bg-custom-purple/90 text-white">Contact us</Button>
         </div>
       </SheetContent>
     </Sheet>

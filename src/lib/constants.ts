@@ -1,6 +1,7 @@
 import { TimelineEntry } from '@/components/ui/timeline';
 import { Company, Industry, Perk, Project, ProjectShowcase, Review, Service, Solution, TechnologyCard } from '@/types';
 import { Brain, CircleDotDashed, Cog, Presentation } from 'lucide-react';
+import { transformSlug } from '@/lib/utils';
 
 export const companies: Company[] = [
   {
@@ -404,7 +405,6 @@ export const timelineItems: TimelineEntry[] = [
     ],
   },
 ];
-
 
 export const servicesProvided: Service[] = [
   {
@@ -906,4 +906,26 @@ export const industries: Industry[] = [
       },
     ],
   },
+];
+
+export const navItems = [
+  { name: 'Home', href: '/' },
+  {
+    name: 'Services',
+    href: '/services',
+    subitems: servicesProvided.map((service) => ({
+      name: transformSlug(service.slug),
+      href: `/services/${service.slug}`,
+    })),
+  },
+  {
+    name: 'Industries',
+    href: '/industries',
+    subitems: industries.map((industry) => ({
+      name: transformSlug(industry.slug),
+      href: `/industries/${industry.slug}`,
+    })),
+  },
+  { name: 'Projects', href: '/projects' },
+  { name: 'About Company', href: '/about' },
 ];
