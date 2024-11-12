@@ -18,6 +18,7 @@ const AppShowcaseCard = ({
   return (
     <AnimatedSection
       direction={index === 2 ? 'up' : index === 0 ? 'left' : 'right'}
+      duration={0.5 * (index + 1)}
       key={id}
       className={cn(
         `rounded-2xl bg-custom-cream p-6 flex flex-col min-h-80`,

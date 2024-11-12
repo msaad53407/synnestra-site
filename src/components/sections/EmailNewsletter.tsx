@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ArrowRight, Plus } from 'lucide-react';
+import AnimatedSection from '@/components/AnimatedSection';
 
 export default function NewsletterSubscription() {
   const [email, setEmail] = useState('');
@@ -16,7 +17,7 @@ export default function NewsletterSubscription() {
   };
 
   return (
-    <section className="bg-custom-purple px-4 py-6 sm:px-6 lg:px-12">
+    <AnimatedSection direction={'up'} className="bg-custom-purple px-4 py-6 sm:px-6 lg:px-12">
       <div className="bg-purple-100/20 rounded-2xl p-8 md:p-12 md:my-8">
         <div className="md:flex md:items-center md:justify-between mt-12">
           <div className="mb-6 md:mb-0 md:mr-8">
@@ -43,6 +44,6 @@ export default function NewsletterSubscription() {
           <p className="text-white text-sm">Only Available to News Letter Subscriber</p>
         </div>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }

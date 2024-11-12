@@ -1,8 +1,7 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import React, { PropsWithChildren } from 'react';
-import useInView from '@/hooks/useInView';
 
 type Props = {
   direction: 'left' | 'right' | 'up' | 'down',
@@ -12,33 +11,30 @@ type Props = {
 
 const AnimatedSection = ({ children, direction, duration = 0.5, className }: Props) => {
   const ref = React.useRef<HTMLDivElement>(null);
-  const inView = useInView(ref);
-
+  const isInView = useInView(ref, { once: true });
   const variants = {
-    left: {
-      initial: { opacity: 0, x: inView ? -50 : -100 },
-      animate: { opacity: 1, x: 0 },
+    hidden: {
+      opacity: 0,
+      x: direction === 'left' ? -100 : direction === 'right' ? 100 : 0,
+      y: direction === 'up' ? 100 : direction === 'down' ? -100 : 0,
     },
-    right: {
-      initial: { opacity: 0, x: inView ? 50 : 100 },
-      animate: { opacity: 1, x: 0 },
-    },
-    up: {
-      initial: { opacity: 0, y: inView ? -50 : -100 },
-      animate: { opacity: 1, y: 0 },
-    },
-    down: {
-      initial: { opacity: 0, y: inView ? 50 : 100 },
-      animate: { opacity: 1, y: 0 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      transition: {
+        duration,
+        ease: 'easeOut',
+      },
     },
   };
 
   return (
     <motion.div
       ref={ref}
-      initial={variants[direction].initial}
-      animate={variants[direction].animate}
-      transition={{ duration }}
+      initial="hidden"
+      animate={isInView ? 'visible' : 'hidden'}
+      variants={variants}
       className={className}
     >
       {children}

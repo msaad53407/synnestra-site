@@ -1,6 +1,7 @@
 import { type TechnologyCard } from '@/types';
 import Image from 'next/image';
 import React from 'react';
+import AnimatedSection from '@/components/AnimatedSection';
 
 type Props = {
   technology: TechnologyCard;
@@ -8,7 +9,7 @@ type Props = {
 
 const TechnologyCard = ({ technology }: Props) => {
   return (
-    <div className="w-16 h-16 p-2 flex items-center justify-center bg-gray-300 rounded-xl">
+    <AnimatedSection direction={'up'} className="w-16 h-16 p-2 flex items-center justify-center bg-gray-300 rounded-xl">
       <Image
         src={technology.imageSrc}
         alt={technology.name}
@@ -16,7 +17,7 @@ const TechnologyCard = ({ technology }: Props) => {
         height={100}
         className="object-contain size-full"
       />
-    </div>
+    </AnimatedSection>
   );
 };
 

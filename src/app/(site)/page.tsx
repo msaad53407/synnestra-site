@@ -65,8 +65,8 @@ export default function Home() {
       <StatisticsBar />
       <AnimatedBanner />
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 px-4 py-6 sm:px-6 lg:px-12">
-        {perks.map(({ description, image, title }) => (
-          <AnimatedSection direction={'up'} key={title} className="flex flex-col gap-5">
+        {perks.map(({ description, image, title }, indx) => (
+          <AnimatedSection direction={'up'} key={title} duration={0.5 * (indx + 1)} className="flex flex-col gap-5">
             <Image src={image} alt={title} width={100} height={100} className="size-16 object-contain" quality={100} />
             <h4 className="font-medium text-xl">{title}</h4>
             <p className="text-xs text-gray-600">{description}</p>
@@ -97,7 +97,8 @@ export default function Home() {
         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-8">Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((solution, index) => (
-            <div key={index} className="bg-white rounded-lg p-6 shadow-sm relative min-h-80">
+            <AnimatedSection direction={'up'} duration={0.3 * (index + 1)} key={index}
+                             className="bg-white rounded-lg p-6 shadow-sm relative min-h-80">
               <Image
                 src={solution.icon}
                 alt={`${solution.title} icon`}
@@ -114,7 +115,7 @@ export default function Home() {
               >
                 Learn more
               </a>
-            </div>
+            </AnimatedSection>
           ))}
         </div>
         <div className="text-center mt-12 w-full">
@@ -124,7 +125,7 @@ export default function Home() {
       <section className="px-4 py-6 sm:px-6 lg:px-12 flex flex-col md:flex-row gap-6">
         <div className="flex flex-col gap-6 w-full md:w-1/2">
           {/* Organizations recognized our work */}
-          <div className="bg-custom-purple text-white p-6 rounded-lg">
+          <AnimatedSection direction={'left'} className="bg-custom-purple text-white p-6 rounded-lg">
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
               Organizations recognized our work
             </h2>
@@ -145,10 +146,10 @@ export default function Home() {
             <Button variant="outline" className="text-black bg-custom-purple-light hover:bg-custom-purple-light mt-4">
               View More Awards
             </Button>
-          </div>
+          </AnimatedSection>
 
           {/* We use latest technologies */}
-          <div className="bg-purple-100 p-6 rounded-lg">
+          <AnimatedSection direction={'left'} className="bg-purple-100 p-6 rounded-lg">
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
               We use latest technologies to run your project smoothly
             </h2>
@@ -161,11 +162,11 @@ export default function Home() {
                 ),
               )}
             </div>
-          </div>
+          </AnimatedSection>
         </div>
         <div className="flex flex-col gap-6 md:mt-20 w-full md:w-1/2">
           {/* Synnestra has been recognized */}
-          <div className="bg-gray-100 p-6 rounded-lg relative row-span-2">
+          <AnimatedSection direction={'right'} className="bg-gray-100 p-6 rounded-lg relative row-span-2">
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
               Synnestra has been recognized as a Leader in the 2024 Gartner
             </h2>
@@ -183,9 +184,9 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          </AnimatedSection>
           {/* Create a great career */}
-          <div className="bg-custom-purple text-white p-6 rounded-lg relative">
+          <AnimatedSection direction={'right'} className="bg-custom-purple text-white p-6 rounded-lg relative">
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
               Create a great career and grow your future with Synnestra
             </h2>
@@ -204,7 +205,7 @@ export default function Home() {
                 />
               </div>
             </div>
-          </div>
+          </AnimatedSection>
         </div>
       </section>
       <ReviewSection />

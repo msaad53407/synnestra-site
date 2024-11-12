@@ -1,9 +1,8 @@
 import AnimatedCounter from '../AnimatedCounter';
-import AnimatedSection from '@/components/AnimatedSection';
 
 export default function CompanyImpact() {
   return (
-    <AnimatedSection direction={'up'} className="relative min-h-[700px] w-full px-4 py-6 sm:px-6 lg:px-12">
+    <section className="relative min-h-[700px] w-full px-4 py-6 sm:px-6 lg:px-12">
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat mx-4 sm:mx-6 lg:mx-12"
@@ -47,6 +46,6 @@ export default function CompanyImpact() {
           </div>
         </div>
       </div>
-    </AnimatedSection>
+    </section>
   );
 }

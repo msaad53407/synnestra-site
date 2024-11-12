@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from 'react';
 import ReviewCard from '../cards/ReviewCard';
 import { Button } from '../ui/button';
 import Image from 'next/image';
+import AnimatedSection from '@/components/AnimatedSection';
 
 export default function ReviewSection() {
   const [activeSection, setActiveSection] = useState(0);
@@ -51,7 +52,7 @@ export default function ReviewSection() {
   }, []);
 
   return (
-    <section className="px-4 py-6 sm:px-6 lg:px-12">
+    <AnimatedSection direction={"up"} className="px-4 py-6 sm:px-6 lg:px-12">
       <h2 className="text-3xl md:text-5xl leading-relaxed font-bold mb-20">
         What Our Clients Say
         <br />
@@ -89,6 +90,6 @@ export default function ReviewSection() {
           <ArrowRightCircle className="size-10" />
         </Button>
       </div>
-    </section>
+    </AnimatedSection>
   );
 }
