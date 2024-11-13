@@ -49,6 +49,13 @@ export type Project = {
   title: string;
   link: string;
   thumbnail: string;
+  description: string;
+  features: string[];
+  technologies: TechnologyCard[];
+  images: {
+    src: string;
+    alt: string;
+  }[];
 };
 
 export type Service = {

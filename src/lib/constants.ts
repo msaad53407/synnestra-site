@@ -167,90 +167,330 @@ export const products: Project[] = [
     title: 'Moonbeam',
     link: 'https://gomoonbeam.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+    description: 'A sophisticated AI-powered writing assistant that helps content creators and professionals write better content faster.',
+    features: [
+      'AI-powered writing suggestions',
+      'Real-time grammar checking',
+      'Content optimization tools',
+      'Team collaboration features',
+      'Custom writing templates',
+    ],
+    technologies: [
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'Node.js',
+        imageSrc: '/technology_logos/nodejs.svg',
+      },
+      {
+        name: 'AWS',
+        imageSrc: '/technology_logos/aws.svg',
+      },
+    ],
+    images: [
+      {
+        src: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+        alt: 'Moonbeam',
+      }, {
+        src: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+        alt: 'Moonbeam',
+      }, {
+        src: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
+        alt: 'Moonbeam',
+      },
+    ],
   },
   {
     slug: 'cursor',
     title: 'Cursor',
     link: 'https://cursor.so',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/cursor.png',
+    description: 'An innovative code editing platform designed for modern developers with AI-powered features and real-time collaboration.',
+    features: [
+      'Intelligent code completion',
+      'Real-time collaboration',
+      'AI-powered code suggestions',
+      'Multiple language support',
+      'Advanced debugging tools',
+    ],
+    technologies: [
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'Python',
+        imageSrc: '/technology_logos/python.svg',
+      },
+      {
+        name: 'Node.js',
+        imageSrc: '/technology_logos/nodejs.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'rogue',
     title: 'Rogue',
     link: 'https://userogue.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/rogue.png',
+    description: 'A cutting-edge design and prototyping platform for creating stunning user interfaces and experiences.',
+    features: [
+      'Visual design tools',
+      'Interactive prototyping',
+      'Design system management',
+      'Collaboration features',
+      'Export to multiple formats',
+    ],
+    technologies: [
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'Figma',
+        imageSrc: '/technology_logos/figma.svg',
+      },
+      {
+        name: 'Adobe Illustrator',
+        imageSrc: '/technology_logos/illustrator.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'editorially',
     title: 'Editorially',
     link: 'https://editorially.org',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/editorially.png',
+    description: 'A collaborative writing and editing platform designed for teams to create, review, and publish content efficiently.',
+    features: [
+      'Document collaboration',
+      'Version control',
+      'Editorial workflow',
+      'Content organization',
+      'Publishing tools',
+    ],
+    technologies: [
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'Node.js',
+        imageSrc: '/technology_logos/nodejs.svg',
+      },
+      {
+        name: 'MySQL',
+        imageSrc: '/technology_logos/mysql.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'editrix-ai',
     title: 'Editrix AI',
     link: 'https://editrix.ai',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/editrix.png',
+    description: 'An AI-powered editing assistant that helps writers and editors improve their content with intelligent suggestions.',
+    features: [
+      'AI grammar checking',
+      'Style recommendations',
+      'Content enhancement',
+      'Plagiarism detection',
+      'Writing analytics',
+    ],
+    technologies: [
+      {
+        name: 'Python',
+        imageSrc: '/technology_logos/python.svg',
+      },
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'AWS',
+        imageSrc: '/technology_logos/aws.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'pixel-perfect',
     title: 'Pixel Perfect',
     link: 'https://app.pixelperfect.quest',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
+    description: 'A comprehensive design quality assurance tool that helps designers and developers ensure pixel-perfect implementations.',
+    features: [
+      'Design comparison tools',
+      'Responsive testing',
+      'Cross-browser validation',
+      'Collaboration features',
+      'Issue tracking',
+    ],
+    technologies: [
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'HTML',
+        imageSrc: '/technology_logos/html.svg',
+      },
+      {
+        name: 'CSS',
+        imageSrc: '/technology_logos/css.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'algochurn',
     title: 'Algochurn',
     link: 'https://algochurn.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/algochurn.png',
+    description: 'An interactive platform for learning and practicing algorithmic problem-solving with hands-on coding challenges.',
+    features: [
+      'Coding challenges',
+      'Interactive tutorials',
+      'Performance analytics',
+      'Progress tracking',
+      'Community features',
+    ],
+    technologies: [
+      {
+        name: 'Python',
+        imageSrc: '/technology_logos/python.svg',
+      },
+      {
+        name: 'Java',
+        imageSrc: '/technology_logos/java.svg',
+      },
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'aceternity-ui',
     title: 'Aceternity UI',
     link: 'https://ui.aceternity.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/aceternityui.png',
+    description: 'A modern UI component library for building beautiful and responsive web applications with ease.',
+    features: [
+      'Responsive components',
+      'Custom themes',
+      'Interactive documentation',
+      'Accessibility support',
+      'Performance optimized',
+    ],
+    technologies: [
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'HTML',
+        imageSrc: '/technology_logos/html.svg',
+      },
+      {
+        name: 'CSS',
+        imageSrc: '/technology_logos/css.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'tailwind-master-kit',
     title: 'Tailwind Master Kit',
     link: 'https://tailwindmasterkit.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png',
+    description: 'A comprehensive collection of Tailwind CSS components and templates for rapid web development.',
+    features: [
+      'Pre-built components',
+      'Responsive layouts',
+      'Dark mode support',
+      'Custom utilities',
+      'Interactive previews',
+    ],
+    technologies: [
+      {
+        name: 'HTML',
+        imageSrc: '/technology_logos/html.svg',
+      },
+      {
+        name: 'CSS',
+        imageSrc: '/technology_logos/css.svg',
+      },
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'smartbridge',
-    title: 'SmartBridge',
+    title: 'Smart Bridge',
     link: 'https://smartbridgetech.com',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/smartbridge.png',
+    description: 'An intelligent IoT platform that connects and manages smart devices for homes and businesses.',
+    features: [
+      'Device management',
+      'Real-time monitoring',
+      'Automated workflows',
+      'Data analytics',
+      'Security features',
+    ],
+    technologies: [
+      {
+        name: 'Python',
+        imageSrc: '/technology_logos/python.svg',
+      },
+      {
+        name: 'Node.js',
+        imageSrc: '/technology_logos/nodejs.svg',
+      },
+      {
+        name: 'AWS',
+        imageSrc: '/technology_logos/aws.svg',
+      },
+    ],
+    images: [],
   },
   {
     slug: 'renderwork-studio',
     title: 'Renderwork Studio',
     link: 'https://renderwork.studio',
     thumbnail: 'https://aceternity.com/images/products/thumbnails/new/renderwork.png',
-  },
-  {
-    slug: 'creme-digital',
-    title: 'Creme Digital',
-    link: 'https://cremedigital.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/cremedigital.png',
-  },
-  {
-    slug: 'golden-bells-academy',
-    title: 'Golden Bells Academy',
-    link: 'https://goldenbellsacademy.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/goldenbellsacademy.png',
-  },
-  {
-    slug: 'invoker-labs',
-    title: 'Invoker Labs',
-    link: 'https://invoker.lol',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/invoker.png',
-  },
-  {
-    slug: 'e-free-invoice',
-    title: 'E Free Invoice',
-    link: 'https://efreeinvoice.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/efreeinvoice.png',
+    description: 'A professional-grade 3D rendering and visualization studio for architects and designers.',
+    features: [
+      '3D rendering tools',
+      'Material library',
+      'Lighting effects',
+      'Scene management',
+      'Export options',
+    ],
+    technologies: [
+      {
+        name: 'Python',
+        imageSrc: '/technology_logos/python.svg',
+      },
+      {
+        name: 'React',
+        imageSrc: '/technology_logos/react.svg',
+      },
+      {
+        name: 'AWS',
+        imageSrc: '/technology_logos/aws.svg',
+      },
+    ],
+    images: [],
   },
 ];
 

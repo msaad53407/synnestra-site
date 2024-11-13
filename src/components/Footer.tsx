@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { Twitter, Facebook, Instagram, Github } from 'lucide-react';
+import { Facebook, Github, Instagram, Twitter } from 'lucide-react';
+import { transformSlug } from '@/lib/utils';
 
 export default function Footer() {
   return (
@@ -30,10 +31,10 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-semibold text-custom-purple mb-4">COMPANY</h3>
           <ul className="space-y-2">
-            {['About', 'Features', 'Works', 'Career'].map((item) => (
+            {['about', 'services', 'projects'].map((item) => (
               <li key={item}>
-                <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple">
-                  {item}
+                <Link href={`/${item}`} className="text-sm text-gray-600 hover:text-custom-purple">
+                  {transformSlug(item)}
                 </Link>
               </li>
             ))}
@@ -42,22 +43,10 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-semibold text-custom-purple mb-4">HELP</h3>
           <ul className="space-y-2">
-            {['Customer Support', 'Delivery Details', 'Terms & Conditions', 'Privacy Policy'].map((item) => (
+            {['terms-and-conditions', 'privacy-policy', 'faqs'].map((item) => (
               <li key={item}>
-                <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple">
-                  {item}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-        <div>
-          <h3 className="text-sm font-semibold text-custom-purple mb-4">RESOURCES</h3>
-          <ul className="space-y-2">
-            {['Free eBooks', 'Development Tutorial', 'How to - Blog', 'Youtube Playlist'].map((item) => (
-              <li key={item}>
-                <Link href="#" className="text-sm text-gray-600 hover:text-custom-purple">
-                  {item}
+                <Link href={`/${item}`} className="text-sm text-gray-600 hover:text-custom-purple">
+                  {transformSlug(item)}
                 </Link>
               </li>
             ))}
