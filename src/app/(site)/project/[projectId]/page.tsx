@@ -32,12 +32,12 @@ const ProjectPage = ({ params }: Props) => {
         />
         <div className="flex gap-4 items-center justify-between">
           <GradientText className="text-3xl font-medium">{activeProject.title}</GradientText>
-          <a
+          {activeProject.link && <a
             href={activeProject.link}
             className="flex items-center bg-custom-purple text-white px-4 py-2 rounded-full"
           >
             <span>Live Preview</span> <ArrowUpRight className="ml-2 h-4 w-4" />
-          </a>
+          </a>}
         </div>
       </div>
 
@@ -61,7 +61,7 @@ const ProjectPage = ({ params }: Props) => {
         </div>
       </div>
 
-      <div>
+      {activeProject.images.length > 0 && <div>
         <GradientText className="text-3xl font-medium mb-2">Project Snapshots</GradientText>
         <Carousel className="w-full max-w-screen-lg mx-auto relative">
           <CarouselContent>
@@ -84,7 +84,7 @@ const ProjectPage = ({ params }: Props) => {
           <CarouselNext
             className={'max-md:absolute max-md:-right-2 max-md:top-1/2 max-md:-translate-y-1/2 max-md:z-10'} />
         </Carousel>
-      </div>
+      </div>}
     </div>
   );
 };

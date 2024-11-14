@@ -163,17 +163,17 @@ export const reviews: Review[] = [
 
 export const products: Project[] = [
   {
-    slug: 'moonbeam',
-    title: 'Moonbeam',
-    link: 'https://gomoonbeam.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
-    description: 'A sophisticated AI-powered writing assistant that helps content creators and professionals write better content faster.',
+    slug: 'success-loop',
+    title: 'Successloop',
+    thumbnail: '/projects/success-loop/thumbnail.png',
+    description: 'SuccessLoop is a powerful platform designed to help businesses create, manage, and optimize referral programs. Our mission is to bring the human touch to a digital world by leveraging the power of word-of-mouth marketing to build communities and brands.',
     features: [
-      'AI-powered writing suggestions',
-      'Real-time grammar checking',
-      'Content optimization tools',
-      'Team collaboration features',
-      'Custom writing templates',
+      'Customizable Referral Programs',
+      'Real-Time Analytics',
+      'Incentive Structures',
+      'Gamification Elements',
+      'Automated Tracking and Reporting',
+      'Seamless Integration',
     ],
     technologies: [
       {
@@ -187,33 +187,42 @@ export const products: Project[] = [
       {
         name: 'AWS',
         imageSrc: '/technology_logos/aws.svg',
+      }, {
+        name: 'MySQL',
+        imageSrc: '/technology_logos/mysql.svg',
       },
     ],
     images: [
       {
-        src: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
-        alt: 'Moonbeam',
+        src: '/projects/success-loop/image-1.png',
+        alt: 'image-1',
       }, {
-        src: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
-        alt: 'Moonbeam',
+        src: '/projects/success-loop/image-2.png',
+        alt: 'image-2',
       }, {
-        src: 'https://aceternity.com/images/products/thumbnails/new/moonbeam.png',
-        alt: 'Moonbeam',
+        src: '/projects/success-loop/image-3.png',
+        alt: 'image-3',
+      }, {
+        src: '/projects/success-loop/image-4.png',
+        alt: 'image-4',
+      }, {
+        src: '/projects/success-loop/image-5.png',
+        alt: 'image-5',
       },
     ],
   },
   {
-    slug: 'cursor',
-    title: 'Cursor',
-    link: 'https://cursor.so',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/cursor.png',
-    description: 'An innovative code editing platform designed for modern developers with AI-powered features and real-time collaboration.',
+    slug: 'management-system',
+    title: 'Management System',
+    thumbnail: '/projects/management-system/thumbnail.png',
     features: [
-      'Intelligent code completion',
-      'Real-time collaboration',
-      'AI-powered code suggestions',
-      'Multiple language support',
-      'Advanced debugging tools',
+      'Centralized dashboard for tracking key metrics',
+      'Comprehensive chapter and district rosters',
+      'Customizable chapter and district settings',
+      'Role-based access control for secure collaboration',
+      'Manage chapter finances and track transactions',
+      'Schedule and document meetings with ease',
+      'Secure authentication powered by Clerk',
     ],
     technologies: [
       {
@@ -221,15 +230,36 @@ export const products: Project[] = [
         imageSrc: '/technology_logos/react.svg',
       },
       {
-        name: 'Python',
-        imageSrc: '/technology_logos/python.svg',
+        name: 'Figma',
+        imageSrc: '/technology_logos/figma.svg',
       },
       {
-        name: 'Node.js',
+        name: 'AWS',
+        imageSrc: '/technology_logos/aws.svg',
+      }, {
+        name: 'Nodejs',
         imageSrc: '/technology_logos/nodejs.svg',
       },
     ],
-    images: [],
+    description: `A cutting-edge solution that leverages the power of modern technologies to deliver a robust set of capabilities, including advanced data analysis, streamlined workflows, and scalable infrastructure. This application is designed to provide a seamless user experience and drive business success.`,
+    images: [
+      {
+        src: '/projects/management-system/image-1.png',
+        alt: 'image-1',
+      }, {
+        src: '/projects/management-system/image-2.png',
+        alt: 'image-2',
+      }, {
+        src: '/projects/management-system/image-3.png',
+        alt: 'image-3',
+      }, {
+        src: '/projects/management-system/image-4.png',
+        alt: 'image-4',
+      }, {
+        src: '/projects/management-system/image-5.png',
+        alt: 'image-5',
+      },
+    ],
   },
   {
     slug: 'rogue',

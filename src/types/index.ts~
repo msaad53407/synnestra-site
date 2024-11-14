@@ -47,7 +47,7 @@ export type TechnologyCard = {
 export type Project = {
   slug: string;
   title: string;
-  link?: string;
+  link: string;
   thumbnail: string;
   description: string;
   features: string[];

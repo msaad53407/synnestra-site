@@ -41,12 +41,12 @@ const ProjectModal = () => {
             />
             <div className="flex gap-4 items-center justify-between">
               <h3 className="text-2xl font-medium">{activeProject.title}</h3>
-              <a
+              {activeProject.link && <a
                 href={activeProject.link}
                 className="flex items-center bg-custom-purple text-white px-4 py-2 rounded-full"
               >
                 <span>Live Preview</span> <ArrowUpRight className="ml-2 h-4 w-4" />
-              </a>
+              </a>}
             </div>
           </div>
 
@@ -70,8 +70,8 @@ const ProjectModal = () => {
             </div>
           </div>
 
-          <div>
-            <h4 className="text-2xl font-medium mb-2">Project Images</h4>
+          {activeProject.images.length > 0 && <div>
+            <h4 className="text-2xl font-medium mb-2">Project Snapshots</h4>
             <Carousel className="w-full max-w-xl mx-auto relative ">
               <CarouselContent>
                 {activeProject.images.map((image, index) => (
@@ -83,6 +83,7 @@ const ProjectModal = () => {
                         width={1000}
                         height={1000}
                         className="object-cover w-full rounded-xl"
+                        quality={100}
                       />
                     </div>
                   </CarouselItem>
@@ -91,7 +92,7 @@ const ProjectModal = () => {
               <CarouselPrevious className={'absolute -left-2 top-1/2 -translate-y-1/2 z-10'} />
               <CarouselNext className={'absolute -right-2 top-1/2 -translate-y-1/2 z-10'} />
             </Carousel>
-          </div>
+          </div>}
         </div>
       </DialogContent>}
     </Dialog>
