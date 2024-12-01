@@ -25,7 +25,7 @@ export const InfiniteScrollingProjects = ({ products }: { products: ProjectCatal
   const rotateZ = useSpring(useTransform(scrollYProgress, [0, 0.2], [20, 0]), springConfig);
   const translateY = useSpring(useTransform(scrollYProgress, [0, 0.2], [-700, 500]), springConfig);
   return (
-    <div ref={ref} className={`h-full pb-[500px] overflow-hidden antialiased relative flex flex-col self-auto`}>
+    <div ref={ref} className={`h-full pb-[500px] overflow-hidden  antialiased relative flex flex-col self-auto`}>
       <Header />
       <motion.div
         style={{

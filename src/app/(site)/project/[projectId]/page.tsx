@@ -14,7 +14,10 @@ type Props = {
 };
 
 const ProjectPage = ({ params }: Props) => {
-  const activeProject = products.find((project) => project.slug === params.projectId);
+  const activeProjectWebsite = products.websites.find(website => website.slug === params.projectId);
+  const activeProjectMobile = products.mobileApps.find(app => app.slug === params.projectId);
+
+  const activeProject = activeProjectWebsite || activeProjectMobile;
 
   if (!activeProject) notFound();
 
@@ -26,7 +29,7 @@ const ProjectPage = ({ params }: Props) => {
           alt={activeProject.title}
           width={1000}
           height={1000}
-          className="object-cover w-full rounded-xl max-w-screen-lg mx-auto"
+          className="object-contain h-[450px] w-full rounded-xl max-w-screen-lg mx-auto"
           priority
           quality={100}
         />
@@ -73,7 +76,7 @@ const ProjectPage = ({ params }: Props) => {
                     alt={image.alt}
                     width={1000}
                     height={1000}
-                    className="object-cover w-full rounded-xl"
+                    className="object-contain h-[450px] w-full rounded-xl"
                   />
                 </div>
               </CarouselItem>

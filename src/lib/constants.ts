@@ -1,5 +1,15 @@
 import { TimelineEntry } from '@/components/ui/timeline';
-import { Company, Industry, Perk, Project, ProjectShowcase, Review, Service, Solution, TechnologyCard } from '@/types';
+import {
+  Company,
+  Industry,
+  Perk,
+  ProjectCatalog,
+  ProjectShowcase,
+  Review,
+  Service,
+  Solution,
+  TechnologyCard,
+} from '@/types';
 import { Brain, CircleDotDashed, Cog, Presentation } from 'lucide-react';
 import { transformSlug } from '@/lib/utils';
 
@@ -161,368 +171,617 @@ export const reviews: Review[] = [
   },
 ];
 
-export const products: Project[] = [
-  {
-    slug: 'success-loop',
-    title: 'Successloop',
-    thumbnail: '/projects/success-loop/thumbnail.png',
-    description: 'SuccessLoop is a powerful platform designed to help businesses create, manage, and optimize referral programs. Our mission is to bring the human touch to a digital world by leveraging the power of word-of-mouth marketing to build communities and brands.',
-    features: [
-      'Customizable Referral Programs',
-      'Real-Time Analytics',
-      'Incentive Structures',
-      'Gamification Elements',
-      'Automated Tracking and Reporting',
-      'Seamless Integration',
-    ],
-    technologies: [
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'Node.js',
-        imageSrc: '/technology_logos/nodejs.svg',
-      },
-      {
-        name: 'AWS',
-        imageSrc: '/technology_logos/aws.svg',
-      }, {
-        name: 'MySQL',
-        imageSrc: '/technology_logos/mysql.svg',
-      },
-    ],
-    images: [
-      {
-        src: '/projects/success-loop/image-1.png',
-        alt: 'image-1',
-      }, {
-        src: '/projects/success-loop/image-2.png',
-        alt: 'image-2',
-      }, {
-        src: '/projects/success-loop/image-3.png',
-        alt: 'image-3',
-      }, {
-        src: '/projects/success-loop/image-4.png',
-        alt: 'image-4',
-      }, {
-        src: '/projects/success-loop/image-5.png',
-        alt: 'image-5',
-      },
-    ],
-  },
-  {
-    slug: 'management-system',
-    title: 'Management System',
-    thumbnail: '/projects/management-system/thumbnail.png',
-    features: [
-      'Centralized dashboard for tracking key metrics',
-      'Comprehensive chapter and district rosters',
-      'Customizable chapter and district settings',
-      'Role-based access control for secure collaboration',
-      'Manage chapter finances and track transactions',
-      'Schedule and document meetings with ease',
-      'Secure authentication powered by Clerk',
-    ],
-    technologies: [
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'Figma',
-        imageSrc: '/technology_logos/figma.svg',
-      },
-      {
-        name: 'AWS',
-        imageSrc: '/technology_logos/aws.svg',
-      }, {
-        name: 'Nodejs',
-        imageSrc: '/technology_logos/nodejs.svg',
-      },
-    ],
-    description: `A cutting-edge solution that leverages the power of modern technologies to deliver a robust set of capabilities, including advanced data analysis, streamlined workflows, and scalable infrastructure. This application is designed to provide a seamless user experience and drive business success.`,
-    images: [
-      {
-        src: '/projects/management-system/image-1.png',
-        alt: 'image-1',
-      }, {
-        src: '/projects/management-system/image-2.png',
-        alt: 'image-2',
-      }, {
-        src: '/projects/management-system/image-3.png',
-        alt: 'image-3',
-      }, {
-        src: '/projects/management-system/image-4.png',
-        alt: 'image-4',
-      }, {
-        src: '/projects/management-system/image-5.png',
-        alt: 'image-5',
-      },
-    ],
-  },
-  {
-    slug: 'rogue',
-    title: 'Rogue',
-    link: 'https://userogue.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/rogue.png',
-    description: 'A cutting-edge design and prototyping platform for creating stunning user interfaces and experiences.',
-    features: [
-      'Visual design tools',
-      'Interactive prototyping',
-      'Design system management',
-      'Collaboration features',
-      'Export to multiple formats',
-    ],
-    technologies: [
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'Figma',
-        imageSrc: '/technology_logos/figma.svg',
-      },
-      {
-        name: 'Adobe Illustrator',
-        imageSrc: '/technology_logos/illustrator.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'editorially',
-    title: 'Editorially',
-    link: 'https://editorially.org',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/editorially.png',
-    description: 'A collaborative writing and editing platform designed for teams to create, review, and publish content efficiently.',
-    features: [
-      'Document collaboration',
-      'Version control',
-      'Editorial workflow',
-      'Content organization',
-      'Publishing tools',
-    ],
-    technologies: [
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'Node.js',
-        imageSrc: '/technology_logos/nodejs.svg',
-      },
-      {
-        name: 'MySQL',
-        imageSrc: '/technology_logos/mysql.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'editrix-ai',
-    title: 'Editrix AI',
-    link: 'https://editrix.ai',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/editrix.png',
-    description: 'An AI-powered editing assistant that helps writers and editors improve their content with intelligent suggestions.',
-    features: [
-      'AI grammar checking',
-      'Style recommendations',
-      'Content enhancement',
-      'Plagiarism detection',
-      'Writing analytics',
-    ],
-    technologies: [
-      {
-        name: 'Python',
-        imageSrc: '/technology_logos/python.svg',
-      },
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'AWS',
-        imageSrc: '/technology_logos/aws.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'pixel-perfect',
-    title: 'Pixel Perfect',
-    link: 'https://app.pixelperfect.quest',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/pixelperfect.png',
-    description: 'A comprehensive design quality assurance tool that helps designers and developers ensure pixel-perfect implementations.',
-    features: [
-      'Design comparison tools',
-      'Responsive testing',
-      'Cross-browser validation',
-      'Collaboration features',
-      'Issue tracking',
-    ],
-    technologies: [
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'HTML',
-        imageSrc: '/technology_logos/html.svg',
-      },
-      {
-        name: 'CSS',
-        imageSrc: '/technology_logos/css.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'algochurn',
-    title: 'Algochurn',
-    link: 'https://algochurn.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/algochurn.png',
-    description: 'An interactive platform for learning and practicing algorithmic problem-solving with hands-on coding challenges.',
-    features: [
-      'Coding challenges',
-      'Interactive tutorials',
-      'Performance analytics',
-      'Progress tracking',
-      'Community features',
-    ],
-    technologies: [
-      {
-        name: 'Python',
-        imageSrc: '/technology_logos/python.svg',
-      },
-      {
-        name: 'Java',
-        imageSrc: '/technology_logos/java.svg',
-      },
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'aceternity-ui',
-    title: 'Aceternity UI',
-    link: 'https://ui.aceternity.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/aceternityui.png',
-    description: 'A modern UI component library for building beautiful and responsive web applications with ease.',
-    features: [
-      'Responsive components',
-      'Custom themes',
-      'Interactive documentation',
-      'Accessibility support',
-      'Performance optimized',
-    ],
-    technologies: [
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'HTML',
-        imageSrc: '/technology_logos/html.svg',
-      },
-      {
-        name: 'CSS',
-        imageSrc: '/technology_logos/css.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'tailwind-master-kit',
-    title: 'Tailwind Master Kit',
-    link: 'https://tailwindmasterkit.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/tailwindmasterkit.png',
-    description: 'A comprehensive collection of Tailwind CSS components and templates for rapid web development.',
-    features: [
-      'Pre-built components',
-      'Responsive layouts',
-      'Dark mode support',
-      'Custom utilities',
-      'Interactive previews',
-    ],
-    technologies: [
-      {
-        name: 'HTML',
-        imageSrc: '/technology_logos/html.svg',
-      },
-      {
-        name: 'CSS',
-        imageSrc: '/technology_logos/css.svg',
-      },
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'smartbridge',
-    title: 'Smart Bridge',
-    link: 'https://smartbridgetech.com',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/smartbridge.png',
-    description: 'An intelligent IoT platform that connects and manages smart devices for homes and businesses.',
-    features: [
-      'Device management',
-      'Real-time monitoring',
-      'Automated workflows',
-      'Data analytics',
-      'Security features',
-    ],
-    technologies: [
-      {
-        name: 'Python',
-        imageSrc: '/technology_logos/python.svg',
-      },
-      {
-        name: 'Node.js',
-        imageSrc: '/technology_logos/nodejs.svg',
-      },
-      {
-        name: 'AWS',
-        imageSrc: '/technology_logos/aws.svg',
-      },
-    ],
-    images: [],
-  },
-  {
-    slug: 'renderwork-studio',
-    title: 'Renderwork Studio',
-    link: 'https://renderwork.studio',
-    thumbnail: 'https://aceternity.com/images/products/thumbnails/new/renderwork.png',
-    description: 'A professional-grade 3D rendering and visualization studio for architects and designers.',
-    features: [
-      '3D rendering tools',
-      'Material library',
-      'Lighting effects',
-      'Scene management',
-      'Export options',
-    ],
-    technologies: [
-      {
-        name: 'Python',
-        imageSrc: '/technology_logos/python.svg',
-      },
-      {
-        name: 'React',
-        imageSrc: '/technology_logos/react.svg',
-      },
-      {
-        name: 'AWS',
-        imageSrc: '/technology_logos/aws.svg',
-      },
-    ],
-    images: [],
-  },
-];
+export const products: ProjectCatalog = {
+  websites: [
+    {
+      slug: 'success-loop',
+      title: 'Successloop',
+      thumbnail: '/projects/success-loop/thumbnail.png',
+      description: 'SuccessLoop is a powerful platform designed to help businesses create, manage, and optimize referral programs. Our mission is to bring the human touch to a digital world by leveraging the power of word-of-mouth marketing to build communities and brands.',
+      features: [
+        'Customizable Referral Programs',
+        'Real-Time Analytics',
+        'Incentive Structures',
+        'Gamification Elements',
+        'Automated Tracking and Reporting',
+        'Seamless Integration',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Node.js',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        }, {
+          name: 'MySQL',
+          imageSrc: '/technology_logos/mysql.svg',
+        },
+      ],
+      images: [
+        {
+          src: '/projects/success-loop/image-1.png',
+          alt: 'image-1',
+        }, {
+          src: '/projects/success-loop/image-2.png',
+          alt: 'image-2',
+        }, {
+          src: '/projects/success-loop/image-3.png',
+          alt: 'image-3',
+        }, {
+          src: '/projects/success-loop/image-4.png',
+          alt: 'image-4',
+        }, {
+          src: '/projects/success-loop/image-5.png',
+          alt: 'image-5',
+        },
+      ],
+    },
+    {
+      slug: 'management-system',
+      title: 'Management System',
+      thumbnail: '/projects/management-system/thumbnail.png',
+      features: [
+        'Centralized dashboard for tracking key metrics',
+        'Comprehensive chapter and district rosters',
+        'Customizable chapter and district settings',
+        'Role-based access control for secure collaboration',
+        'Manage chapter finances and track transactions',
+        'Schedule and document meetings with ease',
+        'Secure authentication powered by Clerk',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        }, {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A cutting-edge solution that leverages the power of modern technologies to deliver a robust set of capabilities, including advanced data analysis, streamlined workflows, and scalable infrastructure. This application is designed to provide a seamless user experience and drive business success.`,
+      images: [
+        {
+          src: '/projects/management-system/image-1.png',
+          alt: 'image-1',
+        }, {
+          src: '/projects/management-system/image-2.png',
+          alt: 'image-2',
+        }, {
+          src: '/projects/management-system/image-3.png',
+          alt: 'image-3',
+        }, {
+          src: '/projects/management-system/image-4.png',
+          alt: 'image-4',
+        }, {
+          src: '/projects/management-system/image-5.png',
+          alt: 'image-5',
+        },
+      ],
+    },
+    {
+      slug: 'fairdeal-electrical',
+      title: 'Fairdeal Electrical',
+      thumbnail: '/projects/fairdeal-electrical/thumbnail.png',
+      features: [
+        'Centralized dashboard for tracking key metrics',
+        'Comprehensive chapter and district rosters',
+        'Customizable chapter and district settings',
+        'Role-based access control for secure collaboration',
+        'Manage chapter finances and track transactions',
+        'Schedule and document meetings with ease',
+        'Secure authentication powered by Clerk',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        }, {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A cutting-edge solution that leverages the power of modern technologies to deliver a robust set of capabilities, including advanced data analysis, streamlined workflows, and scalable infrastructure. This application is designed to provide a seamless user experience and drive business success.`,
+      images: [
+        {
+          src: '/projects/fairdeal-electrical/image-1.webp',
+          alt: 'image-1',
+        }, {
+          src: '/projects/fairdeal-electrical/image-2.webp',
+          alt: 'image-2',
+        }, {
+          src: '/projects/fairdeal-electrical/image-3.webp',
+          alt: 'image-3',
+        }, {
+          src: '/projects/fairdeal-electrical/image-4.webp',
+          alt: 'image-4',
+        }, {
+          src: '/projects/fairdeal-electrical/image-5.webp',
+          alt: 'image-5',
+        },
+      ],
+    },
+    {
+      slug: 'dex-booster',
+      title: 'Dex Booster: Your Cryptocurrency Navigator',
+      thumbnail: '/projects/dex-booster/thumbnail.webp',
+      features: [
+        'Real-time cryptocurrency price tracking',
+        'Personalized coin recommendations',
+        'Comprehensive market trend insights',
+        'Multi-exchange data integration',
+        'Advanced machine learning-powered analysis',
+        'Intuitive and user-friendly interface',
+        'Secure data encryption and privacy protection',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        }, {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A cutting-edge cryptocurrency analysis platform that simplifies market navigation through advanced data integration, personalized insights, and robust security measures. DexBooster leverages machine learning and comprehensive exchange data to provide users with intelligent cryptocurrency recommendations and real-time market intelligence.`,
+      images: [
+        {
+          src: '/projects/dex-booster/image-1.webp',
+          alt: 'image-1',
+        },
+      ],
+    },
+    {
+      slug: 'arcadia-developers',
+      title: 'Arcadia Developers Premier Construction Solutions',
+      thumbnail: '/projects/arcadia-developers-premier-construction-solutions/thumbnail.png',
+      features: [
+        'Comprehensive showcase of construction services',
+        'Detailed project categories (domestic, commercial, industrial)',
+        'Interactive consultation booking system',
+        'Client testimonials and portfolio display',
+        'Intuitive navigation across service offerings',
+        'High-quality visual presentation of projects',
+        'Easy-to-use contact and inquiry forms',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        }, {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A sophisticated digital platform designed to showcase Arcadia Developers' 17-year legacy in luxury construction solutions. The website strategically highlights the company's expertise across residential, commercial, and industrial sectors, featuring a modern, intuitive design that emphasizes quality, professionalism, and comprehensive service offerings.`,
+      images: [
+        {
+          src: '/projects/arcadia-developers-premier-construction-solutions/image-1.webp',
+          alt: 'Arcadia Developers Project Showcase',
+        }, {
+          src: '/projects/arcadia-developers-premier-construction-solutions/image-2.webp',
+          alt: 'Construction Services Overview',
+        },
+      ],
+    },
+    {
+      slug: 'fuze-traders',
+      title: 'FuzeTraders: Integrated Trading Solutions',
+      thumbnail: '/projects/fuze-traders/thumbnail.webp',
+      features: [
+        'Advanced trader funding platform',
+        'Technology-driven capital allocation',
+        'Proprietary trading support system',
+        'Cutting-edge trading technologies',
+        'Performance-based trader selection',
+        'Comprehensive trading support',
+        'Exclusive trader network access',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
+        {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `An innovative digital platform designed to empower exceptionally skilled traders by providing proprietary capital, cutting-edge trading technologies, and top-tier support. Fuze Traders bridges the gap for talented traders facing capital limitations, creating an exclusive ecosystem of high-performance trading professionals.`,
+      images: [
+        {
+          src: '/projects/fuze-traders/image-1.webp',
+          alt: 'Trader Performance Dashboard',
+        },
+        {
+          src: '/projects/fuze-traders/image-2.webp',
+          alt: 'Trading Technology Interface',
+        },
+        {
+          src: '/projects/fuze-traders/image-3.webp',
+          alt: 'Trader Funding Allocation System',
+        },
+      ],
+    },
+    {
+      slug: 'tanafos',
+      title: 'Tanafos: Seamless Football Ground Booking App',
+      thumbnail: '/projects/tanafos/thumbnail.webp',
+      features: [
+        'Multilingual platform (Arabic and English)',
+        'Intuitive football ground booking system',
+        'Real-time field availability and selection',
+        'Match scheduling and team coordination',
+        'Multilingual community chat',
+        'User-friendly interface for all skill levels',
+        'Seamless connection for soccer enthusiasts',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        }, {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A revolutionary soccer platform that bridges language barriers and connects players through innovative technology. Tanafos provides a comprehensive solution for football enthusiasts, offering seamless ground booking, match scheduling, and a vibrant multilingual community. The app simplifies the process of finding and booking football grounds while creating opportunities for players of all skill levels to connect, play, and share their passion for the beautiful game.`,
+      images: [
+        {
+          src: '/projects/tanafos/image-1.webp',
+          alt: 'Tanafos Ground Booking Interface',
+        }, {
+          src: '/projects/tanafos/image-2.webp',
+          alt: 'Match Scheduling Screen',
+        }, {
+          src: '/projects/tanafos/image-3.webp',
+          alt: 'Multilingual Community Chat',
+        }, {
+          src: '/projects/tanafos/image-4.webp',
+          alt: 'Player Connection Features',
+        },
+      ],
+    },
+    {
+      slug: 'daisy-chat',
+      title: 'DaisyChat: Your Wedding Connection',
+      thumbnail: '/projects/daisy-chat/thumbnail.webp',
+      features: [
+        'Secure wedding invitation management',
+        'Guest communication platform',
+        'Wedding details sharing',
+        'Intuitive invitation tracking',
+        'Comprehensive guest coordination',
+        'Privacy-focused communication',
+        'Customizable wedding information hub',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
+        {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A comprehensive desktop application designed to revolutionize wedding planning and guest communication. DaisyChat provides couples with a secure, user-friendly platform to manage wedding invitations, share event details, and facilitate seamless guest interactions. The app addresses the complex challenges of wedding communication through innovative technology and user-centric design.`,
+      images: [
+        {
+          src: '/projects/daisy-chat/image-1.webp',
+          alt: 'Wedding Invitation Management Interface',
+        },
+        {
+          src: '/projects/daisy-chat/image-2.webp',
+          alt: 'Guest Communication Dashboard',
+        },
+        {
+          src: '/projects/daisy-chat/image-3.webp',
+          alt: 'Wedding Details and Agenda Sharing',
+        },
+      ],
+    },
+  ],
+  mobileApps: [
+    {
+      'slug': 'poem-maker',
+      'title': 'Poem Maker',
+      'features': [
+        'Inspiring poetry prompts to spark creativity',
+        'Versatile poetic structure templates',
+        'Advanced poem editing tools',
+        'Easy poem composition and sharing',
+        'Supportive platform for poets of all skill levels',
+        'Intuitive user interface for seamless writing experience',
+        'Secure authentication powered by Clerk',
+      ],
+      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      'thumbnail': '/projects/poem-maker/thumbnail.webp',
+      'description': 'PoemMaker is a delightful native app crafted with FlutterFlow, designed to unleash the creativity of users through the art of poetry. With a range of inspiring prompts, versatile poetic structures, and editing tools, the app serves as a pocket-sized companion for individuals to effortlessly compose and share beautiful poems. Whether you\'re an experienced poet or a beginner, "PoemMaker" provides a seamless platform to express your unique poetic voice and ignite your passion for the written word.',
+      'technologies': [
+        {
+          'name': 'Flutter',
+          'imageSrc': '/technology_logos/flutter.svg',
+        },
+        {
+          'name': 'Nodejs',
+          'imageSrc': '/technology_logos/nodejs.svg',
+        },
+      ],
+      'images': [
+        {
+          'src': '/projects/poem-maker/image-1.webp',
+          'alt': 'image-1',
+        },
+        {
+          'src': '/projects/poem-maker/image-2.webp',
+          'alt': 'image-2',
+        },
+        {
+          'src': '/projects/poem-maker/image-3.webp',
+          'alt': 'image-3',
+        },
+        {
+          'src': '/projects/poem-maker/image-4.webp',
+          'alt': 'image-4',
+        },
+      ],
+    },
+    {
+      'slug': 'pure',
+      'title': 'Pure: More than Hair',
+      'features': [
+        'Performance tracking for salon workers',
+        'Data-driven decision-making dashboard',
+        'Secure and compliant data management',
+        'Real-time performance metrics synchronization',
+        'Scalable infrastructure for salon businesses',
+        'Comprehensive performance analysis tools',
+        'Secure authentication powered by Clerk',
+      ],
+      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      'thumbnail': '/projects/pure/thumbnail.webp',
+      'description': 'SalonTech Solutions introduced Pure, a revolutionary app designed to enhance performance management in the beauty and wellness industry. This case study outlines Pure\'s goals, challenges, strategic approach, and outcomes.',
+      'technologies': [
+        {
+          'name': 'Flutter',
+          'imageSrc': '/technology_logos/flutter.svg',
+        },
+        {
+          'name': 'Nodejs',
+          'imageSrc': '/technology_logos/nodejs.svg',
+        },
+      ],
+      'images': [
+        {
+          'src': '/projects/pure/image-1.webp',
+          'alt': 'image-1',
+        },
+        {
+          'src': '/projects/pure/image-2.webp',
+          'alt': 'image-2',
+        },
+        {
+          'src': '/projects/pure/image-3.webp',
+          'alt': 'image-3',
+        },
+      ],
+    },
+    {
+      'slug': 'flick-skills',
+      'title': 'FlickSkills: Your Ultimate Football Trick Tutorial',
+      'features': [
+        'Comprehensive football trick tutorial videos',
+        'Skill enhancement for players of all levels',
+        'Interactive quizzes and challenges',
+        'Community forums for football enthusiasts',
+        'High-quality content from experienced coaches',
+        'Cross-platform accessibility',
+        'Secure authentication powered by Clerk',
+      ],
+      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      'thumbnail': '/projects/flick-skills/thumbnail.webp',
+      'description': 'Flick Skills is a sports-focused software company committed to providing innovative solutions, particularly in football, to empower enthusiasts and improve their skills.',
+      'technologies': [
+        {
+          'name': 'Flutter',
+          'imageSrc': '/technology_logos/flutter.svg',
+        },
+        {
+          'name': 'Nodejs',
+          'imageSrc': '/technology_logos/nodejs.svg',
+        },
+      ],
+      'images': [
+        {
+          'src': '/projects/flick-skills/image-1.webp',
+          'alt': 'image-1',
+        },
+        {
+          'src': '/projects/flick-skills/image-2.webp',
+          'alt': 'image-2',
+        },
+        {
+          'src': '/projects/flick-skills/image-3.webp',
+          'alt': 'image-3',
+        },
+        {
+          'src': '/projects/flick-skills/image-4.webp',
+          'alt': 'image-4',
+        },
+      ],
+    },
+    {
+      'slug': 'var',
+      'title': 'Var: Animated Book Reading Experience',
+      'features': [
+        'Synchronized animated visuals with text',
+        'Immersive reading experience',
+        'Dynamic content integration with publishers',
+        'Precise text-animation synchronization',
+        'Intuitive and user-friendly interface',
+        'Engaging visual storytelling',
+        'Secure authentication powered by Clerk',
+      ],
+      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      'thumbnail': '/projects/var/thumbnail.webp',
+      'description': 'Var is an app that facilitates easy book reading by providing animated visuals synchronized with highlighted text, allowing users to immerse themselves in the story and enjoy a more engaging reading experience.',
+      'technologies': [
+        {
+          'name': 'Flutter',
+          'imageSrc': '/technology_logos/flutter.svg',
+        },
+        {
+          'name': 'Nodejs',
+          'imageSrc': '/technology_logos/nodejs.svg',
+        },
+      ],
+      'images': [
+        {
+          'src': '/projects/var/image-1.webp',
+          'alt': 'image-1',
+        },
+        {
+          'src': '/projects/var/image-2.webp',
+          'alt': 'image-2',
+        },
+        {
+          'src': '/projects/var/image-3.webp',
+          'alt': 'image-3',
+        },
+      ],
+    },
+    {
+      'slug': 'barber-b',
+      'title': 'Barber b: Streamlined Barber Appointment Booking',
+      'features': [
+        'Efficient appointment scheduling',
+        'Mobile-friendly booking platform',
+        'Automated appointment reminders',
+        'Customizable barber profiles and services',
+        'Seamless calendar integration',
+        'Reduced no-show rates',
+        'Secure authentication powered by Clerk',
+      ],
+      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      'thumbnail': '/projects/barber-b/thumbnail.webp',
+      'description': 'Barber B is a software company aiming to modernize the barber industry by simplifying appointment booking processes for both barbers and clients.',
+      'technologies': [
+        {
+          'name': 'Flutter',
+          'imageSrc': '/technology_logos/flutter.svg',
+        },
+        {
+          'name': 'Nodejs',
+          'imageSrc': '/technology_logos/nodejs.svg',
+        },
+      ],
+      'images': [
+        {
+          'src': '/projects/barber-b/image-1.webp',
+          'alt': 'image-1',
+        },
+        {
+          'src': '/projects/barber-b/image-2.webp',
+          'alt': 'image-2',
+        },
+        {
+          'src': '/projects/barber-b/image-3.webp',
+          'alt': 'image-3',
+        },
+      ],
+    },
+    {
+      'slug': 'calmomind',
+      'title': 'Calmomind: Comprehensive Mental Wellness Solutions',
+      'features': [
+        'Guided meditations by experienced instructors',
+        'Personalized mindfulness techniques',
+        'Meditation timer and daily reminders',
+        'Variety of meditation styles (mindfulness, breathing, body scans)',
+        'Soothing sounds and nature scenes',
+        'Progress tracking and wellness insights',
+        'Secure authentication powered by Clerk',
+      ],
+      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      'thumbnail': '/projects/calmomind/thumbnail.jpg',
+      'description': 'Discover serenity on the go with our meditation app. Whether you\'re seeking stress relief, improved focus, or simply a moment of tranquility, our app offers a personalized journey to inner peace.\n\nEmbark on guided meditations led by experienced instructors, tailored to your schedule and preferences. Explore a variety of techniques, from mindfulness and breathing exercises to body scans and visualization.\n\nTrack your progress and cultivate mindfulness with our meditation timer and daily reminders. With a range of soothing sounds and nature scenes, create your ideal meditation environment anytime, anywhere.',
+      'technologies': [
+        {
+          'name': 'Flutter',
+          'imageSrc': '/technology_logos/flutter.svg',
+        },
+        {
+          'name': 'Nodejs',
+          'imageSrc': '/technology_logos/nodejs.svg',
+        },
+      ],
+      'images': [],
+    },
+  ],
+
+};
 
 export const technologyCards: TechnologyCard[] = [
   {

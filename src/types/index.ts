@@ -58,6 +58,11 @@ export type Project = {
   }[];
 };
 
+export type ProjectCatalog = {
+  websites: Project[];
+  mobileApps: Project[];
+};
+
 export type Service = {
   slug: string;
   imageSrc: string;
