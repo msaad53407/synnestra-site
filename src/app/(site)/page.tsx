@@ -1,6 +1,5 @@
 import AnimatedBanner from '@/components/AnimatedBanner';
 import AppShowcaseCard from '@/components/cards/AppShowcaseCard';
-import NewsletterSubscription from '@/components/sections/EmailNewsletter';
 import ReviewSection from '@/components/sections/ReviewSection';
 import StatisticsBar from '@/components/StatisticsBar';
 import { Button } from '@/components/ui/button';
@@ -9,6 +8,7 @@ import { companies, perks, projectsShowcase, solutions } from '@/lib/constants';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -29,10 +29,14 @@ export default function Home() {
             growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
-            <Button className="bg-orange-400 hover:bg-orange-500 text-white rounded-full px-5">Read more</Button>
-            <Button className="bg-custom-purple hover:bg-custom-purple-light rounded-full px-5">
-              Let&apos;s Talk
-              <ArrowUpRight className="ml-2 h-4 w-4" />
+            <Button className="bg-orange-400 hover:bg-orange-500 text-white rounded-full px-5" asChild>
+              <Link href="/about">Read More</Link>
+            </Button>
+            <Button className="bg-custom-purple hover:bg-custom-purple hover:bg-opacity-90 rounded-full px-5" asChild>
+              <Link href="/contact-us">
+                Let&apos;s Talk
+                <ArrowUpRight className="ml-2 h-4 w-4" />
+              </Link>
             </Button>
           </div>
         </AnimatedSection>
@@ -84,11 +88,11 @@ export default function Home() {
             <AppShowcaseCard index={index} key={project.id} project={project} />
           ))}
         </div>
-        <div className="text-center mt-8">
-          <a href="#" className="text-custom-purple hover:underline">
-            View all Case studies
-          </a>
-        </div>
+        {/*<div className="text-center mt-8">*/}
+        {/*  <a href="#" className="text-custom-purple hover:underline">*/}
+        {/*    View all Case studies*/}
+        {/*  </a>*/}
+        {/*</div>*/}
       </section>
       <section className="bg-blue-100 px-4 py-6 sm:px-6 lg:px-12 relative">
         <div className="my-8">
@@ -109,18 +113,18 @@ export default function Home() {
               />
               <h3 className="text-2xl font-medium text-gray-900 mb-2">{solution.title}</h3>
               <p className="text-gray-600 mb-4">{solution.description}</p>
-              <a
-                href="#"
+              <Link
+                href={solution.link}
                 className="text-custom-purple w-full py-2 px-4 hover:underline absolute bottom-2 left-0 border-t border-t-custom-purple-light"
               >
                 Learn more
-              </a>
+              </Link>
             </AnimatedSection>
           ))}
         </div>
-        <div className="text-center mt-12 w-full">
-          <Button className="bg-custom-purple hover:bg-custom-purple text-white">View All Solutions</Button>
-        </div>
+        {/*<div className="text-center mt-12 w-full">*/}
+        {/*  <Button className="bg-custom-purple hover:bg-custom-purple text-white">View All Solutions</Button>*/}
+        {/*</div>*/}
       </section>
       <section className="px-4 py-6 sm:px-6 lg:px-12 flex flex-col md:flex-row gap-6">
         <div className="flex flex-col gap-6 w-full md:w-1/2">
@@ -209,7 +213,7 @@ export default function Home() {
         </div>
       </section>
       <ReviewSection />
-      <NewsletterSubscription />
+      {/*<NewsletterSubscription />*/}
     </div>
   );
 }

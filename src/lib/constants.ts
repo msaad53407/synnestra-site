@@ -98,31 +98,37 @@ export const solutions: Solution[] = [
     title: 'Manage Services',
     description: 'Our comprehensive managed services suite ensures the smooth and efficient operation of your business-critical systems, allowing you to focus on core competencies and achieve your strategic objectives.',
     icon: '/icons/grommet-icons_services.svg',
+    link: '/services/managed-services',
   },
   {
     title: 'IT Consulting & Advisory',
     description: 'Leverage our industry-leading expertise to navigate the complex IT landscape. Our consultative approach helps you align technology with your business goals, optimize performance, and drive innovation.',
     icon: '/icons/fluent_people-team-24-regular.svg',
+    link: '/services/it-consultancy-and-advisory',
   },
   {
     title: 'Cyber Security',
     description: 'Protect your organization\'s sensitive data and digital assets with our robust cybersecurity solutions. We implement multi-layered security measures to safeguard your operations and maintain business continuity.',
     icon: '/icons/carbon_cloud-services.svg',
+    link: '/services/cyber-security',
   },
   {
     title: 'Web Development',
     description: 'Our web development services empower you to create engaging, user-centric digital experiences that showcase your brand, enhance customer interactions, and drive business growth.',
     icon: '/icons/mdi_web-asset.svg',
+    link: '/services/web-development',
   },
   {
     title: 'Mobile Development',
     description: 'Stay ahead of the mobile-first revolution with our custom mobile applications. We develop intuitive, feature-rich solutions that seamlessly integrate with your existing systems and processes.',
     icon: '/icons/healthicons_mobile.svg',
+    link: '/services/mobile-development',
   },
   {
     title: 'Cloud Services',
     description: 'Unlock the power of cloud computing with our comprehensive suite of cloud-based services. From infrastructure to software-as-a-service, we help you harness the flexibility, scalability, and cost-efficiency of the cloud.',
     icon: '/icons/hugeicons_ai-security-01.svg',
+    link: '/services/cloud-services',
   },
 ];
 
@@ -1442,19 +1448,38 @@ export const navItems = [
   {
     name: 'Services',
     href: '/services',
-    subitems: servicesProvided.map((service) => ({
-      name: transformSlug(service.slug),
-      href: `/services/${service.slug}`,
-    })),
+    subitems: [
+      {
+        name: 'IT Solutions',
+        items: servicesProvided.map((service) => ({
+          name: transformSlug(service.slug),
+          href: `/services/${service.slug}`,
+        })),
+      },
+      {
+        name: 'E Commerce',
+        items: servicesProvided.map((service) => ({
+          name: transformSlug(service.slug),
+          href: `/services/${service.slug}`,
+        })),
+      },
+      {
+        name: 'LLC/LTD',
+        items: servicesProvided.map((service) => ({
+          name: transformSlug(service.slug),
+          href: `/services/${service.slug}`,
+        })),
+      },
+    ],
   },
-  {
-    name: 'Industries',
-    href: '/industries',
-    subitems: industries.map((industry) => ({
-      name: transformSlug(industry.slug),
-      href: `/industries/${industry.slug}`,
-    })),
-  },
+  // {
+  //   name: 'Industries',
+  //   href: '/industries',
+  //   subitems: industries.map((industry) => ({
+  //     name: transformSlug(industry.slug),
+  //     href: `/industries/${industry.slug}`,
+  //   })),
+  // },
   { name: 'Projects', href: '/projects' },
   { name: 'About Company', href: '/about' },
 ];

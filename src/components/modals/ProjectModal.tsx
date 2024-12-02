@@ -5,8 +5,9 @@ import { useActiveProject } from '@/hooks/useActiveProject';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import { ArrowUpRight } from 'lucide-react';
 import TechnologyCard from '@/components/cards/TechnologyCard';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const ProjectModal = () => {
   const { setActiveProject, activeProject } = useActiveProject();
@@ -21,7 +22,7 @@ const ProjectModal = () => {
         router.back();
       }}
     >
-      {activeProject && <DialogContent className={'h-[calc(100vh-100px)] overflow-y-scroll'}>
+      {activeProject && <DialogContent className={'h-[calc(100vh-100px)]  mx-auto sm:w-full overflow-y-scroll'}>
         <DialogHeader>
           <DialogTitle className="sr-only">View Project Details</DialogTitle>
           <DialogDescription className="sr-only">
@@ -35,18 +36,24 @@ const ProjectModal = () => {
               alt={activeProject.title}
               width={1000}
               height={1000}
-              className="object-cover w-full rounded-xl"
+              className="object-contain w-full rounded-xl max-h-[450px]"
               priority
               quality={100}
             />
             <div className="flex gap-4 items-center justify-between">
               <h3 className="text-2xl font-medium">{activeProject.title}</h3>
-              {activeProject.link && <a
-                href={activeProject.link}
-                className="flex items-center bg-custom-purple text-white px-4 py-2 rounded-full"
+              {/*{activeProject.link && <a*/}
+              {/*  href={activeProject.link}*/}
+              {/*  className="flex items-center bg-custom-purple text-white px-4 py-2 rounded-full"*/}
+              {/*>*/}
+              {/*  <span>Live Preview</span> <ArrowUpRight className="ml-2 h-4 w-4" />*/}
+              {/*</a>}*/}
+              <Button
+                className="flex items-center bg-custom-purple hover:bg-custom-purple text-white px-4 py-2 rounded-full"
+                asChild
               >
-                <span>Live Preview</span> <ArrowUpRight className="ml-2 h-4 w-4" />
-              </a>}
+                <a href={`/project/${activeProject?.slug}`}>Read more</a>
+              </Button>
             </div>
           </div>
 
@@ -82,7 +89,7 @@ const ProjectModal = () => {
                         alt={image.alt}
                         width={1000}
                         height={1000}
-                        className="object-cover w-full rounded-xl"
+                        className="object-contain w-full rounded-xl max-h-[450px]"
                         quality={100}
                       />
                     </div>

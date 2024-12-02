@@ -43,7 +43,7 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-semibold text-custom-purple mb-4">HELP</h3>
           <ul className="space-y-2">
-            {['terms-and-conditions', 'privacy-policy', 'faqs'].map((item) => (
+            {['terms-and-conditions', 'privacy-policy', 'FAQs'].map((item) => (
               <li key={item}>
                 <Link href={`/${item}`} className="text-sm text-gray-600 hover:text-custom-purple">
                   {transformSlug(item)}

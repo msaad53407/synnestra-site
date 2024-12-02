@@ -1,7 +1,6 @@
 import Banner from '@/components/Banner';
 import GradientText from '@/components/GradientText';
 import CompanyImpact from '@/components/sections/CompanyImpact';
-import NewsletterSubscription from '@/components/sections/EmailNewsletter';
 import SplitColorText from '@/components/SplitColorText';
 import { Button } from '@/components/ui/button';
 import { StickyScroll } from '@/components/ui/sticky-scroll-reveal';
@@ -294,7 +293,7 @@ const ServicePage = ({ params: { service } }: Props) => {
         </div>
       </section>;
       <CompanyImpact />;
-      <NewsletterSubscription />;
+      {/*<NewsletterSubscription />;*/}
     </div>
   )
     ;

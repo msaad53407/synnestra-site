@@ -23,13 +23,13 @@ const ProjectPage = ({ params }: Props) => {
 
   return (
     <div className="container mx-auto py-12 space-y-8">
-      <div className="space-y-4">
+      <div className="space-y-4 px-4 py-6 sm:px-6 lg:px-12">
         <Image
           src={activeProject.thumbnail}
           alt={activeProject.title}
           width={1000}
           height={1000}
-          className="object-contain h-[450px] w-full rounded-xl max-w-screen-lg mx-auto"
+          className="object-contain max-h-[450px] w-full rounded-xl max-w-screen-lg mx-auto"
           priority
           quality={100}
         />
@@ -44,9 +44,9 @@ const ProjectPage = ({ params }: Props) => {
         </div>
       </div>
 
-      <p className="text-gray-600">{activeProject.description}</p>
+      <p className="text-gray-600 px-4 py-6 sm:px-6 lg:px-12">{activeProject.description}</p>
 
-      <div>
+      <div className="px-4 py-6 sm:px-6 lg:px-12">
         <GradientText className="text-3xl font-medium mb-2">Features</GradientText>
         <ul className="list-disc pl-5 space-y-1">
           {activeProject.features.map((feature, index) => (
@@ -55,7 +55,7 @@ const ProjectPage = ({ params }: Props) => {
         </ul>
       </div>
 
-      <div>
+      <div className={"px-4 py-6 sm:px-6 lg:px-12"}>
         <GradientText className="text-3xl font-medium mb-2">Technologies Used</GradientText>
         <div className="flex flex-wrap gap-4 justify-center items-center">
           {activeProject.technologies.map((tech, index) => (
@@ -64,7 +64,7 @@ const ProjectPage = ({ params }: Props) => {
         </div>
       </div>
 
-      {activeProject.images.length > 0 && <div>
+      {activeProject.images.length > 0 && <div className={"px-4 py-6 sm:px-6 lg:px-12"}>
         <GradientText className="text-3xl font-medium mb-2">Project Snapshots</GradientText>
         <Carousel className="w-full max-w-screen-lg mx-auto relative">
           <CarouselContent>
@@ -76,7 +76,7 @@ const ProjectPage = ({ params }: Props) => {
                     alt={image.alt}
                     width={1000}
                     height={1000}
-                    className="object-contain h-[450px] w-full rounded-xl"
+                    className="object-contain max-h-[450px] w-full rounded-xl"
                   />
                 </div>
               </CarouselItem>

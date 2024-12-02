@@ -1,15 +1,14 @@
 'use client';
 
-import { motion, useInView } from 'framer-motion';
+import { motion, MotionProps, useInView } from 'framer-motion';
 import React, { PropsWithChildren } from 'react';
 
 type Props = {
   direction: 'left' | 'right' | 'up' | 'down',
   duration?: number,
-  className?: string
-} & PropsWithChildren;
+} & PropsWithChildren & MotionProps & React.HTMLAttributes<HTMLDivElement>;
 
-const AnimatedSection = ({ children, direction, duration = 0.5, className }: Props) => {
+const AnimatedSection = ({ children, direction, duration = 0.5, ...props }: Props) => {
   const ref = React.useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true });
   const variants = {
@@ -35,7 +34,7 @@ const AnimatedSection = ({ children, direction, duration = 0.5, className }: Pro
       initial="hidden"
       animate={isInView ? 'visible' : 'hidden'}
       variants={variants}
-      className={className}
+      {...props}
     >
       {children}
     </motion.div>

@@ -5,7 +5,7 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from '@/components/ui/navigation-menu';
-import { PropsWithChildren } from 'react';
+import React, { PropsWithChildren } from 'react';
 
 type Props = {
   triggerComponent: React.ReactNode;
@@ -16,7 +16,15 @@ export default function NavDropdownMenu({ triggerComponent, children }: Props) {
     <NavigationMenu>
       <NavigationMenuList>
         <NavigationMenuItem>
-          <NavigationMenuTrigger>{triggerComponent}</NavigationMenuTrigger>
+          <NavigationMenuTrigger
+            className="p-0"
+            // onPointerEnter={(e) => e.preventDefault()}
+            // onPointerMove={(e) => e.preventDefault()}
+            // onPointerLeave={(e) => e.preventDefault()}
+
+          >
+            {triggerComponent}
+          </NavigationMenuTrigger>
           <NavigationMenuContent>{children}</NavigationMenuContent>
         </NavigationMenuItem>
       </NavigationMenuList>

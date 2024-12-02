@@ -1,7 +1,6 @@
 import AnimatedCounter from '@/components/AnimatedCounter';
 import Banner from '@/components/Banner';
 import TechnologyCard from '@/components/cards/TechnologyCard';
-import NewsletterSubscription from '@/components/sections/EmailNewsletter';
 import ReviewSection from '@/components/sections/ReviewSection';
 import { Timeline } from '@/components/ui/timeline';
 import { technologyCards, timelineItems } from '@/lib/constants';
@@ -12,12 +11,12 @@ const AboutPage = () => {
   return (
     <div className="space-y-20">
       <div className="relative w-full mb-32 space-y-5">
-        <Banner image="/about_banner.png" className="bottom-10 left-4 md:bottom-1/3 md:w-1/2">
+        <Banner image="/about_banner.png" className="bottom-10 left-4 md:bottom-1/3">
           <AnimatedSection direction={'left'} className="flex flex-col gap-4">
             <h1 className="text-4xl font-medium text-white leading-relaxed">
               Explore the world of Synnestra Technologies.
             </h1>
-            <p className="text-white font-normal">
+            <p className="text-white font-normal md:w-1/2">
               Synnestra Technologies is a leading provider of cutting-edge technology solutions that empower the
               world&apos;s
               top companies to achieve their goals and stay ahead of the competition.
@@ -34,12 +33,9 @@ const AboutPage = () => {
           </div>
         </section>
       </div>
-      <AnimatedSection direction={'up'}
-                       className="w-full px-4 py-6 sm:px-6 lg:px-12 flex flex-col gap-8 items-center max-w-screen-lg mx-auto">
-        <div className="bg-custom-purple w-fit px-6 py-4 rounded-full flex items-center justify-center">
-          <h4 className="text-xl text-white font-medium ">Our History</h4>
-        </div>
-        <h3 className="text-3xl font-medium text-center leading-relaxed">
+      <AnimatedSection direction='up' className="w-full px-4 py-6 sm:px-6 lg:px-12 flex flex-col gap-8 items-center max-w-screen-lg mx-auto">
+        <h2 className="text-4xl md:text-5xl text-custom-purple font-medium">Our History</h2>
+        <h3 className="text-2xl font-medium text-center leading-relaxed">
           Proudly serving the <span className="text-custom-purple">world&apos;s top companies</span> with smart{' '}
           <span className="text-custom-purple">technology solutions</span> for over four decades
         </h3>
@@ -63,10 +59,8 @@ const AboutPage = () => {
 
       <section className="px-4 py-6 sm:px-6 lg:px-12 flex flex-col gap-8 items-center">
         <div className="text-center mb-12 flex flex-col items-center gap-5">
-          <div className="bg-custom-purple w-fit px-4 py-2 rounded-full flex items-center justify-center">
-            <h4 className="text-xl text-white font-medium ">Track Record</h4>
-          </div>
-          <h3 className="text-3xl">Proven track record</h3>
+          <h2 className="text-4xl md:text-5xl text-custom-purple font-medium">Track Record</h2>
+          <h3 className="text-2xl">Proven track record</h3>
           <p className="text-gray-600 text-sm">
             Synnestra&apos;s track record of success is a testament to our commitment to excellence, innovation, and
             client satisfaction.
@@ -265,7 +259,8 @@ const AboutPage = () => {
         </div>
         <div className="space-y-4">
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-            <AnimatedSection direction={"left"} className="col-span-1 md:col-span-4 bg-custom-purple relative p-6 rounded-xl gap-4">
+            <AnimatedSection direction={'left'}
+                             className="col-span-1 md:col-span-4 bg-custom-purple relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed text-white">Committed to Quality Excellence</h4>
               <p className="text-sm font-medium text-white w-[80%]">
                 At the heart of Synnestra&apos;s ethos lies an unwavering commitment to quality and excellence. We have
@@ -285,7 +280,8 @@ const AboutPage = () => {
                 className="absolute bottom-2 right-2"
               />
             </AnimatedSection>
-            <AnimatedSection direction={"left"} className="col-span-1 md:col-span-2 bg-gray-100 relative p-6 rounded-xl gap-4">
+            <AnimatedSection direction={'left'}
+                             className="col-span-1 md:col-span-2 bg-gray-100 relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed">Committed to Quality Excellence</h4>
               <p className="text-sm font-medium w-1/2">
                 Synnestra&apos;s clients can count on consistently high levels of service and support, backed by robust
@@ -303,7 +299,8 @@ const AboutPage = () => {
             </AnimatedSection>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
-            <AnimatedSection direction={"right"} className="col-span-1 md:col-span-2 bg-gray-100 relative p-6 rounded-xl gap-4">
+            <AnimatedSection direction={'right'}
+                             className="col-span-1 md:col-span-2 bg-gray-100 relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed">Ensured Service Levels</h4>
               <p className="text-sm font-medium w-1/2">
                 Synnestra&apos;s clients can count on consistently high levels of service and support, backed by robust
@@ -319,7 +316,8 @@ const AboutPage = () => {
                 className="absolute bottom-2 right-2"
               />
             </AnimatedSection>
-            <AnimatedSection direction={"right"} className="col-span-1 md:col-span-4 bg-custom-purple relative p-6 rounded-xl gap-4">
+            <AnimatedSection direction={'right'}
+                             className="col-span-1 md:col-span-4 bg-custom-purple relative p-6 rounded-xl gap-4">
               <h4 className="text-3xl font-medium leading-relaxed text-white">Harnessing the Power of AI</h4>
               <p className="text-sm font-medium text-white w-[80%]">
                 Synnestra&apos;s solutions leverage the transformative power of artificial intelligence to unlock new
@@ -343,7 +341,7 @@ const AboutPage = () => {
         </div>
       </section>
       <ReviewSection />
-      <NewsletterSubscription />
+      {/*<NewsletterSubscription />*/}
     </div>
   );
 };

@@ -30,6 +30,7 @@ export type Solution = {
   title: string;
   description: string;
   icon: string;
+  link: string;
 };
 
 export type Review = {
