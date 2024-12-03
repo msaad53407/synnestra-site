@@ -29,7 +29,8 @@ export default function MobileNav() {
               <li key={item.name}>
                 {item.subitems ? (
                   <Collapsible>
-                    <CollapsibleTrigger className="flex w-full items-center justify-between py-2 text-lg hover:text-custom-purple transition-colors">
+                    <CollapsibleTrigger
+                      className="flex w-full items-center justify-between py-2 text-lg hover:text-custom-purple transition-colors">
                       {item.name}
                       <ChevronDown className="h-4 w-4" />
                     </CollapsibleTrigger>
@@ -70,7 +71,9 @@ export default function MobileNav() {
           </ul>
         </nav>
         <div className="mt-8">
-          <Button className="w-full bg-custom-purple hover:bg-custom-purple/90 text-white">Contact us</Button>
+          <Button className="w-full bg-custom-purple hover:bg-custom-purple text-white"><Link href="/contact-us"
+                                                                                              onClick={() => setOpen(false)}>Contact
+            us</Link></Button>
         </div>
       </SheetContent>
     </Sheet>

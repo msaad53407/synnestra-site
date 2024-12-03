@@ -53,9 +53,9 @@ export default function Home() {
           </div>
         </AnimatedSection>
       </section>
-      <InfiniteMovingCards direction="left" speed="fast" className="px-4 py-6 sm:px-6 lg:px-12">
-        {companies.map((item) => (
-          <div key={item.title} className="size-36 flex items-center justify-center">
+      <InfiniteMovingCards direction="left" speed="normal" className="px-4 py-6 sm:px-6 lg:px-12">
+        {[...companies, ...companies].map((item, index) => (
+          <li key={item.title + " " + index} className="size-36 flex items-center justify-center">
             <Image
               src={item.thumbnail}
               alt={item.title}
@@ -63,7 +63,7 @@ export default function Home() {
               height={100}
               className="size-full object-contain"
             />
-          </div>
+          </li>
         ))}
       </InfiniteMovingCards>
       <StatisticsBar />
@@ -78,7 +78,7 @@ export default function Home() {
         ))}
       </section>
       <section className="px-4 py-6 sm:px-6 lg:px-12">
-        <h2 className="text-4xl md:text-4xl font-medium text-center text-custom-purple my-12">
+        <h2 className="text-4xl md:text-4xl font-medium text-center text-custom-purple mb-12">
           Apps we built been
           <br />
           trending on the App Store

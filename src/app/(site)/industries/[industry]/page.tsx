@@ -1,12 +1,13 @@
 import { notFound } from 'next/navigation';
 
-type Props = {
-  params: {
-    industry: string;
-  };
-};
+// type Props = {
+//   params: {
+//     industry: string;
+//   };
+// };
 
-const IndustryPage = ({ params: { industry } }: Props) => {
+const IndustryPage = () => {
+// const IndustryPage = ({ params: { industry } }: Props) => {
   return notFound();
   // const selectedIndustry = industries.find((i) => i.slug === industry);
   // if (!selectedIndustry) notFound();

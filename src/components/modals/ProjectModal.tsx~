@@ -90,7 +90,6 @@ const ProjectModal = () => {
                         height={1000}
                         className="object-contain w-full rounded-xl max-h-[450px]"
                         quality={100}
-                        priority
                       />
                     </div>
                   </CarouselItem>

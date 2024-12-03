@@ -2,10 +2,8 @@ import { products } from '@/lib/constants';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import React from 'react';
-import { ArrowUpRight } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import TechnologyCard from '@/components/cards/TechnologyCard';
-import GradientText from '@/components/GradientText';
 
 type Props = {
   params: {
@@ -23,7 +21,7 @@ const ProjectPage = ({ params }: Props) => {
 
   return (
     <div className="container mx-auto py-12 space-y-8">
-      <div className="space-y-4 px-4 py-6 sm:px-6 lg:px-12">
+      <div className="space-y-8 px-4 py-6 sm:px-6 lg:px-12">
         <Image
           src={activeProject.thumbnail}
           alt={activeProject.title}
@@ -34,20 +32,14 @@ const ProjectPage = ({ params }: Props) => {
           quality={100}
         />
         <div className="flex gap-4 items-center justify-between">
-          <GradientText className="text-3xl font-medium">{activeProject.title}</GradientText>
-          {activeProject.link && <a
-            href={activeProject.link}
-            className="flex items-center bg-custom-purple text-white px-4 py-2 rounded-full"
-          >
-            <span>Live Preview</span> <ArrowUpRight className="ml-2 h-4 w-4" />
-          </a>}
+          <h2 className="text-3xl font-medium">{activeProject.title}</h2>
         </div>
       </div>
 
-      <p className="text-gray-600 px-4 py-6 sm:px-6 lg:px-12">{activeProject.description}</p>
+      <p className="text-gray-600 px-4 sm:px-6 lg:px-12">{activeProject.description}</p>
 
       <div className="px-4 py-6 sm:px-6 lg:px-12">
-        <GradientText className="text-3xl font-medium mb-2">Features</GradientText>
+        <h2 className="text-3xl font-medium mb-2">Features</h2>
         <ul className="list-disc pl-5 space-y-1">
           {activeProject.features.map((feature, index) => (
             <li key={index} className={'text-gray-600'}>{feature}</li>
@@ -56,7 +48,7 @@ const ProjectPage = ({ params }: Props) => {
       </div>
 
       <div className={"px-4 py-6 sm:px-6 lg:px-12"}>
-        <GradientText className="text-3xl font-medium mb-2">Technologies Used</GradientText>
+        <h2 className="text-3xl font-medium mb-2">Technologies Used</h2>
         <div className="flex flex-wrap gap-4 justify-center items-center">
           {activeProject.technologies.map((tech, index) => (
             <TechnologyCard key={index} technology={tech} />
@@ -65,7 +57,7 @@ const ProjectPage = ({ params }: Props) => {
       </div>
 
       {activeProject.images.length > 0 && <div className={"px-4 py-6 sm:px-6 lg:px-12"}>
-        <GradientText className="text-3xl font-medium mb-2">Project Snapshots</GradientText>
+        <h2 className="text-3xl font-medium mb-2">Project Snapshots</h2>
         <Carousel className="w-full max-w-screen-lg mx-auto relative">
           <CarouselContent>
             {activeProject.images.map((image, index) => (
@@ -77,6 +69,7 @@ const ProjectPage = ({ params }: Props) => {
                     width={1000}
                     height={1000}
                     className="object-contain max-h-[450px] w-full rounded-xl"
+                    priority
                   />
                 </div>
               </CarouselItem>

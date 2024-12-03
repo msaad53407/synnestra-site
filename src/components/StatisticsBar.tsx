@@ -5,7 +5,7 @@ import AnimatedCounter from './AnimatedCounter';
 export default function StatisticsBar() {
   return (
     <div className="bg-white px-4 py-6 sm:px-6 lg:px-12">
-      <div className="flex flex-wrap justify-between items-center -mx-4">
+      <div className="flex flex-wrap gap-4 justify-between items-center -mx-4">
         <div className="w-full md:w-auto px-4 mb-4 md:mb-0">
           <div className="flex items-center gap-5">
             <div className="mr-3 space-y-3">

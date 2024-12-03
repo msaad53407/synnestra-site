@@ -69,7 +69,7 @@ const ServicePage = ({ params: { service } }: Props) => {
                 digital reality
               </p>
               <Button asChild className="bg-custom-orange px-4 py-2 rounded-full hover:bg-custom-orange">
-                <Link href={'#'}>
+                <Link href="/contact-us">
                   Get in Touch <ArrowUpRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
