@@ -21,26 +21,31 @@ type Props = {
 const AIFeatures = [
   {
     title: '50% cost savings',
-    description: 'Our innovative approaches and economies of scale allow us to deliver significant cost savings, freeing up resources for strategic investments.',
+    description:
+      'Our innovative approaches and economies of scale allow us to deliver significant cost savings, freeing up resources for strategic investments.',
     icon: Banknote,
     color: 'text-pink-500',
     bgColor: 'bg-pink-300',
   },
   {
     title: '45% innovation ready',
-    description: 'By leveraging the latest technologies and best practices, we enable your business to stay at the forefront of digital transformation and innovation.',
+    description:
+      'By leveraging the latest technologies and best practices, we enable your business to stay at the forefront of digital transformation and innovation.',
     icon: Lightbulb,
     color: 'text-green-500',
     bgColor: 'bg-green-300',
   },
   {
     title: '8X more success',
-    description: 'Our Managed Services have been proven to increase the success rate of our clients\' digital initiatives by up to 8 times, delivering tangible and sustainable results.',
+    description:
+      "Our Managed Services have been proven to increase the success rate of our clients' digital initiatives by up to 8 times, delivering tangible and sustainable results.",
     icon: Trophy,
     color: 'text-blue-500',
     bgColor: 'bg-blue-300',
   },
 ];
+
+export const generateStaticParams = () => servicesProvided.map((service) => ({ service: service.slug }));
 
 const ServicePage = ({ params: { service } }: Props) => {
   const selectedService = servicesProvided.find((s) => s.slug === service);
@@ -84,12 +89,10 @@ const ServicePage = ({ params: { service } }: Props) => {
             Our <span className="text-custom-purple">{transformSlug(service)}</span> let you concentrate on what matters
           </GradientText>
           <p className="text-gray-600 mb-4">
-            Our {transformSlug(selectedService.slug)} Let You Concentrate on What Matters
-            At Synnestra, we understand that managing your business&apos;s critical operations can be a significant
-            challenge. That&apos;s why we offer comprehensive {transformSlug(selectedService.slug)} to handle the
-            complexities, allowing you
-            to
-            focus on your core competencies and strategic initiatives.
+            Our {transformSlug(selectedService.slug)} Let You Concentrate on What Matters At Synnestra, we understand
+            that managing your business&apos;s critical operations can be a significant challenge. That&apos;s why we
+            offer comprehensive {transformSlug(selectedService.slug)} to handle the complexities, allowing you to focus
+            on your core competencies and strategic initiatives.
           </p>
         </AnimatedSection>
         <AnimatedSection direction={'right'} className="md:w-1/2">
@@ -113,22 +116,23 @@ const ServicePage = ({ params: { service } }: Props) => {
               Benefits of <span className="text-custom-purple">{transformSlug(service)}</span> provided by Synnestra
             </h2>
             <p className="text-gray-600 max-w-2xl">
-              Synnestra&apos;s Services have been proven to increase the success rate of our
-              clients&apos; digital
+              Synnestra&apos;s Services have been proven to increase the success rate of our clients&apos; digital
               transformation projects. Here&apos;s why you should choose us:
             </p>
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {selectedService.benefits.map((benefit, index) => (
-              <AnimatedSection direction={'up'} duration={0.5 * (index + 1)} key={index}
-                               className="flex flex-col items-start gap-3">
+              <AnimatedSection
+                direction={'up'}
+                duration={0.5 * (index + 1)}
+                key={index}
+                className="flex flex-col items-start gap-3"
+              >
                 <div className="p-2 rounded-full bg-custom-purple-light">
                   <benefit.icon />
                 </div>
                 <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
-                <p className="text-gray-600">
-                  {benefit.description}
-                </p>
+                <p className="text-gray-600">{benefit.description}</p>
               </AnimatedSection>
             ))}
           </div>
@@ -152,9 +156,7 @@ const ServicePage = ({ params: { service } }: Props) => {
                   </div>
                   <h3 className="text-2xl font-medium">{stat.title}</h3>
                 </div>
-                <p className="text-gray-600">
-                  {stat.description}
-                </p>
+                <p className="text-gray-600">{stat.description}</p>
               </AnimatedSection>
             ))}
           </div>
@@ -164,7 +166,8 @@ const ServicePage = ({ params: { service } }: Props) => {
         content={selectedService.offers.offerings}
         mainHeading={selectedService.offers.mainHeading}
         subtitle={selectedService.offers.subtitle}
-      />;
+      />
+      ;
       <section className="w-full px-4 py-6 sm:px-6 lg:px-12 space-y-5">
         <h3 className="text-5xl font-medium tracking-tight leading-relaxed text-center">Our Capability</h3>
         {/* Service Channels */}
@@ -291,12 +294,11 @@ const ServicePage = ({ params: { service } }: Props) => {
             </div>
           </div>
         </div>
-      </section>;
-      <CompanyImpact />;
-      {/*<NewsletterSubscription />;*/}
+      </section>
+      ;
+      <CompanyImpact />;{/*<NewsletterSubscription />;*/}
     </div>
-  )
-    ;
+  );
 };
 
 export default ServicePage;

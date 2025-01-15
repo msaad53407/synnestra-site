@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Providers from './Providers';
 import React from 'react';
+import ProjectModal from '@/components/modals/ProjectModal';
 
 const poppins = Poppins({ subsets: ['latin'], weight: ['400', '700', '900'] });
 
@@ -15,10 +16,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-  modal,
 }: Readonly<{
   children: React.ReactNode;
-  modal: React.ReactNode;
 }>) {
   return (
     <html lang="en">
@@ -26,8 +25,8 @@ export default function RootLayout({
         <Header />
         <main className="w-full max-w-screen-2xl mx-auto overflow-hidden">
           <Providers>
-            {modal}
             {children}
+            <ProjectModal />
           </Providers>
         </main>
         <Footer />
