@@ -15,7 +15,8 @@ export default function Header() {
   return (
     <header
       className="flex items-center justify-between bg-white w-full max-w-screen-2xl mx-auto px-4 py-6 sm:px-6 lg:px-12 sticky
-       top-0 z-50">
+       top-0 z-50"
+    >
       <Link href="/" className="text-3xl font-normal text-custom-purple">
         Synnestra
       </Link>
@@ -27,11 +28,15 @@ export default function Header() {
                 {item.subitems ? (
                   <NavDropdownMenu
                     triggerComponent={
-                      <span className={
-                        pathname === item.href
-                          ? 'text-custom-purple text-base font-medium'
-                          : 'text-custom-black-light hover:text-custom-purple text-base font-medium'
-                      }>{item.name}</span>
+                      <span
+                        className={
+                          pathname === item.href
+                            ? 'text-custom-purple text-base font-medium'
+                            : 'text-custom-black-light hover:text-custom-purple text-base font-medium'
+                        }
+                      >
+                        {item.name}
+                      </span>
                     }
                   >
                     <div className="w-screen bg-white shadow-lg">
@@ -54,7 +59,8 @@ export default function Header() {
                                   </li>
                                 ))}
                               </ul>
-                            </div>))}
+                            </div>
+                          ))}
                         </div>
                       </div>
                     </div>
@@ -75,9 +81,7 @@ export default function Header() {
           </ul>
         </nav>
         <Button className="bg-custom-purple hover:bg-custom-purple text-white" asChild>
-          <Link href="/contact-us">
-            Contact us
-          </Link>
+          <Link href="/contact-us">Contact us</Link>
         </Button>
       </div>
       <MobileNav />
