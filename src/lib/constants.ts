@@ -1,7 +1,9 @@
 import { TimelineEntry } from '@/components/ui/timeline';
+import { transformSlug } from '@/lib/utils';
 import {
   Company,
   Industry,
+  Office,
   Perk,
   ProjectCatalog,
   ProjectShowcase,
@@ -10,29 +12,88 @@ import {
   Solution,
   TechnologyCard,
 } from '@/types';
-import { Brain, CircleDotDashed, Cog, Presentation } from 'lucide-react';
-import { transformSlug } from '@/lib/utils';
+import { CircleDotDashed } from 'lucide-react';
 
 export const companies: Company[] = [
   {
-    title: 'Company 1',
-    thumbnail: '/company_logos/company_1.png',
+    title: 'Gec CO2',
+    thumbnail: '/company_logos/brand-logo.png',
   },
   {
-    title: 'Company 2',
-    thumbnail: '/company_logos/company_2.png',
+    title: 'C',
+    thumbnail: '/company_logos/c.png',
   },
   {
-    title: 'Company 3',
-    thumbnail: '/company_logos/company_3.png',
+    title: 'Calmomind',
+    thumbnail: '/company_logos/Calmomind.png',
   },
   {
-    title: 'Company 4',
-    thumbnail: '/company_logos/company_4.png',
+    title: 'Fazewide',
+    thumbnail: '/company_logos/fazewide 1.png',
   },
   {
-    title: 'Company 5',
-    thumbnail: '/company_logos/company_5.png',
+    title: 'Fairdeal Electrical',
+    thumbnail: '/company_logos/Frame 48095775.png',
+  },
+  {
+    title: 'Fuze Traders',
+    thumbnail: '/company_logos/FUZE TRADERS.png',
+  },
+  {
+    title: 'Tanfos',
+    thumbnail: '/company_logos/Group 1.png',
+  },
+  {
+    title: 'Silent Moon',
+    thumbnail: '/company_logos/Group 17.png',
+  },
+  {
+    title: 'Fit Quest',
+    thumbnail: '/company_logos/Group 1000003130.png',
+  },
+  {
+    title: 'MEBEL',
+    thumbnail: '/company_logos/Group 1000004081.png',
+  },
+  {
+    title: 'Pro Connect Hub',
+    thumbnail: '/company_logos/Group 1000005694.png',
+  },
+  {
+    title: 'Success Loop',
+    thumbnail: '/company_logos/logo 1.png',
+  },
+  {
+    title: 'Arcadia Developers',
+    thumbnail: '/company_logos/logo 2.png',
+  },
+  {
+    title: 'Global Currency',
+    thumbnail: '/company_logos/logo app 1.png',
+  },
+  {
+    title: 'VAR',
+    thumbnail: '/company_logos/logo.png',
+  },
+  {
+    title: 'CF4 Academy',
+    thumbnail: '/company_logos/ProjectImages.png',
+  },
+  {
+    title: 'TIRBUL',
+    thumbnail: '/company_logos/TIRBUL.png',
+  },
+  {
+    title: 'Zapta Technologies',
+    thumbnail: '/company_logos/Zapta logo.png',
+  },
+  {
+    title: 'volksbank',
+    thumbnail: '/company_logos/images.png',
+  },
+  {
+    title: 'My Car',
+    thumbnail: '/company_logos/my car.png',
   },
 ];
 
@@ -67,11 +128,12 @@ export const projectsShowcase: ProjectShowcase[] = [
   {
     id: '01',
     name: 'Success Loop',
-    description: 'At Synnestra, we empower businesses to achieve sustainable growth through our innovative software solutions. Our "Success Loop" methodology ensures that we consistently deliver tangible results and drive continuous improvement for our clients.',
+    description:
+      'At Synnestra, we empower businesses to achieve sustainable growth through our innovative software solutions. Our "Success Loop" methodology ensures that we consistently deliver tangible results and drive continuous improvement for our clients.',
     color: 'bg-custom-purple-light',
     textColor: 'text-black',
     headingColor: 'text-custom-purple',
-    image: '/company_logos/successloop_logo.png',
+    image: '/company_logos/logo 1.png',
   },
   {
     id: '02',
@@ -85,7 +147,8 @@ export const projectsShowcase: ProjectShowcase[] = [
   {
     id: '03',
     name: 'Swappin Numbers Academy',
-    description: 'As part of our commitment to knowledge-sharing, we have developed the Swappin\' Numbers Academy - an educational platform that equips professionals with the skills and strategies needed to navigate the dynamic world of financial data analysis and decision-making.',
+    description:
+      "As part of our commitment to knowledge-sharing, we have developed the Swappin' Numbers Academy - an educational platform that equips professionals with the skills and strategies needed to navigate the dynamic world of financial data analysis and decision-making.",
     color: 'bg-custom-purple',
     textColor: 'text-white',
     headingColor: 'text-white',
@@ -96,37 +159,43 @@ export const projectsShowcase: ProjectShowcase[] = [
 export const solutions: Solution[] = [
   {
     title: 'Manage Services',
-    description: 'Our comprehensive managed services suite ensures the smooth and efficient operation of your business-critical systems, allowing you to focus on core competencies and achieve your strategic objectives.',
+    description:
+      'Our comprehensive managed services suite ensures the smooth and efficient operation of your business-critical systems, allowing you to focus on core competencies and achieve your strategic objectives.',
     icon: '/icons/grommet-icons_services.svg',
     link: '/services/managed-services',
   },
   {
     title: 'IT Consulting & Advisory',
-    description: 'Leverage our industry-leading expertise to navigate the complex IT landscape. Our consultative approach helps you align technology with your business goals, optimize performance, and drive innovation.',
+    description:
+      'Leverage our industry-leading expertise to navigate the complex IT landscape. Our consultative approach helps you align technology with your business goals, optimize performance, and drive innovation.',
     icon: '/icons/fluent_people-team-24-regular.svg',
     link: '/services/it-consultancy-and-advisory',
   },
   {
     title: 'Cyber Security',
-    description: 'Protect your organization\'s sensitive data and digital assets with our robust cybersecurity solutions. We implement multi-layered security measures to safeguard your operations and maintain business continuity.',
+    description:
+      "Protect your organization's sensitive data and digital assets with our robust cybersecurity solutions. We implement multi-layered security measures to safeguard your operations and maintain business continuity.",
     icon: '/icons/carbon_cloud-services.svg',
     link: '/services/cyber-security',
   },
   {
     title: 'Web Development',
-    description: 'Our web development services empower you to create engaging, user-centric digital experiences that showcase your brand, enhance customer interactions, and drive business growth.',
+    description:
+      'Our web development services empower you to create engaging, user-centric digital experiences that showcase your brand, enhance customer interactions, and drive business growth.',
     icon: '/icons/mdi_web-asset.svg',
     link: '/services/web-development',
   },
   {
     title: 'Mobile Development',
-    description: 'Stay ahead of the mobile-first revolution with our custom mobile applications. We develop intuitive, feature-rich solutions that seamlessly integrate with your existing systems and processes.',
+    description:
+      'Stay ahead of the mobile-first revolution with our custom mobile applications. We develop intuitive, feature-rich solutions that seamlessly integrate with your existing systems and processes.',
     icon: '/icons/healthicons_mobile.svg',
     link: '/services/mobile-development',
   },
   {
     title: 'Cloud Services',
-    description: 'Unlock the power of cloud computing with our comprehensive suite of cloud-based services. From infrastructure to software-as-a-service, we help you harness the flexibility, scalability, and cost-efficiency of the cloud.',
+    description:
+      'Unlock the power of cloud computing with our comprehensive suite of cloud-based services. From infrastructure to software-as-a-service, we help you harness the flexibility, scalability, and cost-efficiency of the cloud.',
     icon: '/icons/hugeicons_ai-security-01.svg',
     link: '/services/cloud-services',
   },
@@ -134,46 +203,74 @@ export const solutions: Solution[] = [
 
 export const reviews: Review[] = [
   {
-    name: 'Emily Sutherland',
-    role: 'Marketing Director at AVD',
+    name: 'Muhammad Usama',
+    role: 'CTO Synnestra',
     review:
-      'Synnestra\'s solutions have been a game-changer for our marketing team. The intuitive web tools and mobile apps have streamlined our workflows and enabled us to deliver more effective campaigns.',
-    avatar: '/people_images/reviewer_1.png',
+      "At Synnestra, we are dedicated to driving innovation and delivering exceptional solutions to our clients. As the CTO, I've witnessed firsthand the transformative impact our team creates through our cutting-edge technology and unwavering commitment to quality. It's truly fulfilling to lead a team that is shaping the future of technology for our clients and partners.",
+    avatar: '/people_images/usama.webp',
   },
   {
-    name: 'John Nordstrom',
-    role: 'CFO',
+    name: 'Dave Nelson',
+    role: '',
     review:
-      'As the CFO, I\'ve been extremely impressed with Synnestra\'s financial management tools. The real-time reporting and cross-border transaction capabilities have been invaluable in optimizing our global operations.',
-    avatar: '/people_images/reviewer_2.png',
+      "Synnestra's tools have completely reshaped how we manage campaigns. Their intuitive web applications and streamlined processes have allowed us to execute marketing strategies more efficiently while delivering measurable results. Their support has made a noticeable difference to our team's productivity.",
+    avatar: '/people_images/reviewer_1.webp',
+  },
+  {
+    name: 'Scott Foster',
+    role: '',
+    review:
+      "Synnestra's financial tools have been a cornerstone of our global operations. Their real-time reporting and seamless cross-border transaction features have simplified financial oversight and decision-making. Their solutions save us time and give us confidence in managing complex financial scenarios.",
+    avatar: '/people_images/reviewer_2.webp',
   },
   {
     name: 'Michael Brown',
-    role: 'CTO',
+    role: '',
     review:
-      'Synnestra\'s IT consulting and cybersecurity services have been instrumental in modernizing our technology infrastructure. Their expert guidance has helped us enhance our digital resilience and drive innovation.',
-    avatar: '/people_images/reviewer_3.png',
+      "Modernizing our IT infrastructure was a daunting task until we collaborated with Synnestra. Their IT consulting and cybersecurity solutions have fortified our systems while paving the way for technological innovation. Their team's depth of knowledge has been a critical asset for us.",
+    avatar: '/people_images/reviewer_3.webp',
   },
   {
-    name: 'Sarah Smith',
-    role: 'CIO',
+    name: 'Karl Bennett',
+    role: '',
     review:
-      'Synnestra\'s cloud-based solutions have transformed the way we manage our IT resources. The scalability and cost-efficiency of their platform have allowed us to focus on our core business objectives.',
-    avatar: '/people_images/reviewer_4.png',
+      "Switching to Synnestra's cloud platform has revolutionized our IT operations. The flexibility and cost savings have allowed us to reallocate resources toward our core business goals. Their team's focus on reliability and support has been exceptional throughout.",
+    avatar: '/people_images/reviewer_4.webp',
   },
   {
     name: 'Gavy Gruzansky',
-    role: 'CEO A Govarda',
+    role: '',
     review:
-      'Synnestra\'s mobile development expertise has been integral to the success of our new product launch. The intuitive app they created has revolutionized the way our customers interact with our brand.',
-    avatar: '/people_images/reviewer_5.png',
+      "Launching our latest product would not have been as successful without Synnestra's expertise in mobile app development. The app they delivered has transformed the way our customers interact with our brand, offering a seamless and engaging experience.",
+    avatar: '/people_images/reviewer_5.webp',
   },
   {
-    name: 'Omri Pelad',
-    role: 'CEO B',
+    name: 'Emily Sutherland',
+    role: '',
     review:
-      'Synnestra\'s managed services have been a lifesaver for our business. The seamless operation of our critical systems and the proactive support from their team have allowed us to concentrate on strategic initiatives.',
-    avatar: '/people_images/reviewer_6.png',
+      "Synnestra's e-commerce platform exceeded our expectations. It's reliable, user-friendly, and scalable—perfect for handling our growing customer base. Their team's meticulous attention to detail ensured a smooth deployment, making them a top recommendation for anyone looking to elevate their online business.",
+    avatar: '/people_images/reviewer_4.png',
+  },
+  {
+    name: 'Sarah Johnson',
+    role: '',
+    review:
+      "Synnestra's team consistently demonstrated professionalism and clarity throughout the project. The video updates and clear communication made it easy to track progress, and their prompt responses to questions were invaluable. I'm looking forward to collaborating with them on upcoming features for my application.",
+    avatar: '/people_images/reviewer_1.png',
+  },
+  {
+    name: 'Nasser Al-Khelaifi',
+    role: '',
+    review:
+      "Synnestra's Corporate Compliance services have been instrumental in helping us meet regulatory requirements. Their expertise in compliance frameworks and proactive approach to risk management has strengthened our organization's operational integrity. They've proven to be a trusted partner in navigating complex regulations.",
+    avatar: '/people_images/placeholder.jpg',
+  },
+  {
+    name: 'Chris Thompson',
+    role: '',
+    review:
+      "With Synnestra's Data Science & AI services, we've unlocked actionable insights that are transforming our decision-making process. Their predictive models have optimized our workflows, allowing us to stay ahead in a competitive market. Synnestra's ability to tailor solutions to our unique challenges makes them a standout partner for innovation-driven businesses.",
+    avatar: '/people_images/placeholder.jpg',
   },
 ];
 
@@ -183,7 +280,8 @@ export const products: ProjectCatalog = {
       slug: 'success-loop',
       title: 'Successloop',
       thumbnail: '/projects/success-loop/thumbnail.png',
-      description: 'SuccessLoop is a powerful platform designed to help businesses create, manage, and optimize referral programs. Our mission is to bring the human touch to a digital world by leveraging the power of word-of-mouth marketing to build communities and brands.',
+      description:
+        'SuccessLoop is a powerful platform designed to help businesses create, manage, and optimize referral programs. Our mission is to bring the human touch to a digital world by leveraging the power of word-of-mouth marketing to build communities and brands.',
       features: [
         'Customizable Referral Programs',
         'Real-Time Analytics',
@@ -204,7 +302,8 @@ export const products: ProjectCatalog = {
         {
           name: 'AWS',
           imageSrc: '/technology_logos/aws.svg',
-        }, {
+        },
+        {
           name: 'MySQL',
           imageSrc: '/technology_logos/mysql.svg',
         },
@@ -213,16 +312,20 @@ export const products: ProjectCatalog = {
         {
           src: '/projects/success-loop/image-1.png',
           alt: 'image-1',
-        }, {
+        },
+        {
           src: '/projects/success-loop/image-2.png',
           alt: 'image-2',
-        }, {
+        },
+        {
           src: '/projects/success-loop/image-3.png',
           alt: 'image-3',
-        }, {
+        },
+        {
           src: '/projects/success-loop/image-4.png',
           alt: 'image-4',
-        }, {
+        },
+        {
           src: '/projects/success-loop/image-5.png',
           alt: 'image-5',
         },
@@ -253,7 +356,8 @@ export const products: ProjectCatalog = {
         {
           name: 'AWS',
           imageSrc: '/technology_logos/aws.svg',
-        }, {
+        },
+        {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
@@ -263,16 +367,20 @@ export const products: ProjectCatalog = {
         {
           src: '/projects/management-system/image-1.png',
           alt: 'image-1',
-        }, {
+        },
+        {
           src: '/projects/management-system/image-2.png',
           alt: 'image-2',
-        }, {
+        },
+        {
           src: '/projects/management-system/image-3.png',
           alt: 'image-3',
-        }, {
+        },
+        {
           src: '/projects/management-system/image-4.png',
           alt: 'image-4',
-        }, {
+        },
+        {
           src: '/projects/management-system/image-5.png',
           alt: 'image-5',
         },
@@ -303,7 +411,8 @@ export const products: ProjectCatalog = {
         {
           name: 'AWS',
           imageSrc: '/technology_logos/aws.svg',
-        }, {
+        },
+        {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
@@ -313,16 +422,20 @@ export const products: ProjectCatalog = {
         {
           src: '/projects/fairdeal-electrical/image-1.webp',
           alt: 'image-1',
-        }, {
+        },
+        {
           src: '/projects/fairdeal-electrical/image-2.webp',
           alt: 'image-2',
-        }, {
+        },
+        {
           src: '/projects/fairdeal-electrical/image-3.webp',
           alt: 'image-3',
-        }, {
+        },
+        {
           src: '/projects/fairdeal-electrical/image-4.webp',
           alt: 'image-4',
-        }, {
+        },
+        {
           src: '/projects/fairdeal-electrical/image-5.webp',
           alt: 'image-5',
         },
@@ -353,7 +466,8 @@ export const products: ProjectCatalog = {
         {
           name: 'AWS',
           imageSrc: '/technology_logos/aws.svg',
-        }, {
+        },
+        {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
@@ -391,7 +505,8 @@ export const products: ProjectCatalog = {
         {
           name: 'AWS',
           imageSrc: '/technology_logos/aws.svg',
-        }, {
+        },
+        {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
@@ -401,7 +516,8 @@ export const products: ProjectCatalog = {
         {
           src: '/projects/arcadia-developers-premier-construction-solutions/image-1.webp',
           alt: 'Arcadia Developers Project Showcase',
-        }, {
+        },
+        {
           src: '/projects/arcadia-developers-premier-construction-solutions/image-2.webp',
           alt: 'Construction Services Overview',
         },
@@ -479,7 +595,8 @@ export const products: ProjectCatalog = {
         {
           name: 'AWS',
           imageSrc: '/technology_logos/aws.svg',
-        }, {
+        },
+        {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
@@ -489,13 +606,16 @@ export const products: ProjectCatalog = {
         {
           src: '/projects/tanafos/image-1.webp',
           alt: 'Tanafos Ground Booking Interface',
-        }, {
+        },
+        {
           src: '/projects/tanafos/image-2.webp',
           alt: 'Match Scheduling Screen',
-        }, {
+        },
+        {
           src: '/projects/tanafos/image-3.webp',
           alt: 'Multilingual Community Chat',
-        }, {
+        },
+        {
           src: '/projects/tanafos/image-4.webp',
           alt: 'Player Connection Features',
         },
@@ -551,9 +671,9 @@ export const products: ProjectCatalog = {
   ],
   mobileApps: [
     {
-      'slug': 'poem-maker',
-      'title': 'Poem Maker',
-      'features': [
+      slug: 'poem-maker',
+      title: 'Poem Maker',
+      features: [
         'Inspiring poetry prompts to spark creativity',
         'Versatile poetic structure templates',
         'Advanced poem editing tools',
@@ -562,42 +682,43 @@ export const products: ProjectCatalog = {
         'Intuitive user interface for seamless writing experience',
         'Secure authentication powered by Clerk',
       ],
-      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      'thumbnail': '/projects/poem-maker/thumbnail.webp',
-      'description': 'PoemMaker is a delightful native app crafted with FlutterFlow, designed to unleash the creativity of users through the art of poetry. With a range of inspiring prompts, versatile poetic structures, and editing tools, the app serves as a pocket-sized companion for individuals to effortlessly compose and share beautiful poems. Whether you\'re an experienced poet or a beginner, "PoemMaker" provides a seamless platform to express your unique poetic voice and ignite your passion for the written word.',
-      'technologies': [
+      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      thumbnail: '/projects/poem-maker/thumbnail.webp',
+      description:
+        'PoemMaker is a delightful native app crafted with FlutterFlow, designed to unleash the creativity of users through the art of poetry. With a range of inspiring prompts, versatile poetic structures, and editing tools, the app serves as a pocket-sized companion for individuals to effortlessly compose and share beautiful poems. Whether you\'re an experienced poet or a beginner, "PoemMaker" provides a seamless platform to express your unique poetic voice and ignite your passion for the written word.',
+      technologies: [
         {
-          'name': 'Flutter',
-          'imageSrc': '/technology_logos/flutter.svg',
+          name: 'Flutter',
+          imageSrc: '/technology_logos/flutter.svg',
         },
         {
-          'name': 'Nodejs',
-          'imageSrc': '/technology_logos/nodejs.svg',
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
         },
       ],
-      'images': [
+      images: [
         {
-          'src': '/projects/poem-maker/image-1.webp',
-          'alt': 'image-1',
+          src: '/projects/poem-maker/image-1.webp',
+          alt: 'image-1',
         },
         {
-          'src': '/projects/poem-maker/image-2.webp',
-          'alt': 'image-2',
+          src: '/projects/poem-maker/image-2.webp',
+          alt: 'image-2',
         },
         {
-          'src': '/projects/poem-maker/image-3.webp',
-          'alt': 'image-3',
+          src: '/projects/poem-maker/image-3.webp',
+          alt: 'image-3',
         },
         {
-          'src': '/projects/poem-maker/image-4.webp',
-          'alt': 'image-4',
+          src: '/projects/poem-maker/image-4.webp',
+          alt: 'image-4',
         },
       ],
     },
     {
-      'slug': 'pure',
-      'title': 'Pure: More than Hair',
-      'features': [
+      slug: 'pure',
+      title: 'Pure: More than Hair',
+      features: [
         'Performance tracking for salon workers',
         'Data-driven decision-making dashboard',
         'Secure and compliant data management',
@@ -606,38 +727,39 @@ export const products: ProjectCatalog = {
         'Comprehensive performance analysis tools',
         'Secure authentication powered by Clerk',
       ],
-      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      'thumbnail': '/projects/pure/thumbnail.webp',
-      'description': 'SalonTech Solutions introduced Pure, a revolutionary app designed to enhance performance management in the beauty and wellness industry. This case study outlines Pure\'s goals, challenges, strategic approach, and outcomes.',
-      'technologies': [
+      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      thumbnail: '/projects/pure/thumbnail.webp',
+      description:
+        "SalonTech Solutions introduced Pure, a revolutionary app designed to enhance performance management in the beauty and wellness industry. This case study outlines Pure's goals, challenges, strategic approach, and outcomes.",
+      technologies: [
         {
-          'name': 'Flutter',
-          'imageSrc': '/technology_logos/flutter.svg',
+          name: 'Flutter',
+          imageSrc: '/technology_logos/flutter.svg',
         },
         {
-          'name': 'Nodejs',
-          'imageSrc': '/technology_logos/nodejs.svg',
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
         },
       ],
-      'images': [
+      images: [
         {
-          'src': '/projects/pure/image-1.webp',
-          'alt': 'image-1',
+          src: '/projects/pure/image-1.webp',
+          alt: 'image-1',
         },
         {
-          'src': '/projects/pure/image-2.webp',
-          'alt': 'image-2',
+          src: '/projects/pure/image-2.webp',
+          alt: 'image-2',
         },
         {
-          'src': '/projects/pure/image-3.webp',
-          'alt': 'image-3',
+          src: '/projects/pure/image-3.webp',
+          alt: 'image-3',
         },
       ],
     },
     {
-      'slug': 'flick-skills',
-      'title': 'FlickSkills: Your Ultimate Football Trick Tutorial',
-      'features': [
+      slug: 'flick-skills',
+      title: 'FlickSkills: Your Ultimate Football Trick Tutorial',
+      features: [
         'Comprehensive football trick tutorial videos',
         'Skill enhancement for players of all levels',
         'Interactive quizzes and challenges',
@@ -646,42 +768,43 @@ export const products: ProjectCatalog = {
         'Cross-platform accessibility',
         'Secure authentication powered by Clerk',
       ],
-      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      'thumbnail': '/projects/flick-skills/thumbnail.webp',
-      'description': 'Flick Skills is a sports-focused software company committed to providing innovative solutions, particularly in football, to empower enthusiasts and improve their skills.',
-      'technologies': [
+      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      thumbnail: '/projects/flick-skills/thumbnail.webp',
+      description:
+        'Flick Skills is a sports-focused software company committed to providing innovative solutions, particularly in football, to empower enthusiasts and improve their skills.',
+      technologies: [
         {
-          'name': 'Flutter',
-          'imageSrc': '/technology_logos/flutter.svg',
+          name: 'Flutter',
+          imageSrc: '/technology_logos/flutter.svg',
         },
         {
-          'name': 'Nodejs',
-          'imageSrc': '/technology_logos/nodejs.svg',
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
         },
       ],
-      'images': [
+      images: [
         {
-          'src': '/projects/flick-skills/image-1.webp',
-          'alt': 'image-1',
+          src: '/projects/flick-skills/image-1.webp',
+          alt: 'image-1',
         },
         {
-          'src': '/projects/flick-skills/image-2.webp',
-          'alt': 'image-2',
+          src: '/projects/flick-skills/image-2.webp',
+          alt: 'image-2',
         },
         {
-          'src': '/projects/flick-skills/image-3.webp',
-          'alt': 'image-3',
+          src: '/projects/flick-skills/image-3.webp',
+          alt: 'image-3',
         },
         {
-          'src': '/projects/flick-skills/image-4.webp',
-          'alt': 'image-4',
+          src: '/projects/flick-skills/image-4.webp',
+          alt: 'image-4',
         },
       ],
     },
     {
-      'slug': 'var',
-      'title': 'Var: Animated Book Reading Experience',
-      'features': [
+      slug: 'var',
+      title: 'Var: Animated Book Reading Experience',
+      features: [
         'Synchronized animated visuals with text',
         'Immersive reading experience',
         'Dynamic content integration with publishers',
@@ -690,38 +813,39 @@ export const products: ProjectCatalog = {
         'Engaging visual storytelling',
         'Secure authentication powered by Clerk',
       ],
-      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      'thumbnail': '/projects/var/thumbnail.webp',
-      'description': 'Var is an app that facilitates easy book reading by providing animated visuals synchronized with highlighted text, allowing users to immerse themselves in the story and enjoy a more engaging reading experience.',
-      'technologies': [
+      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      thumbnail: '/projects/var/thumbnail.webp',
+      description:
+        'Var is an app that facilitates easy book reading by providing animated visuals synchronized with highlighted text, allowing users to immerse themselves in the story and enjoy a more engaging reading experience.',
+      technologies: [
         {
-          'name': 'Flutter',
-          'imageSrc': '/technology_logos/flutter.svg',
+          name: 'Flutter',
+          imageSrc: '/technology_logos/flutter.svg',
         },
         {
-          'name': 'Nodejs',
-          'imageSrc': '/technology_logos/nodejs.svg',
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
         },
       ],
-      'images': [
+      images: [
         {
-          'src': '/projects/var/image-1.webp',
-          'alt': 'image-1',
+          src: '/projects/var/image-1.webp',
+          alt: 'image-1',
         },
         {
-          'src': '/projects/var/image-2.webp',
-          'alt': 'image-2',
+          src: '/projects/var/image-2.webp',
+          alt: 'image-2',
         },
         {
-          'src': '/projects/var/image-3.webp',
-          'alt': 'image-3',
+          src: '/projects/var/image-3.webp',
+          alt: 'image-3',
         },
       ],
     },
     {
-      'slug': 'barber-b',
-      'title': 'Barber b: Streamlined Barber Appointment Booking',
-      'features': [
+      slug: 'barber-b',
+      title: 'Barber b: Streamlined Barber Appointment Booking',
+      features: [
         'Efficient appointment scheduling',
         'Mobile-friendly booking platform',
         'Automated appointment reminders',
@@ -730,38 +854,39 @@ export const products: ProjectCatalog = {
         'Reduced no-show rates',
         'Secure authentication powered by Clerk',
       ],
-      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      'thumbnail': '/projects/barber-b/thumbnail.webp',
-      'description': 'Barber B is a software company aiming to modernize the barber industry by simplifying appointment booking processes for both barbers and clients.',
-      'technologies': [
+      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      thumbnail: '/projects/barber-b/thumbnail.webp',
+      description:
+        'Barber B is a software company aiming to modernize the barber industry by simplifying appointment booking processes for both barbers and clients.',
+      technologies: [
         {
-          'name': 'Flutter',
-          'imageSrc': '/technology_logos/flutter.svg',
+          name: 'Flutter',
+          imageSrc: '/technology_logos/flutter.svg',
         },
         {
-          'name': 'Nodejs',
-          'imageSrc': '/technology_logos/nodejs.svg',
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
         },
       ],
-      'images': [
+      images: [
         {
-          'src': '/projects/barber-b/image-1.webp',
-          'alt': 'image-1',
+          src: '/projects/barber-b/image-1.webp',
+          alt: 'image-1',
         },
         {
-          'src': '/projects/barber-b/image-2.webp',
-          'alt': 'image-2',
+          src: '/projects/barber-b/image-2.webp',
+          alt: 'image-2',
         },
         {
-          'src': '/projects/barber-b/image-3.webp',
-          'alt': 'image-3',
+          src: '/projects/barber-b/image-3.webp',
+          alt: 'image-3',
         },
       ],
     },
     {
-      'slug': 'calmomind',
-      'title': 'Calmomind: Comprehensive Mental Wellness Solutions',
-      'features': [
+      slug: 'calmomind',
+      title: 'Calmomind: Comprehensive Mental Wellness Solutions',
+      features: [
         'Guided meditations by experienced instructors',
         'Personalized mindfulness techniques',
         'Meditation timer and daily reminders',
@@ -770,37 +895,53 @@ export const products: ProjectCatalog = {
         'Progress tracking and wellness insights',
         'Secure authentication powered by Clerk',
       ],
-      'link': 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      'thumbnail': '/projects/calmomind/thumbnail.jpg',
-      'description': 'Discover serenity on the go with our meditation app. Whether you\'re seeking stress relief, improved focus, or simply a moment of tranquility, our app offers a personalized journey to inner peace.\n\nEmbark on guided meditations led by experienced instructors, tailored to your schedule and preferences. Explore a variety of techniques, from mindfulness and breathing exercises to body scans and visualization.\n\nTrack your progress and cultivate mindfulness with our meditation timer and daily reminders. With a range of soothing sounds and nature scenes, create your ideal meditation environment anytime, anywhere.',
-      'technologies': [
+      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+      thumbnail: '/projects/calmomind/thumbnail.jpg',
+      description:
+        "Discover serenity on the go with our meditation app. Whether you're seeking stress relief, improved focus, or simply a moment of tranquility, our app offers a personalized journey to inner peace.\n\nEmbark on guided meditations led by experienced instructors, tailored to your schedule and preferences. Explore a variety of techniques, from mindfulness and breathing exercises to body scans and visualization.\n\nTrack your progress and cultivate mindfulness with our meditation timer and daily reminders. With a range of soothing sounds and nature scenes, create your ideal meditation environment anytime, anywhere.",
+      technologies: [
         {
-          'name': 'Flutter',
-          'imageSrc': '/technology_logos/flutter.svg',
+          name: 'Flutter',
+          imageSrc: '/technology_logos/flutter.svg',
         },
         {
-          'name': 'Nodejs',
-          'imageSrc': '/technology_logos/nodejs.svg',
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
         },
       ],
-      'images': [],
+      images: [],
     },
   ],
-
 };
 
 export const technologyCards: TechnologyCard[] = [
   {
-    name: 'HTML',
-    imageSrc: '/technology_logos/html.svg',
+    name: 'Angular.js',
+    imageSrc: '/technology_logos/angular.svg',
   },
   {
-    name: 'MySQL',
-    imageSrc: '/technology_logos/mysql.svg',
-  },
-  {
-    name: 'React',
+    name: 'React.js',
     imageSrc: '/technology_logos/react.svg',
+  },
+  {
+    name: 'React Native',
+    imageSrc: '/technology_logos/react.svg',
+  },
+  {
+    name: 'Node.js',
+    imageSrc: '/technology_logos/nodejs.svg',
+  },
+  {
+    name: 'Next.js',
+    imageSrc: '/technology_logos/nextjs-fill.svg',
+  },
+  {
+    name: 'Nest.js',
+    imageSrc: '/technology_logos/nestjs.svg',
+  },
+  {
+    name: 'Docker',
+    imageSrc: '/technology_logos/docker.svg',
   },
   {
     name: 'Python',
@@ -811,110 +952,63 @@ export const technologyCards: TechnologyCard[] = [
     imageSrc: '/technology_logos/figma.svg',
   },
   {
-    name: 'Node.js',
-    imageSrc: '/technology_logos/nodejs.svg',
-  },
-  {
     name: 'Java',
     imageSrc: '/technology_logos/java.svg',
-  },
-  {
-    name: 'Django',
-    imageSrc: '/technology_logos/django.svg',
   },
   {
     name: 'Flutter',
     imageSrc: '/technology_logos/flutter.svg',
   },
   {
-    name: 'Adobe Illustrator',
-    imageSrc: '/technology_logos/illustrator.svg',
+    name: '.NET',
+    imageSrc: '/technology_logos/dotnet.svg',
+  },
+  {
+    name: 'Kotlin',
+    imageSrc: '/technology_logos/kotlin.svg',
+  },
+  {
+    name: 'MongoDB',
+    imageSrc: '/technology_logos/mongo.svg',
+  },
+  {
+    name: 'SQL',
+    imageSrc: '/technology_logos/sql-database-generic.svg',
+  },
+  {
+    name: 'AI/ML',
+    imageSrc: '/technology_logos/ai.svg',
   },
   {
     name: 'AWS',
     imageSrc: '/technology_logos/aws.svg',
   },
   {
-    name: 'CSS',
-    imageSrc: '/technology_logos/css.svg',
+    name: 'CI/CD',
+    imageSrc: '/technology_logos/ci-cd.svg',
+  },
+  {
+    name: 'Jenkins',
+    imageSrc: '/technology_logos/jenkins.svg',
+  },
+  {
+    name: 'Shopify',
+    imageSrc: '/technology_logos/shopify-color.svg',
+  },
+  {
+    name: 'Amazon',
+    imageSrc: '/technology_logos/amazon-color.svg',
   },
 ];
 
 export const timelineItems: TimelineEntry[] = [
   {
-    title: '2016',
+    title: '2022',
     content: [
       {
         heading: 'Synnestra Established',
         description:
-          'Synnestra was founded with a mission to simplify complex IT challenges for businesses across diverse industries. Our journey began with a commitment to delivering innovative software solutions and exceptional customer service.',
-      },
-    ],
-  },
-  {
-    title: '2017',
-    content: [
-      {
-        heading: 'Embracing Transparency',
-        description:
-          'We made a strategic decision to prioritize transparency in all our operations, ensuring our clients have full visibility into our processes and the progress of their projects. This commitment has been a cornerstone of our growth and client satisfaction.',
-      },
-    ],
-  },
-  {
-    title: '2018',
-    content: [
-      {
-        heading: 'Achieving Operational Excellence',
-        description:
-          'Through rigorous process improvement and the implementation of best practices, Synnestra solidified its position as a trusted partner for businesses seeking to streamline their operations and enhance their competitiveness.',
-      },
-    ],
-  },
-  {
-    title: '2019',
-    content: [
-      {
-        heading: 'Landmark $30 Million Contract',
-        description:
-          'Synnestra reached a significant milestone by securing a $30 million contract, further validating our expertise and the value we deliver to our clients. This achievement was a testament to our team\'s hard work, innovative solutions, and unwavering commitment to client success.',
-      },
-    ],
-  },
-
-  {
-    title: '2020',
-    content: [
-      {
-        heading: 'Navigating Unprecedented Challenges',
-        description:
-          'The global pandemic presented unprecedented challenges, but Synnestra\'s resilience and adaptability allowed us to continue supporting our clients without interruption. We leveraged our digital capabilities to ensure seamless service delivery and help our clients navigate the turbulent landscape.',
-      },
-    ],
-  },
-  {
-    title: '2021',
-    content: [
-      {
-        heading: 'Securing the Highest-Value Contract',
-        description:
-          'Synnestra reached another major milestone by securing the highest-value contract in the company\'s history. This accomplishment solidified our reputation as a leading provider of transformative software solutions and underscored our ability to deliver exceptional value to our clients.',
-      },
-    ],
-
-  },
-  {
-    title: '2022',
-    content: [
-      {
-        heading: 'Embracing Artificial Intelligence',
-        description:
-          'Recognizing the transformative potential of AI, Synnestra invested heavily in developing cutting-edge AI-powered solutions to enhance our clients\' competitive edge. This strategic move positioned us at the forefront of the industry and enabled us to deliver even more intelligent and efficient services.',
-      },
-      {
-        heading: 'Expanding to North America',
-        description:
-          'Synnestra announced the successful go-live of our NFS Ascent product in North America, marking a significant milestone in our global expansion strategy. This achievement solidified our position as a trusted provider of enterprise-grade software solutions in the international market.',
+          'Synnestra was founded with a mission to simplify complex IT challenges for businesses across diverse industries. Our goal was to provide innovative solutions that drive growth and efficiency, setting the stage for a new era of technological advancement.',
       },
     ],
   },
@@ -922,10 +1016,9 @@ export const timelineItems: TimelineEntry[] = [
     title: '2023',
     content: [
       {
-        heading:
-          'Recognized as the Most Innovative Company',
+        heading: 'Navigating Unprecedented Challenges and Achieving Operational Excellence',
         description:
-          'Synnestra was honored with the prestigious "Most Innovative Company in the Equipment Finance Ecosystem" award, recognizing our commitment to driving innovation and delivering transformative solutions to our clients. This accolade further strengthened our reputation as an industry leader.',
+          'We faced and overcame unprecedented challenges, achieving operational excellence through strategic planning and execution. Our team demonstrated resilience and adaptability, ensuring that we continued to deliver exceptional value to our clients despite the obstacles.',
       },
     ],
   },
@@ -933,326 +1026,447 @@ export const timelineItems: TimelineEntry[] = [
     title: '2024',
     content: [
       {
-        heading: 'Launching Otoz 2.0',
+        heading: 'Securing Highest-Value Contract and Recognized as Innovative Company',
         description:
-          'Synnestra unveiled the highly anticipated Otoz 2.0, a groundbreaking platform that revolutionizes the way businesses manage their transportation and logistics operations. This innovative solution solidified our position as a trailblazer in the rapidly evolving mobility ecosystem.',
+          'Synnestra secured its highest-value contract to date and was recognized as an innovative company. This milestone underscored our commitment to excellence and our ability to deliver cutting-edge solutions that meet the evolving needs of our clients.',
+      },
+    ],
+  },
+  {
+    title: '2025',
+    content: [
+      {
+        heading: 'Expanding Horizons',
+        description:
+          'Synnestra continues to grow and expand its reach, serving a larger customer base across various industries. Our commitment to innovation and customer satisfaction drives us to explore new markets and deliver exceptional value to our clients.',
       },
     ],
   },
 ];
 
-export const servicesProvided: Service[] = [
+const ITServices: Service[] = [
   {
-    slug: 'managed-services',
-    imageSrc: '/managed_services_section.png',
     benefits: [
       {
+        description: 'Build responsive and high-performance websites tailored to your needs.',
         icon: CircleDotDashed,
-        title: 'Quiet Quitting',
-        description: 'Professional managed services to keep your technology running smoothly without disruptions.',
+        title: 'Modern Websites',
       },
       {
-        icon: Presentation,
-        title: 'Training Disparity',
-        description: 'Ensure your team is equipped with the right skills and support to handle tech issues.',
-      },
-      {
-        icon: Cog,
-        title: 'Management Failure',
-        description: 'Reduce management overhead by letting us handle your IT needs with efficiency.',
-      },
-      {
-        icon: Brain,
-        title: 'Intensive Impact',
-        description: 'Drive impactful results with technology managed by our skilled professionals.',
+        description: 'Ensure cross-browser compatibility and a seamless user experience.',
+        icon: CircleDotDashed,
+        title: 'Cross-Browser Compatibility',
       },
     ],
-    offers: {
-      mainHeading: 'Cutting Edge Tools that Drive Performance',
-      subtitle: 'Is your tech holding you back? We provide the edge you need with IT that supports your goals.',
-      offerings: [
-        {
-          title: 'A Personalized Path to Success',
-          description: 'Align your IT strategy with your core business goals for maximum impact.',
-        },
-        {
-          title: 'Customer Demand Creation',
-          description: 'Enhance your customer experience through optimized, managed IT services.',
-        },
-        {
-          title: 'Embrace Tomorrow\'s Possibilities',
-          description: 'Future-proof your business with innovative technology solutions.',
-        },
-        {
-          title: 'Embrace Tomorrow\'s Possibilities',
-          description: 'Future-proof your business with innovative technology solutions.',
-        },
-        {
-          title: 'Embrace Tomorrow\'s Possibilities',
-          description: 'Future-proof your business with innovative technology solutions.',
-        },
-      ],
-    },
-  },
-  {
-    slug: 'it-consultancy-and-advisory',
-    imageSrc: '/it_consultantancy.jpg',
-    benefits: [
-      {
-        icon: CircleDotDashed,
-        title: 'Strategic Planning',
-        description: 'Our advisory services help you craft a tailored IT roadmap aligned with your business vision.',
-      },
-      {
-        icon: Presentation,
-        title: 'Risk Mitigation',
-        description: 'Identify and manage IT risks proactively to safeguard your business operations.',
-      },
-      {
-        icon: Cog,
-        title: 'Operational Efficiency',
-        description: 'Streamline processes and improve efficiency with expert IT consultancy.',
-      },
-      {
-        icon: Brain,
-        title: 'Scalable Growth',
-        description: 'Achieve sustainable growth with technology solutions designed to scale.',
-      },
-    ],
-    offers: {
-      mainHeading: 'Expert Guidance for Optimal IT Decisions',
-      subtitle: 'Maximize your tech investments with insightful IT advisory and consultancy services.',
-      offerings: [
-        {
-          title: 'Customized IT Strategy',
-          description: 'Get a roadmap designed to meet your business’s unique needs and goals.',
-        },
-        {
-          title: 'Tech Risk Assessment',
-          description: 'Understand and mitigate risks through expert assessment and planning.',
-        },
-        {
-          title: 'Growth-Ready Solutions',
-          description: 'Prepare your infrastructure for future growth with scalable IT solutions.',
-        },
-        {
-          title: 'Tech Risk Assessment',
-          description: 'Understand and mitigate risks through expert assessment and planning.',
-        },
-        {
-          title: 'Growth-Ready Solutions',
-          description: 'Prepare your infrastructure for future growth with scalable IT solutions.',
-        },
-      ],
-    },
-  },
-  {
-    slug: 'cyber-security',
-    imageSrc: '/cybersecurity.jpg',
-    benefits: [
-      {
-        icon: CircleDotDashed,
-        title: 'Threat Protection',
-        description: 'Comprehensive protection against cyber threats to keep your data secure.',
-      },
-      {
-        icon: Presentation,
-        title: 'Data Privacy',
-        description: 'Ensure compliance and secure sensitive data with cutting-edge security protocols.',
-      },
-      {
-        icon: Cog,
-        title: 'Proactive Monitoring',
-        description: 'Real-time monitoring and incident response to minimize security risks.',
-      },
-      {
-        icon: Brain,
-        title: 'Vulnerability Management',
-        description: 'Identify and fix vulnerabilities before they become threats to your business.',
-      },
-    ],
-    offers: {
-      mainHeading: 'Advanced Cybersecurity for a Safer Future',
-      subtitle: 'Stay ahead of evolving threats with robust, managed cybersecurity solutions.',
-      offerings: [
-        {
-          title: 'Comprehensive Protection Plans',
-          description: 'Secure your network with industry-leading cybersecurity measures.',
-        },
-        {
-          title: 'Real-Time Monitoring',
-          description: 'Detect and respond to threats with proactive monitoring and alerts.',
-        },
-        {
-          title: 'Data Compliance & Privacy',
-          description: 'Ensure data privacy and regulatory compliance in your business.',
-        },
-        {
-          title: 'Real-Time Monitoring',
-          description: 'Detect and respond to threats with proactive monitoring and alerts.',
-        },
-        {
-          title: 'Data Compliance & Privacy',
-          description: 'Ensure data privacy and regulatory compliance in your business.',
-        },
-      ],
-    },
-  },
-  {
-    slug: 'web-development',
     imageSrc: '/web_development.jpg',
+    offers: {
+      mainHeading: 'Web Development Services',
+      offerings: [
+        {
+          description: 'We develop fast, secure, and scalable web solutions for businesses.',
+          title: 'Custom Web Solutions',
+        },
+        {
+          description: 'Our team specializes in creating responsive designs for all devices.',
+          title: 'Responsive Design',
+        },
+      ],
+      subtitle: 'Tailored solutions for web development.',
+    },
+    slug: 'web-development',
+  },
+  {
     benefits: [
       {
+        description: 'Design and build robust APIs for seamless data exchange.',
+        icon: CircleDotDashed,
+        title: 'Secure APIs',
+      },
+      {
+        description: 'Integrate your applications with external services effortlessly.',
+        icon: CircleDotDashed,
+        title: 'Third-Party Integrations',
+      },
+    ],
+    imageSrc: '/managed_services_section.png',
+    offers: {
+      mainHeading: 'API Development Services',
+      offerings: [
+        {
+          description: 'Developing RESTful and GraphQL APIs to power your applications.',
+          title: 'Custom API Development',
+        },
+        {
+          description: 'Ensuring APIs are secure, scalable, and maintainable.',
+          title: 'API Security & Maintenance',
+        },
+      ],
+      subtitle: 'Efficient API solutions for your applications.',
+    },
+    slug: 'api-development',
+  },
+  {
+    benefits: [
+      {
+        description: 'Leverage cloud infrastructure for scalable solutions.',
+        icon: CircleDotDashed,
+        title: 'Scalability',
+      },
+      {
+        description: 'Ensure data availability and disaster recovery with the cloud.',
+        icon: CircleDotDashed,
+        title: 'High Availability',
+      },
+    ],
+    imageSrc: '/cloud_services.jpeg',
+    offers: {
+      mainHeading: 'Cloud Computing Services',
+      offerings: [
+        {
+          description: 'Deploy applications with the power of AWS, Azure, and GCP.',
+          title: 'Cloud Deployment',
+        },
+        {
+          description: 'Optimize cloud infrastructure for better performance and cost-efficiency.',
+          title: 'Cloud Optimization',
+        },
+      ],
+      subtitle: 'Empowering businesses with cloud solutions.',
+    },
+    slug: 'cloud-computing',
+  },
+  {
+    benefits: [
+      {
+        description: 'Build cross-platform and native mobile applications.',
+        icon: CircleDotDashed,
+        title: 'Cross-Platform Development',
+      },
+      {
+        description: 'Deliver engaging mobile experiences for Android and iOS.',
         icon: CircleDotDashed,
         title: 'User-Centric Design',
-        description: 'Craft intuitive and engaging user experiences that elevate your brand online.',
-      },
-      {
-        icon: Presentation,
-        title: 'Scalability',
-        description: 'Build scalable web applications designed to grow with your business.',
-      },
-      {
-        icon: Cog,
-        title: 'Performance Optimization',
-        description: 'Ensure fast load times and smooth performance for an optimal user experience.',
-      },
-      {
-        icon: Brain,
-        title: 'SEO & Accessibility',
-        description: 'Increase visibility and reach with SEO-optimized and accessible web designs.',
       },
     ],
-    offers: {
-      mainHeading: 'Creative and Robust Web Solutions',
-      subtitle: 'Bring your digital vision to life with modern, custom-built websites.',
-      offerings: [
-        {
-          title: 'Responsive Designs',
-          description: 'Create websites that look and perform beautifully on any device.',
-        },
-        {
-          title: 'SEO-Optimized Development',
-          description: 'Boost online visibility with built-in SEO practices.',
-        },
-        {
-          title: 'Custom Solutions for Your Brand',
-          description: 'Develop websites tailored to your unique business needs.',
-        },
-        {
-          title: 'SEO-Optimized Development',
-          description: 'Boost online visibility with built-in SEO practices.',
-        },
-        {
-          title: 'Custom Solutions for Your Brand',
-          description: 'Develop websites tailored to your unique business needs.',
-        },
-      ],
-    },
-  },
-  {
-    slug: 'mobile-development',
     imageSrc: '/mobile-application-development.webp',
-    benefits: [
-      {
-        icon: CircleDotDashed,
-        title: 'Cross-Platform Compatibility',
-        description: 'Reach users across platforms with mobile solutions that work everywhere.',
-      },
-      {
-        icon: Presentation,
-        title: 'Enhanced User Experience',
-        description: 'Deliver seamless mobile experiences that keep users engaged and satisfied.',
-      },
-      {
-        icon: Cog,
-        title: 'High Performance',
-        description: 'Build fast, reliable mobile apps that run smoothly under heavy load.',
-      },
-      {
-        icon: Brain,
-        title: 'Security & Privacy',
-        description: 'Protect user data and maintain privacy with secure mobile app development practices.',
-      },
-    ],
     offers: {
-      mainHeading: 'Innovative Mobile Solutions',
-      subtitle: 'Empower your business with mobile applications that enhance accessibility.',
+      mainHeading: 'Mobile Application Development Services',
       offerings: [
         {
-          title: 'Native & Cross-Platform Apps',
-          description: 'Develop apps tailored for both iOS and Android users.',
+          description: 'Creating user-friendly and scalable mobile apps.',
+          title: 'Native App Development',
         },
         {
-          title: 'User-Centric Interfaces',
-          description: 'Create interfaces that prioritize user engagement and satisfaction.',
-        },
-        {
-          title: 'Performance-Driven Development',
-          description: 'Deliver high-quality mobile experiences that meet modern standards.',
-        },
-        {
-          title: 'User-Centric Interfaces',
-          description: 'Create interfaces that prioritize user engagement and satisfaction.',
-        },
-        {
-          title: 'Performance-Driven Development',
-          description: 'Deliver high-quality mobile experiences that meet modern standards.',
+          description: 'Leveraging frameworks like React Native and Flutter for cost-effective solutions.',
+          title: 'Hybrid App Development',
         },
       ],
+      subtitle: 'Custom mobile applications for your needs.',
     },
+    slug: 'mobile-application-development',
   },
   {
-    slug: 'cloud-services',
-    imageSrc: '/cloud_services.jpeg',
     benefits: [
       {
+        description: 'Manage structured and unstructured data efficiently.',
         icon: CircleDotDashed,
-        title: 'Cost Efficiency',
-        description: 'Reduce operational costs with cloud solutions that optimize resource use.',
+        title: 'Data Management',
       },
       {
-        icon: Presentation,
-        title: 'Scalability on Demand',
-        description: 'Easily scale resources up or down based on your business needs.',
-      },
-      {
-        icon: Cog,
-        title: 'Enhanced Collaboration',
-        description: 'Improve collaboration and productivity with cloud-based tools.',
-      },
-      {
-        icon: Brain,
-        title: 'Data Security',
-        description: 'Ensure data security and compliance with industry-leading cloud services.',
+        description: 'Ensure data security and availability across your systems.',
+        icon: CircleDotDashed,
+        title: 'Secure Data Solutions',
       },
     ],
+    imageSrc: '/databases.jpg',
     offers: {
-      mainHeading: 'Flexible and Secure Cloud Solutions',
-      subtitle: 'Unlock new possibilities with scalable, secure, and flexible cloud services.',
+      mainHeading: 'Database Management Services',
       offerings: [
         {
-          title: 'Hybrid & Multi-Cloud Options',
-          description: 'Choose the cloud infrastructure that fits your business best.',
+          description: 'Designing and maintaining SQL and NoSQL databases.',
+          title: 'Database Design',
         },
         {
-          title: 'Disaster Recovery & Backup',
-          description: 'Keep your data safe with built-in recovery and backup solutions.',
-        },
-        {
-          title: 'Collaboration & Efficiency',
-          description: 'Enhance team collaboration with flexible, cloud-based solutions.',
-        },
-        {
-          title: 'Disaster Recovery & Backup',
-          description: 'Keep your data safe with built-in recovery and backup solutions.',
-        },
-        {
-          title: 'Collaboration & Efficiency',
-          description: 'Enhance team collaboration with flexible, cloud-based solutions.',
+          description: 'Optimizing database performance for seamless operations.',
+          title: 'Performance Tuning',
         },
       ],
+      subtitle: 'Reliable database solutions for your business.',
     },
+    slug: 'database-management',
+  },
+  {
+    benefits: [
+      {
+        description: 'Automate your development and deployment workflows.',
+        icon: CircleDotDashed,
+        title: 'Faster Delivery',
+      },
+      {
+        description: 'Improve code quality with continuous integration.',
+        icon: CircleDotDashed,
+        title: 'Quality Assurance',
+      },
+    ],
+    imageSrc: '/ci-cd.png',
+    offers: {
+      mainHeading: 'CI/CD Services',
+      offerings: [
+        {
+          description: 'Implementing Jenkins, GitHub Actions, and other CI/CD tools.',
+          title: 'Pipeline Setup',
+        },
+        {
+          description: 'Automating deployment processes for faster releases.',
+          title: 'Deployment Automation',
+        },
+      ],
+      subtitle: 'Streamline your development cycle.',
+    },
+    slug: 'ci-cd',
+  },
+  {
+    benefits: [
+      {
+        description: 'Integrate development and operations for seamless workflows.',
+        icon: CircleDotDashed,
+        title: 'Improved Collaboration',
+      },
+      {
+        description: 'Enhance system reliability and scalability.',
+        icon: CircleDotDashed,
+        title: 'Efficient Operations',
+      },
+    ],
+    imageSrc: '/devops.jpg',
+    offers: {
+      mainHeading: 'DevOps Services',
+      offerings: [
+        {
+          description: 'Setting up CI/CD pipelines and monitoring solutions.',
+          title: 'Pipeline Implementation',
+        },
+        {
+          description: 'Implementing containerization and orchestration with Docker and Kubernetes.',
+          title: 'Containerization',
+        },
+      ],
+      subtitle: 'Efficient collaboration between dev and ops teams.',
+    },
+    slug: 'devops',
+  },
+  {
+    benefits: [
+      {
+        description: 'Leverage machine learning for data-driven insights.',
+        icon: CircleDotDashed,
+        title: 'AI Solutions',
+      },
+      {
+        description: 'Use data science to solve complex business problems.',
+        icon: CircleDotDashed,
+        title: 'Data Insights',
+      },
+    ],
+    imageSrc: '/data-science-ai.png',
+    offers: {
+      mainHeading: 'Data Science & AI Services',
+      offerings: [
+        {
+          description: 'Building predictive models using AI and ML techniques.',
+          title: 'Predictive Analytics',
+        },
+        {
+          description: 'Providing end-to-end data science solutions for businesses.',
+          title: 'Custom AI Models',
+        },
+      ],
+      subtitle: 'Empowering businesses with intelligent solutions.',
+    },
+    slug: 'data-science-ai',
+  },
+];
+
+const e_commerceServices: Service[] = [
+  {
+    benefits: [
+      {
+        description: 'Identify trending products with high profit margins.',
+        icon: CircleDotDashed,
+        title: 'Market Research',
+      },
+      {
+        description: 'Find reliable suppliers to source high-quality products.',
+        icon: CircleDotDashed,
+        title: 'Supplier Connections',
+      },
+    ],
+    imageSrc: '/images/product-hunting.png',
+    offers: {
+      mainHeading: 'Product Hunting & Sourcing',
+      offerings: [
+        {
+          description: 'Conduct in-depth research to identify top-selling products.',
+          title: 'Product Hunting',
+        },
+        {
+          description: 'Source products directly from verified suppliers.',
+          title: 'Product Sourcing',
+        },
+      ],
+      subtitle: 'Find and source winning products for your business.',
+    },
+    slug: 'product-hunting-sourcing',
+  },
+  {
+    benefits: [
+      {
+        description: 'Optimize your product listings to rank higher and attract customers.',
+        icon: CircleDotDashed,
+        title: 'SEO-Optimized Listings',
+      },
+      {
+        description: 'Craft compelling product descriptions to boost conversions.',
+        icon: CircleDotDashed,
+        title: 'Conversion Optimization',
+      },
+    ],
+    imageSrc: '/images/listing-optimization.png',
+    offers: {
+      mainHeading: 'Listing Optimization Services',
+      offerings: [
+        {
+          description: 'Enhance product titles, descriptions, and keywords.',
+          title: 'Keyword Optimization',
+        },
+        {
+          description: 'Create visually appealing product images and A+ content.',
+          title: 'Content Creation',
+        },
+      ],
+      subtitle: 'Maximize visibility and sales with optimized listings.',
+    },
+    slug: 'listing-optimization',
+  },
+  {
+    benefits: [
+      {
+        description: 'Build a unique brand with private-label products.',
+        icon: CircleDotDashed,
+        title: 'Custom Branding',
+      },
+      {
+        description: 'Control your product quality and branding completely.',
+        icon: CircleDotDashed,
+        title: 'Ownership and Control',
+      },
+    ],
+    imageSrc: '/images/private-label.png',
+    offers: {
+      mainHeading: 'Private Label Services',
+      offerings: [
+        {
+          description: 'Develop unique products tailored to your brand.',
+          title: 'Product Development',
+        },
+        {
+          description: 'Create a strong brand identity with custom packaging.',
+          title: 'Custom Packaging',
+        },
+      ],
+      subtitle: 'Establish your brand with private-label products.',
+    },
+    slug: 'private-label',
+  },
+  {
+    benefits: [
+      {
+        description: 'Buy products in bulk to enjoy wholesale pricing benefits.',
+        icon: CircleDotDashed,
+        title: 'Bulk Purchasing',
+      },
+      {
+        description: 'Diversify your portfolio with proven products.',
+        icon: CircleDotDashed,
+        title: 'Product Variety',
+      },
+    ],
+    imageSrc: '/images/wholesaling.png',
+    offers: {
+      mainHeading: 'Wholesaling Services',
+      offerings: [
+        {
+          description: 'Source and manage bulk inventory for your business.',
+          title: 'Bulk Inventory Management',
+        },
+        {
+          description: 'Find high-demand products with a strong sales track record.',
+          title: 'Market-Ready Products',
+        },
+      ],
+      subtitle: 'Scale your business with wholesale opportunities.',
+    },
+    slug: 'wholesaling',
+  },
+  {
+    benefits: [
+      {
+        description: 'Run an e-commerce business without maintaining inventory.',
+        icon: CircleDotDashed,
+        title: 'No Inventory Needed',
+      },
+      {
+        description: 'Automate order fulfillment with dropshipping partners.',
+        icon: CircleDotDashed,
+        title: 'Automated Fulfillment',
+      },
+    ],
+    imageSrc: '/images/dropshipping.png',
+    offers: {
+      mainHeading: 'Dropshipping Services',
+      offerings: [
+        {
+          description: 'Identify top suppliers for efficient dropshipping operations.',
+          title: 'Supplier Selection',
+        },
+        {
+          description: 'Set up automated order and shipping workflows.',
+          title: 'Workflow Automation',
+        },
+      ],
+      subtitle: 'Start your business without inventory constraints.',
+    },
+    slug: 'dropshipping',
+  },
+  {
+    benefits: [
+      {
+        description: 'Launch and scale your e-commerce store effectively.',
+        icon: CircleDotDashed,
+        title: 'Store Setup',
+      },
+      {
+        description: 'Leverage platform-specific strategies for Amazon and Shopify.',
+        icon: CircleDotDashed,
+        title: 'Platform Expertise',
+      },
+    ],
+    imageSrc: '/images/amazon-shopify.png',
+    offers: {
+      mainHeading: 'Amazon & Shopify Services',
+      offerings: [
+        {
+          description: 'Set up and optimize your Amazon or Shopify store.',
+          title: 'Store Optimization',
+        },
+        {
+          description: 'Develop strategies for sales growth on both platforms.',
+          title: 'Sales Growth Strategies',
+        },
+      ],
+      subtitle: 'Grow your business on Amazon and Shopify.',
+    },
+    slug: 'amazon-shopify',
   },
 ];
 
@@ -1443,6 +1657,8 @@ export const industries: Industry[] = [
   },
 ];
 
+export const servicesProvided = [...ITServices, ...e_commerceServices];
+
 export const navItems = [
   { name: 'Home', href: '/' },
   {
@@ -1451,21 +1667,21 @@ export const navItems = [
     subitems: [
       {
         name: 'IT Solutions',
-        items: servicesProvided.map((service) => ({
+        items: ITServices.map((service) => ({
           name: transformSlug(service.slug),
           href: `/services/${service.slug}`,
         })),
       },
       {
         name: 'E Commerce',
-        items: servicesProvided.map((service) => ({
+        items: e_commerceServices.map((service) => ({
           name: transformSlug(service.slug),
           href: `/services/${service.slug}`,
         })),
       },
       {
-        name: 'LLC/LTD',
-        items: servicesProvided.map((service) => ({
+        name: 'Corporate Compliance',
+        items: e_commerceServices.map((service) => ({
           name: transformSlug(service.slug),
           href: `/services/${service.slug}`,
         })),
@@ -1483,3 +1699,38 @@ export const navItems = [
   { name: 'Projects', href: '/projects' },
   { name: 'About Company', href: '/about' },
 ];
+
+export const offices: Office[] = [
+  {
+    id: 'us',
+    name: 'Texas Office',
+    embedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3667.5055455426937!2d-97.75495459999999!3d30.3415589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8644cae2f96fffff%3A0x893fa7795b7d5f91!2s5900%20Balcones%20Dr%20Suit%20100%2C%20Austin%2C%20TX%2078731%2C%20USA!5e1!3m2!1sen!2s!4v1737197915472!5m2!1sen!2s',
+  },
+  {
+    id: 'uk',
+    name: 'London Office',
+    embedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2643.1737530777214!2d0.05204810000000001!3d51.538702300000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a64bcd464441%3A0x2064cc8ac070bab3!2s5965%2C%20182%20High%20St%20N%2C%20London%20E6%202JA%2C%20UK!5e1!3m2!1sen!2s!4v1737197790113!5m2!1sen!2s',
+  },
+  {
+    id: 'pk',
+    name: 'Lahore Office',
+    embedUrl:
+      'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7249.710395256045!2d74.30515766578155!3d31.46128949653439!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190152e23d4693%3A0xf3085f7be2ade3c6!2sSector%20B-1%20Sector%20B%201%20Township%2C%20Lahore%2C%20Punjab%2C%20Pakistan!5e1!3m2!1sen!2s!4v1737198048521!5m2!1sen!2s',
+  },
+];
+
+// export const countriesWithPhoneNumberCodes = async () => {
+//   const response = await fetch('https://restcountries.com/v3.1/all');
+//   if (!response.ok) {
+//     throw new Error('Failed to fetch countries');
+//   }
+//   const data = await response.json();
+
+//   return data?.map((country: any) => ({
+//     name: country.name?.common,
+//     code: country.idd?.root,
+//     flag: country.flag,
+//   }));
+// };

@@ -5,31 +5,37 @@ import Image from 'next/image';
 import { useActiveProject } from '@/hooks/useActiveProject';
 import { cn } from '@/lib/utils';
 import { Project } from '@/types';
-import { motion } from 'framer-motion';
+import { Button } from '../ui/button';
+import { Card, CardContent, CardFooter, CardHeader } from '../ui/card';
 
-export const ProjectCard = ({ product, className }: { product: Project; className?: string }) => {
+export const ProjectCard = ({ project, className }: { project: Project; className?: string }) => {
   const { setActiveProject } = useActiveProject();
 
   const setActiveProjectHandler = () => {
-    setActiveProject(product);
+    setActiveProject(project);
   };
 
   return (
-    <motion.div
-      key={product.title}
-      className={cn('group/product h-96 w-[30rem] relative flex-shrink-0 cursor-pointer', className)}
-      onClick={setActiveProjectHandler}
-    >
-      <Image
-        src={product.thumbnail}
-        height="600"
-        width="600"
-        className="object-contain object-center absolute h-full w-full inset-0"
-        alt={product.title}
-      />
-
-      <div className="absolute inset-0 h-full w-full opacity-0 group-hover/product:opacity-80 bg-black pointer-events-none"></div>
-      <h2 className="absolute bottom-4 left-4 opacity-0 group-hover/product:opacity-100 text-white">{product.title}</h2>
-    </motion.div>
+    <Card className={cn('flex flex-col h-full', className)}>
+      <CardHeader className="p-0">
+        <div className="aspect-square relative overflow-hidden">
+          <Image
+            src={project.thumbnail}
+            alt={project.title}
+            fill
+            className="object-contain transition-transform hover:scale-105"
+          />
+        </div>
+      </CardHeader>
+      <CardContent className="flex-1 p-6">
+        <h3 className="text-2xl text-custom-purple font-semibold tracking-tight mb-2">{project.title}</h3>
+        <p className="text-muted-foreground line-clamp-[8]">{project.description}</p>
+      </CardContent>
+      <CardFooter className="p-6 pt-0">
+        <Button className="w-fit px-5 py-2 bg-custom-purple text-white hover:bg-custom-purple" onClick={setActiveProjectHandler}>
+          Explore
+        </Button>
+      </CardFooter>
+    </Card>
   );
 };

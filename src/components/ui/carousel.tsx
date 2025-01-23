@@ -175,8 +175,6 @@ const CarouselItem = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
 >(({ className, ...props }, ref) => {
-  const { orientation } = useCarousel()
-
   return (
     <div
       ref={ref}
@@ -184,7 +182,6 @@ const CarouselItem = React.forwardRef<
       aria-roledescription="slide"
       className={cn(
         "min-w-0 shrink-0 grow-0 basis-full h-fit",
-        orientation === "horizontal" ? "pl-4" : "pt-4",
         className
       )}
       {...props}
@@ -215,7 +212,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeftIcon className="h-4 w-4" />
+      <ArrowLeftIcon className="size-4 md:size-6" />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -244,7 +241,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRightIcon className="h-4 w-4" />
+      <ArrowRightIcon className="size-4 md:size-6" />
       <span className="sr-only">Next slide</span>
     </Button>
   )

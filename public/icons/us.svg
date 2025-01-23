@@ -1,0 +1,29 @@
+<svg height="80" width="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1235 650">
+    <rect width="1235" height="650" fill="#b22234" />
+    <rect y="72.7" width="1235" height="72.7" fill="#fff" />
+    <rect y="218.1" width="1235" height="72.7" fill="#fff" />
+    <rect y="363.5" width="1235" height="72.7" fill="#fff" />
+    <rect y="508.9" width="1235" height="72.7" fill="#fff" />
+    <rect width="494" height="381.6" fill="#3c3b6e" />
+    <g fill="#fff">
+        <g id="star">
+            <polygon
+                points="24.7,9.4 30.4,22.6 45.6,22.6 33.2,31.2 38.9,44.4 24.7,35.9 10.5,44.4 16.2,31.2 3.8,22.6 19,22.6" />
+        </g>
+        <use href="#star" x="41.5" />
+        <use href="#star" x="83" />
+        <use href="#star" x="124.5" />
+        <use href="#star" x="166" />
+        <use href="#star" x="207.5" />
+        <use href="#star" x="249" y="35" />
+        <use href="#star" x="290.5" y="35" />
+        <use href="#star" x="332" y="35" />
+        <use href="#star" x="373.5" y="35" />
+        <use href="#star" x="415" y="35" />
+        <use href="#star" x="249" y="70" />
+        <use href="#star" x="290.5" y="70" />
+        <use href="#star" x="332" y="70" />
+        <use href="#star" x="373.5" y="70" />
+        <use href="#star" x="415" y="70" />
+    </g>
+</svg>

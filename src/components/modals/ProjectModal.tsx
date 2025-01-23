@@ -7,9 +7,16 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { useActiveProject } from '@/hooks/useActiveProject';
 import Image from 'next/image';
 import Link from 'next/link';
+// import { ImageViewer } from './ImageViewerModal';
+// import { useState } from 'react';
 
 const ProjectModal = () => {
   const { setActiveProject, activeProject } = useActiveProject();
+  // const [selectedImage, setSelectedImage] = useState<{
+  //   src: string | null;
+  //   alt: string;
+  // } | null>(null);
+
   if (!activeProject) return null;
 
   return (
@@ -21,7 +28,7 @@ const ProjectModal = () => {
       }}
     >
       {activeProject && (
-        <DialogContent className={'h-[calc(100vh-100px)]  mx-auto sm:w-full overflow-y-scroll'}>
+        <DialogContent className={'h-[calc(100vh-100px)] mx-auto w-[98%] rounded-lg md:w-[50%] max-w-[90%] overflow-y-scroll'}>
           <DialogHeader>
             <DialogTitle className="sr-only">View Project Details</DialogTitle>
             <DialogDescription className="sr-only">
@@ -38,6 +45,7 @@ const ProjectModal = () => {
                 className="object-contain w-full rounded-xl max-h-[450px]"
                 priority
                 quality={100}
+                // onClick={() => setSelectedImage({ src: activeProject.thumbnail, alt: activeProject.title })}
               />
               <div className="flex gap-4 items-center justify-between">
                 <h3 className="text-2xl font-medium">{activeProject.title}</h3>
@@ -101,6 +109,7 @@ const ProjectModal = () => {
                             className="object-contain w-full rounded-xl max-h-[450px]"
                             quality={100}
                             priority
+                            // onClick={() => setSelectedImage({ src: image.src, alt: image.alt })}
                           />
                         </div>
                       </CarouselItem>
@@ -111,6 +120,15 @@ const ProjectModal = () => {
                 </Carousel>
               </div>
             )}
+
+            {/* {selectedImage && (
+              <ImageViewer
+                src={selectedImage.src || '/placeholder.svg'}
+                alt={selectedImage.alt}
+                onClose={() => setSelectedImage(null)}
+                isOpen={!!selectedImage}
+              />
+            )} */}
           </div>
         </DialogContent>
       )}

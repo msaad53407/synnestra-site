@@ -11,12 +11,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import AnimatedSection from '@/components/AnimatedSection';
+import { Metadata } from 'next';
 
 type Props = {
   params: {
     service: string;
   };
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  return {
+    title: `${transformSlug(params.service)}`,
+  };
+}
 
 const AIFeatures = [
   {
@@ -167,7 +174,6 @@ const ServicePage = ({ params: { service } }: Props) => {
         mainHeading={selectedService.offers.mainHeading}
         subtitle={selectedService.offers.subtitle}
       />
-      ;
       <section className="w-full px-4 py-6 sm:px-6 lg:px-12 space-y-5">
         <h3 className="text-5xl font-medium tracking-tight leading-relaxed text-center">Our Capability</h3>
         {/* Service Channels */}

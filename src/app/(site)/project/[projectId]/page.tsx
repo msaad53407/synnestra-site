@@ -1,15 +1,27 @@
+import TechnologyCard from '@/components/cards/TechnologyCard';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { products } from '@/lib/constants';
+import { Metadata } from 'next';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
-import React from 'react';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
-import TechnologyCard from '@/components/cards/TechnologyCard';
 
 type Props = {
   params: {
     projectId: string;
   };
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const activeProjectWebsite = products.websites.find((website) => website.slug === params.projectId);
+  const activeProjectMobile = products.mobileApps.find((app) => app.slug === params.projectId);
+
+  const activeProject = activeProjectWebsite || activeProjectMobile;
+
+  if (!activeProject) return { title: 'Not Found' };
+  return {
+    title: `${activeProject.title}`,
+  };
+}
 
 export const generateStaticParams = () => {
   const websiteSlugs = products.websites.map((website) => ({ projectId: website.slug }));

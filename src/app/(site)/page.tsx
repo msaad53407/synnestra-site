@@ -4,7 +4,7 @@ import ReviewSection from '@/components/sections/ReviewSection';
 import StatisticsBar from '@/components/StatisticsBar';
 import { Button } from '@/components/ui/button';
 import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
-import { companies, perks, projectsShowcase, solutions } from '@/lib/constants';
+import { companies, perks, projectsShowcase, solutions, technologyCards } from '@/lib/constants';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
 import AnimatedSection from '@/components/AnimatedSection';
@@ -22,10 +22,9 @@ export default function Home() {
             <br />
             <span className="inline-block pb-1">Software Solutions</span>
           </h1>
-          <p className="text-gray-400 mb-8 text-sm">
+          <p className="text-gray-500 mb-8 text-sm">
             At Synnestra, we empower businesses to navigate the digital landscape with ease. Our innovative software
-            solutions are designed to streamline your operations, enhance productivity, and unlock new opportunities
-            for
+            solutions are designed to streamline your operations, enhance productivity, and unlock new opportunities for
             growth.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
@@ -53,16 +52,10 @@ export default function Home() {
           </div>
         </AnimatedSection>
       </section>
-      <InfiniteMovingCards direction="left" speed="normal" className="px-4 py-6 sm:px-6 lg:px-12">
+      <InfiniteMovingCards direction="left" speed="very-slow" className="px-4 py-6 sm:px-6 lg:px-12">
         {[...companies, ...companies].map((item, index) => (
-          <li key={item.title + " " + index} className="size-36 flex items-center justify-center">
-            <Image
-              src={item.thumbnail}
-              alt={item.title}
-              width={100}
-              height={100}
-              className="size-full object-contain"
-            />
+          <li key={item.title + ' ' + index} className="size-24 flex items-center justify-center">
+            <Image src={item.thumbnail} alt={item.title} width={100} height={100} className="object-contain" />
           </li>
         ))}
       </InfiniteMovingCards>
@@ -101,8 +94,12 @@ export default function Home() {
         <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-8">Solutions</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {solutions.map((solution, index) => (
-            <AnimatedSection direction={'up'} duration={0.3 * (index + 1)} key={index}
-                             className="bg-white rounded-lg p-6 shadow-sm relative min-h-80">
+            <AnimatedSection
+              direction={'up'}
+              duration={0.3 * (index + 1)}
+              key={index}
+              className="bg-white rounded-lg p-6 shadow-sm relative min-h-80"
+            >
               <Image
                 src={solution.icon}
                 alt={`${solution.title} icon`}
@@ -158,10 +155,10 @@ export default function Home() {
               We use latest technologies to run your project smoothly
             </h2>
             <div className="flex flex-wrap gap-2">
-              {['JavaScript', 'TypeScript', 'Node.js', 'React', 'Swift', 'Java', 'Objective-C', 'Kotlin'].map(
+              {technologyCards.map(
                 (tech) => (
-                  <span key={tech} className="bg-white px-3 py-1 rounded-full text-sm">
-                    {tech}
+                  <span key={tech.name} className="bg-white px-3 py-1 rounded-full text-sm">
+                    {tech.name}
                   </span>
                 ),
               )}

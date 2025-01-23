@@ -3,8 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 export const metadata: Metadata = {
-  title: 'Frequently Asked Questions',
-  description: 'Answers to common questions about our software services',
+  title: 'FAQs',
 };
 
 export default function FAQs() {
@@ -26,8 +25,9 @@ export default function FAQs() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-2">
-              <AccordionTrigger className="text-2xl font-medium">How long does a typical project
-                take?</AccordionTrigger>
+              <AccordionTrigger className="text-2xl font-medium">
+                How long does a typical project take?
+              </AccordionTrigger>
               <AccordionContent className="text-gray-600">
                 Project timelines can vary greatly depending on the scope and complexity of the work. A simple website
                 might take a few weeks, while a complex enterprise solution could take several months. We provide
@@ -35,8 +35,9 @@ export default function FAQs() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-3">
-              <AccordionTrigger className="text-2xl font-medium">Do you provide ongoing support and
-                maintenance?</AccordionTrigger>
+              <AccordionTrigger className="text-2xl font-medium">
+                Do you provide ongoing support and maintenance?
+              </AccordionTrigger>
               <AccordionContent className="text-gray-600">
                 Yes, we offer ongoing support and maintenance packages for all our services. This includes regular
                 updates, bug fixes, and technical support to ensure your software continues to perform optimally.
@@ -51,8 +52,9 @@ export default function FAQs() {
               </AccordionContent>
             </AccordionItem>
             <AccordionItem value="item-5">
-              <AccordionTrigger className="text-2xl font-medium">How do you handle data security and
-                privacy?</AccordionTrigger>
+              <AccordionTrigger className="text-2xl font-medium">
+                How do you handle data security and privacy?
+              </AccordionTrigger>
               <AccordionContent className="text-gray-600">
                 We take data security and privacy very seriously. We implement industry-standard security measures,
                 including encryption, secure coding practices, and regular security audits. We also ensure compliance

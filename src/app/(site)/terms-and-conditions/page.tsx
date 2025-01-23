@@ -4,7 +4,6 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/
 
 export const metadata: Metadata = {
   title: 'Terms and Conditions',
-  description: 'Terms and conditions for our software services',
 };
 
 export default function TermsAndConditions() {

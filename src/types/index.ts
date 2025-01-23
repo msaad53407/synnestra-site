@@ -10,6 +10,12 @@ export type Company = {
   thumbnail: string;
 };
 
+export type Office = {
+  id: string;
+  name: string;
+  embedUrl: string;
+};
+
 export type Perk = {
   title: string;
   description: string;

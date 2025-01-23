@@ -13,7 +13,7 @@ export const InfiniteMovingCards = ({
 }: {
   children: React.ReactNode;
   direction?: 'left' | 'right';
-  speed?: 'fast' | 'normal' | 'slow';
+  speed?: 'fast' | 'normal' | 'slow' | 'very-slow';
   pause?: boolean;
   pauseOnHover?: boolean;
   className?: string;
@@ -53,8 +53,10 @@ export const InfiniteMovingCards = ({
           containerRef.current.style.setProperty('--animation-duration', '20s');
         } else if (speed === 'normal') {
           containerRef.current.style.setProperty('--animation-duration', '40s');
-        } else {
+        } else if (speed === 'slow') {
           containerRef.current.style.setProperty('--animation-duration', '80s');
+        } else {
+          containerRef.current.style.setProperty('--animation-duration', '120s');
         }
       }
     };
@@ -67,11 +69,15 @@ export const InfiniteMovingCards = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap',
+          ' flex min-w-full shrink-0 gap-4 py-4 w-max flex-nowrap space-x-10 gradient-3',
           start && 'animate-scroll ',
           pauseOnHover && 'hover:[animation-play-state:paused]',
           pause && '[animation-play-state:paused]',
         )}
+        style={{
+          background: 'linear-gradient(180deg, rgba(224,226,255,1) 0%, rgba(255,255,255,1) 100%)',
+          backgroundColor: 'rgb(224,226,255)',
+        }}
       >
         {children}
       </ul>

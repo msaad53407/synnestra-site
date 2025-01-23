@@ -11,7 +11,7 @@ export default function Footer() {
             Synnestra
           </Link>
           <p className="text-sm text-gray-600 max-w-xs">
-            IT Consultation gives you the assurety and trust you need to create a truly professional website.
+            Empowering Your Digital Dreams with Innovation and Expertise.
           </p>
           <div className="flex space-x-4">
             <Link href="#" className="text-custom-black-light hover:text-custom-purple">
@@ -31,7 +31,7 @@ export default function Footer() {
         <div>
           <h3 className="text-sm font-semibold text-custom-purple mb-4">COMPANY</h3>
           <ul className="space-y-2">
-            {['about', 'services', 'projects'].map((item) => (
+            {['about', 'projects'].map((item) => (
               <li key={item}>
                 <Link href={`/${item}`} className="text-sm text-gray-600 hover:text-custom-purple">
                   {transformSlug(item)}
