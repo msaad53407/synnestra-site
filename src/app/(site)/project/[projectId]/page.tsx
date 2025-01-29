@@ -46,7 +46,7 @@ const ProjectPage = ({ params }: Props) => {
           alt={activeProject.title}
           width={1000}
           height={1000}
-          className="object-contain max-h-[450px] w-full rounded-xl max-w-screen-lg mx-auto"
+          className="object-cover aspect-video w-full rounded-xl min-h-[300px] max-w-screen-lg mx-auto"
           priority
           quality={100}
         />

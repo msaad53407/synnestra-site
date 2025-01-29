@@ -28,7 +28,9 @@ const ProjectModal = () => {
       }}
     >
       {activeProject && (
-        <DialogContent className={'h-[calc(100vh-100px)] mx-auto w-[98%] rounded-lg md:w-[50%] max-w-[90%] overflow-y-scroll'}>
+        <DialogContent
+          className={'h-[calc(100vh-100px)] mx-auto w-[98%] rounded-lg md:w-[50%] max-w-[90%] overflow-y-scroll'}
+        >
           <DialogHeader>
             <DialogTitle className="sr-only">View Project Details</DialogTitle>
             <DialogDescription className="sr-only">
@@ -42,7 +44,7 @@ const ProjectModal = () => {
                 alt={activeProject.title}
                 width={1000}
                 height={1000}
-                className="object-contain w-full rounded-xl max-h-[450px]"
+                className="object-cover w-full rounded-xl aspect-video min-h-[300px]"
                 priority
                 quality={100}
                 // onClick={() => setSelectedImage({ src: activeProject.thumbnail, alt: activeProject.title })}
@@ -106,7 +108,7 @@ const ProjectModal = () => {
                             alt={image.alt}
                             width={1000}
                             height={1000}
-                            className="object-contain w-full rounded-xl max-h-[450px]"
+                            className="object-contain w-full rounded-xl aspect-square"
                             quality={100}
                             priority
                             // onClick={() => setSelectedImage({ src: image.src, alt: image.alt })}

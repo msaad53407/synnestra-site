@@ -24,25 +24,40 @@ export default function CompanyImpact() {
             </h2>
           </div>
 
-          {/* Stats Grid */}
-          <div className="mt-16 grid gap-8 sm:grid-cols-3">
-            <div className="mx-auto max-w-xs">
-              <p className="text-4xl font-medium sm:text-5xl">
-                <AnimatedCounter from={0} to={10} duration={3} />
-              </p>
-              <p className="mt-3 text-sm">Strategic Partnership with leading Synnestra Operator</p>
+          {/* Stats Grid with Timeline Styling */}
+          <div className="mt-16 grid gap-8 sm:grid-cols-3 w-full">
+            <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center">
+                <span className="text-6xl sm:text-7xl font-bold tracking-tighter">
+                  <AnimatedCounter from={0} to={10} duration={3} />
+                </span>
+                <span className="text-sm font-bold tracking-wider mt-2">PARTNERSHIPS</span>
+              </div>
+              <p className="text-sm max-w-[200px] mx-auto">Strategic Partnership with leading Synnestra Operator</p>
             </div>
-            <div className="mx-auto max-w-xs">
-              <p className="text-4xl font-medium sm:text-5xl">
-                <AnimatedCounter from={0} to={39} duration={3} />%
+
+            <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center">
+                <span className="text-6xl sm:text-7xl font-bold tracking-tighter">
+                  <AnimatedCounter from={0} to={39} duration={3} />%
+                </span>
+                <span className="text-sm font-bold tracking-wider mt-2">INCREASE</span>
+              </div>
+              <p className="text-sm max-w-[200px] mx-auto">
+                Increase in Customer Loyalty & Retention for a leading Synnestra
               </p>
-              <p className="mt-3 text-sm">Increase in Customer Loyalty & Retention for a leading Synnestra</p>
             </div>
-            <div className="mx-auto max-w-xs">
-              <p className="text-4xl font-medium sm:text-5xl">
-                <AnimatedCounter from={0} to={30} duration={3} />+
+
+            <div className="flex flex-col items-center space-y-4">
+              <div className="flex flex-col items-center">
+                <span className="text-6xl sm:text-7xl font-bold tracking-tighter">
+                  <AnimatedCounter from={0} to={30} duration={3} />+
+                </span>
+                <span className="text-sm font-bold tracking-wider mt-2">CHANNELS</span>
+              </div>
+              <p className="text-sm max-w-[200px] mx-auto">
+                Channels Unification enabled for a leading Synnestra Operator
               </p>
-              <p className="mt-3 text-sm">Channels Unification enabled for a leading Synnestra Operator</p>
             </div>
           </div>
         </div>

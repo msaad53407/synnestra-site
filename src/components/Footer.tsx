@@ -4,7 +4,13 @@ import { transformSlug } from '@/lib/utils';
 
 export default function Footer() {
   return (
-    <footer className="bg-white w-full max-w-screen-2xl mx-auto px-4 py-6 sm:px-6 lg:px-12">
+    <footer
+      className="w-full max-w-screen-2xl mx-auto mt-8 px-4 py-6 sm:px-6 lg:px-12"
+      style={{
+        background: 'linear-gradient(180deg, rgba(231,232,253,1) 0%, rgba(255,255,255,1) 100%)',
+        backgroundColor: 'rgb(231,232,253)',
+      }}
+    >
       <div className="w-full grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="space-y-4 md:col-span-3">
           <Link href="/" className="text-2xl font-bold text-custom-purple">

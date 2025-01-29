@@ -16,7 +16,7 @@ export default async function ContactPage() {
   // const countries = await countriesWithPhoneNumberCodes();
 
   return (
-    <div className="min-h-screen space-y-20 bg-background py-8">
+    <div className="min-h-screen space-y-14 bg-background py-8">
       {/* Hero Section */}
       <section className="relative px-4 py-6 sm:px-6 lg:px-12">
         <AnimatedSection direction="up" className="flex flex-col items-center space-y-4 text-center">
@@ -36,7 +36,7 @@ export default async function ContactPage() {
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           <AnimatedSection direction={'up'}>
             <Card>
-              <CardContent className="flex flex-col items-center space-y-4 p-6 min-h-64 justify-center">
+              <CardContent className="flex flex-col items-center space-y-4 p-6 min-h-[350px] justify-center">
                 <div className="rounded-full bg-custom-purple p-3">
                   <Phone className="h-6 w-6 text-white" />
                 </div>
@@ -63,7 +63,7 @@ export default async function ContactPage() {
           </AnimatedSection>
           <AnimatedSection direction={'up'}>
             <Card>
-              <CardContent className="flex flex-col items-center space-y-4 p-6 min-h-64 justify-center">
+              <CardContent className="flex flex-col items-center space-y-4 p-6 min-h-[350px] justify-center">
                 <div className="rounded-full bg-custom-purple p-3">
                   <Mail className="h-6 w-6 text-white" />
                 </div>
@@ -77,7 +77,7 @@ export default async function ContactPage() {
           </AnimatedSection>
           <AnimatedSection direction={'up'} className="md:col-span-2 lg:col-span-1">
             <Card>
-              <CardContent className="flex flex-col items-center space-y-4 p-6 min-h-64 justify-center">
+              <CardContent className="flex flex-col items-center space-y-4 p-6 min-h-[350px] justify-center">
                 <div className="rounded-full bg-custom-purple p-3">
                   <MapPin className="h-6 w-6 text-white" />
                 </div>

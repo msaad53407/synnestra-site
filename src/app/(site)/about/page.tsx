@@ -19,7 +19,7 @@ export const metadata: Metadata = {
 const AboutPage = () => {
   return (
     <div className="space-y-20">
-      <div className="relative w-full md:mb-72 space-y-5">
+      <div className="relative w-full md:mb-72 min-[1478px]:mb-48 space-y-5">
         <Banner image="/about_banner.png" className="bottom-10 left-4 md:bottom-1/3">
           <AnimatedSection direction={'left'} className="flex flex-col gap-4">
             <h1 className="text-4xl font-medium text-white leading-relaxed">
@@ -32,7 +32,7 @@ const AboutPage = () => {
           </AnimatedSection>
         </Banner>
         <section className="md:absolute left-1/2 transform w-[95%] mx-auto lg:w-2/3 border border-gray-300 md:-translate-x-1/2 md:-bottom-60 xl:-bottom-56 min-[1478px]:-bottom-36 p-10 flex flex-col gap-5 items-center bg-white rounded-xl shadow-md">
-          <h3 className="text-xl font-semibold">The World&apos;s leading technologies are powered by Synnestra.</h3>
+          <h3 className="text-xl font-semibold">Powered by the Technologies You Trust.</h3>
           <div className="flex gap-5 items-center justify-center w-full flex-wrap">
             {technologyCards.map((techCard) => (
               <TechnologyCard technology={techCard} key={techCard.name} />

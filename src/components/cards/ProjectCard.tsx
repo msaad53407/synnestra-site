@@ -18,12 +18,12 @@ export const ProjectCard = ({ project, className }: { project: Project; classNam
   return (
     <Card className={cn('flex flex-col h-full', className)}>
       <CardHeader className="p-0">
-        <div className="aspect-square relative overflow-hidden">
+        <div className={cn('relative overflow-hidden aspect-square')}>
           <Image
             src={project.thumbnail}
             alt={project.title}
             fill
-            className="object-contain transition-transform hover:scale-105"
+            className="object-contain transition-transform hover:scale-105 overflow-hidden rounded-t-xl"
           />
         </div>
       </CardHeader>
@@ -32,7 +32,10 @@ export const ProjectCard = ({ project, className }: { project: Project; classNam
         <p className="text-muted-foreground line-clamp-[8]">{project.description}</p>
       </CardContent>
       <CardFooter className="p-6 pt-0">
-        <Button className="w-fit px-5 py-2 bg-custom-purple text-white hover:bg-custom-purple" onClick={setActiveProjectHandler}>
+        <Button
+          className="w-fit px-5 py-2 bg-custom-purple text-white hover:bg-custom-purple"
+          onClick={setActiveProjectHandler}
+        >
           Explore
         </Button>
       </CardFooter>

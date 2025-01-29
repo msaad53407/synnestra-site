@@ -1,6 +1,3 @@
-import { LucideProps } from 'lucide-react';
-import { ForwardRefExoticComponent, RefAttributes } from 'react';
-
 export type Prettify<T> = {
   [K in keyof T]: T[K];
 } & {};
@@ -59,6 +56,7 @@ export type Project = {
   description: string;
   features: string[];
   technologies: TechnologyCard[];
+  type: 'web' | 'mobile';
   images: {
     src: string;
     alt: string;
@@ -71,21 +69,21 @@ export type ProjectCatalog = {
 };
 
 export type Service = {
+  title: string;
   slug: string;
   imageSrc: string;
-  benefits: {
-    icon: ForwardRefExoticComponent<Omit<LucideProps, 'ref'> & RefAttributes<SVGSVGElement>>;
+  introSection: {
+    title: string;
+    description: string;
+  };
+  techStack: {
+    frameworks: string[];
+    tools: string[];
+  };
+  ourApproach: {
     title: string;
     description: string;
   }[];
-  offers: {
-    mainHeading: string;
-    subtitle: string;
-    offerings: {
-      title: string;
-      description: string;
-    }[];
-  };
 };
 
 export type ArticlePreview = {

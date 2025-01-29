@@ -1,8 +1,6 @@
 import { TimelineEntry } from '@/components/ui/timeline';
-import { transformSlug } from '@/lib/utils';
 import {
   Company,
-  Industry,
   Office,
   Perk,
   ProjectCatalog,
@@ -12,7 +10,6 @@ import {
   Solution,
   TechnologyCard,
 } from '@/types';
-import { CircleDotDashed } from 'lucide-react';
 
 export const companies: Company[] = [
   {
@@ -279,7 +276,7 @@ export const products: ProjectCatalog = {
     {
       slug: 'success-loop',
       title: 'Successloop',
-      thumbnail: '/projects/success-loop/thumbnail.png',
+      thumbnail: '/projects/demo-website-design.jpg',
       description:
         'SuccessLoop is a powerful platform designed to help businesses create, manage, and optimize referral programs. Our mission is to bring the human touch to a digital world by leveraging the power of word-of-mouth marketing to build communities and brands.',
       features: [
@@ -330,11 +327,12 @@ export const products: ProjectCatalog = {
           alt: 'image-5',
         },
       ],
+      type: 'web',
     },
     {
       slug: 'management-system',
       title: 'Management System',
-      thumbnail: '/projects/management-system/thumbnail.png',
+      thumbnail: '/projects/demo-website-design.jpg',
       features: [
         'Centralized dashboard for tracking key metrics',
         'Comprehensive chapter and district rosters',
@@ -385,11 +383,12 @@ export const products: ProjectCatalog = {
           alt: 'image-5',
         },
       ],
+      type: 'web',
     },
     {
       slug: 'fairdeal-electrical',
       title: 'Fairdeal Electrical',
-      thumbnail: '/projects/fairdeal-electrical/thumbnail.png',
+      thumbnail: '/projects/demo-website-design.jpg',
       features: [
         'Centralized dashboard for tracking key metrics',
         'Comprehensive chapter and district rosters',
@@ -440,11 +439,12 @@ export const products: ProjectCatalog = {
           alt: 'image-5',
         },
       ],
+      type: 'web',
     },
     {
       slug: 'dex-booster',
       title: 'Dex Booster: Your Cryptocurrency Navigator',
-      thumbnail: '/projects/dex-booster/thumbnail.webp',
+      thumbnail: '/projects/demo-website-design.jpg',
       features: [
         'Real-time cryptocurrency price tracking',
         'Personalized coin recommendations',
@@ -479,11 +479,12 @@ export const products: ProjectCatalog = {
           alt: 'image-1',
         },
       ],
+      type: 'web',
     },
     {
       slug: 'arcadia-developers',
       title: 'Arcadia Developers Premier Construction Solutions',
-      thumbnail: '/projects/arcadia-developers-premier-construction-solutions/thumbnail.png',
+      thumbnail: '/projects/demo-website-design.jpg',
       features: [
         'Comprehensive showcase of construction services',
         'Detailed project categories (domestic, commercial, industrial)',
@@ -522,11 +523,12 @@ export const products: ProjectCatalog = {
           alt: 'Construction Services Overview',
         },
       ],
+      type: 'web',
     },
     {
       slug: 'fuze-traders',
       title: 'FuzeTraders: Integrated Trading Solutions',
-      thumbnail: '/projects/fuze-traders/thumbnail.webp',
+      thumbnail: '/projects/demo-website-design.jpg',
       features: [
         'Advanced trader funding platform',
         'Technology-driven capital allocation',
@@ -569,11 +571,12 @@ export const products: ProjectCatalog = {
           alt: 'Trader Funding Allocation System',
         },
       ],
+      type: 'web',
     },
     {
       slug: 'tanafos',
       title: 'Tanafos: Seamless Football Ground Booking App',
-      thumbnail: '/projects/tanafos/thumbnail.webp',
+      thumbnail: '/projects/demo-website-design.jpg',
       features: [
         'Multilingual platform (Arabic and English)',
         'Intuitive football ground booking system',
@@ -620,11 +623,12 @@ export const products: ProjectCatalog = {
           alt: 'Player Connection Features',
         },
       ],
+      type: 'web',
     },
     {
       slug: 'daisy-chat',
       title: 'DaisyChat: Your Wedding Connection',
-      thumbnail: '/projects/daisy-chat/thumbnail.webp',
+      thumbnail: '/projects/demo-website-design.jpg',
       features: [
         'Secure wedding invitation management',
         'Guest communication platform',
@@ -667,6 +671,7 @@ export const products: ProjectCatalog = {
           alt: 'Wedding Details and Agenda Sharing',
         },
       ],
+      type: 'web',
     },
   ],
   mobileApps: [
@@ -683,7 +688,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/poem-maker/thumbnail.webp',
+      thumbnail: '/projects/demo-mobile-design-1.jpg',
       description:
         'PoemMaker is a delightful native app crafted with FlutterFlow, designed to unleash the creativity of users through the art of poetry. With a range of inspiring prompts, versatile poetic structures, and editing tools, the app serves as a pocket-sized companion for individuals to effortlessly compose and share beautiful poems. Whether you\'re an experienced poet or a beginner, "PoemMaker" provides a seamless platform to express your unique poetic voice and ignite your passion for the written word.',
       technologies: [
@@ -714,6 +719,7 @@ export const products: ProjectCatalog = {
           alt: 'image-4',
         },
       ],
+      type: 'mobile',
     },
     {
       slug: 'pure',
@@ -728,7 +734,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/pure/thumbnail.webp',
+      thumbnail: '/projects/demo-mobile-design-1.jpg',
       description:
         "SalonTech Solutions introduced Pure, a revolutionary app designed to enhance performance management in the beauty and wellness industry. This case study outlines Pure's goals, challenges, strategic approach, and outcomes.",
       technologies: [
@@ -755,6 +761,7 @@ export const products: ProjectCatalog = {
           alt: 'image-3',
         },
       ],
+      type: 'mobile',
     },
     {
       slug: 'flick-skills',
@@ -769,7 +776,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/flick-skills/thumbnail.webp',
+      thumbnail: '/projects/demo-mobile-design-1.jpg',
       description:
         'Flick Skills is a sports-focused software company committed to providing innovative solutions, particularly in football, to empower enthusiasts and improve their skills.',
       technologies: [
@@ -800,6 +807,7 @@ export const products: ProjectCatalog = {
           alt: 'image-4',
         },
       ],
+      type: 'mobile',
     },
     {
       slug: 'var',
@@ -814,7 +822,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/var/thumbnail.webp',
+      thumbnail: '/projects/demo-mobile-design.jpg',
       description:
         'Var is an app that facilitates easy book reading by providing animated visuals synchronized with highlighted text, allowing users to immerse themselves in the story and enjoy a more engaging reading experience.',
       technologies: [
@@ -841,6 +849,7 @@ export const products: ProjectCatalog = {
           alt: 'image-3',
         },
       ],
+      type: 'mobile',
     },
     {
       slug: 'barber-b',
@@ -855,7 +864,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/barber-b/thumbnail.webp',
+      thumbnail: '/projects/demo-mobile-design.jpg',
       description:
         'Barber B is a software company aiming to modernize the barber industry by simplifying appointment booking processes for both barbers and clients.',
       technologies: [
@@ -882,6 +891,7 @@ export const products: ProjectCatalog = {
           alt: 'image-3',
         },
       ],
+      type: 'mobile',
     },
     {
       slug: 'calmomind',
@@ -896,7 +906,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/calmomind/thumbnail.jpg',
+      thumbnail: '/projects/demo-mobile-design.jpg',
       description:
         "Discover serenity on the go with our meditation app. Whether you're seeking stress relief, improved focus, or simply a moment of tranquility, our app offers a personalized journey to inner peace.\n\nEmbark on guided meditations led by experienced instructors, tailored to your schedule and preferences. Explore a variety of techniques, from mindfulness and breathing exercises to body scans and visualization.\n\nTrack your progress and cultivate mindfulness with our meditation timer and daily reminders. With a range of soothing sounds and nature scenes, create your ideal meditation environment anytime, anywhere.",
       technologies: [
@@ -910,11 +920,32 @@ export const products: ProjectCatalog = {
         },
       ],
       images: [],
+      type: 'mobile',
     },
   ],
 };
 
 export const technologyCards: TechnologyCard[] = [
+  {
+    name: 'Node.js',
+    imageSrc: '/technology_logos/nodejs.svg',
+  },
+  {
+    name: 'Nest.js',
+    imageSrc: '/technology_logos/nestjs.svg',
+  },
+  {
+    name: 'Python',
+    imageSrc: '/technology_logos/python.svg',
+  },
+  {
+    name: 'Java',
+    imageSrc: '/technology_logos/java.svg',
+  },
+  {
+    name: '.NET',
+    imageSrc: '/technology_logos/dotnet.svg',
+  },
   {
     name: 'Angular.js',
     imageSrc: '/technology_logos/angular.svg',
@@ -924,60 +955,40 @@ export const technologyCards: TechnologyCard[] = [
     imageSrc: '/technology_logos/react.svg',
   },
   {
-    name: 'React Native',
-    imageSrc: '/technology_logos/react.svg',
-  },
-  {
-    name: 'Node.js',
-    imageSrc: '/technology_logos/nodejs.svg',
-  },
-  {
     name: 'Next.js',
     imageSrc: '/technology_logos/nextjs-fill.svg',
-  },
-  {
-    name: 'Nest.js',
-    imageSrc: '/technology_logos/nestjs.svg',
-  },
-  {
-    name: 'Docker',
-    imageSrc: '/technology_logos/docker.svg',
-  },
-  {
-    name: 'Python',
-    imageSrc: '/technology_logos/python.svg',
   },
   {
     name: 'Figma',
     imageSrc: '/technology_logos/figma.svg',
   },
   {
-    name: 'Java',
-    imageSrc: '/technology_logos/java.svg',
-  },
-  {
     name: 'Flutter',
     imageSrc: '/technology_logos/flutter.svg',
-  },
-  {
-    name: '.NET',
-    imageSrc: '/technology_logos/dotnet.svg',
   },
   {
     name: 'Kotlin',
     imageSrc: '/technology_logos/kotlin.svg',
   },
   {
-    name: 'MongoDB',
-    imageSrc: '/technology_logos/mongo.svg',
-  },
-  {
-    name: 'SQL',
-    imageSrc: '/technology_logos/sql-database-generic.svg',
-  },
-  {
-    name: 'AI/ML',
+    name: 'Artificial Intelligence',
     imageSrc: '/technology_logos/ai.svg',
+  },
+  {
+    name: 'Machine Learning',
+    imageSrc: '/technology_logos/machine-learning.svg',
+  },
+  {
+    name: 'Shopify',
+    imageSrc: '/technology_logos/shopify-color.svg',
+  },
+  {
+    name: 'Amazon',
+    imageSrc: '/technology_logos/amazon-color.svg',
+  },
+  {
+    name: 'Docker',
+    imageSrc: '/technology_logos/docker.svg',
   },
   {
     name: 'AWS',
@@ -992,12 +1003,8 @@ export const technologyCards: TechnologyCard[] = [
     imageSrc: '/technology_logos/jenkins.svg',
   },
   {
-    name: 'Shopify',
-    imageSrc: '/technology_logos/shopify-color.svg',
-  },
-  {
-    name: 'Amazon',
-    imageSrc: '/technology_logos/amazon-color.svg',
+    name: 'Databases',
+    imageSrc: '/technology_logos/database.svg',
   },
 ];
 
@@ -1044,433 +1051,460 @@ export const timelineItems: TimelineEntry[] = [
   },
 ];
 
-const ITServices: Service[] = [
+export const ITServices: Service[] = [
   {
-    benefits: [
-      {
-        description: 'Build responsive and high-performance websites tailored to your needs.',
-        icon: CircleDotDashed,
-        title: 'Modern Websites',
-      },
-      {
-        description: 'Ensure cross-browser compatibility and a seamless user experience.',
-        icon: CircleDotDashed,
-        title: 'Cross-Browser Compatibility',
-      },
-    ],
-    imageSrc: '/web_development.jpg',
-    offers: {
-      mainHeading: 'Web Development Services',
-      offerings: [
-        {
-          description: 'We develop fast, secure, and scalable web solutions for businesses.',
-          title: 'Custom Web Solutions',
-        },
-        {
-          description: 'Our team specializes in creating responsive designs for all devices.',
-          title: 'Responsive Design',
-        },
-      ],
-      subtitle: 'Tailored solutions for web development.',
-    },
+    title: 'Web Development',
     slug: 'web-development',
-  },
-  {
-    benefits: [
-      {
-        description: 'Design and build robust APIs for seamless data exchange.',
-        icon: CircleDotDashed,
-        title: 'Secure APIs',
-      },
-      {
-        description: 'Integrate your applications with external services effortlessly.',
-        icon: CircleDotDashed,
-        title: 'Third-Party Integrations',
-      },
-    ],
-    imageSrc: '/managed_services_section.png',
-    offers: {
-      mainHeading: 'API Development Services',
-      offerings: [
-        {
-          description: 'Developing RESTful and GraphQL APIs to power your applications.',
-          title: 'Custom API Development',
-        },
-        {
-          description: 'Ensuring APIs are secure, scalable, and maintainable.',
-          title: 'API Security & Maintenance',
-        },
-      ],
-      subtitle: 'Efficient API solutions for your applications.',
+    imageSrc: '/web_development.jpg',
+    introSection: {
+      title: 'Engineering Digital Excellence',
+      description:
+        "Transform your digital presence with our cutting-edge web development solutions. We craft sophisticated, scalable web applications that combine stunning front-end experiences with robust backend architectures. Our expert team leverages the latest technologies and best practices to deliver high-performance solutions that drive business growth, enhance user engagement, and ensure your competitive edge in today's digital landscape. Choose Synnestra for unparalleled technical expertise, agile development processes, and a commitment to turning your web vision into reality.",
     },
-    slug: 'api-development',
-  },
-  {
-    benefits: [
-      {
-        description: 'Leverage cloud infrastructure for scalable solutions.',
-        icon: CircleDotDashed,
-        title: 'Scalability',
-      },
-      {
-        description: 'Ensure data availability and disaster recovery with the cloud.',
-        icon: CircleDotDashed,
-        title: 'High Availability',
-      },
-    ],
-    imageSrc: '/cloud_services.jpeg',
-    offers: {
-      mainHeading: 'Cloud Computing Services',
-      offerings: [
-        {
-          description: 'Deploy applications with the power of AWS, Azure, and GCP.',
-          title: 'Cloud Deployment',
-        },
-        {
-          description: 'Optimize cloud infrastructure for better performance and cost-efficiency.',
-          title: 'Cloud Optimization',
-        },
-      ],
-      subtitle: 'Empowering businesses with cloud solutions.',
+    techStack: {
+      frameworks: ['React.js', 'Next.js', 'Vue.js', 'Node.js', 'Express', 'Django', 'Laravel'],
+      tools: ['Webpack', 'Git', 'Docker', 'Jest', 'Cypress', 'AWS', 'Vercel'],
     },
-    slug: 'cloud-computing',
-  },
-  {
-    benefits: [
+    ourApproach: [
       {
-        description: 'Build cross-platform and native mobile applications.',
-        icon: CircleDotDashed,
-        title: 'Cross-Platform Development',
+        title: 'User-Centric Development',
+        description:
+          'We prioritize user experience by implementing responsive designs, optimizing load times, and ensuring cross-browser compatibility. Our development process includes continuous user feedback and iterative improvements.',
       },
       {
-        description: 'Deliver engaging mobile experiences for Android and iOS.',
-        icon: CircleDotDashed,
-        title: 'User-Centric Design',
+        title: 'Agile Methodology',
+        description:
+          'Using Agile practices, we maintain transparency and flexibility throughout the development cycle, allowing for quick adaptations to changing requirements while maintaining project momentum.',
+      },
+      {
+        title: 'Performance Optimization',
+        description:
+          'We implement advanced caching strategies, optimize asset delivery, and utilize modern build tools to ensure your web application performs at its peak, providing seamless user experiences.',
       },
     ],
+  },
+  {
+    title: 'Mobile Development',
+    slug: 'mobile-development',
     imageSrc: '/mobile-application-development.webp',
-    offers: {
-      mainHeading: 'Mobile Application Development Services',
-      offerings: [
-        {
-          description: 'Creating user-friendly and scalable mobile apps.',
-          title: 'Native App Development',
-        },
-        {
-          description: 'Leveraging frameworks like React Native and Flutter for cost-effective solutions.',
-          title: 'Hybrid App Development',
-        },
-      ],
-      subtitle: 'Custom mobile applications for your needs.',
+    introSection: {
+      title: 'Mobilizing Your Digital Future',
+      description:
+        "Elevate your mobile presence with our exceptional development expertise. At Synnestra, we specialize in creating powerful, intuitive mobile applications that captivate users and drive business growth. Our team masterfully blends native and cross-platform development approaches to deliver high-performance solutions that seamlessly integrate with your existing systems. From concept to deployment, we ensure your mobile application stands out in today's competitive marketplace with superior functionality, stunning design, and flawless user experience.",
     },
-    slug: 'mobile-application-development',
-  },
-  {
-    benefits: [
+    techStack: {
+      frameworks: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'SwiftUI', 'Jetpack Compose'],
+      tools: ['Firebase', 'Xcode', 'Android Studio', 'Fastlane', 'App Center', 'Google Analytics'],
+    },
+    ourApproach: [
       {
-        description: 'Manage structured and unstructured data efficiently.',
-        icon: CircleDotDashed,
-        title: 'Data Management',
+        title: 'Platform-Specific Excellence',
+        description:
+          'We follow platform-specific design guidelines and best practices to ensure your app feels native and intuitive on each operating system while maintaining consistent functionality.',
       },
       {
-        description: 'Ensure data security and availability across your systems.',
-        icon: CircleDotDashed,
-        title: 'Secure Data Solutions',
+        title: 'Offline-First Architecture',
+        description:
+          'Our mobile applications are designed to work seamlessly offline, implementing robust data synchronization and local storage strategies to ensure uninterrupted user experiences.',
+      },
+      {
+        title: 'Continuous Integration/Deployment',
+        description:
+          'We implement automated testing and deployment pipelines to ensure rapid development cycles and consistent app quality across all supported platforms and devices.',
       },
     ],
-    imageSrc: '/databases.jpg',
-    offers: {
-      mainHeading: 'Database Management Services',
-      offerings: [
-        {
-          description: 'Designing and maintaining SQL and NoSQL databases.',
-          title: 'Database Design',
-        },
-        {
-          description: 'Optimizing database performance for seamless operations.',
-          title: 'Performance Tuning',
-        },
-      ],
-      subtitle: 'Reliable database solutions for your business.',
-    },
-    slug: 'database-management',
   },
   {
-    benefits: [
+    title: 'Artificial Intelligence & Machine Learning',
+    slug: 'artificial-intelligence-ml',
+    imageSrc: '/it_consultantancy.jpg',
+    introSection: {
+      title: "Unleashing AI's Transformative Power",
+      description:
+        "Harness the revolutionary potential of AI with Synnestra's advanced machine learning solutions. We develop sophisticated AI systems that transform complex data into actionable intelligence, automate critical processes, and unlock predictive insights for your business. Our expert team creates custom AI models that adapt to your specific needs, whether in natural language processing, computer vision, or predictive analytics. Partner with us to leverage cutting-edge AI technology that drives innovation and creates sustainable competitive advantages for your organization.",
+    },
+    techStack: {
+      frameworks: ['TensorFlow', 'PyTorch', 'Scikit-learn', 'Keras', 'OpenCV', 'Transformers'],
+      tools: ['Jupyter Notebooks', 'Google Cloud AI', 'AWS SageMaker', 'CUDA', 'MLflow', 'DVC'],
+    },
+    ourApproach: [
       {
-        description: 'Automate your development and deployment workflows.',
-        icon: CircleDotDashed,
-        title: 'Faster Delivery',
+        title: 'Data-Driven Development',
+        description:
+          'We begin with thorough data analysis and preprocessing to ensure your AI models are built on clean, relevant data that accurately represents your business context.',
       },
       {
-        description: 'Improve code quality with continuous integration.',
-        icon: CircleDotDashed,
-        title: 'Quality Assurance',
+        title: 'Iterative Model Improvement',
+        description:
+          'Our process includes continuous model evaluation and refinement, implementing feedback loops to improve accuracy and performance over time.',
+      },
+      {
+        title: 'Scalable AI Infrastructure',
+        description:
+          'We design and implement scalable AI infrastructure that can handle growing data volumes and computational demands while maintaining performance and cost-effectiveness.',
       },
     ],
-    imageSrc: '/ci-cd.png',
-    offers: {
-      mainHeading: 'CI/CD Services',
-      offerings: [
-        {
-          description: 'Implementing Jenkins, GitHub Actions, and other CI/CD tools.',
-          title: 'Pipeline Setup',
-        },
-        {
-          description: 'Automating deployment processes for faster releases.',
-          title: 'Deployment Automation',
-        },
-      ],
-      subtitle: 'Streamline your development cycle.',
-    },
-    slug: 'ci-cd',
   },
   {
-    benefits: [
+    title: 'Blockchain Technology',
+    slug: 'blockchain-technology',
+    imageSrc: '/it_consultantancy.jpg',
+    introSection: {
+      title: 'Architecting Trust in the Digital Age',
+      description:
+        "Step into the future of secure, transparent transactions with Synnestra's blockchain expertise. We develop robust decentralized solutions that revolutionize how businesses handle digital assets, manage supply chains, and process transactions. Our blockchain implementations combine cutting-edge distributed ledger technology with enterprise-grade security and scalability. Choose Synnestra to build trust-driven systems that optimize operations, reduce costs, and create new opportunities in the decentralized economy.",
+    },
+    techStack: {
+      frameworks: ['Ethereum', 'Solidity', 'Hyperledger Fabric', 'Web3.js', 'Truffle', 'Hardhat'],
+      tools: ['MetaMask', 'Ganache', 'IPFS', 'OpenZeppelin', 'Ethers.js', 'Remix IDE'],
+    },
+    ourApproach: [
       {
-        description: 'Integrate development and operations for seamless workflows.',
-        icon: CircleDotDashed,
-        title: 'Improved Collaboration',
+        title: 'Security-First Development',
+        description:
+          'We implement rigorous security measures and best practices in smart contract development, including formal verification and comprehensive security audits.',
       },
       {
-        description: 'Enhance system reliability and scalability.',
-        icon: CircleDotDashed,
-        title: 'Efficient Operations',
+        title: 'Scalable Architecture',
+        description:
+          'Our blockchain solutions are designed with scalability in mind, implementing layer-2 solutions and optimal consensus mechanisms to handle high transaction volumes.',
+      },
+      {
+        title: 'Interoperability Focus',
+        description:
+          'We ensure our blockchain implementations can interact seamlessly with existing systems and other blockchain networks, maximizing their utility and adoption potential.',
       },
     ],
-    imageSrc: '/devops.jpg',
-    offers: {
-      mainHeading: 'DevOps Services',
-      offerings: [
-        {
-          description: 'Setting up CI/CD pipelines and monitoring solutions.',
-          title: 'Pipeline Implementation',
-        },
-        {
-          description: 'Implementing containerization and orchestration with Docker and Kubernetes.',
-          title: 'Containerization',
-        },
-      ],
-      subtitle: 'Efficient collaboration between dev and ops teams.',
-    },
-    slug: 'devops',
   },
   {
-    benefits: [
+    title: 'API Development',
+    slug: 'api-development',
+    imageSrc: '/managed_services_section.png',
+    introSection: {
+      title: 'Connecting Digital Ecosystems',
+      description:
+        "Power your digital infrastructure with Synnestra's sophisticated API solutions. We design and develop robust, scalable APIs that seamlessly connect your systems, applications, and services. Our expertise in RESTful and GraphQL architectures, combined with modern microservices design, ensures your APIs deliver optimal performance, security, and reliability. Partner with us to create APIs that not only meet your current integration needs but scale effortlessly with your growing business demands.",
+    },
+    techStack: {
+      frameworks: ['Express.js', 'NestJS', 'FastAPI', 'Spring Boot', 'Apollo GraphQL', 'gRPC'],
+      tools: ['Swagger', 'Postman', 'Kong', 'Redis', 'RabbitMQ', 'Elasticsearch'],
+    },
+    ourApproach: [
       {
-        description: 'Leverage machine learning for data-driven insights.',
-        icon: CircleDotDashed,
-        title: 'AI Solutions',
+        title: 'API-First Design',
+        description:
+          'We follow an API-first approach, carefully planning and documenting endpoints, data models, and integration patterns before implementation begins.',
       },
       {
-        description: 'Use data science to solve complex business problems.',
-        icon: CircleDotDashed,
-        title: 'Data Insights',
+        title: 'Comprehensive Testing',
+        description:
+          'Our development process includes thorough testing at all levels, from unit tests to integration tests and performance testing, ensuring reliable and stable APIs.',
+      },
+      {
+        title: 'Security & Authentication',
+        description:
+          'We implement robust security measures including OAuth2, JWT, rate limiting, and input validation to protect your APIs from common vulnerabilities and attacks.',
       },
     ],
-    imageSrc: '/data-science-ai.png',
-    offers: {
-      mainHeading: 'Data Science & AI Services',
-      offerings: [
-        {
-          description: 'Building predictive models using AI and ML techniques.',
-          title: 'Predictive Analytics',
-        },
-        {
-          description: 'Providing end-to-end data science solutions for businesses.',
-          title: 'Custom AI Models',
-        },
-      ],
-      subtitle: 'Empowering businesses with intelligent solutions.',
+  },
+  {
+    title: 'DevOps & Cloud Computing',
+    slug: 'devops-cloud-computing',
+    imageSrc: '/cloud_services.jpeg',
+    introSection: {
+      title: 'Empowering Cloud Innovation',
+      description:
+        "Accelerate your digital transformation with Synnestra's comprehensive DevOps and cloud computing solutions. We architect and implement scalable cloud infrastructures that optimize performance, enhance reliability, and drive cost efficiency. Our DevOps expertise streamlines your development workflows through advanced automation, continuous integration/deployment, and infrastructure as code. Trust Synnestra to build and maintain cloud environments that grow with your business while maintaining peak operational excellence.",
     },
-    slug: 'data-science-ai',
+    techStack: {
+      frameworks: ['Terraform', 'Kubernetes', 'Docker', 'Jenkins', 'Ansible', 'GitHub Actions'],
+      tools: ['AWS', 'Azure', 'GCP', 'Prometheus', 'Grafana', 'ELK Stack'],
+    },
+    ourApproach: [
+      {
+        title: 'Infrastructure as Code',
+        description:
+          'We implement infrastructure as code practices to ensure consistent, version-controlled, and repeatable deployment processes across all environments.',
+      },
+      {
+        title: 'Monitoring & Observability',
+        description:
+          'Our solutions include comprehensive monitoring and logging systems to provide real-time insights into system health, performance metrics, and potential issues.',
+      },
+      {
+        title: 'Cost Optimization',
+        description:
+          'We implement cloud cost optimization strategies, including auto-scaling, resource right-sizing, and usage analysis to maintain optimal performance within budget constraints.',
+      },
+    ],
+  },
+  {
+    title: 'Data Analytics',
+    slug: 'data-analytics',
+    imageSrc: '/cybersecurity.jpg',
+    introSection: {
+      title: 'Transforming Data into Strategic Assets',
+      description:
+        "Unlock the full potential of your data with Synnestra's advanced analytics solutions. We transform raw data into actionable insights through sophisticated analysis, visualization, and reporting tools that drive informed decision-making. Our expertise in big data processing and business intelligence enables organizations to discover hidden patterns, predict trends, and optimize operations. Partner with us to harness the power of your data and gain a competitive edge in today's data-driven business landscape.",
+    },
+    techStack: {
+      frameworks: ['Apache Spark', 'Hadoop', 'Pandas', 'Power BI', 'Tableau', 'Apache Airflow'],
+      tools: ['Snowflake', 'BigQuery', 'Redshift', 'Databricks', 'Looker', 'Alteryx'],
+    },
+    ourApproach: [
+      {
+        title: 'Data Strategy Development',
+        description:
+          'We begin by understanding your business objectives and developing a comprehensive data strategy that aligns analytics initiatives with organizational goals.',
+      },
+      {
+        title: 'Data Quality & Governance',
+        description:
+          'Our solutions implement robust data quality checks and governance frameworks to ensure accuracy, consistency, and compliance in all analytics processes.',
+      },
+      {
+        title: 'Automated Reporting',
+        description:
+          'We create automated reporting systems with customizable dashboards that provide real-time insights and facilitate data-driven decision making across your organization.',
+      },
+    ],
+  },
+  {
+    title: 'UI/UX Design',
+    slug: 'ui-ux-design',
+    imageSrc: '/managed_services_section.png',
+    introSection: {
+      title: 'Crafting Digital Experiences that Inspire',
+      description:
+        "Elevate your digital presence with Synnestra's human-centered design approach. We create intuitive, engaging user interfaces that captivate your audience and drive meaningful interactions. Our comprehensive design process combines deep user research, innovative interaction design, and meticulous attention to detail. Choose Synnestra to transform your digital vision into seamless, memorable experiences that delight users and achieve your business objectives.",
+    },
+    techStack: {
+      frameworks: ['Material-UI', 'Tailwind CSS', 'Framer Motion', 'Styled Components', 'Bootstrap', 'Chakra UI'],
+      tools: ['Figma', 'Adobe XD', 'Sketch', 'InVision', 'Zeplin', 'Principle'],
+    },
+    ourApproach: [
+      {
+        title: 'Research & Discovery',
+        description:
+          'We conduct thorough user research, competitive analysis, and stakeholder interviews to understand user needs and business requirements before beginning design work.',
+      },
+      {
+        title: 'Iterative Design Process',
+        description:
+          'Our design process involves multiple iterations and feedback loops, ensuring that each design decision is validated through user testing and stakeholder input.',
+      },
+      {
+        title: 'Design System Development',
+        description:
+          'We create comprehensive design systems that ensure consistency across all user interfaces while maintaining flexibility for future growth and adaptation.',
+      },
+    ],
+  },
+  {
+    title: 'Custom Software Development',
+    slug: 'custom-software',
+    imageSrc: '/industries_dropdown_image.png',
+    introSection: {
+      title: "Building Tomorrow's Solutions Today",
+      description:
+        "Transform your business challenges into opportunities with Synnestra's custom software solutions. We develop tailored applications that perfectly align with your unique business processes and objectives. Whether you need enterprise resource planning systems, specialized industry applications, or legacy system modernization, our expert team delivers scalable, future-proof solutions. Partner with Synnestra to create custom software that drives efficiency, innovation, and sustainable growth for your organization.",
+    },
+    techStack: {
+      frameworks: ['.NET Core', 'Java Spring', 'Python Django', 'Ruby on Rails', 'Angular', 'Vue.js'],
+      tools: ['Visual Studio', 'IntelliJ IDEA', 'GitLab CI/CD', 'Jenkins', 'SonarQube', 'New Relic'],
+    },
+    ourApproach: [
+      {
+        title: 'Requirements Engineering',
+        description:
+          'We conduct thorough requirements gathering and analysis to ensure our custom solutions precisely match your business needs and processes.',
+      },
+      {
+        title: 'Scalable Architecture',
+        description:
+          'Our custom software solutions are built on scalable, modular architectures that can grow and adapt to changing business requirements over time.',
+      },
+      {
+        title: 'Continuous Support',
+        description:
+          'We provide ongoing maintenance, support, and enhancement services to ensure your custom software continues to meet your evolving business needs.',
+      },
+    ],
   },
 ];
 
 const e_commerceServices: Service[] = [
   {
-    benefits: [
-      {
-        description: 'Identify trending products with high profit margins.',
-        icon: CircleDotDashed,
-        title: 'Market Research',
-      },
-      {
-        description: 'Find reliable suppliers to source high-quality products.',
-        icon: CircleDotDashed,
-        title: 'Supplier Connections',
-      },
-    ],
-    imageSrc: '/images/product-hunting.png',
-    offers: {
-      mainHeading: 'Product Hunting & Sourcing',
-      offerings: [
-        {
-          description: 'Conduct in-depth research to identify top-selling products.',
-          title: 'Product Hunting',
-        },
-        {
-          description: 'Source products directly from verified suppliers.',
-          title: 'Product Sourcing',
-        },
-      ],
-      subtitle: 'Find and source winning products for your business.',
-    },
     slug: 'product-hunting-sourcing',
-  },
-  {
-    benefits: [
+    title: 'Product Hunting & Sourcing',
+    imageSrc: '/images/services/product-hunting-sourcing.jpg',
+    introSection: {
+      title: 'Discover Your Next Best-Seller',
+      description:
+        'At Synnestra, we specialize in identifying profitable products and connecting you with reliable suppliers to elevate your e-commerce business. Our expert team conducts thorough market research to ensure you stay ahead of the competition.',
+    },
+    techStack: {
+      frameworks: [],
+      tools: ['Jungle Scout', 'Helium 10', 'Alibaba'],
+    },
+    ourApproach: [
       {
-        description: 'Optimize your product listings to rank higher and attract customers.',
-        icon: CircleDotDashed,
-        title: 'SEO-Optimized Listings',
+        title: 'Market Analysis',
+        description: 'Conduct comprehensive research to identify trending products with high demand.',
       },
       {
-        description: 'Craft compelling product descriptions to boost conversions.',
-        icon: CircleDotDashed,
-        title: 'Conversion Optimization',
+        title: 'Supplier Vetting',
+        description: 'Evaluate and connect with trustworthy suppliers to ensure product quality.',
+      },
+      {
+        title: 'Negotiation & Procurement',
+        description: 'Handle negotiations to secure the best terms and manage the procurement process.',
       },
     ],
-    imageSrc: '/images/listing-optimization.png',
-    offers: {
-      mainHeading: 'Listing Optimization Services',
-      offerings: [
-        {
-          description: 'Enhance product titles, descriptions, and keywords.',
-          title: 'Keyword Optimization',
-        },
-        {
-          description: 'Create visually appealing product images and A+ content.',
-          title: 'Content Creation',
-        },
-      ],
-      subtitle: 'Maximize visibility and sales with optimized listings.',
-    },
+  },
+  {
     slug: 'listing-optimization',
-  },
-  {
-    benefits: [
+    title: 'Listing Optimization',
+    imageSrc: '/images/services/listing-optimization.jpg',
+    introSection: {
+      title: 'Maximize Your Product Visibility',
+      description:
+        'Synnestra enhances your product listings to improve visibility and boost sales. Our team integrates effective SEO strategies and compelling content to ensure your products stand out in the marketplace.',
+    },
+    techStack: {
+      frameworks: [],
+      tools: ['Keyword Tool', 'Canva', 'Adobe Photoshop'],
+    },
+    ourApproach: [
       {
-        description: 'Build a unique brand with private-label products.',
-        icon: CircleDotDashed,
-        title: 'Custom Branding',
+        title: 'SEO Optimization',
+        description: 'Integrate relevant keywords to improve search rankings.',
       },
       {
-        description: 'Control your product quality and branding completely.',
-        icon: CircleDotDashed,
-        title: 'Ownership and Control',
+        title: 'Compelling Copywriting',
+        description: 'Craft persuasive product descriptions that highlight key features and benefits.',
+      },
+      {
+        title: 'Visual Enhancement',
+        description: 'Design high-quality images and graphics to attract potential buyers.',
       },
     ],
-    imageSrc: '/images/private-label.png',
-    offers: {
-      mainHeading: 'Private Label Services',
-      offerings: [
-        {
-          description: 'Develop unique products tailored to your brand.',
-          title: 'Product Development',
-        },
-        {
-          description: 'Create a strong brand identity with custom packaging.',
-          title: 'Custom Packaging',
-        },
-      ],
-      subtitle: 'Establish your brand with private-label products.',
-    },
+  },
+  {
     slug: 'private-label',
-  },
-  {
-    benefits: [
+    title: 'Private Label',
+    imageSrc: '/images/services/private-label.jpg',
+    introSection: {
+      title: 'Build Your Unique Brand Identity',
+      description:
+        'With Synnestra’s Private Label services, create and launch your own branded products to establish a unique market presence. We assist in product development, branding strategy, and quality assurance to reflect your brand identity.',
+    },
+    techStack: {
+      frameworks: [],
+      tools: ['Brand Registry', 'Packaging Design Software'],
+    },
+    ourApproach: [
       {
-        description: 'Buy products in bulk to enjoy wholesale pricing benefits.',
-        icon: CircleDotDashed,
-        title: 'Bulk Purchasing',
+        title: 'Product Development',
+        description: 'Collaborate to design and develop products that reflect your brand identity.',
       },
       {
-        description: 'Diversify your portfolio with proven products.',
-        icon: CircleDotDashed,
-        title: 'Product Variety',
+        title: 'Branding Strategy',
+        description: 'Formulate a comprehensive branding strategy, including logo and packaging design.',
+      },
+      {
+        title: 'Quality Assurance',
+        description: 'Implement strict quality control measures to maintain product standards.',
       },
     ],
-    imageSrc: '/images/wholesaling.png',
-    offers: {
-      mainHeading: 'Wholesaling Services',
-      offerings: [
-        {
-          description: 'Source and manage bulk inventory for your business.',
-          title: 'Bulk Inventory Management',
-        },
-        {
-          description: 'Find high-demand products with a strong sales track record.',
-          title: 'Market-Ready Products',
-        },
-      ],
-      subtitle: 'Scale your business with wholesale opportunities.',
-    },
+  },
+  {
     slug: 'wholesaling',
-  },
-  {
-    benefits: [
+    title: 'Wholesaling',
+    imageSrc: '/images/services/wholesaling.jpg',
+    introSection: {
+      title: 'Scale with Bulk Purchasing Power',
+      description:
+        'Synnestra’s Wholesaling services enable you to purchase products in bulk, benefiting from wholesale pricing and expanding your inventory. We manage bulk procurement, inventory, and distribution planning to help scale your business.',
+    },
+    techStack: {
+      frameworks: [],
+      tools: ['Inventory Management Systems', 'Bulk Order Platforms'],
+    },
+    ourApproach: [
       {
-        description: 'Run an e-commerce business without maintaining inventory.',
-        icon: CircleDotDashed,
-        title: 'No Inventory Needed',
+        title: 'Bulk Procurement',
+        description: 'Source and purchase large quantities of high-demand products.',
       },
       {
-        description: 'Automate order fulfillment with dropshipping partners.',
-        icon: CircleDotDashed,
-        title: 'Automated Fulfillment',
+        title: 'Inventory Management',
+        description: 'Efficiently manage and track inventory levels to prevent stockouts.',
+      },
+      {
+        title: 'Distribution Planning',
+        description: 'Develop strategies for distributing products across various sales channels.',
       },
     ],
-    imageSrc: '/images/dropshipping.png',
-    offers: {
-      mainHeading: 'Dropshipping Services',
-      offerings: [
-        {
-          description: 'Identify top suppliers for efficient dropshipping operations.',
-          title: 'Supplier Selection',
-        },
-        {
-          description: 'Set up automated order and shipping workflows.',
-          title: 'Workflow Automation',
-        },
-      ],
-      subtitle: 'Start your business without inventory constraints.',
-    },
+  },
+  {
     slug: 'dropshipping',
-  },
-  {
-    benefits: [
+    title: 'Dropshipping',
+    imageSrc: '/images/services/dropshipping.jpg',
+    introSection: {
+      title: 'Launch Without Inventory Hassles',
+      description:
+        'Start an online store without the hassle of inventory management through Synnestra’s Dropshipping services. We connect you with reliable suppliers and automate order processing to streamline your operations.',
+    },
+    techStack: {
+      frameworks: [],
+      tools: ['Oberlo', 'DSers', 'Shopify'],
+    },
+    ourApproach: [
       {
-        description: 'Launch and scale your e-commerce store effectively.',
-        icon: CircleDotDashed,
-        title: 'Store Setup',
+        title: 'Supplier Integration',
+        description: 'Connect with reliable dropshipping suppliers to offer a wide range of products.',
       },
       {
-        description: 'Leverage platform-specific strategies for Amazon and Shopify.',
-        icon: CircleDotDashed,
-        title: 'Platform Expertise',
+        title: 'Automated Order Processing',
+        description: 'Set up systems to automate order placement and fulfillment.',
+      },
+      {
+        title: 'Customer Service Management',
+        description: 'Provide support to handle customer inquiries and returns efficiently.',
       },
     ],
-    imageSrc: '/images/amazon-shopify.png',
-    offers: {
-      mainHeading: 'Amazon & Shopify Services',
-      offerings: [
-        {
-          description: 'Set up and optimize your Amazon or Shopify store.',
-          title: 'Store Optimization',
-        },
-        {
-          description: 'Develop strategies for sales growth on both platforms.',
-          title: 'Sales Growth Strategies',
-        },
-      ],
-      subtitle: 'Grow your business on Amazon and Shopify.',
-    },
+  },
+  {
     slug: 'amazon-shopify',
+    title: 'Amazon & Shopify',
+    imageSrc: '/images/services/amazon-shopify.jpg',
+    introSection: {
+      title: 'Dominate Leading E-Commerce Platforms',
+      description:
+        'Synnestra helps you launch and optimize your online store on leading e-commerce platforms like Amazon and Shopify. Our experts handle store setup, platform optimization, and marketing strategies to drive traffic and increase sales.',
+    },
+    techStack: {
+      frameworks: [],
+      tools: ['Amazon Seller Central', 'Shopify Admin', 'Google Analytics'],
+    },
+    ourApproach: [
+      {
+        title: 'Store Setup',
+        description: 'Create and configure your online store tailored to your brand.',
+      },
+      {
+        title: 'Platform Optimization',
+        description: 'Optimize store settings and listings to enhance performance and user experience.',
+      },
+      {
+        title: 'Marketing Strategies',
+        description: 'Develop and implement marketing campaigns to drive traffic and increase sales.',
+      },
+    ],
   },
 ];
 
-export const industries: Industry[] = [
+export const industries = [
   {
     slug: 'telecommunications',
     imageSrc: '/industries/telecommunications_thumbnail.jpg',
@@ -1668,21 +1702,21 @@ export const navItems = [
       {
         name: 'IT Solutions',
         items: ITServices.map((service) => ({
-          name: transformSlug(service.slug),
+          name: service.title,
           href: `/services/${service.slug}`,
         })),
       },
       {
         name: 'E Commerce',
         items: e_commerceServices.map((service) => ({
-          name: transformSlug(service.slug),
+          name: service.title,
           href: `/services/${service.slug}`,
         })),
       },
       {
         name: 'Corporate Compliance',
         items: e_commerceServices.map((service) => ({
-          name: transformSlug(service.slug),
+          name: service.title,
           href: `/services/${service.slug}`,
         })),
       },
