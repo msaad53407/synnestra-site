@@ -6,12 +6,13 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
 type Props = {
-  params: {
+  params: Promise<{
     projectId: string;
-  };
+  }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   const activeProjectWebsite = products.websites.find((website) => website.slug === params.projectId);
   const activeProjectMobile = products.mobileApps.find((app) => app.slug === params.projectId);
 
@@ -30,7 +31,8 @@ export const generateStaticParams = () => {
   return [...websiteSlugs, ...mobileAppSlugs];
 };
 
-const ProjectPage = ({ params }: Props) => {
+const ProjectPage = async (props: Props) => {
+  const params = await props.params;
   const activeProjectWebsite = products.websites.find((website) => website.slug === params.projectId);
   const activeProjectMobile = products.mobileApps.find((app) => app.slug === params.projectId);
 
