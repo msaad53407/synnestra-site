@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from 'react';
 
-export const useOutsideClick = (ref: React.RefObject<HTMLDivElement>, callback: (event: any) => void) => {
+export const useOutsideClick = (ref: React.RefObject<HTMLDivElement | null>, callback: (event: any) => void) => {
   useEffect(() => {
     const listener = (event: any) => {
       if (!ref.current || ref.current.contains(event.target)) {

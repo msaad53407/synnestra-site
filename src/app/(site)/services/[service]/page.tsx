@@ -13,12 +13,13 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 type Props = {
-  params: {
+  params: Promise<{
     service: string;
-  };
+  }>;
 };
 
-export async function generateMetadata({ params }: Props): Promise<Metadata> {
+export async function generateMetadata(props: Props): Promise<Metadata> {
+  const params = await props.params;
   return {
     title: `${transformSlug(params.service)}`,
   };
@@ -26,7 +27,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export const generateStaticParams = () => servicesProvided.map((service) => ({ service: service.slug }));
 
-const ServicePage = ({ params: { service } }: Props) => {
+const ServicePage = async (props: Props) => {
+  const params = await props.params;
+
+  const {
+    service
+  } = params;
+
   const selectedService = servicesProvided.find((s) => s.slug === service);
   if (!selectedService) notFound();
 
