@@ -1,13 +1,14 @@
 import AnimatedBanner from '@/components/AnimatedBanner';
+import AnimatedSection from '@/components/AnimatedSection';
 import AppShowcaseCard from '@/components/cards/AppShowcaseCard';
+import LogosCarousel from '@/components/LogosCarousel';
 import ReviewSection from '@/components/sections/ReviewSection';
 import StatisticsBar from '@/components/StatisticsBar';
 import { Button } from '@/components/ui/button';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import { CarouselItem } from '@/components/ui/carousel';
 import { companies, perks, projectsShowcase, solutions, technologyCards } from '@/lib/constants';
 import { ArrowUpRight } from 'lucide-react';
 import Image from 'next/image';
-import AnimatedSection from '@/components/AnimatedSection';
 import Link from 'next/link';
 
 export default function Home() {
@@ -52,13 +53,26 @@ export default function Home() {
           </div>
         </AnimatedSection>
       </section>
-      <InfiniteMovingCards direction="left" speed="very-slow" className="px-4 py-6 sm:px-6 lg:px-12">
+      {/* <InfiniteMovingCards direction="left" speed="very-slow" className="px-4 py-6 sm:px-6 lg:px-12">
         {[...companies, ...companies].map((item, index) => (
           <li key={item.title + ' ' + index} className="size-24 flex items-center justify-center">
             <Image src={item.thumbnail} alt={item.title} width={100} height={100} className="object-contain" />
           </li>
         ))}
-      </InfiniteMovingCards>
+      </InfiniteMovingCards> */}
+      <LogosCarousel speed={2}>
+        {[...companies, ...companies].map((item, index) => (
+          <CarouselItem key={item.title + ' ' + index} className="basis-1/3 md:basis-1/5 lg:basis-1/6 xl:basis-[12.5%]">
+            <Image
+              src={item.thumbnail}
+              alt={item.title}
+              width={100}
+              height={100}
+              className="object-contain min-w-24 min-h-24"
+            />
+          </CarouselItem>
+        ))}
+      </LogosCarousel>
       <StatisticsBar />
       <AnimatedBanner />
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 px-4 py-6 sm:px-6 lg:px-12">
@@ -78,7 +92,7 @@ export default function Home() {
         </h2>
         <div className="grid grid-cols-6 gap-4">
           {projectsShowcase.map((project, index) => (
-            <AppShowcaseCard index={index} key={project.id} project={project} />
+            <AppShowcaseCard index={index} key={index} project={project} />
           ))}
         </div>
         {/*<div className="text-center mt-8">*/}
@@ -98,7 +112,7 @@ export default function Home() {
               direction={'up'}
               duration={0.3 * (index + 1)}
               key={index}
-              className="bg-white rounded-lg p-6 shadow-sm relative min-h-80"
+              className="bg-white rounded-lg space-y-3 p-6 shadow-sm relative min-h-[23rem]"
             >
               <Image
                 src={solution.icon}
@@ -109,10 +123,10 @@ export default function Home() {
                 quality={100}
               />
               <h3 className="text-2xl font-medium text-gray-900 mb-2">{solution.title}</h3>
-              <p className="text-gray-600 mb-4">{solution.description}</p>
+              <p className="text-gray-600 mb-4 line-clamp-6">{solution.description}</p>
               <Link
                 href={solution.link}
-                className="text-custom-purple w-full py-2 px-4 hover:underline absolute bottom-2 left-0 border-t border-t-custom-purple-light"
+                className="text-custom-purple w-full mt-3 py-2 px-4 hover:underline border-t absolute bottom-2 border-t-custom-purple-light"
               >
                 Learn more
               </Link>
@@ -133,7 +147,7 @@ export default function Home() {
             <div className="flex space-x-4 mb-4 items-center justify-between">
               <div className="space-y-3">
                 <Image src="/company_logos/Forbes 1.svg" alt="Forbes" width={80} height={30} />
-                <p className="text-sm text-custom-purple-light">Forbes Member Council 2022</p>
+                <p className="text-sm text-custom-purple-light">Forbes Member Council</p>
               </div>
               <div className="space-y-3">
                 <Image src="/company_logos/Google.svg" alt="Google" width={80} height={30} />
@@ -141,12 +155,9 @@ export default function Home() {
               </div>
               <div className="space-y-3">
                 <Image src="/company_logos/clutch.svg" alt="Clutch" width={80} height={30} />
-                <p className="text-sm text-custom-purple-light">Top App DevelopmentCompany in USA 2023</p>
+                <p className="text-sm text-custom-purple-light">Top App DevelopmentCompany in USA</p>
               </div>
             </div>
-            <Button variant="outline" className="text-black bg-custom-purple-light hover:bg-custom-purple-light mt-4">
-              View More Awards
-            </Button>
           </AnimatedSection>
 
           {/* We use latest technologies */}
@@ -155,13 +166,11 @@ export default function Home() {
               We use latest technologies to run your project smoothly
             </h2>
             <div className="flex flex-wrap gap-2">
-              {technologyCards.map(
-                (tech) => (
-                  <span key={tech.name} className="bg-white px-3 py-1 rounded-full text-sm">
-                    {tech.name}
-                  </span>
-                ),
-              )}
+              {technologyCards.map((tech) => (
+                <span key={tech.name} className="bg-white px-3 py-1 rounded-full text-sm">
+                  {tech.name}
+                </span>
+              ))}
             </div>
           </AnimatedSection>
         </div>
@@ -172,9 +181,6 @@ export default function Home() {
               Synnestra has been recognized as a Leader in the 2024 Gartner
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
-              <Button variant="link" className="mt-4">
-                View the report
-              </Button>
               <div className="size-full md:size-48">
                 <Image
                   src="/illustrations/shape-dots-black.svg"
@@ -192,9 +198,6 @@ export default function Home() {
               Create a great career and grow your future with Synnestra
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
-              <Button variant="outline" className="text-black bg-custom-purple-light hover:bg-custom-purple-light mt-4">
-                View Open Positions
-              </Button>
               <div className="size-full md:size-48">
                 <Image
                   src="/career_oppurtunities.png"

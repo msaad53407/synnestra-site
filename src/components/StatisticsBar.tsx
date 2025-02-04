@@ -28,10 +28,10 @@ export default function StatisticsBar() {
             </div>
           </div>
         </div>
-        <StatItem value={20} unit="Years" description="Proven Track Record" />
+        <StatItem value={4} unit="Years" description="Proven Track Record" />
         <StatItem value={98} unit="%" description="Customer Satisfaction" />
-        <StatItem value={1500} unit="Projects" description="We Have Completed" />
-        <StatItem value={3} unit="Mins" description="Average Answer Time" />
+        <StatItem value={250} unit="Projects" description="We Have Completed" />
+        <StatItem value={30} unit="Mins" description="Average Answer Time" />
       </div>
     </div>
   );

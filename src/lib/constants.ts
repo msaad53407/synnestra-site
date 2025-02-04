@@ -121,83 +121,6 @@ export const perks: Perk[] = [
   },
 ];
 
-export const projectsShowcase: ProjectShowcase[] = [
-  {
-    id: '01',
-    name: 'Success Loop',
-    description:
-      'At Synnestra, we empower businesses to achieve sustainable growth through our innovative software solutions. Our "Success Loop" methodology ensures that we consistently deliver tangible results and drive continuous improvement for our clients.',
-    color: 'bg-custom-purple-light',
-    textColor: 'text-black',
-    headingColor: 'text-custom-purple',
-    image: '/company_logos/logo 1.png',
-  },
-  {
-    id: '02',
-    name: 'Global Currency',
-    description: '',
-    color: 'bg-custom-cream',
-    textColor: 'text-black',
-    headingColor: 'text-custom-purple',
-    image: '/company_logos/growth_app_logo.png',
-  },
-  {
-    id: '03',
-    name: 'Swappin Numbers Academy',
-    description:
-      "As part of our commitment to knowledge-sharing, we have developed the Swappin' Numbers Academy - an educational platform that equips professionals with the skills and strategies needed to navigate the dynamic world of financial data analysis and decision-making.",
-    color: 'bg-custom-purple',
-    textColor: 'text-white',
-    headingColor: 'text-white',
-    image: '/company_logos/swapping_numbers_academy.png',
-  },
-];
-
-export const solutions: Solution[] = [
-  {
-    title: 'Manage Services',
-    description:
-      'Our comprehensive managed services suite ensures the smooth and efficient operation of your business-critical systems, allowing you to focus on core competencies and achieve your strategic objectives.',
-    icon: '/icons/grommet-icons_services.svg',
-    link: '/services/managed-services',
-  },
-  {
-    title: 'IT Consulting & Advisory',
-    description:
-      'Leverage our industry-leading expertise to navigate the complex IT landscape. Our consultative approach helps you align technology with your business goals, optimize performance, and drive innovation.',
-    icon: '/icons/fluent_people-team-24-regular.svg',
-    link: '/services/it-consultancy-and-advisory',
-  },
-  {
-    title: 'Cyber Security',
-    description:
-      "Protect your organization's sensitive data and digital assets with our robust cybersecurity solutions. We implement multi-layered security measures to safeguard your operations and maintain business continuity.",
-    icon: '/icons/carbon_cloud-services.svg',
-    link: '/services/cyber-security',
-  },
-  {
-    title: 'Web Development',
-    description:
-      'Our web development services empower you to create engaging, user-centric digital experiences that showcase your brand, enhance customer interactions, and drive business growth.',
-    icon: '/icons/mdi_web-asset.svg',
-    link: '/services/web-development',
-  },
-  {
-    title: 'Mobile Development',
-    description:
-      'Stay ahead of the mobile-first revolution with our custom mobile applications. We develop intuitive, feature-rich solutions that seamlessly integrate with your existing systems and processes.',
-    icon: '/icons/healthicons_mobile.svg',
-    link: '/services/mobile-development',
-  },
-  {
-    title: 'Cloud Services',
-    description:
-      'Unlock the power of cloud computing with our comprehensive suite of cloud-based services. From infrastructure to software-as-a-service, we help you harness the flexibility, scalability, and cost-efficiency of the cloud.',
-    icon: '/icons/hugeicons_ai-security-01.svg',
-    link: '/services/cloud-services',
-  },
-];
-
 export const reviews: Review[] = [
   {
     name: 'Muhammad Usama',
@@ -276,7 +199,7 @@ export const products: ProjectCatalog = {
     {
       slug: 'success-loop',
       title: 'Successloop',
-      thumbnail: '/projects/demo-website-design.jpg',
+      thumbnail: '/projects/success-loop/thumbnail.png',
       description:
         'SuccessLoop is a powerful platform designed to help businesses create, manage, and optimize referral programs. Our mission is to bring the human touch to a digital world by leveraging the power of word-of-mouth marketing to build communities and brands.',
       features: [
@@ -388,7 +311,7 @@ export const products: ProjectCatalog = {
     {
       slug: 'fairdeal-electrical',
       title: 'Fairdeal Electrical',
-      thumbnail: '/projects/demo-website-design.jpg',
+      thumbnail: '/projects/fairdeal-electrical/thumbnail.png',
       features: [
         'Centralized dashboard for tracking key metrics',
         'Comprehensive chapter and district rosters',
@@ -484,7 +407,7 @@ export const products: ProjectCatalog = {
     {
       slug: 'arcadia-developers',
       title: 'Arcadia Developers Premier Construction Solutions',
-      thumbnail: '/projects/demo-website-design.jpg',
+      thumbnail: '/projects/arcadia-developers-premier-construction-solutions/thumbnail.jpeg',
       features: [
         'Comprehensive showcase of construction services',
         'Detailed project categories (domestic, commercial, industrial)',
@@ -576,7 +499,7 @@ export const products: ProjectCatalog = {
     {
       slug: 'tanafos',
       title: 'Tanafos: Seamless Football Ground Booking App',
-      thumbnail: '/projects/demo-website-design.jpg',
+      thumbnail: '/projects/tanafos/thumbnail.webp',
       features: [
         'Multilingual platform (Arabic and English)',
         'Intuitive football ground booking system',
@@ -822,7 +745,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/demo-mobile-design.jpg',
+      thumbnail: '/projects/var/thubnail.png',
       description:
         'Var is an app that facilitates easy book reading by providing animated visuals synchronized with highlighted text, allowing users to immerse themselves in the story and enjoy a more engaging reading experience.',
       technologies: [
@@ -924,6 +847,37 @@ export const products: ProjectCatalog = {
     },
   ],
 };
+
+export const projectsShowcase: ProjectShowcase[] = [
+  {
+    name: 'Success Loop',
+    description: products.websites.find((website) => website.slug === 'success-loop')?.description || '',
+    color: 'bg-custom-purple-light',
+    textColor: 'text-black',
+    headingColor: 'text-custom-purple',
+    image: '/company_logos/logo 1.png',
+    link: `/projects/${products.websites.find((website) => website.slug === 'success-loop')?.slug || ''}`,
+  },
+  {
+    name: 'Global Currency',
+    description: '',
+    color: 'bg-custom-cream',
+    textColor: 'text-black',
+    headingColor: 'text-custom-purple',
+    image: '/company_logos/growth_app_logo.png',
+    link: `/projects/${products.websites.find((website) => website.slug === 'global-currency')?.slug || ''}`,
+  },
+  {
+    name: 'Swappin Numbers Academy',
+    description:
+      "As part of our commitment to knowledge-sharing, we have developed the Swappin' Numbers Academy - an educational platform that equips professionals with the skills and strategies needed to navigate the dynamic world of financial data analysis and decision-making.",
+    color: 'bg-custom-purple',
+    textColor: 'text-white',
+    headingColor: 'text-white',
+    image: '/company_logos/swapping_numbers_academy.png',
+    link: `/projects/${products.websites.find((website) => website.slug === 'swapping-numbers-academy')?.slug || ''}`,
+  },
+];
 
 export const technologyCards: TechnologyCard[] = [
   {
@@ -1501,6 +1455,48 @@ const e_commerceServices: Service[] = [
         description: 'Develop and implement marketing campaigns to drive traffic and increase sales.',
       },
     ],
+  },
+];
+
+export const solutions: Solution[] = [
+  {
+    title: 'Web Development',
+    description: ITServices.find((service) => service.slug === 'web-development')?.introSection.description || '',
+    icon: '/icons/mdi_web-asset.svg',
+    link: '/services/web-development',
+  },
+  {
+    title: 'Mobile Development',
+    description: ITServices.find((service) => service.slug === 'mobile-development')?.introSection.description || '',
+    icon: '/icons/healthicons_mobile.svg',
+    link: '/services/mobile-development',
+  },
+  {
+    title: 'Artificial Intelligence & Machine Learning',
+    description:
+      ITServices.find((service) => service.slug === 'artificial-intelligence-ml')?.introSection.description || '',
+    icon: '/icons/hugeicons_ai-security-01.svg',
+    link: '/services/artificial-intelligence-ml',
+  },
+  {
+    title: 'Blockchain Technology',
+    description: ITServices.find((service) => service.slug === 'blockchain-technology')?.introSection.description || '',
+    icon: '/icons/blockchain.svg',
+    link: '/services/blockchain-technology',
+  },
+  {
+    title: 'DevOps & Cloud Computing',
+    description:
+      ITServices.find((service) => service.slug === 'devops-cloud-computing')?.introSection.description || '',
+    icon: '/icons/carbon_cloud-services.svg',
+    link: '/services/devops-cloud-computing',
+  },
+  {
+    title: 'Amazon & Shopify',
+    description:
+      e_commerceServices.find((service) => service.slug === 'amazon-shopify')?.introSection.description || '',
+    icon: '/icons/fluent_people-team-24-regular.svg',
+    link: '/services/amazon-shopify',
   },
 ];
 

@@ -20,13 +20,13 @@ export type Perk = {
 };
 
 export type ProjectShowcase = {
-  id: string;
   name: string;
   description: string;
   color: string;
   textColor: string;
   headingColor: string;
   image: string;
+  link: string;
 };
 
 export type Solution = {

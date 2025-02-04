@@ -1,9 +1,10 @@
 import AnimatedSection from '@/components/AnimatedSection';
 import { ProjectCard } from '@/components/cards/ProjectCard';
+import LogosCarousel from '@/components/LogosCarousel';
+import { CarouselItem } from '@/components/ui/carousel';
 import { companies, products } from '@/lib/constants';
-import Image from 'next/image';
 import { Metadata } from 'next';
-import { InfiniteMovingCards } from '@/components/ui/infinite-moving-cards';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
   title: 'Projects',
@@ -38,7 +39,7 @@ export default function ProjectsPage() {
         </AnimatedSection>
       </section>
 
-      <InfiniteMovingCards direction="left" speed="very-slow" className="px-4 py-6 sm:px-6 lg:px-12">
+      {/* <InfiniteMovingCards direction="left" speed="very-slow" className="px-4 py-6 sm:px-6 lg:px-12">
         {[...companies, ...companies].map((item, index) => (
           <li key={item.title + ' ' + index} className="size-24 flex items-center justify-center">
             <Image
@@ -50,7 +51,21 @@ export default function ProjectsPage() {
             />
           </li>
         ))}
-      </InfiniteMovingCards>
+      </InfiniteMovingCards> */}
+
+      <LogosCarousel speed={2}>
+        {[...companies, ...companies].map((item, index) => (
+          <CarouselItem key={item.title + ' ' + index} className="basis-1/3 md:basis-1/5 lg:basis-1/6 xl:basis-[12.5%]">
+            <Image
+              src={item.thumbnail}
+              alt={item.title}
+              width={100}
+              height={100}
+              className="object-contain min-w-24 min-h-24"
+            />
+          </CarouselItem>
+        ))}
+      </LogosCarousel>
 
       <section className="w-full py-12 md:py-24 bg-gray-50">
         <AnimatedSection direction="left" className="px-4 py-6 sm:px-6 lg:px-12">
