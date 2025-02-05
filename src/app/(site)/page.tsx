@@ -180,8 +180,8 @@ export default function Home() {
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
               Synnestra has been recognized as a Leader in the 2024 Gartner
             </h2>
-            <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
-              <div className="size-full md:size-48">
+            <div className="flex flex-col md:flex-row items-center gap-5 justify-between relative min-h-36">
+              <div className="size-full md:size-48 md:absolute md:right-0">
                 <Image
                   src="/illustrations/shape-dots-black.svg"
                   alt="Decorative triangle"
@@ -197,8 +197,8 @@ export default function Home() {
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
               Create a great career and grow your future with Synnestra
             </h2>
-            <div className="flex flex-col md:flex-row items-center gap-5 justify-between">
-              <div className="size-full md:size-48">
+            <div className="flex flex-col md:flex-row items-center gap-5 justify-between relative min-h-36">
+              <div className="size-full md:size-48 md:absolute md:right-0">
                 <Image
                   src="/career_oppurtunities.png"
                   alt="Team working together"

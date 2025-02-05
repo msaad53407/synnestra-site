@@ -46,7 +46,7 @@ importers:
         specifier: ^1.1.0
         version: 1.1.1(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       '@radix-ui/react-slot':
-        specifier: ^1.1.0
+        specifier: ^1.1.1
         version: 1.1.1(@types/react@19.0.8)(react@19.0.0)
       '@radix-ui/react-toast':
         specifier: ^1.2.4
@@ -63,8 +63,14 @@ importers:
       dotenv:
         specifier: ^16.4.7
         version: 16.4.7
+      embla-carousel-auto-scroll:
+        specifier: ^8.5.2
+        version: 8.5.2(embla-carousel@8.5.2)
+      embla-carousel-autoplay:
+        specifier: ^8.5.2
+        version: 8.5.2(embla-carousel@8.5.2)
       embla-carousel-react:
-        specifier: ^8.3.1
+        specifier: ^8.5.2
         version: 8.5.2(react@19.0.0)
       flag-icons:
         specifier: ^7.3.2
@@ -118,9 +124,6 @@ importers:
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.17
-      typescript:
-        specifier: ^5
-        version: 5.7.3
 
 packages:
 
@@ -1160,6 +1163,16 @@ packages:
 
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
+
+  embla-carousel-auto-scroll@8.5.2:
+    resolution: {integrity: sha512-B0QF4vcHRLu7DJwDpgTq5q8qsX4185hOuXfpWPtOlZW+a+QG7ZIN3zTSUTI3Xt0MTWkAB5ZJ0gsFj2zUMKL3ig==}
+    peerDependencies:
+      embla-carousel: 8.5.2
+
+  embla-carousel-autoplay@8.5.2:
+    resolution: {integrity: sha512-27emJ0px3q/c0kCHCjwRrEbYcyYUPfGO3g5IBWF1i7714TTzE6L9P81V6PHLoSMAKJ1aHoT2e7YFOsuFKCbyag==}
+    peerDependencies:
+      embla-carousel: 8.5.2
 
   embla-carousel-react@8.5.2:
     resolution: {integrity: sha512-Tmx+uY3MqseIGdwp0ScyUuxpBgx5jX1f7od4Cm5mDwg/dptEiTKf9xp6tw0lZN2VA9JbnVMl/aikmbc53c6QFA==}
@@ -3392,6 +3405,14 @@ snapshots:
       gopd: 1.2.0
 
   eastasianwidth@0.2.0: {}
+
+  embla-carousel-auto-scroll@8.5.2(embla-carousel@8.5.2):
+    dependencies:
+      embla-carousel: 8.5.2
+
+  embla-carousel-autoplay@8.5.2(embla-carousel@8.5.2):
+    dependencies:
+      embla-carousel: 8.5.2
 
   embla-carousel-react@8.5.2(react@19.0.0):
     dependencies:
