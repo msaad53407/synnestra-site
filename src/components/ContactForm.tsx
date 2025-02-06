@@ -72,8 +72,8 @@ export default function ContactForm() {
                   <SelectValue placeholder="Code" />
                 </SelectTrigger>
                 <SelectContent>
-                  {countries.map((country) => (
-                    <SelectItem key={country.code} value={country.code}>
+                  {countries.map((country, index) => (
+                    <SelectItem key={index} value={country.code}>
                       {country.code} ({country.country})
                     </SelectItem>
                   ))}

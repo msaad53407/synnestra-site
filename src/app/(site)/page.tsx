@@ -63,13 +63,7 @@ export default function Home() {
       <LogosCarousel speed={2}>
         {[...companies, ...companies].map((item, index) => (
           <CarouselItem key={item.title + ' ' + index} className="basis-1/3 md:basis-1/5 lg:basis-1/6 xl:basis-[12.5%]">
-            <Image
-              src={item.thumbnail}
-              alt={item.title}
-              width={100}
-              height={100}
-              className="object-contain min-w-24 min-h-24"
-            />
+            <Image src={item.thumbnail} alt={item.title} width={120} height={120} className="object-cover" />
           </CarouselItem>
         ))}
       </LogosCarousel>

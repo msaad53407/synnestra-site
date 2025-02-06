@@ -5,7 +5,6 @@ import CompanyImpact from '@/components/sections/CompanyImpact';
 import SplitColorText from '@/components/SplitColorText';
 import { Button } from '@/components/ui/button';
 import { servicesProvided } from '@/lib/constants';
-import { transformSlug } from '@/lib/utils';
 import { ArrowUpRight, Code2, Wrench } from 'lucide-react';
 import { Metadata } from 'next';
 import Image from 'next/image';
@@ -20,8 +19,9 @@ type Props = {
 
 export async function generateMetadata(props: Props): Promise<Metadata> {
   const params = await props.params;
+  const selectedService = servicesProvided.find((s) => s.slug === params.service);
   return {
-    title: `${transformSlug(params.service)}`,
+    title: selectedService?.title,
   };
 }
 
@@ -30,9 +30,7 @@ export const generateStaticParams = () => servicesProvided.map((service) => ({ s
 const ServicePage = async (props: Props) => {
   const params = await props.params;
 
-  const {
-    service
-  } = params;
+  const { service } = params;
 
   const selectedService = servicesProvided.find((s) => s.slug === service);
   if (!selectedService) notFound();
@@ -46,7 +44,9 @@ const ServicePage = async (props: Props) => {
           minHeight="min-h-[350px]"
         >
           <AnimatedSection direction={'left'} className="flex flex-col gap-4">
-            <h3 className="text-wrap text-3xl md:text-4xl w-full text-center font-bold text-gray-100 leading-relaxed">{selectedService.title}</h3>
+            <h3 className="text-wrap text-3xl md:text-4xl w-full text-center font-bold text-gray-100 leading-relaxed">
+              {selectedService.title}
+            </h3>
             <p className="text-4xl min-[550px]:text-5xl md:text-7xl lg:text-8xl text-white font-medium mb-2">From a</p>
             <SplitColorText
               text="concept to"
@@ -73,13 +73,13 @@ const ServicePage = async (props: Props) => {
           <GradientText className={'md:text-5xl text-4xl'}>{selectedService.introSection.title}</GradientText>
           <p className="text-gray-600 mb-4">{selectedService.introSection.description}</p>
         </AnimatedSection>
-        <AnimatedSection direction={'right'} className="md:w-1/2">
+        <AnimatedSection direction={'right'} className="md:w-1/2 h-fit">
           <Image
             src={selectedService.imageSrc}
             alt="Managed IT Services"
             width={500}
             height={300}
-            className="rounded-lg object-cover object-center aspect-square w-full hover:zoom-out-150 transition-all"
+            className="rounded-lg object-contain object-center  w-full hover:zoom-out-150 transition-all"
             quality={100}
           />
         </AnimatedSection>

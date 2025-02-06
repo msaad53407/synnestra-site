@@ -28,7 +28,7 @@ export default function GradientText({ className, children }: Props) {
   return (
     <div ref={defaultRef}>
       <motion.div
-        className="relative"
+        className="relative h-max"
         style={{
           background: `linear-gradient(
               to right,
@@ -45,7 +45,7 @@ export default function GradientText({ className, children }: Props) {
           backgroundPosition: gradientX,
         }}
       >
-        <h2 className={cn('text-5xl font-medium mb-4 leading-normal', className)}>{children}</h2>
+        <h2 className={cn('text-5xl h-full font-medium mb-4 leading-normal', className)}>{children}</h2>
       </motion.div>
     </div>
   );

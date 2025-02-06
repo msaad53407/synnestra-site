@@ -16,18 +16,18 @@ export const companies: Company[] = [
     title: 'Gec CO2',
     thumbnail: '/company_logos/brand-logo.png',
   },
-  {
-    title: 'C',
-    thumbnail: '/company_logos/c.png',
-  },
-  {
-    title: 'Calmomind',
-    thumbnail: '/company_logos/Calmomind.png',
-  },
-  {
-    title: 'Fazewide',
-    thumbnail: '/company_logos/fazewide 1.png',
-  },
+  // {
+  //   title: 'C',
+  //   thumbnail: '/company_logos/c.png',
+  // },
+  // {
+  //   title: 'Calmomind',
+  //   thumbnail: '/company_logos/Calmomind.png',
+  // },
+  // {
+  //   title: 'Fazewide',
+  //   thumbnail: '/company_logos/fazewide 1.png',
+  // },
   {
     title: 'Fairdeal Electrical',
     thumbnail: '/company_logos/Frame 48095775.png',
@@ -36,22 +36,22 @@ export const companies: Company[] = [
     title: 'Fuze Traders',
     thumbnail: '/company_logos/FUZE TRADERS.png',
   },
-  {
-    title: 'Tanfos',
-    thumbnail: '/company_logos/Group 1.png',
-  },
+  // {
+  //   title: 'Tanfos',
+  //   thumbnail: '/company_logos/Group 1.png',
+  // },
   {
     title: 'Silent Moon',
     thumbnail: '/company_logos/Group 17.png',
   },
-  {
-    title: 'Fit Quest',
-    thumbnail: '/company_logos/Group 1000003130.png',
-  },
-  {
-    title: 'MEBEL',
-    thumbnail: '/company_logos/Group 1000004081.png',
-  },
+  // {
+  //   title: 'Fit Quest',
+  //   thumbnail: '/company_logos/Group 1000003130.png',
+  // },
+  // {
+  //   title: 'MEBEL',
+  //   thumbnail: '/company_logos/Group 1000004081.png',
+  // },
   {
     title: 'Pro Connect Hub',
     thumbnail: '/company_logos/Group 1000005694.png',
@@ -64,22 +64,22 @@ export const companies: Company[] = [
     title: 'Arcadia Developers',
     thumbnail: '/company_logos/logo 2.png',
   },
-  {
-    title: 'Global Currency',
-    thumbnail: '/company_logos/logo app 1.png',
-  },
-  {
-    title: 'VAR',
-    thumbnail: '/company_logos/logo.png',
-  },
+  // {
+  //   title: 'Global Currency',
+  //   thumbnail: '/company_logos/logo app 1.png',
+  // },
+  // {
+  //   title: 'VAR',
+  //   thumbnail: '/company_logos/logo.png',
+  // },
   {
     title: 'CF4 Academy',
     thumbnail: '/company_logos/ProjectImages.png',
   },
-  {
-    title: 'TIRBUL',
-    thumbnail: '/company_logos/TIRBUL.png',
-  },
+  // {
+  //   title: 'TIRBUL',
+  //   thumbnail: '/company_logos/TIRBUL.png',
+  // },
   {
     title: 'Zapta Technologies',
     thumbnail: '/company_logos/Zapta logo.png',
@@ -252,62 +252,62 @@ export const products: ProjectCatalog = {
       ],
       type: 'web',
     },
-    {
-      slug: 'management-system',
-      title: 'Management System',
-      thumbnail: '/projects/demo-website-design.jpg',
-      features: [
-        'Centralized dashboard for tracking key metrics',
-        'Comprehensive chapter and district rosters',
-        'Customizable chapter and district settings',
-        'Role-based access control for secure collaboration',
-        'Manage chapter finances and track transactions',
-        'Schedule and document meetings with ease',
-        'Secure authentication powered by Clerk',
-      ],
-      technologies: [
-        {
-          name: 'React',
-          imageSrc: '/technology_logos/react.svg',
-        },
-        {
-          name: 'Figma',
-          imageSrc: '/technology_logos/figma.svg',
-        },
-        {
-          name: 'AWS',
-          imageSrc: '/technology_logos/aws.svg',
-        },
-        {
-          name: 'Nodejs',
-          imageSrc: '/technology_logos/nodejs.svg',
-        },
-      ],
-      description: `A cutting-edge solution that leverages the power of modern technologies to deliver a robust set of capabilities, including advanced data analysis, streamlined workflows, and scalable infrastructure. This application is designed to provide a seamless user experience and drive business success.`,
-      images: [
-        {
-          src: '/projects/management-system/image-1.png',
-          alt: 'image-1',
-        },
-        {
-          src: '/projects/management-system/image-2.png',
-          alt: 'image-2',
-        },
-        {
-          src: '/projects/management-system/image-3.png',
-          alt: 'image-3',
-        },
-        {
-          src: '/projects/management-system/image-4.png',
-          alt: 'image-4',
-        },
-        {
-          src: '/projects/management-system/image-5.png',
-          alt: 'image-5',
-        },
-      ],
-      type: 'web',
-    },
+    // {
+    //   slug: 'management-system',
+    //   title: 'Management System',
+    //   thumbnail: '/projects/demo-website-design.jpg',
+    //   features: [
+    //     'Centralized dashboard for tracking key metrics',
+    //     'Comprehensive chapter and district rosters',
+    //     'Customizable chapter and district settings',
+    //     'Role-based access control for secure collaboration',
+    //     'Manage chapter finances and track transactions',
+    //     'Schedule and document meetings with ease',
+    //     'Secure authentication powered by Clerk',
+    //   ],
+    //   technologies: [
+    //     {
+    //       name: 'React',
+    //       imageSrc: '/technology_logos/react.svg',
+    //     },
+    //     {
+    //       name: 'Figma',
+    //       imageSrc: '/technology_logos/figma.svg',
+    //     },
+    //     {
+    //       name: 'AWS',
+    //       imageSrc: '/technology_logos/aws.svg',
+    //     },
+    //     {
+    //       name: 'Nodejs',
+    //       imageSrc: '/technology_logos/nodejs.svg',
+    //     },
+    //   ],
+    //   description: `A cutting-edge solution that leverages the power of modern technologies to deliver a robust set of capabilities, including advanced data analysis, streamlined workflows, and scalable infrastructure. This application is designed to provide a seamless user experience and drive business success.`,
+    //   images: [
+    //     {
+    //       src: '/projects/management-system/image-1.png',
+    //       alt: 'image-1',
+    //     },
+    //     {
+    //       src: '/projects/management-system/image-2.png',
+    //       alt: 'image-2',
+    //     },
+    //     {
+    //       src: '/projects/management-system/image-3.png',
+    //       alt: 'image-3',
+    //     },
+    //     {
+    //       src: '/projects/management-system/image-4.png',
+    //       alt: 'image-4',
+    //     },
+    //     {
+    //       src: '/projects/management-system/image-5.png',
+    //       alt: 'image-5',
+    //     },
+    //   ],
+    //   type: 'web',
+    // },
     {
       slug: 'fairdeal-electrical',
       title: 'Fairdeal Electrical',
@@ -365,45 +365,96 @@ export const products: ProjectCatalog = {
       type: 'web',
     },
     {
-      slug: 'dex-booster',
-      title: 'Dex Booster: Your Cryptocurrency Navigator',
-      thumbnail: '/projects/demo-website-design.jpg',
-      features: [
-        'Real-time cryptocurrency price tracking',
-        'Personalized coin recommendations',
-        'Comprehensive market trend insights',
-        'Multi-exchange data integration',
-        'Advanced machine learning-powered analysis',
-        'Intuitive and user-friendly interface',
-        'Secure data encryption and privacy protection',
+      slug: 'ummah-cargo',
+      title: 'Ummah Cargo',
+      thumbnail: '/projects/ummah-cargo/thumbnail.png',
+      technologies: [],
+      type: 'web',
+      description: '',
+      features: [],
+      images: [
+        { src: '/projects/ummah-cargo/image-1.png', alt: 'Swift Cargo' },
+        { src: '/projects/ummah-cargo/image-2.png', alt: 'Swift Cargo' },
+        { src: '/projects/ummah-cargo/image-3.png', alt: 'Swift Cargo' },
+        { src: '/projects/ummah-cargo/image-4.png', alt: 'Swift Cargo' },
+        { src: '/projects/ummah-cargo/image-5.png', alt: 'Swift Cargo' },
       ],
-      technologies: [
-        {
-          name: 'React',
-          imageSrc: '/technology_logos/react.svg',
-        },
-        {
-          name: 'Figma',
-          imageSrc: '/technology_logos/figma.svg',
-        },
-        {
-          name: 'AWS',
-          imageSrc: '/technology_logos/aws.svg',
-        },
-        {
-          name: 'Nodejs',
-          imageSrc: '/technology_logos/nodejs.svg',
-        },
-      ],
-      description: `A cutting-edge cryptocurrency analysis platform that simplifies market navigation through advanced data integration, personalized insights, and robust security measures. DexBooster leverages machine learning and comprehensive exchange data to provide users with intelligent cryptocurrency recommendations and real-time market intelligence.`,
+    },
+    {
+      slug: 'c4f-academy',
+      title: 'CF4 Academy',
+      type: 'web',
+      thumbnail: '/projects/c4f/thumbnail.png',
+      description: '',
+      features: [],
       images: [
         {
-          src: '/projects/dex-booster/image-1.webp',
-          alt: 'image-1',
+          src: '/projects/c4f/image-1.png',
+          alt: 'C4F Academy',
+        },
+        {
+          src: '/projects/c4f/image-2.png',
+          alt: 'C4F Academy',
+        },
+        {
+          src: '/projects/c4f/image-3.png',
+          alt: 'C4F Academy',
+        },
+        {
+          src: '/projects/c4f/image-4.png',
+          alt: 'C4F Academy',
+        },
+        {
+          src: '/projects/c4f/image-5.png',
+          alt: 'C4F Academy',
+        },
+        {
+          src: '/projects/c4f/image-6.png',
+          alt: 'C4F Academy',
         },
       ],
-      type: 'web',
+      technologies: [],
     },
+    // {
+    //   slug: 'dex-booster',
+    //   title: 'Dex Booster: Your Cryptocurrency Navigator',
+    //   thumbnail: '/projects/demo-website-design.jpg',
+    //   features: [
+    //     'Real-time cryptocurrency price tracking',
+    //     'Personalized coin recommendations',
+    //     'Comprehensive market trend insights',
+    //     'Multi-exchange data integration',
+    //     'Advanced machine learning-powered analysis',
+    //     'Intuitive and user-friendly interface',
+    //     'Secure data encryption and privacy protection',
+    //   ],
+    //   technologies: [
+    //     {
+    //       name: 'React',
+    //       imageSrc: '/technology_logos/react.svg',
+    //     },
+    //     {
+    //       name: 'Figma',
+    //       imageSrc: '/technology_logos/figma.svg',
+    //     },
+    //     {
+    //       name: 'AWS',
+    //       imageSrc: '/technology_logos/aws.svg',
+    //     },
+    //     {
+    //       name: 'Nodejs',
+    //       imageSrc: '/technology_logos/nodejs.svg',
+    //     },
+    //   ],
+    //   description: `A cutting-edge cryptocurrency analysis platform that simplifies market navigation through advanced data integration, personalized insights, and robust security measures. DexBooster leverages machine learning and comprehensive exchange data to provide users with intelligent cryptocurrency recommendations and real-time market intelligence.`,
+    //   images: [
+    //     {
+    //       src: '/projects/dex-booster/image-1.webp',
+    //       alt: 'image-1',
+    //     },
+    //   ],
+    //   type: 'web',
+    // },
     {
       slug: 'arcadia-developers',
       title: 'Arcadia Developers Premier Construction Solutions',
@@ -548,56 +599,122 @@ export const products: ProjectCatalog = {
       ],
       type: 'web',
     },
-    {
-      slug: 'daisy-chat',
-      title: 'DaisyChat: Your Wedding Connection',
-      thumbnail: '/projects/demo-website-design.jpg',
-      features: [
-        'Secure wedding invitation management',
-        'Guest communication platform',
-        'Wedding details sharing',
-        'Intuitive invitation tracking',
-        'Comprehensive guest coordination',
-        'Privacy-focused communication',
-        'Customizable wedding information hub',
-      ],
-      technologies: [
-        {
-          name: 'React',
-          imageSrc: '/technology_logos/react.svg',
-        },
-        {
-          name: 'Figma',
-          imageSrc: '/technology_logos/figma.svg',
-        },
-        {
-          name: 'AWS',
-          imageSrc: '/technology_logos/aws.svg',
-        },
-        {
-          name: 'Nodejs',
-          imageSrc: '/technology_logos/nodejs.svg',
-        },
-      ],
-      description: `A comprehensive desktop application designed to revolutionize wedding planning and guest communication. DaisyChat provides couples with a secure, user-friendly platform to manage wedding invitations, share event details, and facilitate seamless guest interactions. The app addresses the complex challenges of wedding communication through innovative technology and user-centric design.`,
-      images: [
-        {
-          src: '/projects/daisy-chat/image-1.webp',
-          alt: 'Wedding Invitation Management Interface',
-        },
-        {
-          src: '/projects/daisy-chat/image-2.webp',
-          alt: 'Guest Communication Dashboard',
-        },
-        {
-          src: '/projects/daisy-chat/image-3.webp',
-          alt: 'Wedding Details and Agenda Sharing',
-        },
-      ],
-      type: 'web',
-    },
+    // {
+    //   slug: 'daisy-chat',
+    //   title: 'DaisyChat: Your Wedding Connection',
+    //   thumbnail: '/projects/demo-website-design.jpg',
+    //   features: [
+    //     'Secure wedding invitation management',
+    //     'Guest communication platform',
+    //     'Wedding details sharing',
+    //     'Intuitive invitation tracking',
+    //     'Comprehensive guest coordination',
+    //     'Privacy-focused communication',
+    //     'Customizable wedding information hub',
+    //   ],
+    //   technologies: [
+    //     {
+    //       name: 'React',
+    //       imageSrc: '/technology_logos/react.svg',
+    //     },
+    //     {
+    //       name: 'Figma',
+    //       imageSrc: '/technology_logos/figma.svg',
+    //     },
+    //     {
+    //       name: 'AWS',
+    //       imageSrc: '/technology_logos/aws.svg',
+    //     },
+    //     {
+    //       name: 'Nodejs',
+    //       imageSrc: '/technology_logos/nodejs.svg',
+    //     },
+    //   ],
+    //   description: `A comprehensive desktop application designed to revolutionize wedding planning and guest communication. DaisyChat provides couples with a secure, user-friendly platform to manage wedding invitations, share event details, and facilitate seamless guest interactions. The app addresses the complex challenges of wedding communication through innovative technology and user-centric design.`,
+    //   images: [
+    //     {
+    //       src: '/projects/daisy-chat/image-1.webp',
+    //       alt: 'Wedding Invitation Management Interface',
+    //     },
+    //     {
+    //       src: '/projects/daisy-chat/image-2.webp',
+    //       alt: 'Guest Communication Dashboard',
+    //     },
+    //     {
+    //       src: '/projects/daisy-chat/image-3.webp',
+    //       alt: 'Wedding Details and Agenda Sharing',
+    //     },
+    //   ],
+    //   type: 'web',
+    // },
   ],
   mobileApps: [
+    {
+      slug: 'swapping-numbers-academy',
+      title: 'Swapping Numbers Academy',
+      type: 'mobile',
+      description: '',
+      features: [],
+      technologies: [],
+      thumbnail: '/projects/swapping-numbers-academy/thumbnail.png',
+      images: [
+        { src: '/projects/swapping-numbers-academy/image-1.png', alt: 'Swapping Numbers Academy' },
+        {
+          src: '/projects/swapping-numbers-academy/image-2.png',
+          alt: 'Swapping Numbers Academy',
+        },
+        {
+          src: '/projects/swapping-numbers-academy/image-3.png',
+          alt: 'Swapping Numbers Academy',
+        },
+        {
+          src: '/projects/swapping-numbers-academy/image-4.png',
+          alt: 'Swapping Numbers Academy',
+        },
+        {
+          src: '/projects/swapping-numbers-academy/image-5.png',
+          alt: 'Swapping Numbers Academy',
+        },
+        {
+          src: '/projects/swapping-numbers-academy/image-6.png',
+          alt: 'Swapping Numbers Academy',
+        },
+      ],
+    },
+    {
+      slug: 'global-currency',
+      title: 'Global Currency',
+      type: 'mobile',
+      description: '',
+      features: [],
+      technologies: [],
+      thumbnail: '/projects/global-currency/thumbnail.png',
+      images: [
+        { src: '/projects/global-currency/image-1.png', alt: 'Global Currency' },
+        { src: '/projects/global-currency/image-2.png', alt: 'Global Currency' },
+        { src: '/projects/global-currency/image-3.png', alt: 'Global Currency' },
+        { src: '/projects/global-currency/image-4.png', alt: 'Global Currency' },
+        { src: '/projects/global-currency/image-5.png', alt: 'Global Currency' },
+        { src: '/projects/global-currency/image-6.png', alt: 'Global Currency' },
+      ],
+    },
+    {
+      slug: 'mebel',
+      title: 'Mebel',
+      type: 'mobile',
+      description: '',
+      features: [],
+      technologies: [],
+      thumbnail: '/projects/mebel/thumbnail.png',
+      images: [
+        { src: '/projects/mebel/image-1.png', alt: 'Mebel' },
+        { src: '/projects/mebel/image-2.png', alt: 'Mebel' },
+        { src: '/projects/mebel/image-3.png', alt: 'Mebel' },
+        { src: '/projects/mebel/image-4.png', alt: 'Mebel' },
+        { src: '/projects/mebel/image-5.png', alt: 'Mebel' },
+        { src: '/projects/mebel/image-6.png', alt: 'Mebel' },
+      ],
+    },
     {
       slug: 'poem-maker',
       title: 'Poem Maker',
@@ -1009,7 +1126,7 @@ export const ITServices: Service[] = [
   {
     title: 'Web Development',
     slug: 'web-development',
-    imageSrc: '/web_development.jpg',
+    imageSrc: '/web-development.jpg',
     introSection: {
       title: 'Engineering Digital Excellence',
       description:
@@ -1040,7 +1157,7 @@ export const ITServices: Service[] = [
   {
     title: 'Mobile Development',
     slug: 'mobile-development',
-    imageSrc: '/mobile-application-development.webp',
+    imageSrc: '/app-development.jpg',
     introSection: {
       title: 'Mobilizing Your Digital Future',
       description:
@@ -1071,7 +1188,7 @@ export const ITServices: Service[] = [
   {
     title: 'Artificial Intelligence & Machine Learning',
     slug: 'artificial-intelligence-ml',
-    imageSrc: '/it_consultantancy.jpg',
+    imageSrc: '/ai.jpg',
     introSection: {
       title: "Unleashing AI's Transformative Power",
       description:
@@ -1102,7 +1219,7 @@ export const ITServices: Service[] = [
   {
     title: 'Blockchain Technology',
     slug: 'blockchain-technology',
-    imageSrc: '/it_consultantancy.jpg',
+    imageSrc: '/blockchain.jpg',
     introSection: {
       title: 'Architecting Trust in the Digital Age',
       description:
@@ -1133,7 +1250,7 @@ export const ITServices: Service[] = [
   {
     title: 'API Development',
     slug: 'api-development',
-    imageSrc: '/managed_services_section.png',
+    imageSrc: '/api-development.jpg',
     introSection: {
       title: 'Connecting Digital Ecosystems',
       description:
@@ -1195,7 +1312,7 @@ export const ITServices: Service[] = [
   {
     title: 'Data Analytics',
     slug: 'data-analytics',
-    imageSrc: '/cybersecurity.jpg',
+    imageSrc: '/data-analytics.jpg',
     introSection: {
       title: 'Transforming Data into Strategic Assets',
       description:
@@ -1226,7 +1343,7 @@ export const ITServices: Service[] = [
   {
     title: 'UI/UX Design',
     slug: 'ui-ux-design',
-    imageSrc: '/managed_services_section.png',
+    imageSrc: '/ui-ux.jpg',
     introSection: {
       title: 'Crafting Digital Experiences that Inspire',
       description:
@@ -1257,7 +1374,7 @@ export const ITServices: Service[] = [
   {
     title: 'Custom Software Development',
     slug: 'custom-software',
-    imageSrc: '/industries_dropdown_image.png',
+    imageSrc: '/custom-software.jpg',
     introSection: {
       title: "Building Tomorrow's Solutions Today",
       description:
@@ -1687,7 +1804,234 @@ export const industries = [
   },
 ];
 
-export const servicesProvided = [...ITServices, ...e_commerceServices];
+const corporateComplianceServices: Service[] = [
+  {
+    slug: 'llc-ltd-formation',
+    title: 'LLC & LTD Formation',
+    imageSrc: '/images/services/llc-ltd-formation.jpg',
+    introSection: {
+      title: 'Start Your Business Journey Right',
+      description:
+        'Our comprehensive business formation services guide you through establishing your LLC or LTD. We handle all necessary paperwork, compliance requirements, and state filings to ensure your business starts on solid legal ground.',
+    },
+    techStack: {
+      frameworks: ['DocuSign', 'Adobe Sign', 'LegalZoom API'],
+      tools: ['State Filing Systems', 'Legal Document Management', 'Business Formation Software'],
+    },
+    ourApproach: [
+      {
+        title: 'Entity Selection',
+        description: 'Guide you through choosing the right business structure based on your needs and goals.',
+      },
+      {
+        title: 'Document Preparation',
+        description: 'Prepare and file all necessary formation documents with state authorities.',
+      },
+      {
+        title: 'Compliance Setup',
+        description: 'Establish initial compliance procedures and requirements for your new business.',
+      },
+    ],
+  },
+  {
+    slug: 'registered-agent',
+    title: 'Registered Agent Services',
+    imageSrc: '/images/services/registered-agent.jpg',
+    introSection: {
+      title: 'Professional Representation for Your Business',
+      description:
+        'Maintain your business compliance with our registered agent services. We receive and manage legal documents, state correspondence, and official notices while maintaining your privacy and ensuring timely responses.',
+    },
+    techStack: {
+      frameworks: ['CT Corporation API', 'InCorp API', 'CSC Platform'],
+      tools: ['Document Management System', 'Compliance Calendar', 'Secure Communication Platform'],
+    },
+    ourApproach: [
+      {
+        title: 'Document Reception',
+        description: 'Receive and process all official correspondence and legal documents.',
+      },
+      {
+        title: 'Compliance Monitoring',
+        description: 'Track and alert you of important deadlines and filing requirements.',
+      },
+      {
+        title: 'Secure Documentation',
+        description: 'Maintain secure records of all received documents and communications.',
+      },
+    ],
+  },
+  {
+    slug: 'sales-tax',
+    title: 'Sales Tax Filing and Registration',
+    imageSrc: '/images/services/sales-tax.jpg',
+    introSection: {
+      title: 'Streamline Your Tax Compliance',
+      description:
+        'Navigate complex sales tax requirements with our comprehensive registration and filing services. We ensure accurate compliance across multiple jurisdictions while keeping your business tax-efficient.',
+    },
+    techStack: {
+      frameworks: ['Avalara', 'TaxJar', 'Vertex'],
+      tools: ['Tax Filing Software', 'Multi-State Compliance Tools', 'Tax Rate Calculator'],
+    },
+    ourApproach: [
+      {
+        title: 'Registration Process',
+        description: 'Handle sales tax registration in all required jurisdictions.',
+      },
+      {
+        title: 'Tax Calculation',
+        description: 'Implement accurate tax calculation systems for your business operations.',
+      },
+      {
+        title: 'Filing Management',
+        description: 'Manage regular filing requirements and maintain compliance records.',
+      },
+    ],
+  },
+  {
+    slug: 'virtual-services',
+    title: 'Virtual Address/Number Services',
+    imageSrc: '/images/services/virtual-services.jpg',
+    introSection: {
+      title: 'Professional Business Presence',
+      description:
+        'Establish a professional business presence with our virtual address and phone services. Maintain privacy while ensuring reliable communication channels for your business operations.',
+    },
+    techStack: {
+      frameworks: ['Earth Class Mail API', 'Twilio', 'VirtualPostMail'],
+      tools: ['Virtual Mail Management', 'Call Forwarding Systems', 'Digital Mail Processing'],
+    },
+    ourApproach: [
+      {
+        title: 'Address Setup',
+        description: 'Establish a professional business address with mail handling services.',
+      },
+      {
+        title: 'Communication Management',
+        description: 'Set up and manage virtual phone systems with professional handling.',
+      },
+      {
+        title: 'Mail Processing',
+        description: 'Process and forward important correspondence to your preferred location.',
+      },
+    ],
+  },
+  {
+    slug: 'trademark-registration',
+    title: 'Trademark Registration',
+    imageSrc: '/images/services/trademark-registration.jpg',
+    introSection: {
+      title: 'Protect Your Brand Identity',
+      description:
+        'Secure your business brand with our comprehensive trademark registration services. We handle the entire process from search to registration, ensuring your intellectual property is protected.',
+    },
+    techStack: {
+      frameworks: ['USPTO API', 'TMview API', 'CompuMark'],
+      tools: ['Trademark Database', 'Search Tools', 'USPTO Filing System'],
+    },
+    ourApproach: [
+      {
+        title: 'Trademark Search',
+        description: 'Conduct comprehensive searches to ensure trademark availability.',
+      },
+      {
+        title: 'Application Filing',
+        description: 'Prepare and submit trademark applications with required documentation.',
+      },
+      {
+        title: 'Registration Monitoring',
+        description: 'Monitor the registration process and respond to office actions.',
+      },
+    ],
+  },
+  {
+    slug: 'ein-itin-services',
+    title: 'EIN, ITIN Services',
+    imageSrc: '/images/services/ein-itin-services.jpg',
+    introSection: {
+      title: 'Essential Tax ID Solutions',
+      description:
+        'Obtain necessary tax identification numbers for your business and personnel. We streamline the application process for EIN and ITIN, ensuring compliance with IRS requirements.',
+    },
+    techStack: {
+      frameworks: ['IRS e-File API', 'ID.me', 'Login.gov'],
+      tools: ['IRS Filing Systems', 'Document Verification Tools', 'Application Tracking Software'],
+    },
+    ourApproach: [
+      {
+        title: 'Application Preparation',
+        description: 'Prepare accurate applications for EIN or ITIN based on your needs.',
+      },
+      {
+        title: 'Document Verification',
+        description: 'Review and verify all required supporting documentation.',
+      },
+      {
+        title: 'Status Monitoring',
+        description: 'Track application status and ensure successful processing.',
+      },
+    ],
+  },
+  {
+    slug: 'confirmation-statements',
+    title: 'Confirmation & Accounts Statement',
+    imageSrc: '/images/services/confirmation-statements.jpg',
+    introSection: {
+      title: 'Maintain Your Company Records',
+      description:
+        'Keep your business compliant with timely confirmation statement filings and account management. We ensure accurate reporting of company information and financial statements.',
+    },
+    techStack: {
+      frameworks: ['Companies House API', 'Xero API', 'QuickBooks API'],
+      tools: ['Financial Reporting Software', 'Companies House Filing System', 'Document Management'],
+    },
+    ourApproach: [
+      {
+        title: 'Information Review',
+        description: 'Review and verify company information for accuracy and completeness.',
+      },
+      {
+        title: 'Statement Preparation',
+        description: 'Prepare required statements and documentation for filing.',
+      },
+      {
+        title: 'Compliance Filing',
+        description: 'Submit filings and maintain records of compliance requirements.',
+      },
+    ],
+  },
+  {
+    slug: 'bank-creation',
+    title: 'Bank Creation Services',
+    imageSrc: '/images/services/bank-creation.jpg',
+    introSection: {
+      title: 'Establish Your Business Banking',
+      description:
+        'Streamline your business banking setup with our comprehensive account creation services. We assist in selecting the right bank, preparing documentation, and establishing your business financial presence.',
+    },
+    techStack: {
+      frameworks: ['Plaid', 'Stripe Connect', 'Mercury API'],
+      tools: ['Banking Documentation Systems', 'Identity Verification Tools', 'Account Management Software'],
+    },
+    ourApproach: [
+      {
+        title: 'Bank Selection',
+        description: 'Guide you through choosing the right banking partner for your business needs.',
+      },
+      {
+        title: 'Documentation Support',
+        description: 'Prepare and organize required documentation for account opening.',
+      },
+      {
+        title: 'Account Setup',
+        description: 'Facilitate the account opening process and initial banking setup.',
+      },
+    ],
+  },
+];
+
+export const servicesProvided = [...ITServices, ...e_commerceServices, ...corporateComplianceServices];
 
 export const navItems = [
   { name: 'Home', href: '/' },
@@ -1711,7 +2055,7 @@ export const navItems = [
       },
       {
         name: 'Corporate Compliance',
-        items: e_commerceServices.map((service) => ({
+        items: corporateComplianceServices.map((service) => ({
           name: service.title,
           href: `/services/${service.slug}`,
         })),
