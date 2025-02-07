@@ -365,8 +365,8 @@ export const products: ProjectCatalog = {
       type: 'web',
     },
     {
-      slug: 'ummah-cargo',
-      title: 'Ummah Cargo',
+      slug: 'swift-cargo',
+      title: 'Swift Cargo',
       thumbnail: '/projects/ummah-cargo/thumbnail.png',
       technologies: [],
       type: 'web',
@@ -500,9 +500,40 @@ export const products: ProjectCatalog = {
       type: 'web',
     },
     {
+      slug: 'faisal-burger',
+      title: 'Faisal Burger',
+      thumbnail: '/projects/faisal-burger/thumbnail.png',
+      features: [],
+      description: '',
+      technologies: [],
+      type: 'web',
+      images: [
+        {
+          src: '/projects/faisal-burger/image-1.png',
+          alt: 'Faisal Burger',
+        },
+        {
+          src: '/projects/faisal-burger/image-2.png',
+          alt: 'Faisal Burger',
+        },
+        {
+          src: '/projects/faisal-burger/image-3.png',
+          alt: 'Faisal Burger',
+        },
+        {
+          src: '/projects/faisal-burger/image-4.png',
+          alt: 'Faisal Burger',
+        },
+        {
+          src: '/projects/faisal-burger/image-5.png',
+          alt: 'Faisal Burger',
+        },
+      ],
+    },
+    {
       slug: 'fuze-traders',
       title: 'FuzeTraders: Integrated Trading Solutions',
-      thumbnail: '/projects/demo-website-design.jpg',
+      thumbnail: '/projects/fuze-traders/thumbnail.png',
       features: [
         'Advanced trader funding platform',
         'Technology-driven capital allocation',
@@ -547,58 +578,7 @@ export const products: ProjectCatalog = {
       ],
       type: 'web',
     },
-    {
-      slug: 'tanafos',
-      title: 'Tanafos: Seamless Football Ground Booking App',
-      thumbnail: '/projects/tanafos/thumbnail.webp',
-      features: [
-        'Multilingual platform (Arabic and English)',
-        'Intuitive football ground booking system',
-        'Real-time field availability and selection',
-        'Match scheduling and team coordination',
-        'Multilingual community chat',
-        'User-friendly interface for all skill levels',
-        'Seamless connection for soccer enthusiasts',
-      ],
-      technologies: [
-        {
-          name: 'React',
-          imageSrc: '/technology_logos/react.svg',
-        },
-        {
-          name: 'Figma',
-          imageSrc: '/technology_logos/figma.svg',
-        },
-        {
-          name: 'AWS',
-          imageSrc: '/technology_logos/aws.svg',
-        },
-        {
-          name: 'Nodejs',
-          imageSrc: '/technology_logos/nodejs.svg',
-        },
-      ],
-      description: `A revolutionary soccer platform that bridges language barriers and connects players through innovative technology. Tanafos provides a comprehensive solution for football enthusiasts, offering seamless ground booking, match scheduling, and a vibrant multilingual community. The app simplifies the process of finding and booking football grounds while creating opportunities for players of all skill levels to connect, play, and share their passion for the beautiful game.`,
-      images: [
-        {
-          src: '/projects/tanafos/image-1.webp',
-          alt: 'Tanafos Ground Booking Interface',
-        },
-        {
-          src: '/projects/tanafos/image-2.webp',
-          alt: 'Match Scheduling Screen',
-        },
-        {
-          src: '/projects/tanafos/image-3.webp',
-          alt: 'Multilingual Community Chat',
-        },
-        {
-          src: '/projects/tanafos/image-4.webp',
-          alt: 'Player Connection Features',
-        },
-      ],
-      type: 'web',
-    },
+
     // {
     //   slug: 'daisy-chat',
     //   title: 'DaisyChat: Your Wedding Connection',
@@ -762,6 +742,100 @@ export const products: ProjectCatalog = {
       type: 'mobile',
     },
     {
+      slug: 'bane',
+      title: 'Bane',
+      features: [],
+      description: '',
+      technologies: [],
+      type: 'mobile',
+      thumbnail: '/projects/bane/thumbnail.png',
+      images: [
+        { src: '/projects/bane/image-1.png', alt: 'Bane' },
+        { src: '/projects/bane/image-2.png', alt: 'Bane' },
+        { src: '/projects/bane/image-3.png', alt: 'Bane' },
+        { src: '/projects/bane/image-4.png', alt: 'Bane' },
+        { src: '/projects/bane/image-5.png', alt: 'Bane' },
+        { src: '/projects/bane/image-6.png', alt: 'Bane' },
+      ],
+    },
+    {
+      slug: 'fitquest',
+      title: 'FitQuest',
+      features: [],
+      description: '',
+      technologies: [],
+      type: 'mobile',
+      thumbnail: '/projects/fitquest/thumbnail.png',
+      images: [
+        { src: '/projects/fitquest/image-1.png', alt: 'FitQuest' },
+        { src: '/projects/fitquest/image-2.png', alt: 'FitQuest' },
+        { src: '/projects/fitquest/image-3.png', alt: 'FitQuest' },
+        { src: '/projects/fitquest/image-4.png', alt: 'FitQuest' },
+        { src: '/projects/fitquest/image-5.png', alt: 'FitQuest' },
+        { src: '/projects/fitquest/image-6.png', alt: 'FitQuest' },
+      ],
+    },
+    {
+      slug: 'tanafos',
+      title: 'Tanafos: Seamless Football Ground Booking App',
+      thumbnail: '/projects/tanafos/thumbnail.png',
+      features: [
+        'Multilingual platform (Arabic and English)',
+        'Intuitive football ground booking system',
+        'Real-time field availability and selection',
+        'Match scheduling and team coordination',
+        'Multilingual community chat',
+        'User-friendly interface for all skill levels',
+        'Seamless connection for soccer enthusiasts',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
+        {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A revolutionary soccer platform that bridges language barriers and connects players through innovative technology. Tanafos provides a comprehensive solution for football enthusiasts, offering seamless ground booking, match scheduling, and a vibrant multilingual community. The app simplifies the process of finding and booking football grounds while creating opportunities for players of all skill levels to connect, play, and share their passion for the beautiful game.`,
+      images: [
+        {
+          src: '/projects/tanafos/image-1.png',
+          alt: 'Tanafos Ground Booking Interface',
+        },
+        {
+          src: '/projects/tanafos/image-2.png',
+          alt: 'Match Scheduling Screen',
+        },
+        {
+          src: '/projects/tanafos/image-3.png',
+          alt: 'Multilingual Community Chat',
+        },
+        {
+          src: '/projects/tanafos/image-4.png',
+          alt: 'Player Connection Features',
+        },
+        {
+          src: '/projects/tanafos/image-5.png',
+          alt: 'Player Connection Features',
+        },
+        {
+          src: '/projects/tanafos/image-6.png',
+          alt: 'Player Connection Features',
+        },
+      ],
+      type: 'mobile',
+    },
+    {
       slug: 'pure',
       title: 'Pure: More than Hair',
       features: [
@@ -802,6 +876,21 @@ export const products: ProjectCatalog = {
         },
       ],
       type: 'mobile',
+    },
+    {
+      slug: 'health-app',
+      title: 'Health App',
+      features: [],
+      description: '',
+      technologies: [],
+      type: 'mobile',
+      thumbnail: '/projects/health-app/thumbnail.png',
+      images: [
+        { src: '/projects/health-app/image-1.png', alt: 'Health App' },
+        { src: '/projects/health-app/image-2.png', alt: 'Health App' },
+        { src: '/projects/health-app/image-3.png', alt: 'Health App' },
+        { src: '/projects/health-app/image-4.png', alt: 'Health App' },
+      ],
     },
     {
       slug: 'flick-skills',
@@ -848,6 +937,39 @@ export const products: ProjectCatalog = {
         },
       ],
       type: 'mobile',
+    },
+    {
+      slug: 'oyo-ecommerce',
+      title: 'Oyo Ecommerce',
+      type: 'mobile',
+      description: '',
+      features: [],
+      technologies: [],
+      thumbnail: '/projects/oyo/thumbnail.png',
+      images: [
+        { src: '/projects/oyo/image-1.png', alt: 'Oyo Ecommerce' },
+        { src: '/projects/oyo/image-2.png', alt: 'Oyo Ecommerce' },
+        { src: '/projects/oyo/image-3.png', alt: 'Oyo Ecommerce' },
+        { src: '/projects/oyo/image-4.png', alt: 'Oyo Ecommerce' },
+      ],
+    },
+    {
+      slug: 'trucker-application',
+      title: 'Trucker Application',
+      type: 'mobile',
+      description: '',
+      features: [],
+      technologies: [],
+      thumbnail: '/projects/trucker-application/thumbnail.png',
+      images: [
+        { src: '/projects/trucker-application/image-1.png', alt: 'Trucker Application' },
+        { src: '/projects/trucker-application/image-2.png', alt: 'Trucker Application' },
+        { src: '/projects/trucker-application/image-3.png', alt: 'Trucker Application' },
+        { src: '/projects/trucker-application/image-4.png', alt: 'Trucker Application' },
+        { src: '/projects/trucker-application/image-5.png', alt: 'Trucker Application' },
+        { src: '/projects/trucker-application/image-6.png', alt: 'Trucker Application' },
+        { src: '/projects/trucker-application/image-7.png', alt: 'Trucker Application' },
+      ],
     },
     {
       slug: 'var',
@@ -946,7 +1068,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/demo-mobile-design.jpg',
+      thumbnail: '/projects/calmomind/thumbnail.jpg',
       description:
         "Discover serenity on the go with our meditation app. Whether you're seeking stress relief, improved focus, or simply a moment of tranquility, our app offers a personalized journey to inner peace.\n\nEmbark on guided meditations led by experienced instructors, tailored to your schedule and preferences. Explore a variety of techniques, from mindfulness and breathing exercises to body scans and visualization.\n\nTrack your progress and cultivate mindfulness with our meditation timer and daily reminders. With a range of soothing sounds and nature scenes, create your ideal meditation environment anytime, anywhere.",
       technologies: [
@@ -959,7 +1081,28 @@ export const products: ProjectCatalog = {
           imageSrc: '/technology_logos/nodejs.svg',
         },
       ],
-      images: [],
+      images: [
+        {
+          src: '/projects/calmomind/image-1.png',
+          alt: 'image-1',
+        },
+        {
+          src: '/projects/calmomind/image-2.png',
+          alt: 'image-2',
+        },
+        {
+          src: '/projects/calmomind/image-3.png',
+          alt: 'image-3',
+        },
+        {
+          src: '/projects/calmomind/image-4.png',
+          alt: 'image-4',
+        },
+        {
+          src: '/projects/calmomind/image-5.png',
+          alt: 'image-5',
+        },
+      ],
       type: 'mobile',
     },
   ],
@@ -973,26 +1116,27 @@ export const projectsShowcase: ProjectShowcase[] = [
     textColor: 'text-black',
     headingColor: 'text-custom-purple',
     image: '/company_logos/logo 1.png',
-    link: `/projects/${products.websites.find((website) => website.slug === 'success-loop')?.slug || ''}`,
+    link: `/project/${products.websites.find((website) => website.slug === 'success-loop')?.slug || ''}`,
   },
   {
     name: 'Global Currency',
-    description: '',
+    description: products.mobileApps.find((app) => app.slug === 'global-currency')?.description || '',
     color: 'bg-custom-cream',
     textColor: 'text-black',
     headingColor: 'text-custom-purple',
     image: '/company_logos/growth_app_logo.png',
-    link: `/projects/${products.websites.find((website) => website.slug === 'global-currency')?.slug || ''}`,
+    link: `/project/${products.mobileApps.find((app) => app.slug === 'global-currency')?.slug || ''}`,
   },
   {
-    name: 'Swappin Numbers Academy',
+    name: 'Swapping Numbers Academy',
     description:
+      products.mobileApps.find((app) => app.slug === 'swapping-numbers-academy')?.slug ||
       "As part of our commitment to knowledge-sharing, we have developed the Swappin' Numbers Academy - an educational platform that equips professionals with the skills and strategies needed to navigate the dynamic world of financial data analysis and decision-making.",
     color: 'bg-custom-purple',
     textColor: 'text-white',
     headingColor: 'text-white',
     image: '/company_logos/swapping_numbers_academy.png',
-    link: `/projects/${products.websites.find((website) => website.slug === 'swapping-numbers-academy')?.slug || ''}`,
+    link: `/project/${products.mobileApps.find((app) => app.slug === 'swapping-numbers-academy')?.slug || ''}`,
   },
 ];
 

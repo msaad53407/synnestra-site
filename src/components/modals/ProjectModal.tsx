@@ -7,6 +7,8 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } f
 import { useActiveProject } from '@/hooks/useActiveProject';
 import Image from 'next/image';
 import Link from 'next/link';
+import Iphone15Pro from '../magicui/iphone-15-pro';
+import { Safari } from '../magicui/safari';
 // import { ImageViewer } from './ImageViewerModal';
 // import { useState } from 'react';
 
@@ -100,10 +102,10 @@ const ProjectModal = () => {
                 <h4 className="text-2xl font-medium mb-2">Project Snapshots</h4>
                 <Carousel className="w-full max-w-xl mx-auto relative ">
                   <CarouselContent>
-                    {activeProject.images.map((image, index) => (
+                    {activeProject.images.map(({ src }, index) => (
                       <CarouselItem key={index}>
                         <div className="p-1">
-                          <Image
+                          {/* <Image
                             src={image.src}
                             alt={image.alt}
                             width={1000}
@@ -112,7 +114,12 @@ const ProjectModal = () => {
                             quality={100}
                             priority
                             // onClick={() => setSelectedImage({ src: image.src, alt: image.alt })}
-                          />
+                          /> */}
+                          {activeProject.type === 'mobile' ? (
+                            <Iphone15Pro src={src} width={400} height={900} className="object-contain w-full" />
+                          ) : (
+                            <Safari imageSrc={src} className="object-contain size-full my-6" />
+                          )}
                         </div>
                       </CarouselItem>
                     ))}

@@ -1,4 +1,6 @@
 import TechnologyCard from '@/components/cards/TechnologyCard';
+import Iphone15Pro from '@/components/magicui/iphone-15-pro';
+import { Safari } from '@/components/magicui/safari';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { products } from '@/lib/constants';
 import { Metadata } from 'next';
@@ -84,17 +86,22 @@ const ProjectPage = async (props: Props) => {
           <h2 className="text-3xl font-medium mb-2">Project Snapshots</h2>
           <Carousel className="w-full max-w-screen-lg mx-auto relative">
             <CarouselContent>
-              {activeProject.images.map((image, index) => (
+              {activeProject.images.map(({ src }, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1">
-                    <Image
+                    {/* <Image
                       src={image.src}
                       alt={image.alt}
                       width={1000}
                       height={1000}
                       className="object-contain max-h-[450px] w-full rounded-xl"
                       priority
-                    />
+                    /> */}
+                    {activeProject.type === 'mobile' ? (
+                      <Iphone15Pro src={src} width={400} height={900} className="object-contain w-full" />
+                    ) : (
+                      <Safari imageSrc={src} className="object-contain size-full my-6" />
+                    )}
                   </div>
                 </CarouselItem>
               ))}
