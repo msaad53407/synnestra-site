@@ -216,8 +216,8 @@ export const products: ProjectCatalog = {
           imageSrc: '/technology_logos/react.svg',
         },
         {
-          name: 'Node.js',
-          imageSrc: '/technology_logos/nodejs.svg',
+          name: '.NET',
+          imageSrc: '/technology_logos/dotnet.svg',
         },
         {
           name: 'AWS',
@@ -225,7 +225,7 @@ export const products: ProjectCatalog = {
         },
         {
           name: 'MySQL',
-          imageSrc: '/technology_logos/mysql.svg',
+          imageSrc: '/technology_logos/database.svg',
         },
       ],
       images: [
@@ -313,12 +313,12 @@ export const products: ProjectCatalog = {
       title: 'Fairdeal Electrical',
       thumbnail: '/projects/fairdeal-electrical/thumbnail.png',
       features: [
-        'Centralized dashboard for tracking key metrics',
-        'Comprehensive chapter and district rosters',
-        'Customizable chapter and district settings',
-        'Role-based access control for secure collaboration',
-        'Manage chapter finances and track transactions',
-        'Schedule and document meetings with ease',
+        'Online booking and scheduling for electrical services',
+        'Real-time tracking of service requests and status',
+        'Customer management and communication tools',
+        'Customizable service offerings and pricing',
+        'Secure payment processing and invoicing',
+        'Integrations with popular calendar and communication tools',
         'Secure authentication powered by Clerk',
       ],
       technologies: [
@@ -367,54 +367,90 @@ export const products: ProjectCatalog = {
     {
       slug: 'swift-cargo',
       title: 'Swift Cargo',
-      thumbnail: '/projects/ummah-cargo/thumbnail.png',
-      technologies: [],
       type: 'web',
-      description: '',
-      features: [],
-      images: [
-        { src: '/projects/ummah-cargo/image-1.png', alt: 'Swift Cargo' },
-        { src: '/projects/ummah-cargo/image-2.png', alt: 'Swift Cargo' },
-        { src: '/projects/ummah-cargo/image-3.png', alt: 'Swift Cargo' },
-        { src: '/projects/ummah-cargo/image-4.png', alt: 'Swift Cargo' },
-        { src: '/projects/ummah-cargo/image-5.png', alt: 'Swift Cargo' },
+      description:
+        'A cargo management system that streamlines operations with role-based access, data visualization, and invoice management.',
+      features: [
+        'Manage Dashboard',
+        'Payments',
+        'Add Employees',
+        'Role-based Access (Employees and Admin)',
+        'Data Visualization with Charts and Trends',
+        'Notifications System',
+        'Manage Employee Data-Tables',
+        'Manage Accounts',
+        'Manage Invoices',
       ],
+      technologies: [
+        { name: 'Next.js', imageSrc: '/technology_logos/nextjs-fill.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+        { name: 'Jenkins', imageSrc: '/technology_logos/jenkins.svg' },
+      ],
+      thumbnail: '/projects/ummah-cargo/thumbnail.png',
+      images: [...Array(5).keys()].map((i) => ({
+        src: `/projects/ummah-cargo/image-${i + 1}.png`,
+        alt: 'Swift Cargo',
+      })),
     },
     {
       slug: 'c4f-academy',
-      title: 'CF4 Academy',
+      title: 'C4F Academy',
       type: 'web',
-      thumbnail: '/projects/c4f/thumbnail.png',
-      description: '',
-      features: [],
-      images: [
-        {
-          src: '/projects/c4f/image-1.png',
-          alt: 'C4F Academy',
-        },
-        {
-          src: '/projects/c4f/image-2.png',
-          alt: 'C4F Academy',
-        },
-        {
-          src: '/projects/c4f/image-3.png',
-          alt: 'C4F Academy',
-        },
-        {
-          src: '/projects/c4f/image-4.png',
-          alt: 'C4F Academy',
-        },
-        {
-          src: '/projects/c4f/image-5.png',
-          alt: 'C4F Academy',
-        },
-        {
-          src: '/projects/c4f/image-6.png',
-          alt: 'C4F Academy',
-        },
+      description:
+        'A crypto trading academy where users can enroll in courses, practice in a virtual environment, and manage their profiles.',
+      features: [
+        'Discover and Buy Packages',
+        'Enroll in Courses and Track Progress',
+        'Take Video Lectures',
+        'Discover Course Contents',
+        'Practical Playground for Demo Practice',
+        'Virtual Environment for Crypto Trading Skills',
+        'Manage User Profiles',
       ],
-      technologies: [],
+      technologies: [
+        { name: 'Angular', imageSrc: '/technology_logos/angular.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'Nest.js', imageSrc: '/technology_logos/nestjs.svg' },
+        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+        { name: 'docker', imageSrc: '/technology_logos/docker.svg' },
+      ],
+      thumbnail: '/projects/c4f/thumbnail.png',
+      images: [...Array(6).keys()].map((i) => ({
+        src: `/projects/c4f/image-${i + 1}.png`,
+        alt: 'C4F Academy',
+      })),
     },
+    {
+      slug: 'faisal-burger',
+      title: 'Faisal Burger',
+      type: 'web',
+      description:
+        'An online fast food delivery site with account management, order tracking, and a feature-rich admin dashboard.',
+      features: [
+        'Browse Items from Categories and Search',
+        'Apply Filters',
+        'Manage Accounts and Addresses',
+        'Payments (Cards and Other Means)',
+        'Checkout Feature',
+        'Manage Special Discounts for Occasions',
+        'Admin Dashboard for Data and Analytics',
+        'Interactive Charts and Graphs',
+        'Monthly and Weekly Sales Overviews',
+      ],
+      technologies: [
+        { name: 'React', imageSrc: '/technology_logos/react.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'MongoDB', imageSrc: '/technology_logos/database.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+      ],
+      thumbnail: '/projects/faisal-burger/thumbnail.png',
+      images: [...Array(5).keys()].map((i) => ({
+        src: `/projects/faisal-burger/image-${i + 1}.png`,
+        alt: 'Faisal Burger',
+      })),
+    },
+
     // {
     //   slug: 'dex-booster',
     //   title: 'Dex Booster: Your Cryptocurrency Navigator',
@@ -500,37 +536,6 @@ export const products: ProjectCatalog = {
       type: 'web',
     },
     {
-      slug: 'faisal-burger',
-      title: 'Faisal Burger',
-      thumbnail: '/projects/faisal-burger/thumbnail.png',
-      features: [],
-      description: '',
-      technologies: [],
-      type: 'web',
-      images: [
-        {
-          src: '/projects/faisal-burger/image-1.png',
-          alt: 'Faisal Burger',
-        },
-        {
-          src: '/projects/faisal-burger/image-2.png',
-          alt: 'Faisal Burger',
-        },
-        {
-          src: '/projects/faisal-burger/image-3.png',
-          alt: 'Faisal Burger',
-        },
-        {
-          src: '/projects/faisal-burger/image-4.png',
-          alt: 'Faisal Burger',
-        },
-        {
-          src: '/projects/faisal-burger/image-5.png',
-          alt: 'Faisal Burger',
-        },
-      ],
-    },
-    {
       slug: 'fuze-traders',
       title: 'FuzeTraders: Integrated Trading Solutions',
       thumbnail: '/projects/fuze-traders/thumbnail.png',
@@ -545,8 +550,8 @@ export const products: ProjectCatalog = {
       ],
       technologies: [
         {
-          name: 'React',
-          imageSrc: '/technology_logos/react.svg',
+          name: 'Angular',
+          imageSrc: '/technology_logos/angular.svg',
         },
         {
           name: 'Figma',
@@ -557,8 +562,8 @@ export const products: ProjectCatalog = {
           imageSrc: '/technology_logos/aws.svg',
         },
         {
-          name: 'Nodejs',
-          imageSrc: '/technology_logos/nodejs.svg',
+          name: 'Python',
+          imageSrc: '/technology_logos/python.svg',
         },
       ],
       description: `An innovative digital platform designed to empower exceptionally skilled traders by providing proprietary capital, cutting-edge trading technologies, and top-tier support. Fuze Traders bridges the gap for talented traders facing capital limitations, creating an exclusive ecosystem of high-performance trading professionals.`,
@@ -633,67 +638,113 @@ export const products: ProjectCatalog = {
       slug: 'swapping-numbers-academy',
       title: 'Swapping Numbers Academy',
       type: 'mobile',
-      description: '',
-      features: [],
-      technologies: [],
-      thumbnail: '/projects/swapping-numbers-academy/thumbnail.png',
-      images: [
-        { src: '/projects/swapping-numbers-academy/image-1.png', alt: 'Swapping Numbers Academy' },
-        {
-          src: '/projects/swapping-numbers-academy/image-2.png',
-          alt: 'Swapping Numbers Academy',
-        },
-        {
-          src: '/projects/swapping-numbers-academy/image-3.png',
-          alt: 'Swapping Numbers Academy',
-        },
-        {
-          src: '/projects/swapping-numbers-academy/image-4.png',
-          alt: 'Swapping Numbers Academy',
-        },
-        {
-          src: '/projects/swapping-numbers-academy/image-5.png',
-          alt: 'Swapping Numbers Academy',
-        },
-        {
-          src: '/projects/swapping-numbers-academy/image-6.png',
-          alt: 'Swapping Numbers Academy',
-        },
+      description:
+        'An interactive learning platform focused on personal finance and investment strategies, featuring gamified progression, AI assistance, and a community-driven learning experience.',
+      features: [
+        'Auditorium-style learning environment',
+        'Credit monitoring and improvement system',
+        "Dean's Office for administrative support",
+        'AI Buddy for personalized assistance',
+        'Frat House community feature',
+        'Point-based progression system',
+        'Achievement rewards',
+        'Progress tracking with graphs and analytics',
+        'Dark mode UI',
+        'Mobile-first design',
       ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'Artificial Intelligence', imageSrc: '/technology_logos/ai.svg' },
+        { name: 'Machine Learning', imageSrc: '/technology_logos/machine-learning.svg' },
+        { name: 'Figma', imageSrc: '/technology_logos/figma.svg' },
+      ],
+      thumbnail: '/projects/swapping-numbers-academy/thumbnail.png',
+      images: [...Array(6).keys()].map((i) => ({
+        src: `/projects/swapping-numbers-academy/image-${i + 1}.png`,
+        alt: 'Swapping Numbers Academy',
+      })),
     },
     {
       slug: 'global-currency',
       title: 'Global Currency',
       type: 'mobile',
-      description: '',
-      features: [],
-      technologies: [],
-      thumbnail: '/projects/global-currency/thumbnail.png',
-      images: [
-        { src: '/projects/global-currency/image-1.png', alt: 'Global Currency' },
-        { src: '/projects/global-currency/image-2.png', alt: 'Global Currency' },
-        { src: '/projects/global-currency/image-3.png', alt: 'Global Currency' },
-        { src: '/projects/global-currency/image-4.png', alt: 'Global Currency' },
-        { src: '/projects/global-currency/image-5.png', alt: 'Global Currency' },
-        { src: '/projects/global-currency/image-6.png', alt: 'Global Currency' },
+      description:
+        'A crypto-based platform with an integrated wallet, AI chatbot, and an article discovery section for users to read and engage with financial content.',
+      features: [
+        'Secure crypto wallet',
+        'AI-powered chatbot',
+        'Article discovery and engagement',
+        'Like and save articles',
+        'Real-time crypto price tracking',
+        'User-friendly transaction history',
+        'Dark mode UI',
       ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'Artificial Intelligence', imageSrc: '/technology_logos/ai.svg' },
+        { name: 'Machine Learning', imageSrc: '/technology_logos/machine-learning.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+      ],
+      thumbnail: '/projects/global-currency/thumbnail.png',
+      images: [...Array(7).keys()].map((i) => ({
+        src: `/projects/global-currency/image-${i + 1}.png`,
+        alt: 'Global Currency',
+      })),
     },
     {
       slug: 'mebel',
       title: 'Mebel',
       type: 'mobile',
-      description: '',
-      features: [],
-      technologies: [],
-      thumbnail: '/projects/mebel/thumbnail.png',
-      images: [
-        { src: '/projects/mebel/image-1.png', alt: 'Mebel' },
-        { src: '/projects/mebel/image-2.png', alt: 'Mebel' },
-        { src: '/projects/mebel/image-3.png', alt: 'Mebel' },
-        { src: '/projects/mebel/image-4.png', alt: 'Mebel' },
-        { src: '/projects/mebel/image-5.png', alt: 'Mebel' },
-        { src: '/projects/mebel/image-6.png', alt: 'Mebel' },
+      description:
+        'A healthcare app providing doctor listings, appointment bookings, a reviews system, invoice management, and a medical reports system.',
+      features: [
+        'Doctor listings with profiles',
+        'Appointment booking system',
+        'User reviews and ratings',
+        'Invoice management',
+        'Medical reports storage and retrieval',
+        'Secure patient data handling',
+        'Intuitive UI with dark mode support',
       ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+      ],
+      thumbnail: '/projects/mebel/thumbnail.png',
+      images: [...Array(6).keys()].map((i) => ({
+        src: `/projects/mebel/image-${i + 1}.png`,
+        alt: 'Mebel',
+      })),
+    },
+    {
+      slug: 'soul-pills',
+      title: 'Soul Pills',
+      type: 'mobile',
+      description:
+        'A meditation and wellness app that offers guided meditation, soothing music, stopwatch and timers, and playlist management for a calming experience.',
+      features: [
+        'User authentication and profiles',
+        'Guided meditation sessions',
+        'Soothing built-in music',
+        'Stopwatch and timer functionality',
+        'Playlist management',
+        'Dark mode UI for a relaxing experience',
+      ],
+      technologies: [
+        { imageSrc: '/technology_logos/flutter.svg', name: 'Flutter' },
+        { imageSrc: '/technology_logos/nodejs.svg', name: 'Node.js' },
+        { imageSrc: '/technology_logos/aws.svg', name: 'AWS' },
+        { imageSrc: '/technology_logos/database.svg', name: 'PostgreSQL' },
+      ],
+      thumbnail: '/projects/soul-pills/thumbnail.png',
+      images: [...Array(5).keys()].map((i) => ({
+        src: `/projects/soul-pills/image-${i + 1}.png`,
+        alt: 'Soul Pills',
+      })),
     },
     {
       slug: 'poem-maker',
@@ -720,6 +771,14 @@ export const products: ProjectCatalog = {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
+        {
+          name: 'MongoDB',
+          imageSrc: '/technology_logos/database.svg',
+        },
+        {
+          name: 'Jenkins',
+          imageSrc: '/technology_logos/jenkins.svg',
+        },
       ],
       images: [
         {
@@ -744,36 +803,56 @@ export const products: ProjectCatalog = {
     {
       slug: 'bane',
       title: 'Bane',
-      features: [],
-      description: '',
-      technologies: [],
       type: 'mobile',
-      thumbnail: '/projects/bane/thumbnail.png',
-      images: [
-        { src: '/projects/bane/image-1.png', alt: 'Bane' },
-        { src: '/projects/bane/image-2.png', alt: 'Bane' },
-        { src: '/projects/bane/image-3.png', alt: 'Bane' },
-        { src: '/projects/bane/image-4.png', alt: 'Bane' },
-        { src: '/projects/bane/image-5.png', alt: 'Bane' },
-        { src: '/projects/bane/image-6.png', alt: 'Bane' },
+      description:
+        'A health tracking and workout app featuring leaderboards, dashboards, social media integration, progress tracking, a shop, daily and monthly challenges, and a story mode for workouts.',
+      features: [
+        'Health tracking and workout management',
+        'Leaderboards functionality',
+        'Comprehensive dashboard',
+        'Integrated social media service',
+        'Progress tracking',
+        'Online shop',
+        'Daily and monthly challenges',
+        'Story mode for workouts',
       ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+      ],
+      thumbnail: '/projects/bane/thumbnail.png',
+      images: [...Array(6).keys()].map((i) => ({
+        src: `/projects/bane/image-${i + 1}.png`,
+        alt: 'Bane',
+      })),
     },
     {
       slug: 'fitquest',
       title: 'FitQuest',
-      features: [],
-      description: '',
-      technologies: [],
       type: 'mobile',
-      thumbnail: '/projects/fitquest/thumbnail.png',
-      images: [
-        { src: '/projects/fitquest/image-1.png', alt: 'FitQuest' },
-        { src: '/projects/fitquest/image-2.png', alt: 'FitQuest' },
-        { src: '/projects/fitquest/image-3.png', alt: 'FitQuest' },
-        { src: '/projects/fitquest/image-4.png', alt: 'FitQuest' },
-        { src: '/projects/fitquest/image-5.png', alt: 'FitQuest' },
-        { src: '/projects/fitquest/image-6.png', alt: 'FitQuest' },
+      description:
+        'A fitness app similar to Bane but with additional gamification, premium subscriptions, history tracking, calorie and food intake monitoring, and quest-based challenges with deadlines and points.',
+      features: [
+        'Gamified fitness experience',
+        'Premium subscriptions',
+        'Track history',
+        'Calorie and food intake tracking',
+        'Quest-based challenges with deadlines and points',
       ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+        { name: 'Machine Learning', imageSrc: '/technology_logos/machine-learning.svg' },
+      ],
+      thumbnail: '/projects/fitquest/thumbnail.png',
+      images: [...Array(6).keys()].map((i) => ({
+        src: `/projects/fitquest/image-${i + 1}.png`,
+        alt: 'FitQuest',
+      })),
     },
     {
       slug: 'tanafos',
@@ -860,6 +939,14 @@ export const products: ProjectCatalog = {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
+        {
+          name: 'PostgreSQL',
+          imageSrc: '/technology_logos/database.svg',
+        },
       ],
       images: [
         {
@@ -880,10 +967,23 @@ export const products: ProjectCatalog = {
     {
       slug: 'health-app',
       title: 'Health App',
-      features: [],
-      description: '',
-      technologies: [],
       type: 'mobile',
+      description:
+        'A personal health tracking app designed to help users monitor their health activities, analyze data trends, and achieve fitness goals together with their crew.',
+      features: [
+        'Track health activities and fitness progress',
+        'Analyze data trends for better insights',
+        'Create and join crews to achieve goals together',
+        'Chat and communicate with crew members',
+        'Import existing health data into the app',
+        'Export health records and reports',
+      ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+      ],
       thumbnail: '/projects/health-app/thumbnail.png',
       images: [
         { src: '/projects/health-app/image-1.png', alt: 'Health App' },
@@ -917,6 +1017,18 @@ export const products: ProjectCatalog = {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
+        {
+          name: 'MongoDB',
+          imageSrc: '/technology_logos/database.svg',
+        },
+        {
+          name: 'Docker',
+          imageSrc: '/technology_logos/docker.svg',
+        },
+        {
+          name: 'CI/CD',
+          imageSrc: '/technology_logos/ci-cd.svg',
+        },
       ],
       images: [
         {
@@ -940,36 +1052,58 @@ export const products: ProjectCatalog = {
     },
     {
       slug: 'oyo-ecommerce',
-      title: 'Oyo Ecommerce',
+      title: 'OYO Ecommerce',
       type: 'mobile',
-      description: '',
-      features: [],
-      technologies: [],
-      thumbnail: '/projects/oyo/thumbnail.png',
-      images: [
-        { src: '/projects/oyo/image-1.png', alt: 'Oyo Ecommerce' },
-        { src: '/projects/oyo/image-2.png', alt: 'Oyo Ecommerce' },
-        { src: '/projects/oyo/image-3.png', alt: 'Oyo Ecommerce' },
-        { src: '/projects/oyo/image-4.png', alt: 'Oyo Ecommerce' },
+      description:
+        'An e-commerce platform featuring a seamless shopping experience with product browsing, a secure checkout process, and real-time inventory management.',
+      features: [
+        'Product browsing and filtering',
+        'Secure payment gateway',
+        'Real-time inventory updates',
+        'User authentication and profiles',
+        'Order tracking system',
+        'Wishlist and favorites',
+        'Discount and coupon management',
+        'Admin dashboard for analytics',
       ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'MySQL', imageSrc: '/technology_logos/database.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+      ],
+      thumbnail: '/projects/oyo/thumbnail.png',
+      images: [...Array(4).keys()].map((i) => ({
+        src: `/projects/oyo/image-${i + 1}.png`,
+        alt: 'OYO Ecommerce',
+      })),
     },
     {
       slug: 'trucker-application',
       title: 'Trucker Application',
       type: 'mobile',
-      description: '',
-      features: [],
-      technologies: [],
-      thumbnail: '/projects/trucker-application/thumbnail.png',
-      images: [
-        { src: '/projects/trucker-application/image-1.png', alt: 'Trucker Application' },
-        { src: '/projects/trucker-application/image-2.png', alt: 'Trucker Application' },
-        { src: '/projects/trucker-application/image-3.png', alt: 'Trucker Application' },
-        { src: '/projects/trucker-application/image-4.png', alt: 'Trucker Application' },
-        { src: '/projects/trucker-application/image-5.png', alt: 'Trucker Application' },
-        { src: '/projects/trucker-application/image-6.png', alt: 'Trucker Application' },
-        { src: '/projects/trucker-application/image-7.png', alt: 'Trucker Application' },
+      description:
+        'A logistics and trucking management app that provides route optimization, live tracking, and automated dispatch solutions for fleet owners and drivers.',
+      features: [
+        'Live GPS tracking',
+        'Automated dispatch and scheduling',
+        'Route optimization',
+        'Driver and fleet management',
+        'Expense and fuel tracking',
+        'In-app messaging system',
+        'Digital invoicing and payments',
       ],
+      technologies: [
+        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+      ],
+      thumbnail: '/projects/trucker-application/thumbnail.png',
+      images: [...Array(7).keys()].map((i) => ({
+        src: `/projects/trucker-application/image-${i + 1}.png`,
+        alt: 'Trucker Application',
+      })),
     },
     {
       slug: 'var',
@@ -989,12 +1123,20 @@ export const products: ProjectCatalog = {
         'Var is an app that facilitates easy book reading by providing animated visuals synchronized with highlighted text, allowing users to immerse themselves in the story and enjoy a more engaging reading experience.',
       technologies: [
         {
-          name: 'Flutter',
-          imageSrc: '/technology_logos/flutter.svg',
+          name: 'Kotlin',
+          imageSrc: '/technology_logos/kotlin.svg',
         },
         {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
+        },
+        {
+          name: 'Nest.js',
+          imageSrc: '/technology_logos/nestjs.svg',
+        },
+        {
+          name: 'Jenkins',
+          imageSrc: '/technology_logos/jenkins.svg',
         },
       ],
       images: [
@@ -1038,6 +1180,14 @@ export const products: ProjectCatalog = {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
         },
+        {
+          name: 'PostgreSQL',
+          imageSrc: '/technology_logos/database.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
       ],
       images: [
         {
@@ -1077,8 +1227,16 @@ export const products: ProjectCatalog = {
           imageSrc: '/technology_logos/flutter.svg',
         },
         {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
           name: 'Nodejs',
           imageSrc: '/technology_logos/nodejs.svg',
+        },
+        {
+          name: 'MongoDB',
+          imageSrc: '/technology_logos/database.svg',
         },
       ],
       images: [
