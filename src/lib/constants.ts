@@ -422,6 +422,57 @@ export const products: ProjectCatalog = {
       })),
     },
     {
+      slug: 'my-car',
+      title: 'My CAR',
+      description:
+        'My CAR is a comprehensive car rental platform that streamlines the vehicle rental experience through an intuitive online booking system. With features like flexible payment options, advanced filtering capabilities, and seamless scheduling, customers can easily rent vehicles that match their specific needs and preferences while managing their bookings through a personalized dashboard.',
+      features: [
+        'Real-time car availability tracking',
+        'Flexible booking management system',
+        'Advanced car filtering options',
+        'Multiple payment methods and timing',
+        'Interactive booking calendar',
+        'Personalized user dashboard',
+        'Scheduled pickup and drop-off service',
+        'Detailed vehicle specifications and images',
+        'Future availability notifications',
+        'Booking history and rental analytics',
+        'Internalization and localization',
+      ],
+      technologies: [
+        {
+          name: 'Next,js',
+          imageSrc: '/technology_logos/nextjs-fill.svg',
+        },
+        {
+          name: 'Node.js',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+        {
+          name: 'PostgreSQL',
+          imageSrc: '/technology_logos/database.svg',
+        },
+        {
+          name: 'Nestjs',
+          imageSrc: '/technology_logos/nestjs.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
+        {
+          name: 'Jenkins',
+          imageSrc: '/technology_logos/jenkins.svg',
+        },
+      ],
+      images: [...Array(6).keys()].map((i) => ({
+        src: `/projects/my-car/image-${i + 1}.png`,
+        alt: 'My CAR',
+      })),
+      thumbnail: '/projects/my-car/thumbnail.png',
+      type: 'web',
+    },
+    {
       slug: 'faisal-burger',
       title: 'Faisal Burger',
       type: 'web',
@@ -448,6 +499,58 @@ export const products: ProjectCatalog = {
       images: [...Array(5).keys()].map((i) => ({
         src: `/projects/faisal-burger/image-${i + 1}.png`,
         alt: 'Faisal Burger',
+      })),
+    },
+    {
+      slug: 'pro-connect-hub',
+      title: 'Pro Connect Hub',
+      type: 'web',
+      description:
+        'Pro Connect Hub is a comprehensive social networking platform that combines community building, content creation, and wellness support. The platform offers a unique blend of social interaction, knowledge sharing, and personal development through its integrated features including community management, blogging, event organization, AI-powered health support, and professional networking capabilities.',
+      features: [
+        'Dynamic community creation and management',
+        'Public and private community spaces',
+        'Integrated blogging platform with rich media support',
+        'Advanced event management system',
+        'AI-powered 24/7 health consultation chatbot',
+        'Live customer support during business hours',
+        'Comprehensive self-care resources and tools',
+        'Tiered subscription plans with exclusive benefits',
+        'Interactive analytics dashboard',
+        'Customizable content templates',
+        'Real-time community engagement metrics',
+        'Multi-channel communication tools',
+      ],
+      technologies: [
+        {
+          name: 'Next.js',
+          imageSrc: '/technology_logos/nextjs-fill.svg',
+        },
+        {
+          name: 'Node.js',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+        {
+          name: 'PostgreSQL',
+          imageSrc: '/technology_logos/database.svg',
+        },
+        {
+          name: 'OpenAI',
+          imageSrc: '/technology_logos/ai.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
+        {
+          name: 'Docker',
+          imageSrc: '/technology_logos/docker.svg',
+        },
+      ],
+      thumbnail: '/projects/pro-connect-hub/thumbnail.png',
+      images: [...Array(8).keys()].map((i) => ({
+        src: `/projects/pro-connect-hub/image-${i + 1}.png`,
+        alt: 'Pro Connect Hub',
       })),
     },
 
@@ -584,54 +687,62 @@ export const products: ProjectCatalog = {
       type: 'web',
     },
 
-    // {
-    //   slug: 'daisy-chat',
-    //   title: 'DaisyChat: Your Wedding Connection',
-    //   thumbnail: '/projects/demo-website-design.jpg',
-    //   features: [
-    //     'Secure wedding invitation management',
-    //     'Guest communication platform',
-    //     'Wedding details sharing',
-    //     'Intuitive invitation tracking',
-    //     'Comprehensive guest coordination',
-    //     'Privacy-focused communication',
-    //     'Customizable wedding information hub',
-    //   ],
-    //   technologies: [
-    //     {
-    //       name: 'React',
-    //       imageSrc: '/technology_logos/react.svg',
-    //     },
-    //     {
-    //       name: 'Figma',
-    //       imageSrc: '/technology_logos/figma.svg',
-    //     },
-    //     {
-    //       name: 'AWS',
-    //       imageSrc: '/technology_logos/aws.svg',
-    //     },
-    //     {
-    //       name: 'Nodejs',
-    //       imageSrc: '/technology_logos/nodejs.svg',
-    //     },
-    //   ],
-    //   description: `A comprehensive desktop application designed to revolutionize wedding planning and guest communication. DaisyChat provides couples with a secure, user-friendly platform to manage wedding invitations, share event details, and facilitate seamless guest interactions. The app addresses the complex challenges of wedding communication through innovative technology and user-centric design.`,
-    //   images: [
-    //     {
-    //       src: '/projects/daisy-chat/image-1.webp',
-    //       alt: 'Wedding Invitation Management Interface',
-    //     },
-    //     {
-    //       src: '/projects/daisy-chat/image-2.webp',
-    //       alt: 'Guest Communication Dashboard',
-    //     },
-    //     {
-    //       src: '/projects/daisy-chat/image-3.webp',
-    //       alt: 'Wedding Details and Agenda Sharing',
-    //     },
-    //   ],
-    //   type: 'web',
-    // },
+    {
+      slug: 'daisy-chat',
+      title: 'DaisyChat: Your Wedding Connection',
+      thumbnail: '/projects/daisy-chat/thumbnail.png',
+      features: [
+        'Secure wedding invitation management',
+        'Guest communication platform',
+        'Wedding details sharing',
+        'Intuitive invitation tracking',
+        'Comprehensive guest coordination',
+        'Privacy-focused communication',
+        'Customizable wedding information hub',
+      ],
+      technologies: [
+        {
+          name: 'React',
+          imageSrc: '/technology_logos/react.svg',
+        },
+        {
+          name: 'Figma',
+          imageSrc: '/technology_logos/figma.svg',
+        },
+        {
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
+        },
+        {
+          name: 'Nodejs',
+          imageSrc: '/technology_logos/nodejs.svg',
+        },
+      ],
+      description: `A comprehensive desktop application designed to revolutionize wedding planning and guest communication. DaisyChat provides couples with a secure, user-friendly platform to manage wedding invitations, share event details, and facilitate seamless guest interactions. The app addresses the complex challenges of wedding communication through innovative technology and user-centric design.`,
+      images: [
+        {
+          src: '/projects/daisy-chat/image-1.png',
+          alt: 'Wedding Invitation Management Interface',
+        },
+        {
+          src: '/projects/daisy-chat/image-2.png',
+          alt: 'Guest Communication Dashboard',
+        },
+        {
+          src: '/projects/daisy-chat/image-3.png',
+          alt: 'Wedding Details and Agenda Sharing',
+        },
+        {
+          src: '/projects/daisy-chat/image-4.png',
+          alt: 'Wedding Details and Agenda Sharing',
+        },
+        {
+          src: '/projects/daisy-chat/image-5.png',
+          alt: 'Wedding Details and Agenda Sharing',
+        },
+      ],
+      type: 'web',
+    },
   ],
   mobileApps: [
     {
@@ -759,7 +870,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/demo-mobile-design-1.jpg',
+      thumbnail: '/projects/poem-maker/thumbnail.webp',
       description:
         'PoemMaker is a delightful native app crafted with FlutterFlow, designed to unleash the creativity of users through the art of poetry. With a range of inspiring prompts, versatile poetic structures, and editing tools, the app serves as a pocket-sized companion for individuals to effortlessly compose and share beautiful poems. Whether you\'re an experienced poet or a beginner, "PoemMaker" provides a seamless platform to express your unique poetic voice and ignite your passion for the written word.',
       technologies: [
@@ -990,31 +1101,37 @@ export const products: ProjectCatalog = {
         { src: '/projects/health-app/image-2.png', alt: 'Health App' },
         { src: '/projects/health-app/image-3.png', alt: 'Health App' },
         { src: '/projects/health-app/image-4.png', alt: 'Health App' },
+        { src: '/projects/health-app/image-5.png', alt: 'Health App' },
+        { src: '/projects/health-app/image-6.png', alt: 'Health App' },
+        { src: '/projects/health-app/image-7.png', alt: 'Health App' },
       ],
     },
     {
-      slug: 'flick-skills',
-      title: 'FlickSkills: Your Ultimate Football Trick Tutorial',
+      slug: 'hiya-cleaners',
+      title: 'Hiya Cleaners: Professional Home Cleaning Services',
       features: [
-        'Comprehensive football trick tutorial videos',
-        'Skill enhancement for players of all levels',
-        'Interactive quizzes and challenges',
-        'Community forums for football enthusiasts',
-        'High-quality content from experienced coaches',
-        'Cross-platform accessibility',
-        'Secure authentication powered by Clerk',
+        'Dual registration for homeowners and cleaners',
+        'Real-time booking management system',
+        'Integrated chat communication platform',
+        'Categorized cleaning service listings',
+        'Multi-shift scheduling system',
+        'Secure payment processing',
+        'Comprehensive review and rating system',
+        'Role-specific customized dashboards',
+        'Service categorization and filtering',
+        'Detailed cleaning history tracking',
       ],
-      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/demo-mobile-design-1.jpg',
+      link: 'https://play.google.com/store/apps/details?id=com.hiyacleaners.app',
+      thumbnail: '/projects/hiya-cleaners/thumbnail.jpeg',
       description:
-        'Flick Skills is a sports-focused software company committed to providing innovative solutions, particularly in football, to empower enthusiasts and improve their skills.',
+        'Hiya Cleaners is a comprehensive cleaning service platform that connects professional cleaners with homeowners, offering a streamlined booking system, secure communication channels, and detailed service management tools for both service providers and clients.',
       technologies: [
         {
-          name: 'Flutter',
-          imageSrc: '/technology_logos/flutter.svg',
+          name: 'React Native',
+          imageSrc: '/technology_logos/react.svg',
         },
         {
-          name: 'Nodejs',
+          name: 'Express.js',
           imageSrc: '/technology_logos/nodejs.svg',
         },
         {
@@ -1022,32 +1139,18 @@ export const products: ProjectCatalog = {
           imageSrc: '/technology_logos/database.svg',
         },
         {
-          name: 'Docker',
-          imageSrc: '/technology_logos/docker.svg',
+          name: 'AWS',
+          imageSrc: '/technology_logos/aws.svg',
         },
         {
-          name: 'CI/CD',
-          imageSrc: '/technology_logos/ci-cd.svg',
+          name: 'Jenkins',
+          imageSrc: '/technology_logos/jenkins.svg',
         },
       ],
-      images: [
-        {
-          src: '/projects/flick-skills/image-1.webp',
-          alt: 'image-1',
-        },
-        {
-          src: '/projects/flick-skills/image-2.webp',
-          alt: 'image-2',
-        },
-        {
-          src: '/projects/flick-skills/image-3.webp',
-          alt: 'image-3',
-        },
-        {
-          src: '/projects/flick-skills/image-4.webp',
-          alt: 'image-4',
-        },
-      ],
+      images: [...Array(9).keys()].map((i) => ({
+        src: `/projects/hiya-cleaners/image-${i + 1}.png`,
+        alt: 'Hiya Cleaners',
+      })),
       type: 'mobile',
     },
     {
@@ -1099,7 +1202,7 @@ export const products: ProjectCatalog = {
         { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
         { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
       ],
-      thumbnail: '/projects/trucker-application/thumbnail.png',
+      thumbnail: '/projects/trucker-application/thumbnail.jpeg',
       images: [...Array(7).keys()].map((i) => ({
         src: `/projects/trucker-application/image-${i + 1}.png`,
         alt: 'Trucker Application',
@@ -1156,51 +1259,55 @@ export const products: ProjectCatalog = {
       type: 'mobile',
     },
     {
-      slug: 'barber-b',
-      title: 'Barber b: Streamlined Barber Appointment Booking',
+      slug: 'red-stripe',
+      title: 'Red Stripe: Recycling Rewards Platform',
       features: [
-        'Efficient appointment scheduling',
-        'Mobile-friendly booking platform',
-        'Automated appointment reminders',
-        'Customizable barber profiles and services',
-        'Seamless calendar integration',
-        'Reduced no-show rates',
-        'Secure authentication powered by Clerk',
+        'Instant and scheduled pickup requests',
+        'Real-time tracking of nearby recyclable items',
+        'In-app earnings management',
+        'Interactive recycling maps',
+        'Reward point system',
+        'Community impact metrics',
+        'Seamless digital payments',
       ],
-      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/demo-mobile-design.jpg',
+      link: 'https://play.google.com/store/apps/details?id=com.redstripe.recycling',
+      thumbnail: '/projects/red-stripe/thumbnail.png',
       description:
-        'Barber B is a software company aiming to modernize the barber industry by simplifying appointment booking processes for both barbers and clients.',
+        'Red Stripe is an innovative recycling platform in Jamaica that incentivizes environmental consciousness by rewarding users for returning recyclable items, contributing to a cleaner, more sustainable community while providing economic opportunities.',
       technologies: [
         {
-          name: 'Flutter',
-          imageSrc: '/technology_logos/flutter.svg',
-        },
-        {
-          name: 'Nodejs',
-          imageSrc: '/technology_logos/nodejs.svg',
-        },
-        {
-          name: 'PostgreSQL',
-          imageSrc: '/technology_logos/database.svg',
+          name: 'React Native',
+          imageSrc: '/technology_logos/react.svg',
         },
         {
           name: 'AWS',
           imageSrc: '/technology_logos/aws.svg',
         },
+        {
+          name: 'MongoDB',
+          imageSrc: '/technology_logos/database.svg',
+        },
+        {
+          name: 'Jenkins',
+          imageSrc: '/technology_logos/jenkins.svg',
+        },
       ],
       images: [
         {
-          src: '/projects/barber-b/image-1.webp',
-          alt: 'image-1',
+          src: '/projects/red-stripe/image-1.png',
+          alt: 'Red Stripe Dashboard',
         },
         {
-          src: '/projects/barber-b/image-2.webp',
-          alt: 'image-2',
+          src: '/projects/red-stripe/image-2.png',
+          alt: 'Pickup Schedule Interface',
         },
         {
-          src: '/projects/barber-b/image-3.webp',
-          alt: 'image-3',
+          src: '/projects/red-stripe/image-3.png',
+          alt: 'Earnings Management Screen',
+        },
+        {
+          src: '/projects/red-stripe/image-4.png',
+          alt: 'Earnings Management Screen',
         },
       ],
       type: 'mobile',
@@ -1218,7 +1325,7 @@ export const products: ProjectCatalog = {
         'Secure authentication powered by Clerk',
       ],
       link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/calmomind/thumbnail.jpg',
+      thumbnail: '/projects/calmomind/thumbnail.png',
       description:
         "Discover serenity on the go with our meditation app. Whether you're seeking stress relief, improved focus, or simply a moment of tranquility, our app offers a personalized journey to inner peace.\n\nEmbark on guided meditations led by experienced instructors, tailored to your schedule and preferences. Explore a variety of techniques, from mindfulness and breathing exercises to body scans and visualization.\n\nTrack your progress and cultivate mindfulness with our meditation timer and daily reminders. With a range of soothing sounds and nature scenes, create your ideal meditation environment anytime, anywhere.",
       technologies: [
@@ -1288,7 +1395,7 @@ export const projectsShowcase: ProjectShowcase[] = [
   {
     name: 'Swapping Numbers Academy',
     description:
-      products.mobileApps.find((app) => app.slug === 'swapping-numbers-academy')?.slug ||
+      products.mobileApps.find((app) => app.slug === 'swapping-numbers-academy')?.description ||
       "As part of our commitment to knowledge-sharing, we have developed the Swappin' Numbers Academy - an educational platform that equips professionals with the skills and strategies needed to navigate the dynamic world of financial data analysis and decision-making.",
     color: 'bg-custom-purple',
     textColor: 'text-white',

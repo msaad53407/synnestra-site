@@ -29,7 +29,7 @@ export const ProjectCard = ({ project, className }: { project: Project; classNam
       </CardHeader>
       <CardContent className="flex-1 p-6">
         <h3 className="text-2xl text-custom-purple font-semibold tracking-tight mb-2">{project.title}</h3>
-        <p className="text-muted-foreground line-clamp-[8]">{project.description}</p>
+        <p className="text-muted-foreground line-clamp-[5]">{project.description}</p>
       </CardContent>
       <CardFooter className="p-6 pt-0">
         <Button
