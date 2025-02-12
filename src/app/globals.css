@@ -59,6 +59,14 @@
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
+
+  .shape-top-left {
+    box-shadow: -10px -10px 0 0 #fff;
+  }
+
+  .shape-top-right {
+    box-shadow: 10px -10px 0 0 #fff;
+  }
 }
 
 @layer base {

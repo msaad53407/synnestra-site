@@ -13,8 +13,14 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="space-y-20 py-8">
-      <section className="flex items-center flex-col lg:flex-row px-4 py-6 sm:px-6 lg:px-12">
+    <div className="space-y-20 pb-8">
+      <section
+        className="flex items-center flex-col lg:flex-row pt-20 px-4 py-6 sm:px-6 lg:px-12 bg-custom-purple-light"
+        style={{
+          background: 'linear-gradient(180deg, rgba(224,226,255,1) 0%, rgba(255,255,255,1) 100%)',
+          backgroundColor: 'rgb(224,226,255)',
+        }}
+      >
         <AnimatedSection direction={'left'} className="lg:w-1/2 lg:pr-16">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-medium text-custom-purple mb-6">
             <span className="inline-block pb-3">Simplifying Complex</span>

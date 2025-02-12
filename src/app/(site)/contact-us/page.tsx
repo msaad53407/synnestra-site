@@ -16,9 +16,9 @@ export default async function ContactPage() {
   // const countries = await countriesWithPhoneNumberCodes();
 
   return (
-    <div className="min-h-screen space-y-14 bg-background py-8">
+    <div className="min-h-screen space-y-14 bg-background pb-8">
       {/* Hero Section */}
-      <section className="relative px-4 py-6 sm:px-6 lg:px-12">
+      <section className="relative px-4 py-6 sm:px-6 lg:px-12 pt-24">
         <AnimatedSection direction="up" className="flex flex-col items-center space-y-4 text-center">
           <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-custom-purple">
             Get in Touch

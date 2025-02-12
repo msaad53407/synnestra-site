@@ -23,7 +23,7 @@ const Banner = ({ image, children, className, minHeight = 'min-h-[450px]' }: Pro
           priority
         />
       </div>
-      <div className={cn('absolute flex flex-col gap-4 left-10 bottom-10 max-w-screen-xl', className)}>{children}</div>
+      <div className={cn('absolute flex flex-col gap-4 left-10 bottom-10 max-w-screen-2xl', className)}>{children}</div>
     </div>
   );
 };

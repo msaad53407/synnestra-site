@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 export default function ProjectsPage() {
   return (
-    <div className="space-y-20 py-8 w-full">
+    <div className="space-y-20 pb-8 w-full">
       {/* Hero Section */}
       <section className="flex items-center flex-col lg:flex-row px-4 py-6 sm:px-6 lg:px-12">
         <AnimatedSection direction={'left'} className="lg:w-1/2 lg:pr-16">

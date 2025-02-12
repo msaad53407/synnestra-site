@@ -22,14 +22,17 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header
-      className="flex items-center justify-between bg-white w-full max-w-screen-2xl mx-auto px-4 py-4 sm:px-6 lg:px-12 sticky
-       top-0 z-50"
-    >
-      <Link href="/" className="text-3xl font-normal text-custom-purple">
+    <header className="flex items-center justify-between w-full max-w-screen-2xl mx-auto fixed left-1/2 transform -translate-x-1/2 top-0 z-50">
+      <span className="h-4 bg-white w-full absolute top-0"></span>
+      <Link
+        href="/"
+        className="text-3xl font-normal text-custom-purple bg-white my-0 px-4 py-4 sm:px-6 rounded-ee-3xl relative"
+      >
+        <span className="shape-top-left h-10 w-10 bg-transparent absolute -right-10 top-[14px] rounded-ss-2xl z-[99]"></span>
+        <span className="shape-top-left h-10 w-10 bg-transparent absolute top-[58px] left-0 rounded-ss-2xl z-[99] mt-2.5"></span>
         Synnestra
       </Link>
-      <div className="hidden lg:flex items-center space-x-8">
+      <div className="hidden lg:flex items-center space-x-8 bg-white px-4 py-4 sm:px-6 rounded-es-3xl relative">
         <nav>
           <ul className="flex space-x-8 items-center">
             {navItems.map((item) => (
@@ -104,6 +107,8 @@ export default function Header() {
         <Button className="bg-custom-purple hover:bg-custom-purple text-white" asChild>
           <Link href="/contact-us">Contact us</Link>
         </Button>
+        <span className="shape-top-right h-10 w-10 bg-transparent absolute -left-[72px] mr-2.5 top-[16px] rounded-se-2xl z-[99]"></span>
+        <span className="shape-top-right h-10 w-10 bg-transparent absolute top-[62px] right-0 rounded-se-2xl mt-2.5 z-[99]"></span>
       </div>
       <MobileNav />
     </header>
