@@ -33,7 +33,7 @@ export type Solution = {
   title: string;
   description: string;
   icon: string;
-  link: string;
+  link?: string;
 };
 
 export type Review = {
@@ -76,7 +76,7 @@ export type Service = {
     title: string;
     description: string;
   };
-  techStack: {
+  techStack?: {
     frameworks: string[];
     tools: string[];
   };

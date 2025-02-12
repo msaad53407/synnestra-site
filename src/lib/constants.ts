@@ -394,8 +394,8 @@ export const products: ProjectCatalog = {
       })),
     },
     {
-      slug: 'c4f-academy',
-      title: 'C4F Academy',
+      slug: 'cf4-academy',
+      title: 'cf4 Academy',
       type: 'web',
       description:
         'A crypto trading academy where users can enroll in courses, practice in a virtual environment, and manage their profiles.',
@@ -415,10 +415,10 @@ export const products: ProjectCatalog = {
         { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
         { name: 'docker', imageSrc: '/technology_logos/docker.svg' },
       ],
-      thumbnail: '/projects/c4f/thumbnail.png',
+      thumbnail: '/projects/cf4/thumbnail.jpeg',
       images: [...Array(6).keys()].map((i) => ({
-        src: `/projects/c4f/image-${i + 1}.png`,
-        alt: 'C4F Academy',
+        src: `/projects/cf4/image-${i + 1}.png`,
+        alt: 'cf4 Academy',
       })),
     },
     {
@@ -939,32 +939,32 @@ export const products: ProjectCatalog = {
         alt: 'Bane',
       })),
     },
-    {
-      slug: 'fitquest',
-      title: 'FitQuest',
-      type: 'mobile',
-      description:
-        'A fitness app similar to Bane but with additional gamification, premium subscriptions, history tracking, calorie and food intake monitoring, and quest-based challenges with deadlines and points.',
-      features: [
-        'Gamified fitness experience',
-        'Premium subscriptions',
-        'Track history',
-        'Calorie and food intake tracking',
-        'Quest-based challenges with deadlines and points',
-      ],
-      technologies: [
-        { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
-        { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
-        { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
-        { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
-        { name: 'Machine Learning', imageSrc: '/technology_logos/machine-learning.svg' },
-      ],
-      thumbnail: '/projects/fitquest/thumbnail.png',
-      images: [...Array(6).keys()].map((i) => ({
-        src: `/projects/fitquest/image-${i + 1}.png`,
-        alt: 'FitQuest',
-      })),
-    },
+    // {
+    //   slug: 'fitquest',
+    //   title: 'FitQuest',
+    //   type: 'mobile',
+    //   description:
+    //     'A fitness app similar to Bane but with additional gamification, premium subscriptions, history tracking, calorie and food intake monitoring, and quest-based challenges with deadlines and points.',
+    //   features: [
+    //     'Gamified fitness experience',
+    //     'Premium subscriptions',
+    //     'Track history',
+    //     'Calorie and food intake tracking',
+    //     'Quest-based challenges with deadlines and points',
+    //   ],
+    //   technologies: [
+    //     { name: 'Flutter', imageSrc: '/technology_logos/flutter.svg' },
+    //     { name: 'Node.js', imageSrc: '/technology_logos/nodejs.svg' },
+    //     { name: 'AWS', imageSrc: '/technology_logos/aws.svg' },
+    //     { name: 'PostgreSQL', imageSrc: '/technology_logos/database.svg' },
+    //     { name: 'Machine Learning', imageSrc: '/technology_logos/machine-learning.svg' },
+    //   ],
+    //   thumbnail: '/projects/fitquest/thumbnail.png',
+    //   images: [...Array(6).keys()].map((i) => ({
+    //     src: `/projects/fitquest/image-${i + 1}.png`,
+    //     alt: 'FitQuest',
+    //   })),
+    // },
     {
       slug: 'tanafos',
       title: 'Tanafos: Seamless Football Ground Booking App',
@@ -1025,56 +1025,56 @@ export const products: ProjectCatalog = {
       ],
       type: 'mobile',
     },
-    {
-      slug: 'pure',
-      title: 'Pure: More than Hair',
-      features: [
-        'Performance tracking for salon workers',
-        'Data-driven decision-making dashboard',
-        'Secure and compliant data management',
-        'Real-time performance metrics synchronization',
-        'Scalable infrastructure for salon businesses',
-        'Comprehensive performance analysis tools',
-        'Secure authentication powered by Clerk',
-      ],
-      link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
-      thumbnail: '/projects/demo-mobile-design-1.jpg',
-      description:
-        "SalonTech Solutions introduced Pure, a revolutionary app designed to enhance performance management in the beauty and wellness industry. This case study outlines Pure's goals, challenges, strategic approach, and outcomes.",
-      technologies: [
-        {
-          name: 'Flutter',
-          imageSrc: '/technology_logos/flutter.svg',
-        },
-        {
-          name: 'Nodejs',
-          imageSrc: '/technology_logos/nodejs.svg',
-        },
-        {
-          name: 'AWS',
-          imageSrc: '/technology_logos/aws.svg',
-        },
-        {
-          name: 'PostgreSQL',
-          imageSrc: '/technology_logos/database.svg',
-        },
-      ],
-      images: [
-        {
-          src: '/projects/pure/image-1.webp',
-          alt: 'image-1',
-        },
-        {
-          src: '/projects/pure/image-2.webp',
-          alt: 'image-2',
-        },
-        {
-          src: '/projects/pure/image-3.webp',
-          alt: 'image-3',
-        },
-      ],
-      type: 'mobile',
-    },
+    // {
+    //   slug: 'pure',
+    //   title: 'Pure: More than Hair',
+    //   features: [
+    //     'Performance tracking for salon workers',
+    //     'Data-driven decision-making dashboard',
+    //     'Secure and compliant data management',
+    //     'Real-time performance metrics synchronization',
+    //     'Scalable infrastructure for salon businesses',
+    //     'Comprehensive performance analysis tools',
+    //     'Secure authentication powered by Clerk',
+    //   ],
+    //   link: 'https://play.google.com/store/apps/details?id=com.poemmaker.poemmaker&hl=en_US&gl=US',
+    //   thumbnail: '/projects/demo-mobile-design-1.jpg',
+    //   description:
+    //     "SalonTech Solutions introduced Pure, a revolutionary app designed to enhance performance management in the beauty and wellness industry. This case study outlines Pure's goals, challenges, strategic approach, and outcomes.",
+    //   technologies: [
+    //     {
+    //       name: 'Flutter',
+    //       imageSrc: '/technology_logos/flutter.svg',
+    //     },
+    //     {
+    //       name: 'Nodejs',
+    //       imageSrc: '/technology_logos/nodejs.svg',
+    //     },
+    //     {
+    //       name: 'AWS',
+    //       imageSrc: '/technology_logos/aws.svg',
+    //     },
+    //     {
+    //       name: 'PostgreSQL',
+    //       imageSrc: '/technology_logos/database.svg',
+    //     },
+    //   ],
+    //   images: [
+    //     {
+    //       src: '/projects/pure/image-1.webp',
+    //       alt: 'image-1',
+    //     },
+    //     {
+    //       src: '/projects/pure/image-2.webp',
+    //       alt: 'image-2',
+    //     },
+    //     {
+    //       src: '/projects/pure/image-3.webp',
+    //       alt: 'image-3',
+    //     },
+    //   ],
+    //   type: 'mobile',
+    // },
     {
       slug: 'health-app',
       title: 'Health App',
@@ -1375,13 +1375,13 @@ export const products: ProjectCatalog = {
 
 export const projectsShowcase: ProjectShowcase[] = [
   {
-    name: 'Success Loop',
-    description: products.websites.find((website) => website.slug === 'success-loop')?.description || '',
+    name: 'My CAR',
+    description: products.websites.find((website) => website.slug === 'my-car')?.description || '',
     color: 'bg-custom-purple-light',
     textColor: 'text-black',
     headingColor: 'text-custom-purple',
-    image: '/company_logos/logo 1.png',
-    link: `/project/${products.websites.find((website) => website.slug === 'success-loop')?.slug || ''}`,
+    image: '/company_logos/my car.png',
+    link: `/project/${products.websites.find((website) => website.slug === 'my-car')?.slug || ''}`,
   },
   {
     name: 'Global Currency',
@@ -1817,15 +1817,11 @@ const e_commerceServices: Service[] = [
   {
     slug: 'product-hunting-sourcing',
     title: 'Product Hunting & Sourcing',
-    imageSrc: '/images/services/product-hunting-sourcing.jpg',
+    imageSrc: '/product-hunting-sourcing.jpg',
     introSection: {
       title: 'Discover Your Next Best-Seller',
       description:
-        'At Synnestra, we specialize in identifying profitable products and connecting you with reliable suppliers to elevate your e-commerce business. Our expert team conducts thorough market research to ensure you stay ahead of the competition.',
-    },
-    techStack: {
-      frameworks: [],
-      tools: ['Jungle Scout', 'Helium 10', 'Alibaba'],
+        'Transform your e-commerce venture with our sophisticated product hunting and sourcing solutions. We identify lucrative market opportunities and connect you with premium suppliers to establish a competitive product portfolio. Our expert team conducts comprehensive market analysis and supplier evaluations, leveraging advanced research methodologies to ensure optimal product selection. We handle complex supplier negotiations, quality control processes, and procurement strategies to maximize your profit margins and market position. Choose Synnestra for unparalleled sourcing expertise, strategic supplier relationships, and a commitment to elevating your e-commerce success.',
     },
     ourApproach: [
       {
@@ -1845,15 +1841,11 @@ const e_commerceServices: Service[] = [
   {
     slug: 'listing-optimization',
     title: 'Listing Optimization',
-    imageSrc: '/images/services/listing-optimization.jpg',
+    imageSrc: '/listing-optimization.jpg',
     introSection: {
       title: 'Maximize Your Product Visibility',
       description:
-        'Synnestra enhances your product listings to improve visibility and boost sales. Our team integrates effective SEO strategies and compelling content to ensure your products stand out in the marketplace.',
-    },
-    techStack: {
-      frameworks: [],
-      tools: ['Keyword Tool', 'Canva', 'Adobe Photoshop'],
+        "Transform your product listings with our cutting-edge optimization solutions. We craft sophisticated, conversion-focused product pages that combine compelling content with strategic keyword implementation. Our expert team leverages advanced SEO techniques and marketplace best practices to deliver high-performance listings that drive visibility, enhance click-through rates, and ensure your competitive edge in crowded marketplaces. Choose Synnestra for unparalleled optimization expertise, data-driven strategies, and a commitment to maximizing your product's market presence.",
     },
     ourApproach: [
       {
@@ -1873,15 +1865,11 @@ const e_commerceServices: Service[] = [
   {
     slug: 'private-label',
     title: 'Private Label',
-    imageSrc: '/images/services/private-label.jpg',
+    imageSrc: '/private-label.jpg',
     introSection: {
       title: 'Build Your Unique Brand Identity',
       description:
-        'With Synnestra’s Private Label services, create and launch your own branded products to establish a unique market presence. We assist in product development, branding strategy, and quality assurance to reflect your brand identity.',
-    },
-    techStack: {
-      frameworks: [],
-      tools: ['Brand Registry', 'Packaging Design Software'],
+        'Transform your market presence with our comprehensive private label solutions. We craft sophisticated, unique branded products that combine distinctive design elements with superior quality standards. Our expert team leverages industry insights and manufacturing expertise to deliver high-performance private label products that drive brand recognition, enhance customer loyalty, and ensure your competitive edge in the marketplace. Choose Synnestra for unparalleled product development expertise, strategic brand building, and a commitment to establishing your unique market identity.',
     },
     ourApproach: [
       {
@@ -1901,15 +1889,11 @@ const e_commerceServices: Service[] = [
   {
     slug: 'wholesaling',
     title: 'Wholesaling',
-    imageSrc: '/images/services/wholesaling.jpg',
+    imageSrc: '/wholesale.jpeg',
     introSection: {
       title: 'Scale with Bulk Purchasing Power',
       description:
-        'Synnestra’s Wholesaling services enable you to purchase products in bulk, benefiting from wholesale pricing and expanding your inventory. We manage bulk procurement, inventory, and distribution planning to help scale your business.',
-    },
-    techStack: {
-      frameworks: [],
-      tools: ['Inventory Management Systems', 'Bulk Order Platforms'],
+        'Transform your business scale with our strategic wholesale solutions. We craft sophisticated, efficient bulk purchasing strategies that combine cost optimization with inventory management excellence. Our expert team leverages market intelligence and supplier networks to deliver high-performance wholesale operations that drive profitability, enhance operational efficiency, and ensure your competitive edge in the distribution landscape. Choose Synnestra for unparalleled wholesale expertise, strategic inventory management, and a commitment to maximizing your business potential.',
     },
     ourApproach: [
       {
@@ -1929,15 +1913,11 @@ const e_commerceServices: Service[] = [
   {
     slug: 'dropshipping',
     title: 'Dropshipping',
-    imageSrc: '/images/services/dropshipping.jpg',
+    imageSrc: '/dropshipping.jpeg',
     introSection: {
       title: 'Launch Without Inventory Hassles',
       description:
-        'Start an online store without the hassle of inventory management through Synnestra’s Dropshipping services. We connect you with reliable suppliers and automate order processing to streamline your operations.',
-    },
-    techStack: {
-      frameworks: [],
-      tools: ['Oberlo', 'DSers', 'Shopify'],
+        'Transform your retail approach with our innovative dropshipping solutions. We craft sophisticated, automated fulfillment systems that combine seamless supplier integration with efficient order processing. Our expert team leverages advanced automation tools and supplier relationships to deliver high-performance dropshipping operations that drive scalability, enhance operational efficiency, and ensure your competitive edge in the e-commerce landscape. Choose Synnestra for unparalleled dropshipping expertise, automated workflows, and a commitment to your business success.',
     },
     ourApproach: [
       {
@@ -1957,15 +1937,11 @@ const e_commerceServices: Service[] = [
   {
     slug: 'amazon-shopify',
     title: 'Amazon & Shopify',
-    imageSrc: '/images/services/amazon-shopify.jpg',
+    imageSrc: '/amazon-shopify.jpeg',
     introSection: {
       title: 'Dominate Leading E-Commerce Platforms',
       description:
-        'Synnestra helps you launch and optimize your online store on leading e-commerce platforms like Amazon and Shopify. Our experts handle store setup, platform optimization, and marketing strategies to drive traffic and increase sales.',
-    },
-    techStack: {
-      frameworks: [],
-      tools: ['Amazon Seller Central', 'Shopify Admin', 'Google Analytics'],
+        'Transform your online retail presence with our platform optimization solutions. We craft sophisticated, high-converting stores that combine platform-specific best practices with strategic marketing approaches. Our expert team leverages deep marketplace knowledge and technical expertise to deliver high-performance stores that drive traffic, enhance conversion rates, and ensure your competitive edge on leading platforms. Choose Synnestra for unparalleled platform expertise, conversion optimization, and a commitment to your marketplace success.',
     },
     ourApproach: [
       {
@@ -1979,6 +1955,32 @@ const e_commerceServices: Service[] = [
       {
         title: 'Marketing Strategies',
         description: 'Develop and implement marketing campaigns to drive traffic and increase sales.',
+      },
+    ],
+  },
+  {
+    slug: 'digital-marketing',
+    title: 'Digital Marketing',
+    imageSrc: '/digital-marketing.jpg',
+    introSection: {
+      title: 'Boost Your Online Presence',
+      description:
+        'Transform your market reach with our comprehensive digital marketing solutions. We craft sophisticated, multi-channel campaigns that combine strategic content creation with data-driven optimization techniques. Our expert team leverages advanced marketing tools and industry best practices to deliver high-performance campaigns that drive engagement, enhance brand visibility, and ensure your competitive edge in the digital marketplace. Choose Synnestra for unparalleled marketing expertise, results-driven strategies, and a commitment to your growth.',
+    },
+    ourApproach: [
+      {
+        title: 'SEO Audit',
+        description:
+          'We conduct a thorough SEO audit to identify areas for improvement and optimize your website for search engines.',
+      },
+      {
+        title: 'Email Marketing',
+        description: 'We create and send targeted email campaigns that nurture leads and drive sales.',
+      },
+      {
+        title: 'Social Media Management',
+        description:
+          'We manage your social media presence and create engaging content that grows your audience and drives sales.',
       },
     ],
   },
@@ -2023,6 +2025,19 @@ export const solutions: Solution[] = [
       e_commerceServices.find((service) => service.slug === 'amazon-shopify')?.introSection.description || '',
     icon: '/icons/fluent_people-team-24-regular.svg',
     link: '/services/amazon-shopify',
+  },
+  {
+    title: 'Digital Marketing',
+    description:
+      e_commerceServices.find((service) => service.slug === 'digital-marketing')?.introSection.description || '',
+    icon: '/icons/digital-marketing.png',
+    link: '/services/digital-marketing',
+  },
+  {
+    title: 'Corporate Compliance',
+    description:
+      'Streamline your business compliance with our comprehensive solutions. From entity formation and registered agent services to tax compliance and trademark protection, we handle all regulatory requirements, letting you focus on business growth and success.',
+    icon: '/icons/corporate-compliance.png',
   },
 ];
 
@@ -2217,15 +2232,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'llc-ltd-formation',
     title: 'LLC & LTD Formation',
-    imageSrc: '/images/services/llc-ltd-formation.jpg',
+    imageSrc: '/llc-ltd.jpeg',
     introSection: {
       title: 'Start Your Business Journey Right',
       description:
-        'Our comprehensive business formation services guide you through establishing your LLC or LTD. We handle all necessary paperwork, compliance requirements, and state filings to ensure your business starts on solid legal ground.',
-    },
-    techStack: {
-      frameworks: ['DocuSign', 'Adobe Sign', 'LegalZoom API'],
-      tools: ['State Filing Systems', 'Legal Document Management', 'Business Formation Software'],
+        'Embark on your entrepreneurial journey with our comprehensive LLC and LTD formation services. Our expert team guides you through every step of establishing your business entity, ensuring complete legal compliance and protection. We handle all critical aspects including state filings, documentation preparation, and initial compliance setup. Our service includes thorough consultation to determine the optimal business structure, preparation of operating agreements, assistance with EIN registration, and establishment of corporate bylaws. We also provide guidance on maintaining corporate veil protection, understanding your legal obligations, and implementing proper governance structures. Let our experienced professionals handle the complexities of business formation while you focus on building your enterprise.',
     },
     ourApproach: [
       {
@@ -2245,15 +2256,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'registered-agent',
     title: 'Registered Agent Services',
-    imageSrc: '/images/services/registered-agent.jpg',
+    imageSrc: '/registered-agent.jpeg',
     introSection: {
       title: 'Professional Representation for Your Business',
       description:
-        'Maintain your business compliance with our registered agent services. We receive and manage legal documents, state correspondence, and official notices while maintaining your privacy and ensuring timely responses.',
-    },
-    techStack: {
-      frameworks: ['CT Corporation API', 'InCorp API', 'CSC Platform'],
-      tools: ['Document Management System', 'Compliance Calendar', 'Secure Communication Platform'],
+        'Ensure uninterrupted compliance and professional representation with our comprehensive registered agent services. We serve as your official point of contact for all state communications, legal notices, and important documents. Our dedicated team manages time-sensitive materials, maintains detailed records of all received documents, and provides immediate notification of critical communications. We offer secure digital access to your documents, maintain strict confidentiality protocols, and ensure timely processing of all correspondence. Our service includes compliance calendar management, annual report reminders, and dedicated support for maintaining good standing with state authorities. Trust us to handle your statutory obligations while protecting your privacy and peace of mind.',
     },
     ourApproach: [
       {
@@ -2273,15 +2280,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'sales-tax',
     title: 'Sales Tax Filing and Registration',
-    imageSrc: '/images/services/sales-tax.jpg',
+    imageSrc: '/sales-tax.jpeg',
     introSection: {
       title: 'Streamline Your Tax Compliance',
       description:
-        'Navigate complex sales tax requirements with our comprehensive registration and filing services. We ensure accurate compliance across multiple jurisdictions while keeping your business tax-efficient.',
-    },
-    techStack: {
-      frameworks: ['Avalara', 'TaxJar', 'Vertex'],
-      tools: ['Tax Filing Software', 'Multi-State Compliance Tools', 'Tax Rate Calculator'],
+        'Master complex sales tax obligations with our comprehensive registration and filing services across multiple jurisdictions. Our specialized team handles state-specific requirements, ensuring accurate tax calculations and timely submissions. We manage the entire process from initial registration to ongoing compliance, including nexus analysis, tax rate determination, and filing schedule management. Our service encompasses regular return preparation, payment processing, and audit support when needed. We stay current with changing tax laws and requirements across different states, maintaining detailed records of all transactions and filings. Let us handle the intricacies of sales tax compliance while you focus on growing your revenue and serving your customers.',
     },
     ourApproach: [
       {
@@ -2301,15 +2304,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'virtual-services',
     title: 'Virtual Address/Number Services',
-    imageSrc: '/images/services/virtual-services.jpg',
+    imageSrc: '/va.jpg',
     introSection: {
       title: 'Professional Business Presence',
       description:
-        'Establish a professional business presence with our virtual address and phone services. Maintain privacy while ensuring reliable communication channels for your business operations.',
-    },
-    techStack: {
-      frameworks: ['Earth Class Mail API', 'Twilio', 'VirtualPostMail'],
-      tools: ['Virtual Mail Management', 'Call Forwarding Systems', 'Digital Mail Processing'],
+        'Establish a sophisticated business presence without the overhead of physical office space through our comprehensive virtual address and communication services. Our professional facilities provide a prestigious business address, secure mail handling, and dedicated phone services. We manage all incoming correspondence, digitize important documents, and forward materials according to your preferences. Our virtual phone services include professional call handling, message forwarding, and customized greeting options. Experience the benefits of a professional business presence while maintaining flexibility and reducing operational costs. Our team ensures seamless communication management and reliable service delivery.',
     },
     ourApproach: [
       {
@@ -2329,15 +2328,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'trademark-registration',
     title: 'Trademark Registration',
-    imageSrc: '/images/services/trademark-registration.jpg',
+    imageSrc: '/registered-trademark.webp',
     introSection: {
       title: 'Protect Your Brand Identity',
       description:
-        'Secure your business brand with our comprehensive trademark registration services. We handle the entire process from search to registration, ensuring your intellectual property is protected.',
-    },
-    techStack: {
-      frameworks: ['USPTO API', 'TMview API', 'CompuMark'],
-      tools: ['Trademark Database', 'Search Tools', 'USPTO Filing System'],
+        "Safeguard your brand's unique identity with our comprehensive trademark registration services. Our intellectual property experts guide you through the entire process, from initial availability searches to final registration and monitoring. We conduct thorough trademark searches across federal and state databases, analyze potential conflicts, and provide strategic guidance on trademark selection. Our service includes detailed application preparation, responses to office actions, and ongoing maintenance reminders. We handle all communication with the USPTO, monitor your marks for potential infringement, and provide guidance on proper trademark usage and protection strategies. Trust our expertise to secure and maintain your valuable intellectual property rights.",
     },
     ourApproach: [
       {
@@ -2357,15 +2352,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'ein-itin-services',
     title: 'EIN, ITIN Services',
-    imageSrc: '/images/services/ein-itin-services.jpg',
+    imageSrc: '/EIN.jpg',
     introSection: {
       title: 'Essential Tax ID Solutions',
       description:
-        'Obtain necessary tax identification numbers for your business and personnel. We streamline the application process for EIN and ITIN, ensuring compliance with IRS requirements.',
-    },
-    techStack: {
-      frameworks: ['IRS e-File API', 'ID.me', 'Login.gov'],
-      tools: ['IRS Filing Systems', 'Document Verification Tools', 'Application Tracking Software'],
+        'Secure your essential tax identification numbers efficiently with our specialized EIN and ITIN services. Our experienced team manages the entire application process, ensuring accurate documentation and swift processing with the IRS. We handle all aspects of the application, from initial preparation to final verification, including support for non-US residents and entities. Our comprehensive service includes eligibility assessment, document preparation, application submission, and status tracking. We provide guidance on proper usage of tax IDs, help with verification requirements, and assist with any IRS correspondence. Trust our expertise to navigate the complexities of federal tax identification requirements.',
     },
     ourApproach: [
       {
@@ -2385,15 +2376,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'confirmation-statements',
     title: 'Confirmation & Accounts Statement',
-    imageSrc: '/images/services/confirmation-statements.jpg',
+    imageSrc: '/confirmation-account-statement.webp',
     introSection: {
       title: 'Maintain Your Company Records',
       description:
-        'Keep your business compliant with timely confirmation statement filings and account management. We ensure accurate reporting of company information and financial statements.',
-    },
-    techStack: {
-      frameworks: ['Companies House API', 'Xero API', 'QuickBooks API'],
-      tools: ['Financial Reporting Software', 'Companies House Filing System', 'Document Management'],
+        'Ensure seamless compliance with your annual reporting obligations through our comprehensive confirmation and accounts statement services. Our dedicated team manages all aspects of statutory filing requirements, maintaining accurate company records and financial documentation. We handle the preparation and submission of confirmation statements, annual returns, and related financial reports. Our service includes thorough review of company information, verification of shareholder details, and updates to corporate structure changes. We maintain detailed compliance calendars, provide advance filing reminders, and ensure all submissions meet regulatory standards. Trust us to keep your company in good standing with timely and accurate statutory filings.',
     },
     ourApproach: [
       {
@@ -2413,15 +2400,11 @@ const corporateComplianceServices: Service[] = [
   {
     slug: 'bank-creation',
     title: 'Bank Creation Services',
-    imageSrc: '/images/services/bank-creation.jpg',
+    imageSrc: '/bank-creation.jpeg',
     introSection: {
       title: 'Establish Your Business Banking',
       description:
-        'Streamline your business banking setup with our comprehensive account creation services. We assist in selecting the right bank, preparing documentation, and establishing your business financial presence.',
-    },
-    techStack: {
-      frameworks: ['Plaid', 'Stripe Connect', 'Mercury API'],
-      tools: ['Banking Documentation Systems', 'Identity Verification Tools', 'Account Management Software'],
+        'Navigate the complexities of business banking setup with our comprehensive account creation services. Our experienced team assists in selecting the optimal banking partner, preparing necessary documentation, and establishing your financial infrastructure. We guide you through account options, help gather required documents, and facilitate the application process. Our service includes consultation on banking needs, assistance with multiple account types, and guidance on digital banking setup. We help establish merchant services, handle initial deposits, and ensure proper account management protocols. Experience seamless banking integration with our professional support and expertise in financial institution requirements.',
     },
     ourApproach: [
       {

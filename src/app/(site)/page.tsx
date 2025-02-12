@@ -80,11 +80,9 @@ export default function Home() {
       </section>
       <section className="px-4 py-6 sm:px-6 lg:px-12">
         <h2 className="text-4xl md:text-4xl font-medium text-center text-custom-purple mb-12">
-          Apps we built been
-          <br />
-          trending on the App Store
+          Apps we&apos;ve developed are trending on the App Store
         </h2>
-        <div className="grid grid-cols-6 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
           {projectsShowcase.map((project, index) => (
             <AppShowcaseCard index={index} key={index} project={project} />
           ))}
@@ -97,10 +95,9 @@ export default function Home() {
       </section>
       <section className="bg-blue-100 px-4 py-6 sm:px-6 lg:px-12 relative">
         <div className="my-8">
-          <span className="inline-block bg-white text-sm font-semibold py-1 px-3 rounded-xl">HOW WE DO</span>
+          <span className="inline-block bg-white text-sm font-semibold py-1 px-3 rounded-xl">WHAT WE OFFER</span>
         </div>
-        <h2 className="text-3xl md:text-5xl font-medium text-gray-900 mb-8">Solutions</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 content-center gap-6">
           {solutions.map((solution, index) => (
             <AnimatedSection
               direction={'up'}
@@ -118,12 +115,14 @@ export default function Home() {
               />
               <h3 className="text-2xl font-medium text-gray-900 mb-2">{solution.title}</h3>
               <p className="text-gray-600 mb-4 line-clamp-6">{solution.description}</p>
-              <Link
-                href={solution.link}
-                className="text-custom-purple w-full mt-3 py-2 px-4 hover:underline border-t absolute bottom-2 border-t-custom-purple-light"
-              >
-                Learn more
-              </Link>
+              {solution.link && (
+                <Link
+                  href={solution.link}
+                  className="text-custom-purple w-full mt-3 py-2 px-4 hover:underline border-t absolute bottom-2 border-t-custom-purple-light"
+                >
+                  Learn more
+                </Link>
+              )}
             </AnimatedSection>
           ))}
         </div>
@@ -138,18 +137,18 @@ export default function Home() {
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
               Organizations recognized our work
             </h2>
-            <div className="flex space-x-4 mb-4 items-center justify-between">
+            <div className="flex space-x-4 mb-4 items-center gap-3">
               <div className="space-y-3">
-                <Image src="/company_logos/Forbes 1.svg" alt="Forbes" width={80} height={30} />
-                <p className="text-sm text-custom-purple-light">Forbes Member Council</p>
+                <Image src="/company_logos/fiverr-logo-purple.png" alt="Fiverr" width={80} height={30} />
+                <p className="text-sm text-custom-purple-light text-center">Fiverr</p>
               </div>
+              {/* <div className="space-y-3">
+                <Image src="/company_logos/Google.svg" alt="google" width={80} height={30} />
+                <p className="text-sm text-custom-purple-light text-center">Google</p>
+              </div> */}
               <div className="space-y-3">
-                <Image src="/company_logos/Google.svg" alt="Google" width={80} height={30} />
-                <p className="text-sm text-custom-purple-light">Developers Certified Agency</p>
-              </div>
-              <div className="space-y-3">
-                <Image src="/company_logos/clutch.svg" alt="Clutch" width={80} height={30} />
-                <p className="text-sm text-custom-purple-light">Top App DevelopmentCompany in USA</p>
+                <Image src="/company_logos/upwork-logo.png" alt="Upwork" width={80} height={30} />
+                <p className="text-sm text-custom-purple-light text-center">Upwork</p>
               </div>
             </div>
           </AnimatedSection>
@@ -172,7 +171,7 @@ export default function Home() {
           {/* Synnestra has been recognized */}
           <AnimatedSection direction={'right'} className="bg-gray-100 p-6 rounded-lg relative row-span-2">
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
-              Synnestra has been recognized as a Leader in the 2024 Gartner
+              Synnestra has been recognized as a leader in the industry
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-5 justify-between relative min-h-36">
               <div className="size-full md:size-48 md:absolute md:right-0">
@@ -189,20 +188,8 @@ export default function Home() {
           {/* Create a great career */}
           <AnimatedSection direction={'right'} className="bg-custom-purple text-white p-6 rounded-lg relative">
             <h2 className="text-4xl font-medium mb-4 leading-relaxed md:leading-loose">
-              Create a great career and grow your future with Synnestra
+              Develop your career and unlock future growth with Synnestra
             </h2>
-            <div className="flex flex-col md:flex-row items-center gap-5 justify-between relative min-h-36">
-              <div className="size-full md:size-48 md:absolute md:right-0">
-                <Image
-                  src="/career_oppurtunities.png"
-                  alt="Team working together"
-                  width={400}
-                  height={400}
-                  quality={100}
-                  className="size-full object-contain rounded-3xl"
-                />
-              </div>
-            </div>
           </AnimatedSection>
         </div>
       </section>

@@ -9,7 +9,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { toast } from '@/hooks/use-toast';
 import { getCountries } from '@/lib/countries';
 import { ValidationError, useForm } from '@formspree/react';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 
 export default function ContactForm() {
@@ -19,6 +19,7 @@ export default function ContactForm() {
       'g-recaptcha-response': executeRecaptcha,
     },
   });
+  const [customSubject, setCustomSubject] = useState(false);
 
   const formRef = useRef<HTMLFormElement>(null);
 
@@ -85,18 +86,40 @@ export default function ContactForm() {
           </div>
           <div className="space-y-2">
             <Label htmlFor="subject">Subject</Label>
-            <Select name="Subject" required>
+            <Select
+              name="Subject"
+              required
+              onValueChange={(value) => {
+                if (value === 'other') {
+                  setCustomSubject(true);
+                } else {
+                  setCustomSubject(false);
+                }
+              }}
+            >
               <SelectTrigger>
                 <SelectValue placeholder="Select a subject" />
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="general">General Inquiry</SelectItem>
                 <SelectItem value="support">Technical Support</SelectItem>
-                <SelectItem value="sales">Sales</SelectItem>
+                <SelectItem value="other">Other</SelectItem>
               </SelectContent>
             </Select>
             <ValidationError prefix="Subject" field="Subject" errors={state.errors} />
           </div>
+          {customSubject && (
+            <div className="space-y-2">
+              <Label htmlFor="customSubject">Add your own Subject</Label>
+              <Input
+                id="customSubject"
+                required={customSubject}
+                placeholder="Type your own subject"
+                type="text"
+                name="customSubject"
+              />
+            </div>
+          )}
           <div className="space-y-2">
             <Label htmlFor="message">Message</Label>
             <Textarea className="min-h-[150px]" id="message" name="message" placeholder="Enter your message" required />

@@ -84,48 +84,50 @@ const ServicePage = async (props: Props) => {
           />
         </AnimatedSection>
       </section>
-      <section className="w-full px-4 py-12 sm:px-6 lg:px-12">
-        <span className="inline-block bg-custom-purple text-white text-sm font-medium py-2 px-4 rounded-full mb-8">
-          Tech Stack
-        </span>
+      {selectedService.techStack && (
+        <section className="w-full px-4 py-12 sm:px-6 lg:px-12">
+          <span className="inline-block bg-custom-purple text-white text-sm font-medium py-2 px-4 rounded-full mb-8">
+            Tech Stack
+          </span>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {selectedService.techStack.frameworks.length > 0 && (
-            <AnimatedSection direction="left" className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-full bg-custom-purple-light">
-                  <Code2 className="w-6 h-6 text-custom-purple" />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {selectedService.techStack.frameworks.length > 0 && (
+              <AnimatedSection direction="left" className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 rounded-full bg-custom-purple-light">
+                    <Code2 className="w-6 h-6 text-custom-purple" />
+                  </div>
+                  <h3 className="text-2xl font-semibold">Frameworks</h3>
                 </div>
-                <h3 className="text-2xl font-semibold">Frameworks</h3>
-              </div>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {selectedService.techStack.frameworks.map((framework, index) => (
-                  <li key={index} className="bg-gray-100 rounded-full p-3 text-center text-sm font-medium">
-                    {framework}
-                  </li>
-                ))}
-              </ul>
-            </AnimatedSection>
-          )}
-          {selectedService.techStack.tools.length > 0 && (
-            <AnimatedSection direction="right" className="space-y-6">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 rounded-full bg-custom-purple-light">
-                  <Wrench className="w-6 h-6 text-custom-purple" />
+                <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {selectedService.techStack.frameworks.map((framework, index) => (
+                    <li key={index} className="bg-gray-100 rounded-full p-3 text-center text-sm font-medium">
+                      {framework}
+                    </li>
+                  ))}
+                </ul>
+              </AnimatedSection>
+            )}
+            {selectedService.techStack.tools.length > 0 && (
+              <AnimatedSection direction="right" className="space-y-6">
+                <div className="flex items-center space-x-4">
+                  <div className="p-3 rounded-full bg-custom-purple-light">
+                    <Wrench className="w-6 h-6 text-custom-purple" />
+                  </div>
+                  <h3 className="text-2xl font-semibold">Tools</h3>
                 </div>
-                <h3 className="text-2xl font-semibold">Tools</h3>
-              </div>
-              <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                {selectedService.techStack.tools.map((tool, index) => (
-                  <li key={index} className="bg-gray-100 rounded-full p-3 text-center text-sm font-medium">
-                    {tool}
-                  </li>
-                ))}
-              </ul>
-            </AnimatedSection>
-          )}
-        </div>
-      </section>
+                <ul className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  {selectedService.techStack.tools.map((tool, index) => (
+                    <li key={index} className="bg-gray-100 rounded-full p-3 text-center text-sm font-medium">
+                      {tool}
+                    </li>
+                  ))}
+                </ul>
+              </AnimatedSection>
+            )}
+          </div>
+        </section>
+      )}
       <section className="w-full px-4 py-6 sm:px-6 lg:px-12 p-8">
         <div className="bg-purple-50 rounded-lg px-4 py-6 sm:px-6 lg:px-12">
           <AnimatedSection
