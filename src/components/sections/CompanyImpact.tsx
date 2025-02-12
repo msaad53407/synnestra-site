@@ -19,7 +19,7 @@ export default function CompanyImpact() {
         <div className="flex flex-col gap-12 items-center justify-between">
           <div className="space-y-8">
             <p className="text-sm font-medium uppercase tracking-wider">The value we deliver</p>
-            <h2 className="mx-auto max-w-4xl text-4xl font-medium leading-loose sm:text-5xl md:text-6xl">
+            <h2 className="mx-auto max-w-4xl text-4xl font-medium  sm:text-5xl md:text-6xl">
               Assisting Synnestra in transforming and redefining the IT industry
             </h2>
           </div>

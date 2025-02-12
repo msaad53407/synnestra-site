@@ -22,12 +22,10 @@ const AboutPage = () => {
       <div className="relative w-full md:mb-72 min-[1478px]:mb-48 space-y-5">
         <Banner image="/about_banner.png" className="bottom-10 left-4 md:bottom-1/3">
           <AnimatedSection direction={'left'} className="flex flex-col gap-4">
-            <h1 className="text-4xl font-medium text-white leading-relaxed">
-              Explore the world of Synnestra.
-            </h1>
+            <h1 className="text-4xl font-medium text-white leading-relaxed">Explore the world of Synnestra.</h1>
             <p className="text-white font-normal md:w-1/2">
-              Synnestra is a leading provider of cutting-edge technology solutions that empower the
-              world&apos;s top companies to achieve their goals and stay ahead of the competition.
+              Synnestra is a leading provider of cutting-edge technology solutions that empower the world&apos;s top
+              companies to achieve their goals and stay ahead of the competition.
             </p>
           </AnimatedSection>
         </Banner>
@@ -126,9 +124,9 @@ const AboutPage = () => {
         <div className="max-w-screen-lg mx-auto space-y-8">
           <h3 className="text-3xl font-bold text-center">Domain Expertise</h3>
           <p className="text-sm text-gray-500 text-center">
-            Synnestra is a trusted partner with deep domain expertise across a wide range of industries and
-            technology landscapes. For many years, we have been at the forefront of innovation, delivering cutting-edge
-            solutions that empower our clients to stay ahead of the curve.
+            Synnestra is a trusted partner with deep domain expertise across a wide range of industries and technology
+            landscapes. For many years, we have been at the forefront of innovation, delivering cutting-edge solutions
+            that empower our clients to stay ahead of the curve.
           </p>
         </div>
         <div className="space-y-4">

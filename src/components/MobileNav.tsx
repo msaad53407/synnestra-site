@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/components/ui/sheet';
 import { navItems } from '@/lib/constants';
+import { cn } from '@/lib/utils';
 import { ChevronDown, Menu } from 'lucide-react';
 import Link from 'next/link';
 import { useState } from 'react';
@@ -31,8 +32,8 @@ export default function MobileNav() {
         </SheetHeader>
         <nav className="mt-8">
           <ul className="space-y-4">
-            {navItems.map((item) => (
-              <li key={item.name}>
+            {navItems.map((item, index) => (
+              <li key={item.name} className={cn('border-b border-custom-purple', index + 1 === navItems.length && "border-b-0")}>
                 {item.subitems ? (
                   <Collapsible>
                     <CollapsibleTrigger className="flex w-full items-center justify-between py-2 text-lg hover:text-custom-purple transition-colors">

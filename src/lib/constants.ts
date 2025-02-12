@@ -123,7 +123,7 @@ export const perks: Perk[] = [
 
 export const reviews: Review[] = [
   {
-    name: 'Muhammad Usama',
+    name: 'M. Usama Zafar',
     role: 'CTO Synnestra',
     review:
       "At Synnestra, we are dedicated to driving innovation and delivering exceptional solutions to our clients. As the CTO, I've witnessed firsthand the transformative impact our team creates through our cutting-edge technology and unwavering commitment to quality. It's truly fulfilling to lead a team that is shaping the future of technology for our clients and partners.",

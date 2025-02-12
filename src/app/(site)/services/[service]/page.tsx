@@ -39,15 +39,15 @@ const ServicePage = async (props: Props) => {
     <div className="space-y-12">
       <div className="mb-44 md:mb-52">
         <Banner
-          image="/services_banner.png"
-          className="left-6 -bottom-[8.5rem] min-[550px]:-bottom-24 md:-bottom-32 lg:-bottom-40 w-max sm:w-screen max-w-full sm:max-w-screen-2xl"
-          minHeight="min-h-[350px]"
+          className="md:left-6 left-0 -bottom-[8.5rem] min-[550px]:-bottom-24 md:-bottom-32 lg:-bottom-40 w-max sm:w-screen max-w-full sm:max-w-screen-2xl pt-20"
+          minHeight="min-h-[400px]"
+          image="/services-banner-desktop.webp"
         >
-          <AnimatedSection direction={'left'} className="flex flex-col gap-4">
+          <AnimatedSection direction={'left'} className="flex flex-col gap-4 px-4">
             <h3 className="text-wrap text-3xl md:text-4xl w-full text-center font-bold text-gray-100 leading-relaxed">
               {selectedService.title}
             </h3>
-            <p className="text-4xl min-[550px]:text-5xl md:text-7xl lg:text-8xl text-white font-medium mb-2">From a</p>
+            <p className="text-4xl min-[550px]:text-5xl md:text-7xl lg:text-8xl text-white font-medium mt-16 md:mt-0 mb-2">From a</p>
             <SplitColorText
               text="concept to"
               className="text-4xl min-[550px]:text-5xl md:text-7xl lg:text-8xl text-black font-medium mb-2"

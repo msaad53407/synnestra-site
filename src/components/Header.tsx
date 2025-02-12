@@ -15,14 +15,42 @@ import {
   DropdownMenuTrigger,
 } from './ui/dropdown-menu';
 import { ChevronDownIcon } from 'lucide-react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY;
+      const scrollThreshold = 150; // Adjust this value to change when the header starts hiding
+
+      if (currentScrollY <= scrollThreshold) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY) {
+        setIsVisible(false);
+      } else {
+        setIsVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', controlNavbar);
+
+    return () => {
+      window.removeEventListener('scroll', controlNavbar);
+    };
+  }, [lastScrollY]);
 
   return (
-    <header className="flex items-center justify-between w-full max-w-screen-2xl mx-auto fixed left-1/2 transform -translate-x-1/2 top-0 z-50">
+    <header className={cn(
+      "flex items-center justify-between w-full max-w-screen-2xl mx-auto fixed left-1/2 transform transition-all -translate-x-1/2 top-0 z-50",
+      isVisible ? "translate-y-0" : "-translate-y-40"
+    )}>
       <span className="h-4 bg-white w-full absolute top-0"></span>
       <Link
         href="/"

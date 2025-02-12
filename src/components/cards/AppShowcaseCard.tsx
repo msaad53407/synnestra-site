@@ -25,10 +25,6 @@ const AppShowcaseCard = ({
         color,
       )}
     >
-      <div className="flex justify-between items-start mb-4">
-        <span className={`text-sm font-semibold ${textColor}`}>{index + 1}</span>
-        <span className={`text-sm font-semibold ${textColor}`}>Showcase</span>
-      </div>
       <div className="flex flex-col md:flex-row gap-5 justify-between h-full">
         <div className="w-full md:w-[70%]">
           <h3 className={`text-3xl font-medium mb-2 ${headingColor}`}>{name}</h3>

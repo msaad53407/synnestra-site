@@ -14,7 +14,7 @@ export default function ProjectsPage() {
   return (
     <div className="space-y-20 pb-8 w-full">
       {/* Hero Section */}
-      <section className="flex items-center flex-col lg:flex-row px-4 py-6 sm:px-6 lg:px-12">
+      <section className="flex items-center flex-col lg:flex-row px-4 py-6 sm:px-6 lg:px-12 pt-28">
         <AnimatedSection direction={'left'} className="lg:w-1/2 lg:pr-16">
           <h1 className="text-4xl font-semibold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl text-custom-purple mb-4">
             The Ultimate

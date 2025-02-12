@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="space-y-20 pb-8">
       <section
-        className="flex items-center flex-col lg:flex-row pt-20 px-4 py-6 sm:px-6 lg:px-12 bg-custom-purple-light"
+        className="flex items-center flex-col lg:flex-row pt-28 px-4 py-6 sm:px-6 lg:px-12 bg-custom-purple-light"
         style={{
           background: 'linear-gradient(180deg, rgba(224,226,255,1) 0%, rgba(255,255,255,1) 100%)',
           backgroundColor: 'rgb(224,226,255)',
@@ -86,7 +86,7 @@ export default function Home() {
       </section>
       <section className="px-4 py-6 sm:px-6 lg:px-12">
         <h2 className="text-4xl md:text-4xl font-medium text-center text-custom-purple mb-12">
-          Apps we&apos;ve developed are trending on the App Store
+          Apps we&apos;ve developed are trending in market
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
           {projectsShowcase.map((project, index) => (
@@ -152,8 +152,8 @@ export default function Home() {
                 <Image src="/company_logos/Google.svg" alt="google" width={80} height={30} />
                 <p className="text-sm text-custom-purple-light text-center">Google</p>
               </div> */}
-              <div className="space-y-3">
-                <Image src="/company_logos/upwork-logo.png" alt="Upwork" width={80} height={30} />
+              <div className="space-y-3 mt-4">
+                <Image src="/company_logos/upwork-logo.png" alt="Upwork" width={60} height={30} />
                 <p className="text-sm text-custom-purple-light text-center">Upwork</p>
               </div>
             </div>
