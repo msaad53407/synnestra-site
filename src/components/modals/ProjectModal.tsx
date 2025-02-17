@@ -101,8 +101,8 @@ const ProjectModal = () => {
             {activeProject.images.length > 0 && (
               <div>
                 <h4 className="text-2xl font-medium mb-2">Project Snapshots</h4>
-                <Carousel className="w-full max-w-xl mx-auto h-fit relative ">
-                  <CarouselContent className='overflow-x-hidden'>
+                <Carousel className="w-full max-w-xl mx-auto relative ">
+                  <CarouselContent>
                     {activeProject.images.map(({ src }, index) => (
                       <CarouselItem key={index}>
                         <div className="p-1">
@@ -118,7 +118,7 @@ const ProjectModal = () => {
                             // onClick={() => setSelectedImage({ src: image.src, alt: image.alt })}
                           /> */}
                           {activeProject.type === 'mobile' ? (
-                            <Iphone15Pro src={src} width={460} height={700} className="object-contain w-full" />
+                            <Iphone15Pro src={src} width={460} height={890} className="object-contain w-full" />
                           ) : (
                             <Safari imageSrc={src} className="object-contain size-full my-6" />
                           )}
