@@ -13,13 +13,14 @@ const Banner = ({ image, children, className, minHeight = 'min-h-[450px]' }: Pro
   return (
     <div className={`relative w-full h-auto ${minHeight}`}>
       <div className="absolute inset-0">
-        <Image
+        <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
           src={image}
           width={1000}
           height={1000}
           quality={100}
           alt="BannerImage"
-          className="object-cover size-full"
+          className="object-cover size-full  rounded-2xl"
           priority
         />
       </div>

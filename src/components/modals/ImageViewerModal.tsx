@@ -16,7 +16,8 @@ export function ImageViewer({ src, alt, isOpen, onClose }: ImageViewerProps) {
       <DialogContent className="p-2 bg-white border-none size-[90%] max-w-full">
         <div className="relative size-full">
           <div className="relative size-full">
-            <Image
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
               src={src || '/placeholder.svg'}
               alt={alt}
               className="rounded-xl object-contain"

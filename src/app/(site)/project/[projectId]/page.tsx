@@ -45,7 +45,8 @@ const ProjectPage = async (props: Props) => {
   return (
     <div className="container mx-auto py-12 space-y-8">
       <div className="space-y-8 px-4 py-6 sm:px-6 lg:px-12">
-        <Image
+        <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
           src={activeProject.thumbnail}
           alt={activeProject.title}
           width={1000}
@@ -89,7 +90,8 @@ const ProjectPage = async (props: Props) => {
               {activeProject.images.map(({ src }, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1">
-                    {/* <Image
+                    {/* <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                       src={image.src}
                       alt={image.alt}
                       width={1000}

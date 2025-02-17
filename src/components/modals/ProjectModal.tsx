@@ -41,7 +41,8 @@ const ProjectModal = () => {
           </DialogHeader>
           <div className="space-y-8">
             <div className="space-y-4">
-              <Image
+              <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                 src={activeProject.thumbnail}
                 alt={activeProject.title}
                 width={1000}
@@ -105,7 +106,8 @@ const ProjectModal = () => {
                     {activeProject.images.map(({ src }, index) => (
                       <CarouselItem key={index}>
                         <div className="p-1">
-                          {/* <Image
+                          {/* <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                             src={image.src}
                             alt={image.alt}
                             width={1000}

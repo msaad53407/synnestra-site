@@ -37,10 +37,10 @@ const ServicePage = async (props: Props) => {
 
   return (
     <div className="space-y-12">
-      <div className="mb-44 md:mb-52">
+      <div className="mb-44 md:mb-52 mx-4">
         <Banner
           className="md:left-6 left-0 -bottom-[8.5rem] min-[550px]:-bottom-24 md:-bottom-32 lg:-bottom-40 w-max sm:w-screen max-w-full sm:max-w-screen-2xl pt-20"
-          minHeight="min-h-[400px]"
+          minHeight="min-h-[400px] md:min-h-[450px]"
           image="/services-banner-desktop.webp"
         >
           <AnimatedSection direction={'left'} className="flex flex-col gap-4 px-4">
@@ -74,7 +74,8 @@ const ServicePage = async (props: Props) => {
           <p className="text-gray-600 mb-4">{selectedService.introSection.description}</p>
         </AnimatedSection>
         <AnimatedSection direction={'right'} className="md:w-1/2 h-fit">
-          <Image
+          <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
             src={selectedService.imageSrc}
             alt="Managed IT Services"
             width={500}
@@ -137,7 +138,8 @@ const ServicePage = async (props: Props) => {
             <h2 className="text-4xl font-medium mb-8 text-center leading-relaxed">
               Our Approach to {selectedService.title}
             </h2>
-            <Image src="/illustrations/shape-dots.svg" alt="shape-dots illustration" width={200} height={150} />
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg" src="/illustrations/shape-dots.svg" alt="shape-dots illustration" width={200} height={150} />
           </AnimatedSection>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {selectedService.ourApproach.map((approach, index) => (

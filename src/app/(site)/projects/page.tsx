@@ -28,7 +28,8 @@ export default function ProjectsPage() {
         </AnimatedSection>
         <AnimatedSection direction={'right'} className="lg:w-1/2 mt-12 lg:mt-0">
           <div className="aspect-w-16 aspect-h-9 rounded-lg">
-            <Image
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
               src="/illustrations/projects_hero_section.png"
               alt="Projects Hero Section"
               width={800}
@@ -42,7 +43,8 @@ export default function ProjectsPage() {
       {/* <InfiniteMovingCards direction="left" speed="very-slow" className="px-4 py-6 sm:px-6 lg:px-12">
         {[...companies, ...companies].map((item, index) => (
           <li key={item.title + ' ' + index} className="size-24 flex items-center justify-center">
-            <Image
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
               src={item.thumbnail}
               alt={item.title}
               width={100}
@@ -56,7 +58,8 @@ export default function ProjectsPage() {
       <LogosCarousel speed={2}>
         {[...companies, ...companies].map((item, index) => (
           <CarouselItem key={item.title + ' ' + index} className="basis-1/3 md:basis-1/5 lg:basis-1/6 xl:basis-[12.5%]">
-            <Image
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
               src={item.thumbnail}
               alt={item.title}
               width={120}

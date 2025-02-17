@@ -62,7 +62,8 @@ const IndustryPage = () => {
   //         </p>
   //       </AnimatedSection>
   //       <AnimatedSection direction={"right"} className="md:w-1/2">
-  //         <Image
+  //         <Image placeholder="blur"
+  //       blurDataURL="/placeholder.jpg"
   //           src={selectedIndustry.imageSrc}
   //           alt="Managed IT Services"
   //           width={500}
@@ -84,7 +85,8 @@ const IndustryPage = () => {
   //       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   //         {selectedIndustry.relatedArticles.map((article) => (
   //           <AnimatedSection direction={"up"} className="space-y-4" key={article.slug}>
-  //             <Image
+  //             <Image placeholder="blur"
+  //      blurDataURL="/placeholder.jpg"
   //               src={article.thumbnail}
   //               alt={transformSlug(article.slug)}
   //               width={500}

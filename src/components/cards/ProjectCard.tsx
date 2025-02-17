@@ -22,6 +22,8 @@ export const ProjectCard = ({ project, className }: { project: Project; classNam
           <Image
             src={project.thumbnail}
             alt={project.title}
+            placeholder="blur"
+            blurDataURL="/placeholder.jpg"
             fill
             className="object-contain transition-transform hover:scale-105 overflow-hidden rounded-t-xl"
           />

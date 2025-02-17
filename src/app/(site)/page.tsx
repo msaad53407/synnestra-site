@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="space-y-20 pb-8">
+    <div className="space-y-20 pb-8 mx-4">
       <section
         className="flex items-center flex-col lg:flex-row pt-28 px-4 py-6 sm:px-6 lg:px-12 bg-custom-purple-light"
         style={{
@@ -48,7 +48,8 @@ export default function Home() {
         </AnimatedSection>
         <AnimatedSection direction={'right'} className="lg:w-1/2 mt-12 lg:mt-0">
           <div className="aspect-w-16 aspect-h-9 rounded-lg">
-            <Image
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
               src="/illustrations/hero_illustration.svg"
               alt="hero_illustrations"
               width={1000}
@@ -62,23 +63,32 @@ export default function Home() {
       {/* <InfiniteMovingCards direction="left" speed="very-slow" className="px-4 py-6 sm:px-6 lg:px-12">
         {[...companies, ...companies].map((item, index) => (
           <li key={item.title + ' ' + index} className="size-24 flex items-center justify-center">
-            <Image src={item.thumbnail} alt={item.title} width={100} height={100} className="object-contain" />
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg" src={item.thumbnail} alt={item.title} width={100} height={100} className="object-contain" />
           </li>
         ))}
       </InfiniteMovingCards> */}
       <LogosCarousel speed={2}>
         {[...companies, ...companies].map((item, index) => (
           <CarouselItem key={item.title + ' ' + index} className="basis-1/3 md:basis-1/5 lg:basis-1/6 xl:basis-[12.5%]">
-            <Image src={item.thumbnail} alt={item.title} width={120} height={120} className="object-cover" />
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
+              src={item.thumbnail}
+              alt={item.title}
+              width={120}
+              height={120}
+              className="object-cover"
+            />
           </CarouselItem>
         ))}
       </LogosCarousel>
       <StatisticsBar />
       <AnimatedBanner />
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mt-12 px-4 py-6 sm:px-6 lg:px-12">
-        {perks.map(({ description, image, title }, indx) => (
-          <AnimatedSection direction={'up'} key={title} duration={0.5 * (indx + 1)} className="flex flex-col gap-5">
-            <Image src={image} alt={title} width={100} height={100} className="size-16 object-contain" quality={100} />
+        {perks.map(({ description, image, title }) => (
+          <AnimatedSection direction={'up'} key={title} className="flex flex-col gap-5">
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg" src={image} alt={title} width={100} height={100} className="size-16 object-contain" quality={100}  />
             <h4 className="font-medium text-xl">{title}</h4>
             <p className="text-xs text-gray-600">{description}</p>
           </AnimatedSection>
@@ -99,7 +109,7 @@ export default function Home() {
         {/*  </a>*/}
         {/*</div>*/}
       </section>
-      <section className="bg-blue-100 px-4 py-6 sm:px-6 lg:px-12 relative">
+      <section className="bg-blue-100 px-4 py-6 sm:px-6 lg:px-12 relative rounded-md">
         <div className="my-8">
           <span className="inline-block bg-white text-sm font-semibold py-1 px-3 rounded-xl">WHAT WE OFFER</span>
         </div>
@@ -107,11 +117,11 @@ export default function Home() {
           {solutions.map((solution, index) => (
             <AnimatedSection
               direction={'up'}
-              duration={0.3 * (index + 1)}
               key={index}
               className="bg-white rounded-lg space-y-3 p-6 shadow-sm relative min-h-[23rem]"
             >
-              <Image
+              <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                 src={solution.icon}
                 alt={`${solution.title} icon`}
                 width={200}
@@ -144,16 +154,19 @@ export default function Home() {
               Organizations recognized our work
             </h2>
             <div className="flex space-x-4 mb-4 items-center gap-3">
-              <div className="space-y-3">
-                <Image src="/company_logos/fiverr-logo-purple.png" alt="Fiverr" width={80} height={30} />
+              <div className="space-y-3 h-full">
+                <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg" src="/company_logos/fiverr-logo-purple.png" alt="Fiverr" width={80} height={30} />
                 <p className="text-sm text-custom-purple-light text-center">Fiverr</p>
               </div>
-              {/* <div className="space-y-3">
-                <Image src="/company_logos/Google.svg" alt="google" width={80} height={30} />
+              {/* <div className="space-y-3 h-full">
+                <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg" src="/company_logos/Google.svg" alt="google" width={80} height={30} />
                 <p className="text-sm text-custom-purple-light text-center">Google</p>
               </div> */}
-              <div className="space-y-3 mt-4">
-                <Image src="/company_logos/upwork-logo.png" alt="Upwork" width={60} height={30} />
+              <div className="space-y-3 h-full mt-4">
+                <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg" src="/company_logos/upwork-logo.png" alt="Upwork" width={50} height={30} />
                 <p className="text-sm text-custom-purple-light text-center">Upwork</p>
               </div>
             </div>
@@ -181,7 +194,8 @@ export default function Home() {
             </h2>
             <div className="flex flex-col md:flex-row items-center gap-5 justify-between relative min-h-36">
               <div className="size-full md:size-48 md:absolute md:right-0">
-                <Image
+                <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                   src="/illustrations/shape-dots-black.svg"
                   alt="Decorative triangle"
                   width={400}

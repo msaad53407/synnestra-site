@@ -26,7 +26,8 @@ export default function ReviewSection() {
           <CarouselPrevious variant="ghost" className={'absolute md:size-10 -left-2 top-1/2 -translate-y-1/2 z-10'} />
           <CarouselNext variant="ghost" className={'absolute md:size-10 -right-2 top-1/2 -translate-y-1/2 z-10'} />
         </Carousel>
-        <Image
+        <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
           src="/illustrations/Praise.svg"
           width={100}
           height={100}

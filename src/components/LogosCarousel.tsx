@@ -42,7 +42,7 @@ export default function LogosCarousel({ children, speed = 1 }: Props) {
   }, [api, autoScrollPlugin]);
 
   return (
-    <div className="w-full max-w-screen-2xl mx-auto overflow-hidden gradient-3">
+    <div className="w-full max-w-screen-2xl mx-auto overflow-hidden gradient-3 rounded-md">
       <Carousel
         setApi={setApi}
         opts={{

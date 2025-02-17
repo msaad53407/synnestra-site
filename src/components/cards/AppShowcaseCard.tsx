@@ -36,7 +36,8 @@ const AppShowcaseCard = ({
             index !== 2 ? 'justify-end md:w-[30%]' : 'justify-center',
           )}
         >
-          <Image
+          <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
             src={image}
             alt={`${name} preview`}
             width={index === 2 ? 800 : 200}

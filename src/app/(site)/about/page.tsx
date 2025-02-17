@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 
 const AboutPage = () => {
   return (
-    <div className="space-y-20">
+    <div className="space-y-20 mx-4">
       <div className="relative w-full md:mb-72 min-[1478px]:mb-48 space-y-5">
-        <Banner image="/about_banner.png" className="bottom-10 left-4 md:bottom-1/3">
+        <Banner image="/about_banner.png" className="bottom-10 left-4 md:bottom-1/3" minHeight='min-h-[400px] md:min-h-[450px]'>
           <AnimatedSection direction={'left'} className="flex flex-col gap-4">
             <h1 className="text-4xl font-medium text-white leading-relaxed">Explore the world of Synnestra.</h1>
             <p className="text-white font-normal md:w-1/2">
@@ -162,7 +162,8 @@ const AboutPage = () => {
                 and uncover new opportunities for growth. By leveraging advanced algorithms and cutting-edge
                 technologies, we help our clients stay ahead of the competition and achieve their strategic objectives.
               </p>
-              <Image
+              <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                 src="/icons/eos-icons_ai.svg"
                 alt="ai"
                 width={120}
@@ -183,7 +184,8 @@ const AboutPage = () => {
                 unique challenges and objectives, providing tailored strategies and solutions that drive efficiency,
                 innovation, and growth.
               </p>
-              <Image
+              <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                 src="/icons/grommet-icons_services.svg"
                 alt="synnestra"
                 width={100}

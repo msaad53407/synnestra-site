@@ -10,7 +10,8 @@ export default function StatisticsBar() {
           <div className="flex items-center gap-5">
             <div className="mr-3 space-y-3">
               <p className="text-xs font-semibold">REVIEWED ON</p>
-              <Image
+              <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
                 src="/company_logos/fiverr-logo.png"
                 alt="clutch-logo"
                 width={100}
@@ -29,7 +30,7 @@ export default function StatisticsBar() {
         </div>
         <StatItem value={4} unit="Years" description="Proven Track Record" />
         <StatItem value={98} unit="%" description="Customer's Satisfaction" />
-        <StatItem value={250} unit="Projects" description="We Have Concluded" />
+        <StatItem value={250} unit="+ Projects" description="We Have Concluded" />
         <StatItem value={30} unit="Mins" description="Standard Response Time" />
       </div>
     </div>

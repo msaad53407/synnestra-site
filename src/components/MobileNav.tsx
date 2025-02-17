@@ -18,12 +18,12 @@ export default function MobileNav() {
         <Button
           variant="ghost"
           size="icon"
-          className="lg:hidden bg-white w-fit h-fit relative rounded-none rounded-bl-3xl px-4 py-4 sm:px-6 hover:bg-white"
+          className="lg:hidden bg-white w-fit relative rounded-none rounded-bl-3xl px-4 py-4 sm:px-6 hover:bg-white h-[72px]"
         >
           <Menu className="h-6 w-6 bg-white" />
           <span className="sr-only">Open menu</span>
-          <span className="shape-top-right h-10 w-10 bg-transparent absolute -left-[39px] mr-2.5 top-[10px] rounded-se-2xl z-[99]"></span>
-          <span className="shape-top-right h-10 w-10 bg-transparent absolute top-[46px] right-0 rounded-se-2xl mt-2.5 z-[99]"></span>
+          <span className="shape-top-right h-10 w-10 bg-transparent absolute -left-[39px] mr-2.5 top-[15px] rounded-se-2xl z-[99]"></span>
+          <span className="shape-top-right h-8 w-8 bg-transparent absolute top-[52px] right-4 rounded-se-3xl mt-2.5 z-[99]"></span>
         </Button>
       </SheetTrigger>
       <SheetContent side="right" className="w-full sm:w-[400px] overflow-y-scroll">

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Facebook, Github, Instagram, Twitter } from 'lucide-react';
 import { transformSlug } from '@/lib/utils';
+import Image from 'next/image';
 
 export default function Footer() {
   return (
@@ -14,7 +15,7 @@ export default function Footer() {
       <div className="w-full grid grid-cols-1 md:grid-cols-6 gap-8">
         <div className="space-y-4 md:col-span-3">
           <Link href="/" className="text-2xl font-bold text-custom-purple">
-            Synnestra
+            <Image src="/Synnestra-logo.png" alt="Website Logo" width={170} height={170} />
           </Link>
           <p className="text-sm text-gray-600 max-w-xs">
             Empowering Your Digital Dreams with Innovation and Expertise.

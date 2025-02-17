@@ -14,7 +14,8 @@ const TechnologyCard = ({ technology }: Props) => {
       <TooltipProvider>
         <Tooltip delayDuration={0}>
           <TooltipTrigger className="cursor-default">
-            <Image
+            <Image placeholder="blur"
+        blurDataURL="/placeholder.jpg"
               src={technology.imageSrc}
               alt={technology.name}
               width={100}
