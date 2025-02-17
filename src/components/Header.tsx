@@ -69,7 +69,7 @@ export default function Header() {
             {navItems.map((item) => (
               <li key={item.name}>
                 {item.subitems ? (
-                  <DropdownMenu open={open} onOpenChange={() => setOpen(!open)}>
+                  <DropdownMenu modal={false} open={open} onOpenChange={() => setOpen(!open)}>
                     <DropdownMenuTrigger className="flex gap-2 items-center">
                       <span
                         className={
@@ -85,9 +85,9 @@ export default function Header() {
                         aria-hidden="true"
                       />
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="p-0 mt-3">
+                    <DropdownMenuContent className="p-0 mt-3 w-screen">
                       <div
-                        className="w-screen shadow-lg"
+                        className="shadow-lg"
                         style={{
                           background: 'linear-gradient(180deg, rgba(231,232,253,1) 0%, rgba(255,255,255,1) 100%)',
                           backgroundColor: 'rgb(231,232,253)',

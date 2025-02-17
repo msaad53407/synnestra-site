@@ -70,7 +70,7 @@ const ServicePage = async (props: Props) => {
       </div>
       <section className="w-full px-4 py-6 sm:px-6 lg:px-12 flex flex-col md:flex-row items-center gap-x-20 gap-y-8">
         <AnimatedSection direction={'left'} className="md:w-1/2">
-          <GradientText className={'md:text-5xl text-4xl'}>{selectedService.introSection.title}</GradientText>
+          <GradientText className={'md:text-5xl text-4xl !leading-normal'}>{selectedService.introSection.title}</GradientText>
           <p className="text-gray-600 mb-4">{selectedService.introSection.description}</p>
         </AnimatedSection>
         <AnimatedSection direction={'right'} className="md:w-1/2 h-fit">

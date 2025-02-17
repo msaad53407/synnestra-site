@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function TermsAndConditions() {
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-10 mt-20">
       <Card>
         <CardHeader>
           <CardTitle className="text-3xl font-semibold text-custom-purple">Terms and Conditions</CardTitle>
