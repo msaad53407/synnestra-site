@@ -77,7 +77,7 @@ export default function MobileNav() {
           </ul>
         </nav>
         <div className="mt-8">
-          <Button className="w-full bg-custom-purple hover:bg-custom-purple text-white">
+          <Button className="w-full bg-custom-purple hover:bg-custom-purple text-white" asChild>
             <Link href="/contact-us" onClick={() => setOpen(false)}>
               Contact us
             </Link>
